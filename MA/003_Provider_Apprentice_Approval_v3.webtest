@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="003_Provider_Apprentice_Approval_v3" Id="d798f6c7-4012-43a9-91f9-b9603a8963f9" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest4.e437f085-3f65-4e71-8485-d8f72fc33b15.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <TransactionTimer Name="003_Provider_ApproveApprentice_0010_LandingPage">
+      <Items>
+        <Comment CommentText="Landing page" />
+        <Request Method="GET" Guid="13a2c56c-28fa-47e0-a8bb-1f113da0f7e0" Version="1.1" Url="https://pp-pas.apprenticeships.sfa.bis.gov.uk/" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="003_Provider_ApproveApprentice_0020_StartNow">
+      <Items>
+        <Comment CommentText="Click Start now on landing page" />
+        <Request Method="GET" Guid="cb7838b8-dc94-4f39-a0a4-d5e197a2530b" Version="1.1" Url="https://pp-pas.apprenticeships.sfa.bis.gov.uk/signin" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLLboMwEPwV5Ds2BtISiyBFiSohpVXVVj30ZsAQK8amXruPv6%2bBXqpKuXlXMzszuy6Bj2pie%2b%2fO%2bkm8ewEuqo87JLu4SbrNTZ7SuNmmXZy3Io%2b3WZqEV7FJmtusoE2ColdhQRq9QykOVQ3gRa3Bce1CK6FFTGmcbl9owrKCbTKcpvkbio5BR2ruFubZuQkYIdOkzGA07jmAw8YO2F%2fIyQxSk9ll3U0oOhgNYp7trWaGgwSm%2bSiAuZY97%2b9PLNhg7QpiXsMkWtlL0aHoa1Qa2BL3OnuyxpnWKFSVSxy7Uq%2bTgmVh5ziomuOENLzrAU9WhHEdhotUCnqvO6kHHKAfshV4MB9zxBlJfntAnPXgSrJKV%2bV6n4cgWB8fjZLtd3Rn7MivrIBiunTCDfsF%2bncRe6XM58EK7sQOBTWBIlKV5P9HqH4A&amp;RelayState=eaeb0514-a1d7-4442-aad7-72b7cad89e39" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.sfa.bis.gov.uk/" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="003_Provider_ApproveApprentice_0030_SignIn">
+      <Items>
+        <Comment CommentText="Sign in" />
+        <Request Method="POST" Guid="f56032ce-6099-4387-acd4-2c5571725419" Version="1.1" Url="https://adfs.preprod.skillsfunding.service.gov.uk/adfs/ls/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLLboMwEPwV5Ds2BtISiyBFiSohpVXVVj30ZsAQK8amXruPv6%2BBXqpKuXlXMzszuy6Bj2pie%2B%2FO%2Bkm8ewEuqo87JLu4SbrNTZ7SuNmmXZy3Io%2B3WZqEV7FJmtusoE2ColdhQRq9QykOVQ3gRa3Bce1CK6FFTGmcbl9owrKCbTKcpvkbio5BR2ruFubZuQkYIdOkzGA07jmAw8YO2F%2FIyQxSk9ll3U0oOhgNYp7trWaGgwSm%2BSiAuZY97%2B9PLNhg7QpiXsMkWtlL0aHoa1Qa2BL3OnuyxpnWKFSVSxy7Uq%2BTgmVh5ziomuOENLzrAU9WhHEdhotUCnqvO6kHHKAfshV4MB9zxBlJfntAnPXgSrJKV%2BV6n4cgWB8fjZLtd3Rn7MivrIBiunTCDfsF%2BncRe6XM58EK7sQOBTWBIlKV5P9HqH4A&amp;RelayState=eaeb0514-a1d7-4442-aad7-72b7cad89e39" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam14.wa" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam15.wctx" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+                <RuleParameter Name="Index" Value="2" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="SAMLResponse" Value="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHNhbWwycDpSZXNwb25zZSBE&#xD;&#xA;ZXN0aW5hdGlvbj0iaHR0cHM6Ly9hZGZzLnByZXByb2Quc2tpbGxzZnVuZGluZy5zZXJ2aWNlLmdv&#xD;&#xA;di51ay9hZGZzL2xzLyIgSUQ9InV1aWRfOTJhM2M4YmMyMGQxZDFhZTIyZjVkNWI2OTNhM2Y4ZWEi&#xD;&#xA;IEluUmVzcG9uc2VUbz0iaWQtYjBkNTY0MjEtYjkyZC00Y2U0LTkzMjAtNGM4NTBiNzM4MWIwIiBJ&#xD;&#xA;c3N1ZUluc3RhbnQ9IjIwMTgtMTEtMjlUMTA6Mzk6MzMuNjczWiIgVmVyc2lvbj0iMi4wIiB4bWxu&#xD;&#xA;czpzYW1sMnA9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpwcm90b2NvbCI+PHNhbWwyOklz&#xD;&#xA;c3VlciBGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpuYW1laWQtZm9ybWF0OmVu&#xD;&#xA;dGl0eSIgeG1sbnM6c2FtbDI9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24i&#xD;&#xA;Pmh0dHBzOi8vcHBsb2dvbi5mYXNzdC5vcmcudWsvTG9naW4vc2FtbElkcDwvc2FtbDI6SXNzdWVy&#xD;&#xA;PjxzYW1sMnA6U3RhdHVzPjxzYW1sMnA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVz&#xD;&#xA;OnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9zYW1sMnA6U3RhdHVzPjxzYW1sMjpBc3Nl&#xD;&#xA;cnRpb24gSUQ9InV1aWRfNDYzMWVmMDQ2ZDk5MzVjZmM3MjgwMWE5MGViZGE0MmIiIElzc3VlSW5z&#xD;&#xA;dGFudD0iMjAxOC0xMS0yOVQxMDozOTozMy42NzNaIiBWZXJzaW9uPSIyLjAiIHhtbG5zOnNhbWwy&#xD;&#xA;PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIiB4bWxuczp4cz0iaHR0cDov&#xD;&#xA;L3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiPjxzYW1sMjpJc3N1ZXIgRm9ybWF0PSJ1cm46b2Fz&#xD;&#xA;aXM6bmFtZXM6dGM6U0FNTDoyLjA6bmFtZWlkLWZvcm1hdDplbnRpdHkiIHhtbG5zOnNhbWwyPSJ1&#xD;&#xA;cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5odHRwczovL3BwbG9nb24uZmFz&#xD;&#xA;c3Qub3JnLnVrL0xvZ2luL3NhbWxJZHA8L3NhbWwyOklzc3Vlcj48ZHM6U2lnbmF0dXJlIHhtbG5z&#xD;&#xA;OmRzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIj48ZHM6U2lnbmVkSW5mbz48&#xD;&#xA;ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIw&#xD;&#xA;MDEvMTAveG1sLWV4Yy1jMTRuIyIvPjxkczpTaWduYXR1cmVNZXRob2QgQWxnb3JpdGhtPSJodHRw&#xD;&#xA;Oi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2Ii8+PGRzOlJlZmVy&#xD;&#xA;ZW5jZSBVUkk9IiN1dWlkXzQ2MzFlZjA0NmQ5OTM1Y2ZjNzI4MDFhOTBlYmRhNDJiIj48ZHM6VHJh&#xD;&#xA;bnNmb3Jtcz48ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8w&#xD;&#xA;OS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz48ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0i&#xD;&#xA;aHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIj48ZWM6SW5jbHVzaXZlTmFt&#xD;&#xA;ZXNwYWNlcyBQcmVmaXhMaXN0PSJ4cyIgeG1sbnM6ZWM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEv&#xD;&#xA;MTAveG1sLWV4Yy1jMTRuIyIvPjwvZHM6VHJhbnNmb3JtPjwvZHM6VHJhbnNmb3Jtcz48ZHM6RGln&#xD;&#xA;ZXN0TWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI3No&#xD;&#xA;YTEiLz48ZHM6RGlnZXN0VmFsdWU+M202UzYwOFNzSVhFUWxvNUZPMFFuVTQ2RzZVPTwvZHM6RGln&#xD;&#xA;ZXN0VmFsdWU+PC9kczpSZWZlcmVuY2U+PC9kczpTaWduZWRJbmZvPjxkczpTaWduYXR1cmVWYWx1&#xD;&#xA;ZT5DWUpOYXhpdkVGanlTR3hUcTZTU0NwUlgwTjB2cVVLTTFIK3JvUWdIVS94bTlyRUVzTmpYbGg5&#xD;&#xA;Z2V3WGNkMlFON2VYN1F6SXZiWm1zaWc3WlQxUjZFR212MzFHU3F3MloxdWlRUWZ2bUlmNFBoUExY&#xD;&#xA;UWxJVWNITjhCaTRXaFpBSEw5ZWE1M2VYZ1d2V1ZwbUxFTjl0RHVHa0tkbGZSY1lub084Vm1Pemsv&#xD;&#xA;cGJsV3JsL2g3bHV0ajdkQ1IxZEpmaDkxZnBXbWxOQTh0cGw4aHZrbWpYSG9zUGtPY0VXaExhNVhD&#xD;&#xA;M2s3anYwVUI0TGRJWnM0Zm9vVzlwZ1ZjTkhGVG1OTnlQYlFsRDBCcDBZcmxCa2F2SzJxbzJnT1F3&#xD;&#xA;d01xYytDNHZsbmRHTjMrZGpoZ1QrT3pTN3VJMDFJSUNkSGJEOGNlWklyTGVtaTNZajNvTzIxend5&#xD;&#xA;SlE9PTwvZHM6U2lnbmF0dXJlVmFsdWU+PGRzOktleUluZm8+PGRzOlg1MDlEYXRhPjxkczpYNTA5&#xD;&#xA;Q2VydGlmaWNhdGU+TUlJRFd6Q0NBa09nQXdJQkFnSUpBS2dTNzNQemFXY1BNQTBHQ1NxR1NJYjNE&#xD;&#xA;UUVCQlFVQU1HMHhDekFKQmdOVkJBWVRBa2RDTVJNd0VRWURWUVFLRXdwUWFYSmxZVzRnVEhSa01R&#xD;&#xA;OHdEUVlEVlFRSEV3Wk1iMjVrYjI0eEVEQU9CZ05WQkFzVEIyUmxabUYxYkhReEpqQWtCZ05WQkFN&#xD;&#xA;VEhXaDBkSEJ6T2k4dmNIQnNiMmR2Ymk1bVlYTnpkQzV2Y21jdWRXc3ZNQjRYRFRFMk1Ea3hOakE1&#xD;&#xA;TlRZMU9Gb1hEVEkyTURreE5qQTVOVFkxT0Zvd2JURUxNQWtHQTFVRUJoTUNSMEl4RXpBUkJnTlZC&#xD;&#xA;QW9UQ2xCcGNtVmhiaUJNZEdReER6QU5CZ05WQkFjVEJreHZibVJ2YmpFUU1BNEdBMVVFQ3hNSFpH&#xD;&#xA;Vm1ZWFZzZERFbU1DUUdBMVVFQXhNZGFIUjBjSE02THk5d2NHeHZaMjl1TG1aaGMzTjBMbTl5Wnk1&#xD;&#xA;MWF5OHdnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFDQzh3SE9Dc2RQ&#xD;&#xA;T3I2OXJWYlJ5RnRSWjBCQmpOU2xSZnA2Mm1ENWNoT0RLQURTLyttRDdXSkRHVyt5MERieWY2TndE&#xD;&#xA;QXZQc1ErZkRVeGNJQmpRWWlEZVlWcDRMbFM2MEhsMmptZVJVWXFWcWZrN2hUVEZJZGJRRHc0YzdR&#xD;&#xA;U215V0FiNHh4THlpSTMzZ2djV2tYT1JuTENnMnM0R0VncGtIVGhsc0ZGak1RUnBtSFZlNTh3aGJE&#xD;&#xA;bDV4S2dHMithdUNWUDQzK0Q4QWRxTjVGMmZyU0JoQ2lhdWJQb3lXU1h4V1BXZkx5MXpHMmtXcHhY&#xD;&#xA;Z2dhajZVYzJWVnVlZkFRRHl1Lzhvd21pOUlnVEVKbENnNnpQK0l2bmlOM1h5eEp2TWJCMlUvWVJi&#xD;&#xA;djZjcWpYaTlhbVB2Tm93WXU3U2tZc0Q5WWdtcHdqRXVFaVVDNmwxYVVLQnBuTmJBZ01CQUFFd0RR&#xD;&#xA;WUpLb1pJaHZjTkFRRUZCUUFEZ2dFQkFIY3pnNVdzZHV6UTUycVpSc25rV2F0TnAvaW1laHNZL1p1&#xD;&#xA;OXdLam8zWmsybjY3TmVzTEp6YTIrakZ0ME9PcXNqSzU0Wk5LT09qNHBqWXoweVAyZTBOMGJCQVFS&#xD;&#xA;aUQrUVdJVUQwTmsxcFZDVEtRZUR1NEpPZHZOYXZDajYwajdtTHV1eUFxV2lpMWlWcDd0cWF5cXZP&#xD;&#xA;aGFoRit0Ui9kTnVjTXVCNlRrMEI5WFBndFJYeVhYMVUxTjh3Z2FrSHBCaHZTeHliUmhEMTYreU9U&#xD;&#xA;YzhYeisrZ0hqbFdLZjhwbVNvelJGWEJxcXBCL2huQjVVVUd4bUNiQUgrN29WSVNjQWlLNXIzN2dQ&#xD;&#xA;a0RjVldGc2xtZVZkbzVvTWVBdG1lOVJ6UDMzUHRhYXJQL25MUVpvL0YxMTNCUU5OVlhqTDN2ZTc3&#xD;&#xA;ci9EV2hjaTdmUzdEZW5BWkhJZmFIWkE9PC9kczpYNTA5Q2VydGlmaWNhdGU+PC9kczpYNTA5RGF0&#xD;&#xA;YT48L2RzOktleUluZm8+PC9kczpTaWduYXR1cmU+PHNhbWwyOlN1YmplY3QgeG1sbnM6c2FtbDI9&#xD;&#xA;InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sMjpOYW1lSUQgRm9y&#xD;&#xA;bWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmll&#xD;&#xA;ZCI+SVNQLTEwMDA1MDc3czwvc2FtbDI6TmFtZUlEPjxzYW1sMjpTdWJqZWN0Q29uZmlybWF0aW9u&#xD;&#xA;IE1ldGhvZD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmNtOmJlYXJlciI+PHNhbWwyOlN1&#xD;&#xA;YmplY3RDb25maXJtYXRpb25EYXRhIEluUmVzcG9uc2VUbz0iaWQtYjBkNTY0MjEtYjkyZC00Y2U0&#xD;&#xA;LTkzMjAtNGM4NTBiNzM4MWIwIiBOb3RPbk9yQWZ0ZXI9IjIwMTgtMTEtMjlUMTA6NDQ6MzMuNjcz&#xD;&#xA;WiIgUmVjaXBpZW50PSJodHRwczovL2FkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5nLnNlcnZpY2Uu&#xD;&#xA;Z292LnVrL2FkZnMvbHMvIi8+PC9zYW1sMjpTdWJqZWN0Q29uZmlybWF0aW9uPjwvc2FtbDI6U3Vi&#xD;&#xA;amVjdD48c2FtbDI6Q29uZGl0aW9ucyBOb3RCZWZvcmU9IjIwMTgtMTEtMjlUMTA6Mjk6MzMuNjcz&#xD;&#xA;WiIgTm90T25PckFmdGVyPSIyMDE4LTExLTI5VDEwOjU0OjMzLjY3M1oiIHhtbG5zOnNhbWwyPSJ1&#xD;&#xA;cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXVkaWVuY2VSZXN0&#xD;&#xA;cmljdGlvbj48c2FtbDI6QXVkaWVuY2U+aHR0cDovL2FkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5n&#xD;&#xA;LnNlcnZpY2UuZ292LnVrL2FkZnMvc2VydmljZXMvdHJ1c3Q8L3NhbWwyOkF1ZGllbmNlPjwvc2Ft&#xD;&#xA;bDI6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWwyOkNvbmRpdGlvbnM+PHNhbWwyOkF1dGhuU3Rh&#xD;&#xA;dGVtZW50IEF1dGhuSW5zdGFudD0iMjAxOC0xMS0yOVQxMDozOTozMy42NzNaIiBTZXNzaW9uSW5k&#xD;&#xA;ZXg9InV1aWRfNDYzMWVmMDQ2ZDk5MzVjZmM3MjgwMWE5MGViZGE0MmIiIHhtbG5zOnNhbWwyPSJ1&#xD;&#xA;cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXV0aG5Db250ZXh0&#xD;&#xA;PjxzYW1sMjpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6&#xD;&#xA;YWM6Y2xhc3NlczpQYXNzd29yZFByb3RlY3RlZFRyYW5zcG9ydDwvc2FtbDI6QXV0aG5Db250ZXh0&#xD;&#xA;Q2xhc3NSZWY+PC9zYW1sMjpBdXRobkNvbnRleHQ+PC9zYW1sMjpBdXRoblN0YXRlbWVudD48c2Ft&#xD;&#xA;bDI6QXR0cmlidXRlU3RhdGVtZW50IHhtbG5zOnNhbWwyPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FN&#xD;&#xA;TDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlIE5hbWU9InNlcnZpY2UiIE5hbWVGb3Jt&#xD;&#xA;YXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sMjpBdHRyaWJ1&#xD;&#xA;dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5z&#xD;&#xA;OnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTp0eXBl&#xD;&#xA;PSJ4czpzdHJpbmciPkRBQTwvc2FtbDI6QXR0cmlidXRlVmFsdWU+PC9zYW1sMjpBdHRyaWJ1dGU+&#xD;&#xA;PHNhbWwyOkF0dHJpYnV0ZSBOYW1lPSJtYWlsIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6&#xD;&#xA;dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0&#xD;&#xA;dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMu&#xD;&#xA;b3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5vYXR0ZXN0&#xD;&#xA;dXNlcisxMDAwNTA3N0BnbWFpbC5jb208L3NhbWwyOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0&#xD;&#xA;cmlidXRlPjxzYW1sMjpBdHRyaWJ1dGUgTmFtZT0idXBpbiIgTmFtZUZvcm1hdD0idXJuOm9hc2lz&#xD;&#xA;Om5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiI+PHNhbWwyOkF0dHJpYnV0ZVZhbHVlIHhtbG5z&#xD;&#xA;OnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6eHNpPSJodHRwOi8v&#xD;&#xA;d3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnR5cGU9InhzOnN0cmluZyI+&#xD;&#xA;MTA2NDA5PC9zYW1sMjpBdHRyaWJ1dGVWYWx1ZT48L3NhbWwyOkF0dHJpYnV0ZT48c2FtbDI6QXR0&#xD;&#xA;cmlidXRlIE5hbWU9ImRpc3BsYXluYW1lIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xD;&#xA;U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6&#xD;&#xA;Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3Jn&#xD;&#xA;LzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5NciBTZnN0ZXN0&#xD;&#xA;IDEwMDA1MDc3PC9zYW1sMjpBdHRyaWJ1dGVWYWx1ZT48L3NhbWwyOkF0dHJpYnV0ZT48c2FtbDI6&#xD;&#xA;QXR0cmlidXRlIE5hbWU9InVzZXJ0eXBlIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xD;&#xA;U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6&#xD;&#xA;Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3Jn&#xD;&#xA;LzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5JU1A8L3NhbWwy&#xD;&#xA;OkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0cmlidXRlPjxzYW1sMjpBdHRyaWJ1dGUgTmFtZT0i&#xD;&#xA;YWRkaXRpb25hbHVwaW5zIi8+PHNhbWwyOkF0dHJpYnV0ZSBOYW1lPSJ1a3BybiIgTmFtZUZvcm1h&#xD;&#xA;dD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiI+PHNhbWwyOkF0dHJpYnV0&#xD;&#xA;ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6&#xD;&#xA;eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnR5cGU9&#xD;&#xA;InhzOnN0cmluZyI+MTAwMDUwNzc8L3NhbWwyOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0cmli&#xD;&#xA;dXRlPjwvc2FtbDI6QXR0cmlidXRlU3RhdGVtZW50Pjwvc2FtbDI6QXNzZXJ0aW9uPjwvc2FtbDJw&#xD;&#xA;OlJlc3BvbnNlPg==" RecordedValue="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHNhbWwycDpSZXNwb25zZSBE&#xD;&#xA;ZXN0aW5hdGlvbj0iaHR0cHM6Ly9hZGZzLnByZXByb2Quc2tpbGxzZnVuZGluZy5zZXJ2aWNlLmdv&#xD;&#xA;di51ay9hZGZzL2xzLyIgSUQ9InV1aWRfOTJhM2M4YmMyMGQxZDFhZTIyZjVkNWI2OTNhM2Y4ZWEi&#xD;&#xA;IEluUmVzcG9uc2VUbz0iaWQtYjBkNTY0MjEtYjkyZC00Y2U0LTkzMjAtNGM4NTBiNzM4MWIwIiBJ&#xD;&#xA;c3N1ZUluc3RhbnQ9IjIwMTgtMTEtMjlUMTA6Mzk6MzMuNjczWiIgVmVyc2lvbj0iMi4wIiB4bWxu&#xD;&#xA;czpzYW1sMnA9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpwcm90b2NvbCI+PHNhbWwyOklz&#xD;&#xA;c3VlciBGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpuYW1laWQtZm9ybWF0OmVu&#xD;&#xA;dGl0eSIgeG1sbnM6c2FtbDI9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24i&#xD;&#xA;Pmh0dHBzOi8vcHBsb2dvbi5mYXNzdC5vcmcudWsvTG9naW4vc2FtbElkcDwvc2FtbDI6SXNzdWVy&#xD;&#xA;PjxzYW1sMnA6U3RhdHVzPjxzYW1sMnA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVz&#xD;&#xA;OnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9zYW1sMnA6U3RhdHVzPjxzYW1sMjpBc3Nl&#xD;&#xA;cnRpb24gSUQ9InV1aWRfNDYzMWVmMDQ2ZDk5MzVjZmM3MjgwMWE5MGViZGE0MmIiIElzc3VlSW5z&#xD;&#xA;dGFudD0iMjAxOC0xMS0yOVQxMDozOTozMy42NzNaIiBWZXJzaW9uPSIyLjAiIHhtbG5zOnNhbWwy&#xD;&#xA;PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIiB4bWxuczp4cz0iaHR0cDov&#xD;&#xA;L3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiPjxzYW1sMjpJc3N1ZXIgRm9ybWF0PSJ1cm46b2Fz&#xD;&#xA;aXM6bmFtZXM6dGM6U0FNTDoyLjA6bmFtZWlkLWZvcm1hdDplbnRpdHkiIHhtbG5zOnNhbWwyPSJ1&#xD;&#xA;cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5odHRwczovL3BwbG9nb24uZmFz&#xD;&#xA;c3Qub3JnLnVrL0xvZ2luL3NhbWxJZHA8L3NhbWwyOklzc3Vlcj48ZHM6U2lnbmF0dXJlIHhtbG5z&#xD;&#xA;OmRzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIj48ZHM6U2lnbmVkSW5mbz48&#xD;&#xA;ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIw&#xD;&#xA;MDEvMTAveG1sLWV4Yy1jMTRuIyIvPjxkczpTaWduYXR1cmVNZXRob2QgQWxnb3JpdGhtPSJodHRw&#xD;&#xA;Oi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2Ii8+PGRzOlJlZmVy&#xD;&#xA;ZW5jZSBVUkk9IiN1dWlkXzQ2MzFlZjA0NmQ5OTM1Y2ZjNzI4MDFhOTBlYmRhNDJiIj48ZHM6VHJh&#xD;&#xA;bnNmb3Jtcz48ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8w&#xD;&#xA;OS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz48ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0i&#xD;&#xA;aHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIj48ZWM6SW5jbHVzaXZlTmFt&#xD;&#xA;ZXNwYWNlcyBQcmVmaXhMaXN0PSJ4cyIgeG1sbnM6ZWM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEv&#xD;&#xA;MTAveG1sLWV4Yy1jMTRuIyIvPjwvZHM6VHJhbnNmb3JtPjwvZHM6VHJhbnNmb3Jtcz48ZHM6RGln&#xD;&#xA;ZXN0TWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI3No&#xD;&#xA;YTEiLz48ZHM6RGlnZXN0VmFsdWU+M202UzYwOFNzSVhFUWxvNUZPMFFuVTQ2RzZVPTwvZHM6RGln&#xD;&#xA;ZXN0VmFsdWU+PC9kczpSZWZlcmVuY2U+PC9kczpTaWduZWRJbmZvPjxkczpTaWduYXR1cmVWYWx1&#xD;&#xA;ZT5DWUpOYXhpdkVGanlTR3hUcTZTU0NwUlgwTjB2cVVLTTFIK3JvUWdIVS94bTlyRUVzTmpYbGg5&#xD;&#xA;Z2V3WGNkMlFON2VYN1F6SXZiWm1zaWc3WlQxUjZFR212MzFHU3F3MloxdWlRUWZ2bUlmNFBoUExY&#xD;&#xA;UWxJVWNITjhCaTRXaFpBSEw5ZWE1M2VYZ1d2V1ZwbUxFTjl0RHVHa0tkbGZSY1lub084Vm1Pemsv&#xD;&#xA;cGJsV3JsL2g3bHV0ajdkQ1IxZEpmaDkxZnBXbWxOQTh0cGw4aHZrbWpYSG9zUGtPY0VXaExhNVhD&#xD;&#xA;M2s3anYwVUI0TGRJWnM0Zm9vVzlwZ1ZjTkhGVG1OTnlQYlFsRDBCcDBZcmxCa2F2SzJxbzJnT1F3&#xD;&#xA;d01xYytDNHZsbmRHTjMrZGpoZ1QrT3pTN3VJMDFJSUNkSGJEOGNlWklyTGVtaTNZajNvTzIxend5&#xD;&#xA;SlE9PTwvZHM6U2lnbmF0dXJlVmFsdWU+PGRzOktleUluZm8+PGRzOlg1MDlEYXRhPjxkczpYNTA5&#xD;&#xA;Q2VydGlmaWNhdGU+TUlJRFd6Q0NBa09nQXdJQkFnSUpBS2dTNzNQemFXY1BNQTBHQ1NxR1NJYjNE&#xD;&#xA;UUVCQlFVQU1HMHhDekFKQmdOVkJBWVRBa2RDTVJNd0VRWURWUVFLRXdwUWFYSmxZVzRnVEhSa01R&#xD;&#xA;OHdEUVlEVlFRSEV3Wk1iMjVrYjI0eEVEQU9CZ05WQkFzVEIyUmxabUYxYkhReEpqQWtCZ05WQkFN&#xD;&#xA;VEhXaDBkSEJ6T2k4dmNIQnNiMmR2Ymk1bVlYTnpkQzV2Y21jdWRXc3ZNQjRYRFRFMk1Ea3hOakE1&#xD;&#xA;TlRZMU9Gb1hEVEkyTURreE5qQTVOVFkxT0Zvd2JURUxNQWtHQTFVRUJoTUNSMEl4RXpBUkJnTlZC&#xD;&#xA;QW9UQ2xCcGNtVmhiaUJNZEdReER6QU5CZ05WQkFjVEJreHZibVJ2YmpFUU1BNEdBMVVFQ3hNSFpH&#xD;&#xA;Vm1ZWFZzZERFbU1DUUdBMVVFQXhNZGFIUjBjSE02THk5d2NHeHZaMjl1TG1aaGMzTjBMbTl5Wnk1&#xD;&#xA;MWF5OHdnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFDQzh3SE9Dc2RQ&#xD;&#xA;T3I2OXJWYlJ5RnRSWjBCQmpOU2xSZnA2Mm1ENWNoT0RLQURTLyttRDdXSkRHVyt5MERieWY2TndE&#xD;&#xA;QXZQc1ErZkRVeGNJQmpRWWlEZVlWcDRMbFM2MEhsMmptZVJVWXFWcWZrN2hUVEZJZGJRRHc0YzdR&#xD;&#xA;U215V0FiNHh4THlpSTMzZ2djV2tYT1JuTENnMnM0R0VncGtIVGhsc0ZGak1RUnBtSFZlNTh3aGJE&#xD;&#xA;bDV4S2dHMithdUNWUDQzK0Q4QWRxTjVGMmZyU0JoQ2lhdWJQb3lXU1h4V1BXZkx5MXpHMmtXcHhY&#xD;&#xA;Z2dhajZVYzJWVnVlZkFRRHl1Lzhvd21pOUlnVEVKbENnNnpQK0l2bmlOM1h5eEp2TWJCMlUvWVJi&#xD;&#xA;djZjcWpYaTlhbVB2Tm93WXU3U2tZc0Q5WWdtcHdqRXVFaVVDNmwxYVVLQnBuTmJBZ01CQUFFd0RR&#xD;&#xA;WUpLb1pJaHZjTkFRRUZCUUFEZ2dFQkFIY3pnNVdzZHV6UTUycVpSc25rV2F0TnAvaW1laHNZL1p1&#xD;&#xA;OXdLam8zWmsybjY3TmVzTEp6YTIrakZ0ME9PcXNqSzU0Wk5LT09qNHBqWXoweVAyZTBOMGJCQVFS&#xD;&#xA;aUQrUVdJVUQwTmsxcFZDVEtRZUR1NEpPZHZOYXZDajYwajdtTHV1eUFxV2lpMWlWcDd0cWF5cXZP&#xD;&#xA;aGFoRit0Ui9kTnVjTXVCNlRrMEI5WFBndFJYeVhYMVUxTjh3Z2FrSHBCaHZTeHliUmhEMTYreU9U&#xD;&#xA;YzhYeisrZ0hqbFdLZjhwbVNvelJGWEJxcXBCL2huQjVVVUd4bUNiQUgrN29WSVNjQWlLNXIzN2dQ&#xD;&#xA;a0RjVldGc2xtZVZkbzVvTWVBdG1lOVJ6UDMzUHRhYXJQL25MUVpvL0YxMTNCUU5OVlhqTDN2ZTc3&#xD;&#xA;ci9EV2hjaTdmUzdEZW5BWkhJZmFIWkE9PC9kczpYNTA5Q2VydGlmaWNhdGU+PC9kczpYNTA5RGF0&#xD;&#xA;YT48L2RzOktleUluZm8+PC9kczpTaWduYXR1cmU+PHNhbWwyOlN1YmplY3QgeG1sbnM6c2FtbDI9&#xD;&#xA;InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sMjpOYW1lSUQgRm9y&#xD;&#xA;bWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmll&#xD;&#xA;ZCI+SVNQLTEwMDA1MDc3czwvc2FtbDI6TmFtZUlEPjxzYW1sMjpTdWJqZWN0Q29uZmlybWF0aW9u&#xD;&#xA;IE1ldGhvZD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmNtOmJlYXJlciI+PHNhbWwyOlN1&#xD;&#xA;YmplY3RDb25maXJtYXRpb25EYXRhIEluUmVzcG9uc2VUbz0iaWQtYjBkNTY0MjEtYjkyZC00Y2U0&#xD;&#xA;LTkzMjAtNGM4NTBiNzM4MWIwIiBOb3RPbk9yQWZ0ZXI9IjIwMTgtMTEtMjlUMTA6NDQ6MzMuNjcz&#xD;&#xA;WiIgUmVjaXBpZW50PSJodHRwczovL2FkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5nLnNlcnZpY2Uu&#xD;&#xA;Z292LnVrL2FkZnMvbHMvIi8+PC9zYW1sMjpTdWJqZWN0Q29uZmlybWF0aW9uPjwvc2FtbDI6U3Vi&#xD;&#xA;amVjdD48c2FtbDI6Q29uZGl0aW9ucyBOb3RCZWZvcmU9IjIwMTgtMTEtMjlUMTA6Mjk6MzMuNjcz&#xD;&#xA;WiIgTm90T25PckFmdGVyPSIyMDE4LTExLTI5VDEwOjU0OjMzLjY3M1oiIHhtbG5zOnNhbWwyPSJ1&#xD;&#xA;cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXVkaWVuY2VSZXN0&#xD;&#xA;cmljdGlvbj48c2FtbDI6QXVkaWVuY2U+aHR0cDovL2FkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5n&#xD;&#xA;LnNlcnZpY2UuZ292LnVrL2FkZnMvc2VydmljZXMvdHJ1c3Q8L3NhbWwyOkF1ZGllbmNlPjwvc2Ft&#xD;&#xA;bDI6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWwyOkNvbmRpdGlvbnM+PHNhbWwyOkF1dGhuU3Rh&#xD;&#xA;dGVtZW50IEF1dGhuSW5zdGFudD0iMjAxOC0xMS0yOVQxMDozOTozMy42NzNaIiBTZXNzaW9uSW5k&#xD;&#xA;ZXg9InV1aWRfNDYzMWVmMDQ2ZDk5MzVjZmM3MjgwMWE5MGViZGE0MmIiIHhtbG5zOnNhbWwyPSJ1&#xD;&#xA;cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXV0aG5Db250ZXh0&#xD;&#xA;PjxzYW1sMjpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6&#xD;&#xA;YWM6Y2xhc3NlczpQYXNzd29yZFByb3RlY3RlZFRyYW5zcG9ydDwvc2FtbDI6QXV0aG5Db250ZXh0&#xD;&#xA;Q2xhc3NSZWY+PC9zYW1sMjpBdXRobkNvbnRleHQ+PC9zYW1sMjpBdXRoblN0YXRlbWVudD48c2Ft&#xD;&#xA;bDI6QXR0cmlidXRlU3RhdGVtZW50IHhtbG5zOnNhbWwyPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FN&#xD;&#xA;TDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlIE5hbWU9InNlcnZpY2UiIE5hbWVGb3Jt&#xD;&#xA;YXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sMjpBdHRyaWJ1&#xD;&#xA;dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5z&#xD;&#xA;OnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTp0eXBl&#xD;&#xA;PSJ4czpzdHJpbmciPkRBQTwvc2FtbDI6QXR0cmlidXRlVmFsdWU+PC9zYW1sMjpBdHRyaWJ1dGU+&#xD;&#xA;PHNhbWwyOkF0dHJpYnV0ZSBOYW1lPSJtYWlsIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6&#xD;&#xA;dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0&#xD;&#xA;dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMu&#xD;&#xA;b3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5vYXR0ZXN0&#xD;&#xA;dXNlcisxMDAwNTA3N0BnbWFpbC5jb208L3NhbWwyOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0&#xD;&#xA;cmlidXRlPjxzYW1sMjpBdHRyaWJ1dGUgTmFtZT0idXBpbiIgTmFtZUZvcm1hdD0idXJuOm9hc2lz&#xD;&#xA;Om5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiI+PHNhbWwyOkF0dHJpYnV0ZVZhbHVlIHhtbG5z&#xD;&#xA;OnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6eHNpPSJodHRwOi8v&#xD;&#xA;d3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnR5cGU9InhzOnN0cmluZyI+&#xD;&#xA;MTA2NDA5PC9zYW1sMjpBdHRyaWJ1dGVWYWx1ZT48L3NhbWwyOkF0dHJpYnV0ZT48c2FtbDI6QXR0&#xD;&#xA;cmlidXRlIE5hbWU9ImRpc3BsYXluYW1lIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xD;&#xA;U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6&#xD;&#xA;Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3Jn&#xD;&#xA;LzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5NciBTZnN0ZXN0&#xD;&#xA;IDEwMDA1MDc3PC9zYW1sMjpBdHRyaWJ1dGVWYWx1ZT48L3NhbWwyOkF0dHJpYnV0ZT48c2FtbDI6&#xD;&#xA;QXR0cmlidXRlIE5hbWU9InVzZXJ0eXBlIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xD;&#xA;U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6&#xD;&#xA;Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3Jn&#xD;&#xA;LzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5JU1A8L3NhbWwy&#xD;&#xA;OkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0cmlidXRlPjxzYW1sMjpBdHRyaWJ1dGUgTmFtZT0i&#xD;&#xA;YWRkaXRpb25hbHVwaW5zIi8+PHNhbWwyOkF0dHJpYnV0ZSBOYW1lPSJ1a3BybiIgTmFtZUZvcm1h&#xD;&#xA;dD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiI+PHNhbWwyOkF0dHJpYnV0&#xD;&#xA;ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6&#xD;&#xA;eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnR5cGU9&#xD;&#xA;InhzOnN0cmluZyI+MTAwMDUwNzc8L3NhbWwyOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0cmli&#xD;&#xA;dXRlPjwvc2FtbDI6QXR0cmlidXRlU3RhdGVtZW50Pjwvc2FtbDI6QXNzZXJ0aW9uPjwvc2FtbDJw&#xD;&#xA;OlJlc3BvbnNlPg==" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="POST" Guid="6a6a555c-47c7-48cd-8fc4-3e0a969a2afa" Version="1.1" Url="https://pp-pas.apprenticeships.sfa.bis.gov.uk/" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-pas.apprenticeships.sfa.bis.gov.uk/account" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://adfs.preprod.skillsfunding.service.gov.uk/adfs/ls/" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="wa" Value="wsignin1.0" RecordedValue="wsignin1.0" CorrelationBinding="{{FormPostParam14.wa}}" UrlEncode="True" />
+            <FormPostParameter Name="wresult" Value="&lt;t:RequestSecurityTokenResponse xmlns:t=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;&gt;&lt;t:Lifetime&gt;&lt;wsu:Created xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-01-04T09:30:02.830Z&lt;/wsu:Created&gt;&lt;wsu:Expires xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-01-04T17:30:02.830Z&lt;/wsu:Expires&gt;&lt;/t:Lifetime&gt;&lt;wsp:AppliesTo xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;wsa:EndpointReference xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;https://pp-pas.apprenticeships.sfa.bis.gov.uk/&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;t:RequestedSecurityToken&gt;&lt;saml:Assertion MajorVersion=&quot;1&quot; MinorVersion=&quot;1&quot; AssertionID=&quot;_9c3bc7ca-0bce-4f0f-8a52-1f242789c064&quot; Issuer=&quot;http://adfs.preprod.skillsfunding.service.gov.uk/adfs/services/trust&quot; IssueInstant=&quot;2019-01-04T09:30:02.830Z&quot; xmlns:saml=&quot;urn:oasis:names:tc:SAML:1.0:assertion&quot;&gt;&lt;saml:Conditions NotBefore=&quot;2019-01-04T09:30:02.830Z&quot; NotOnOrAfter=&quot;2019-01-04T17:30:02.830Z&quot;&gt;&lt;saml:AudienceRestrictionCondition&gt;&lt;saml:Audience&gt;https://pp-pas.apprenticeships.sfa.bis.gov.uk/&lt;/saml:Audience&gt;&lt;/saml:AudienceRestrictionCondition&gt;&lt;/saml:Conditions&gt;&lt;saml:AttributeStatement&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;saml:Attribute AttributeName=&quot;upn&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;ISP-10005077s&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;ukprn&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;10005077&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;service&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;DAA&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;displayname&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;Mr Sfstest 10005077&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;name&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;Mr Sfstest 10005077&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;mail&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;oattestuser+10005077@gmail.com&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;/saml:AttributeStatement&gt;&lt;saml:AuthenticationStatement AuthenticationMethod=&quot;urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport&quot; AuthenticationInstant=&quot;2019-01-04T09:29:59.104Z&quot;&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;/saml:AuthenticationStatement&gt;&lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;ds:SignedInfo&gt;&lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&quot; /&gt;&lt;ds:Reference URI=&quot;#_9c3bc7ca-0bce-4f0f-8a52-1f242789c064&quot;&gt;&lt;ds:Transforms&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot; /&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;/ds:Transforms&gt;&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot; /&gt;&lt;ds:DigestValue&gt;+xFwwxugnmzgFGrs/EBMjBhTq9WaiRmJPX1KzC/UEtc=&lt;/ds:DigestValue&gt;&lt;/ds:Reference&gt;&lt;/ds:SignedInfo&gt;&lt;ds:SignatureValue&gt;htQvuYLKYew6lXtSnSe1LhqRkSQPp5ETMyWpCDOPbL7L8ZGc5n1ylU2AZZ5E13OARFewNGCbLqQEmHQ5XiTGFAQn5stPLD1CYlAHox5Yfhq7w6oa2oc6mUkfvK1a0UmuuhmrEL3X4IYEyTPY0U4+YLgCioKCIOIfdKx+9/J2Dw6UvsW+PQ5k8LndrcDImNrcBBR46XBxyxiz9S4mCB21PcPy20z7m3CUJbGNfuYga8knQkUYV2NpGH6dunSbfIm4rQjg2zUtB5rXrcRzF26Yk8C39m9BnoUMqhGMOF9tTlc6Q0Pnlc/hhVU4w3/mGOXM3pqSrJTcgpwUXtcDWj2TGA==&lt;/ds:SignatureValue&gt;&lt;KeyInfo xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;X509Data&gt;&lt;X509Certificate&gt;MIIDDjCCAfagAwIBAgIQVu3rHgUAyaNM353xrulvYDANBgkqhkiG9w0BAQsFADBDMUEwPwYDVQQDEzhBREZTIFNpZ25pbmcgLSBhZGZzLnByZXByb2Quc2tpbGxzZnVuZGluZy5zZXJ2aWNlLmdvdi51azAeFw0xODExMjExMjM3MTJaFw0yMDExMjAxMjM3MTJaMEMxQTA/BgNVBAMTOEFERlMgU2lnbmluZyAtIGFkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5nLnNlcnZpY2UuZ292LnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqkFOYtkoyM+korIURnmrhFWCsSeikmNXfg9DOoB5mzFleWlkQ4vPT375lo9q+rc3hKfEjIsVQIKrjVJjhYThO9Dct04sV5funwYncSDtd+IU1wQbNaYM05fnmYTty7qAL8OjcPwO+YgMmz3NWS5ahcxFtpCI4TuhZONP28MhUJXjlzkZSi0PM+kMu14vXJh8u0Iii/7OQ7eNQWM83Cd5Hd5PB/ci+ThvPnbMXEKCfhqbNXBHlBFfszFHec4FLRRhdnDxZwnK/CRRaSEE3tViYY7Gccdl+fZi87oSI3PjQJhNKZ2jdzHPXYtjlCOM3v/9+trDQMt9kzDhRWZ00khu+wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBE9066fbUb+10sJZtuRZr+1oh6f/5ONYb9mMPkRZuO+Sxof5XL+wjPSQFqtMrcHOfm3M6Y5hnsdpFXlvW1ymq2a94Do5nB+X97LUFLlAVU+U6VGbUw1T6w8KSA5wuuxcPl3CgVwb+XnOQXBW0FDaLGqMWGnctaGeO7lF74QttXbtZTm4GXjsV0R+TU3DjddnpG4yzSs3BnBZowOepdq85vTjpJMOOiEp4WKWshEOTqlOXl2+8a09ZTW09AtRjDelIRkDqU5gOEIK8cuNhCspoTcFZGPN03w0IYq36mBIO4sq/uUYNNH6jRXNoPr4a4LLB7WbyDeOWgKnbXxUwlg2Hi&lt;/X509Certificate&gt;&lt;/X509Data&gt;&lt;/KeyInfo&gt;&lt;/ds:Signature&gt;&lt;/saml:Assertion&gt;&lt;/t:RequestedSecurityToken&gt;&lt;t:TokenType&gt;urn:oasis:names:tc:SAML:1.0:assertion&lt;/t:TokenType&gt;&lt;t:RequestType&gt;http://schemas.xmlsoap.org/ws/2005/02/trust/Issue&lt;/t:RequestType&gt;&lt;t:KeyType&gt;http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey&lt;/t:KeyType&gt;&lt;/t:RequestSecurityTokenResponse&gt;" RecordedValue="&lt;t:RequestSecurityTokenResponse xmlns:t=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;&gt;&lt;t:Lifetime&gt;&lt;wsu:Created xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2018-11-29T10:39:37.283Z&lt;/wsu:Created&gt;&lt;wsu:Expires xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2018-11-29T18:39:37.283Z&lt;/wsu:Expires&gt;&lt;/t:Lifetime&gt;&lt;wsp:AppliesTo xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;wsa:EndpointReference xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;https://pp-pas.apprenticeships.sfa.bis.gov.uk/&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;t:RequestedSecurityToken&gt;&lt;saml:Assertion MajorVersion=&quot;1&quot; MinorVersion=&quot;1&quot; AssertionID=&quot;_140b3b2c-d810-418a-a23c-63291e34c18f&quot; Issuer=&quot;http://adfs.preprod.skillsfunding.service.gov.uk/adfs/services/trust&quot; IssueInstant=&quot;2018-11-29T10:39:37.283Z&quot; xmlns:saml=&quot;urn:oasis:names:tc:SAML:1.0:assertion&quot;&gt;&lt;saml:Conditions NotBefore=&quot;2018-11-29T10:39:37.283Z&quot; NotOnOrAfter=&quot;2018-11-29T18:39:37.283Z&quot;&gt;&lt;saml:AudienceRestrictionCondition&gt;&lt;saml:Audience&gt;https://pp-pas.apprenticeships.sfa.bis.gov.uk/&lt;/saml:Audience&gt;&lt;/saml:AudienceRestrictionCondition&gt;&lt;/saml:Conditions&gt;&lt;saml:AttributeStatement&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;saml:Attribute AttributeName=&quot;upn&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;ISP-10005077s&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;ukprn&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;10005077&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;service&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;DAA&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;displayname&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;Mr Sfstest 10005077&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;name&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;Mr Sfstest 10005077&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;mail&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;oattestuser+10005077@gmail.com&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;/saml:AttributeStatement&gt;&lt;saml:AuthenticationStatement AuthenticationMethod=&quot;urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport&quot; AuthenticationInstant=&quot;2018-11-29T10:39:33.673Z&quot;&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;/saml:AuthenticationStatement&gt;&lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;ds:SignedInfo&gt;&lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&quot; /&gt;&lt;ds:Reference URI=&quot;#_140b3b2c-d810-418a-a23c-63291e34c18f&quot;&gt;&lt;ds:Transforms&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot; /&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;/ds:Transforms&gt;&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot; /&gt;&lt;ds:DigestValue&gt;xg+IdvBmQh1+k2Z0Df/JcW3X7vjurOPzJDSgN7EnfjY=&lt;/ds:DigestValue&gt;&lt;/ds:Reference&gt;&lt;/ds:SignedInfo&gt;&lt;ds:SignatureValue&gt;bXEPyiFsqt3D75jdiy2stmjrwqVK0I+w81GhfGSO/NUVf9PHjFwvGY+2A4he7Nr3A2P7SI4HhYwH9bBtQSGleRuyU71Fbt6F2XwY1+BmoqV2WQQVWN0GpRxq7tr8QWo5oizSJVi4U9TInsLJ9EQa+P+U95yNCOF0D5mC/QvNlzOtN19hw6YDht69QjKXKyRpq1VjLWdRxwyTCen6jZHw7OpuTzmU8gY9tsoyCT27IbM6xUOunHvClEn8P9eu0/tLo39/qMSXQE0cjCCYtfSvyiQ6J80SdUWSwJ/LUSAiWc5DY7E+HIZqT7s4Zvsb+8souSS3Mg2QAOSSw6vQD+Knfg==&lt;/ds:SignatureValue&gt;&lt;KeyInfo xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;X509Data&gt;&lt;X509Certificate&gt;MIIDDjCCAfagAwIBAgIQVu3rHgUAyaNM353xrulvYDANBgkqhkiG9w0BAQsFADBDMUEwPwYDVQQDEzhBREZTIFNpZ25pbmcgLSBhZGZzLnByZXByb2Quc2tpbGxzZnVuZGluZy5zZXJ2aWNlLmdvdi51azAeFw0xODExMjExMjM3MTJaFw0yMDExMjAxMjM3MTJaMEMxQTA/BgNVBAMTOEFERlMgU2lnbmluZyAtIGFkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5nLnNlcnZpY2UuZ292LnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqkFOYtkoyM+korIURnmrhFWCsSeikmNXfg9DOoB5mzFleWlkQ4vPT375lo9q+rc3hKfEjIsVQIKrjVJjhYThO9Dct04sV5funwYncSDtd+IU1wQbNaYM05fnmYTty7qAL8OjcPwO+YgMmz3NWS5ahcxFtpCI4TuhZONP28MhUJXjlzkZSi0PM+kMu14vXJh8u0Iii/7OQ7eNQWM83Cd5Hd5PB/ci+ThvPnbMXEKCfhqbNXBHlBFfszFHec4FLRRhdnDxZwnK/CRRaSEE3tViYY7Gccdl+fZi87oSI3PjQJhNKZ2jdzHPXYtjlCOM3v/9+trDQMt9kzDhRWZ00khu+wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBE9066fbUb+10sJZtuRZr+1oh6f/5ONYb9mMPkRZuO+Sxof5XL+wjPSQFqtMrcHOfm3M6Y5hnsdpFXlvW1ymq2a94Do5nB+X97LUFLlAVU+U6VGbUw1T6w8KSA5wuuxcPl3CgVwb+XnOQXBW0FDaLGqMWGnctaGeO7lF74QttXbtZTm4GXjsV0R+TU3DjddnpG4yzSs3BnBZowOepdq85vTjpJMOOiEp4WKWshEOTqlOXl2+8a09ZTW09AtRjDelIRkDqU5gOEIK8cuNhCspoTcFZGPN03w0IYq36mBIO4sq/uUYNNH6jRXNoPr4a4LLB7WbyDeOWgKnbXxUwlg2Hi&lt;/X509Certificate&gt;&lt;/X509Data&gt;&lt;/KeyInfo&gt;&lt;/ds:Signature&gt;&lt;/saml:Assertion&gt;&lt;/t:RequestedSecurityToken&gt;&lt;t:TokenType&gt;urn:oasis:names:tc:SAML:1.0:assertion&lt;/t:TokenType&gt;&lt;t:RequestType&gt;http://schemas.xmlsoap.org/ws/2005/02/trust/Issue&lt;/t:RequestType&gt;&lt;t:KeyType&gt;http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey&lt;/t:KeyType&gt;&lt;/t:RequestSecurityTokenResponse&gt;" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="wctx" Value="WsFedOwinState=Cyo1h4D3swMqlxOA-5GWmFJ0KLVhcg1aIvxl0M5xDYlfU1ufHgY71xVVjnT9T9gTc-4s4tkO3kNVfPgzDj6J9937Thk" RecordedValue="WsFedOwinState=5Xa3Ori4MH58UNXmYfdoEAgIfJqyMe792gE0N5NvPJzPfGbeWS8ALOunskr7jJDb77QPF_StLcWzA_WCQubEhyFzdek" CorrelationBinding="{{FormPostParam15.wctx}}" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="003_Provider_ApproveApprentice_0040_YourCohorts_Click">
+      <Items>
+        <Comment CommentText="Click Your cohorts" />
+        <Request Method="GET" Guid="3bbb323f-255c-4d63-98dd-364e165d1c45" Version="1.1" Url="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/Cohorts" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.sfa.bis.gov.uk/account" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="003_Provider_ApproveApprentice_0050_ReadyForReview_Click">
+      <Items>
+        <Comment CommentText="Ready for review block" />
+        <Request Method="GET" Guid="9b43fbd0-201b-4ba7-bf8f-d8b3b4bf3265" Version="1.1" Url="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/cohorts/review" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/Cohorts" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="003_Provider_ApproveApprentice_0060_ApprenticeDetails_Click">
+      <Items>
+        <Comment CommentText="Select second record for review MBNRBR" />
+        <Request Method="GET" Guid="b716eca8-6f36-410e-9f8f-d139aaead6f3" Version="1.1" Url="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/{{FormPostParam18.CohertRef}}/Details" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/cohorts/review" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParameter.ApprenticeshipRef" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="/Edit/" />
+                <RuleParameter Name="EndsWith" Value="&quot;" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="SearchInHeaders" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="003_Provider_ApproveApprentice_0070_Apprentice_Edit_Click">
+      <Items>
+        <Comment CommentText="Clicl Edit link" />
+        <Request Method="GET" Guid="a3c8a9d2-e0e3-4fce-8efa-085816d1f8d6" Version="1.1" Url="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/{{FormPostParam18.CohertRef}}/Edit/{{FormPostParameter.ApprenticeshipRef}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/{{FormPostParam18.CohertRef}}/Details" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.FirstName" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="FirstName" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.LastName" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="LastName" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.DateOfBirth.Day" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="DateOfBirth_Day" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam5.DateOfBirth.Month" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="DateOfBirth_Month" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam6.DateOfBirth.Year" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="DateOfBirth_Year" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam7.StartDate.Month" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="StartDate_Month" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam8.StartDate.Year" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="StartDate_Year" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam9.EndDate.Month" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="EndDate_Month" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam10.EndDate.Year" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="EndDate_Year" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam11.Cost" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="Cost" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam12.TrainingCode" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; sel" />
+                <RuleParameter Name="Index" Value="8" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam16.FirstName" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="FirstName" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam17.LastName" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="LastName" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam18.DateOfBirth.Day" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="DateOfBirth_Day" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam19.DateOfBirth.Month" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="DateOfBirth_Month" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam20.DateOfBirth.Year" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="DateOfBirth_Year" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam21.StartDate.Month" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="StartDate_Month" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam22.StartDate.Year" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="StartDate_Year" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam23.EndDate.Month" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="EndDate_Month" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam24.EndDate.Year" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="EndDate_Year" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam25.Cost" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="Cost" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam26.TrainingCode" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; sel" />
+                <RuleParameter Name="Index" Value="8" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="003_Provider_ApproveApprentice_0080_Apprentice_Save">
+      <Items>
+        <Comment CommentText="Enter ULN and click Save" />
+        <Request Method="POST" Guid="08ae3698-84d9-4438-af7e-5dd376c74e35" Version="1.1" Url="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/{{FormPostParam18.CohertRef}}/Edit/{{FormPostParameter.ApprenticeshipRef}}" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/{{FormPostParam18.CohertRef}}/Details" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/{{FormPostParam18.CohertRef}}/Edit/{{FormPostParameter.ApprenticeshipRef}}" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="iH_DZL-Kyib-8mafgxEngLcnFOz_qLuLQTcyTOey99ZL1LqYn0Ta4NiqVUmdY3-z0E4fkD960uVEELvGIGq8ikC90sD85gz8cVaaEKvK5gfIeforY0FqmveMnxJ3rWVgj_UZTg2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="FirstName" Value="First_2911101352_6_12" RecordedValue="First_2911101352_6_12" CorrelationBinding="{{FormPostParam16.FirstName}}" UrlEncode="True" />
+            <FormPostParameter Name="LastName" Value="Last_2911101352_6_12" RecordedValue="Last_2911101352_6_12" CorrelationBinding="{{FormPostParam17.LastName}}" UrlEncode="True" />
+            <FormPostParameter Name="DateOfBirth.Day" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam18.DateOfBirth.Day}}" UrlEncode="True" />
+            <FormPostParameter Name="DateOfBirth.Month" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam19.DateOfBirth.Month}}" UrlEncode="True" />
+            <FormPostParameter Name="DateOfBirth.Year" Value="1980" RecordedValue="1980" CorrelationBinding="{{FormPostParam20.DateOfBirth.Year}}" UrlEncode="True" />
+            <FormPostParameter Name="ULN" Value="{{ULRN}}" RecordedValue="5573101462" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="TrainingCode" Value="274" RecordedValue="274" CorrelationBinding="{{FormPostParam26.TrainingCode}}" UrlEncode="True" />
+            <FormPostParameter Name="StartDate.Month" Value="8" RecordedValue="8" CorrelationBinding="{{FormPostParam21.StartDate.Month}}" UrlEncode="True" />
+            <FormPostParameter Name="StartDate.Year" Value="2018" RecordedValue="2018" CorrelationBinding="{{FormPostParam22.StartDate.Year}}" UrlEncode="True" />
+            <FormPostParameter Name="EndDate.Month" Value="8" RecordedValue="8" CorrelationBinding="{{FormPostParam23.EndDate.Month}}" UrlEncode="True" />
+            <FormPostParameter Name="EndDate.Year" Value="2019" RecordedValue="2019" CorrelationBinding="{{FormPostParam24.EndDate.Year}}" UrlEncode="True" />
+            <FormPostParameter Name="Cost" Value="1200" RecordedValue="1200" CorrelationBinding="{{FormPostParam25.Cost}}" UrlEncode="True" />
+            <FormPostParameter Name="ProviderRef" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="IsPaidForByTransfer" Value="{{$HIDDEN1.IsPaidForByTransfer}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="003_Provider_ApproveApprentice_0090_Apprentice_ContinueApproval">
+      <Items>
+        <Comment CommentText="Continue to approval" />
+        <Request Method="GET" Guid="1b5b6640-f77d-41f2-a77d-205f189de422" Version="1.1" Url="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/{{FormPostParam18.CohertRef}}/Finished" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/{{FormPostParam18.CohertRef}}/Details" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.SaveStatus" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="SaveStatus-Approve" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam27.SaveStatus" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="SaveStatus-Approve" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="003_Provider_ApproveApprentice_0100_Approve_Select_Continue">
+      <Items>
+        <Comment CommentText="Choose Approve" />
+        <Comment CommentText="Click Continue" />
+        <Request Method="POST" Guid="d906531b-1dd2-41eb-b30d-51566357c9c4" Version="1.1" Url="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/{{FormPostParam18.CohertRef}}/Finished" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/{{FormPostParam18.CohertRef}}/RequestApproved" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/{{FormPostParam18.CohertRef}}/Finished" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="ZoReBWyyC35vkcDtCtolQrM8Q2D99nqagmmUZ_1ZA0EmxQ5kAOysmMvD4T7CFbhhnVbgx6DtVIgHA6GarElG9Hze6OSRpxdkq02Z7B9sPOzNYSreQ195Xnk0ux3IEU2lG_DSUg2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="SaveStatus" Value="Approve" RecordedValue="Approve" CorrelationBinding="{{FormPostParam27.SaveStatus}}" UrlEncode="True" />
+            <FormPostParameter Name="ProviderId" Value="{{$HIDDEN1.ProviderId}}" RecordedValue="10005077" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="HashedCommitmentId" Value="{{$HIDDEN1.HashedCommitmentId}}" RecordedValue="MBNRBR" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="HasApprenticeships" Value="{{$HIDDEN1.HasApprenticeships}}" RecordedValue="True" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="InvalidApprenticeshipCount" Value="{{$HIDDEN1.InvalidApprenticeshipCount}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ReadyForApproval" Value="{{$HIDDEN1.ReadyForApproval}}" RecordedValue="True" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="HasSignedTheAgreement" Value="{{$HIDDEN1.HasSignedTheAgreement}}" RecordedValue="True" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="003_Provider_ApproveApprentice_0110_BackToHome_Link_Click">
+      <Items>
+        <Comment CommentText="Cohort approved. Click back to account home link" />
+        <Request Method="GET" Guid="d7485003-af2c-4eec-b641-d6b69586cbfb" Version="1.1" Url="https://pp-pas.apprenticeships.sfa.bis.gov.uk/" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-pas.apprenticeships.sfa.bis.gov.uk/account" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.sfa.bis.gov.uk/{{Providers.Providers#csv.Provider_Id}}/apprentices/{{FormPostParam18.CohertRef}}/RequestApproved" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="003_Provider_ApproveApprentice_0120_Signout">
+      <Items>
+        <Comment CommentText="On Home page. Click signout" />
+        <Request Method="GET" Guid="25822898-609f-4421-8a7d-e12f2dfb3091" Version="1.1" Url="https://pp-pas.apprenticeships.sfa.bis.gov.uk/signout" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pplogon.fasst.org.uk/Login/dialog/appl/sfa/wflow/samlslopage?SAMLResponse=tVbbkqpKEn2frzDcj26bO6ix7RMFeKEVFERQX04UUALKTQoE%2FPqhtbuju%2BfMnv0ywVNmZa5crMy6%2FPqrjqPOFeU4TJNxl3oiux2UuKkXJv64uzWn%2FUH3r%2Bd%2F%2FcIwjuhstEz9tCwMhLM0wagjI1yECSzuuUFRZHhEEFkWtVHJ0xFiXDyluf9Unok2MUwIL4TtGgHbEAIfIVEdo7QiXrFxlGbQR92OIo%2B7ZRl6f%2FMI8gPIUgNy4CDGpXmP5ITjkHNcjmEd5LahyTsRMx13%2F%2BZcSLOMI%2FQFgSf7LBoKfcdl6D5yaKr9eOghp03CuERKgguYFOMuTVKDPkX16aFJkSOOHFHME8%2Byh27HepeEfpWkFSnBo4cILb88GaUQh3iUwBjhUeGONkBdjtrQUZanReqmUff5odnoXjD%2FjPB7gFY1lL8q2n3%2BA0VfARUv%2B0V8Lvb8y8OjTei3nSlz9Fbaw48WtXhVVT1VzCsQQZMkSZBDoo3xcOj%2F6H7kIk9JjundlGCSJqELo%2FB277WKiiD1OiDy0zwsgvi%2FAFMERb4C91Ht9l2KTX50ia%2FU%2FhiIZN8Z9uM0Rz9yDPs4gDTHv0Ea6IjydnBRZ2so4%2B6PPxuhe6qZwwQf0zzGX83%2FSeuLcCi5onaGkdfH73%2F3Ru3PAf9ZMOI%2FOcqh3%2B68P1TvC81WNOqN1wPEglGJ3qp8iPgwv03BR9feU1rfAjUf6zuOHMqwgB%2FGYxg3KG93%2FTen1o79s6SNfzvhPzur7dhDR1hGxc%2FOcrxMEy9NWu94HeYIJp1l4f3sSOOZeKf7Df294KO%2BVsZOuzHag4CiSJLj6SHN8ALDCBT1kfwl8hvkt7%2FYlM4JucX%2F6zc%2Bw7%2BXlF5PhWO7Cwv0rCqKbN8kCZxXPqgUEfjKC1j4G4FZ36DtrlVAzqTNZbZRHEbWJ6Kob4E6I2vpBl5EX7NEsDfB2ZNUQ60m%2Bl62dH0xqTId7l6ivc365tw4q%2Fqgkh9r80l1UB2aOzs0W09ksHpgYFOkjegQTylnrtcvJ3B%2B%2BFVzbgekNxdvq3Bwdecidmjv6oRcvN9pN0%2Firm7slp6Nr6rI7mRzQqvyudZOgNPMPbWapq1P%2Be6rHHOyVMF5BqjtRAxUySCVenIDxqNmakqRmLmxFTihqHozvZZvQHusuaZ4rq9ObFyd00RXAXvHkGp1fphZLScLe%2FIkViX97ge16sG5QbpzlV82w8qd1dcDPSyX8SFwGY1cxsPm0HAUbAaV70%2FC71qDVmvAKqJcgdf1BUjb%2FuiSNKjmKwl761XOD3PLMZppYRxIUTxpm8g4Zjwdy5wbrOQFkDdEL5YF%2B0We2b2GlJ3myGuVDK5rrPeO8rZ2FfGk70MZ7a2MXUYbnpxH9ClGxnZ%2FsS7HsxCY5lTxHF2uWFfQN3FjA4et62UTKgzj%2B6593q2MZCn5NGZnEz87z80gwtPpSdWNLJ5biBtUgSNHXL3wZ3QPlpK1ZpmePADeReOm9DHfiIEUwtJZp4292dX22j4uG%2Bo2o892Vu98H574rUtbVomOQJebkhikVRwOFd%2BcvESSz9%2FWPeWahBqza%2BqXq%2BqI9JbYG86Vdy%2BnXTiE8fqqpdW%2BFDbnPZaHez%2FOqtOknIRbiY8ouF2IWaI5wFdFACavc%2FqySA9KcHU1oE%2Bmog7kVnsRzN2bz9nYK286R18OBk7ONiy0jAhjFOA9cSiH1eKUMocznfCChvDy5Qbp3mlakKvVBZ8WHHvQFqvVic1O%2BxvZrGlEaqTTNtQI5Z5uK1uZ1M5UZknmQkdyyb6svKsGr9KJJ09CvCzLBlzsMKRCKxOKC2wu11UAg2mvMAhPK121FHnzTIrD3dovjF2z21FbSmsHC57nmRhcN3XjGIFM8b1mZbqD3a3X8%2BenyF4cB" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.sfa.bis.gov.uk/account" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="d7658a58-7c9f-40ae-9fb0-051bb404aa1a" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/languages/lang-en.json" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/dialog/appl/sfa/wflow/samlslopage?SAMLResponse=tVbbkqpKEn2frzDcj26bO6ix7RMFeKEVFERQX04UUALKTQoE%2FPqhtbuju%2BfMnv0ywVNmZa5crMy6%2FPqrjqPOFeU4TJNxl3oiux2UuKkXJv64uzWn%2FUH3r%2Bd%2F%2FcIwjuhstEz9tCwMhLM0wagjI1yECSzuuUFRZHhEEFkWtVHJ0xFiXDyluf9Unok2MUwIL4TtGgHbEAIfIVEdo7QiXrFxlGbQR92OIo%2B7ZRl6f%2FMI8gPIUgNy4CDGpXmP5ITjkHNcjmEd5LahyTsRMx13%2F%2BZcSLOMI%2FQFgSf7LBoKfcdl6D5yaKr9eOghp03CuERKgguYFOMuTVKDPkX16aFJkSOOHFHME8%2Byh27HepeEfpWkFSnBo4cILb88GaUQh3iUwBjhUeGONkBdjtrQUZanReqmUff5odnoXjD%2FjPB7gFY1lL8q2n3%2BA0VfARUv%2B0V8Lvb8y8OjTei3nSlz9Fbaw48WtXhVVT1VzCsQQZMkSZBDoo3xcOj%2F6H7kIk9JjundlGCSJqELo%2FB277WKiiD1OiDy0zwsgvi%2FAFMERb4C91Ht9l2KTX50ia%2FU%2FhiIZN8Z9uM0Rz9yDPs4gDTHv0Ea6IjydnBRZ2so4%2B6PPxuhe6qZwwQf0zzGX83%2FSeuLcCi5onaGkdfH73%2F3Ru3PAf9ZMOI%2FOcqh3%2B68P1TvC81WNOqN1wPEglGJ3qp8iPgwv03BR9feU1rfAjUf6zuOHMqwgB%2FGYxg3KG93%2FTen1o79s6SNfzvhPzur7dhDR1hGxc%2FOcrxMEy9NWu94HeYIJp1l4f3sSOOZeKf7Df294KO%2BVsZOuzHag4CiSJLj6SHN8ALDCBT1kfwl8hvkt7%2FYlM4JucX%2F6zc%2Bw7%2BXlF5PhWO7Cwv0rCqKbN8kCZxXPqgUEfjKC1j4G4FZ36DtrlVAzqTNZbZRHEbWJ6Kob4E6I2vpBl5EX7NEsDfB2ZNUQ60m%2Bl62dH0xqTId7l6ivc365tw4q%2Fqgkh9r80l1UB2aOzs0W09ksHpgYFOkjegQTylnrtcvJ3B%2B%2BFVzbgekNxdvq3Bwdecidmjv6oRcvN9pN0%2Firm7slp6Nr6rI7mRzQqvyudZOgNPMPbWapq1P%2Be6rHHOyVMF5BqjtRAxUySCVenIDxqNmakqRmLmxFTihqHozvZZvQHusuaZ4rq9ObFyd00RXAXvHkGp1fphZLScLe%2FIkViX97ge16sG5QbpzlV82w8qd1dcDPSyX8SFwGY1cxsPm0HAUbAaV70%2FC71qDVmvAKqJcgdf1BUjb%2FuiSNKjmKwl761XOD3PLMZppYRxIUTxpm8g4Zjwdy5wbrOQFkDdEL5YF%2B0We2b2GlJ3myGuVDK5rrPeO8rZ2FfGk70MZ7a2MXUYbnpxH9ClGxnZ%2FsS7HsxCY5lTxHF2uWFfQN3FjA4et62UTKgzj%2B6593q2MZCn5NGZnEz87z80gwtPpSdWNLJ5biBtUgSNHXL3wZ3QPlpK1ZpmePADeReOm9DHfiIEUwtJZp4292dX22j4uG%2Bo2o892Vu98H574rUtbVomOQJebkhikVRwOFd%2BcvESSz9%2FWPeWahBqza%2BqXq%2BqI9JbYG86Vdy%2BnXTiE8fqqpdW%2BFDbnPZaHez%2FOqtOknIRbiY8ouF2IWaI5wFdFACavc%2FqySA9KcHU1oE%2Bmog7kVnsRzN2bz9nYK286R18OBk7ONiy0jAhjFOA9cSiH1eKUMocznfCChvDy5Qbp3mlakKvVBZ8WHHvQFqvVic1O%2BxvZrGlEaqTTNtQI5Z5uK1uZ1M5UZknmQkdyyb6svKsGr9KJJ09CvCzLBlzsMKRCKxOKC2wu11UAg2mvMAhPK121FHnzTIrD3dovjF2z21FbSmsHC57nmRhcN3XjGIFM8b1mZbqD3a3X8%2BenyF4cB1m8SW%2FGdCdeLplIBInIbbezOpYcMO8JqaVsXBAuuJwR%2FPVZdi17iqMYWV7KpSoCRYyGxm3NMOsCwnxNJEv9kBJTimJEXdOs3WnJXJEg5IRsB24oHDeCjBJwmCtHOD%2BA8cdB9flQ%2BnA%2BLgHi8%2FVAfL4%2Fnt9fk5uitfE3U0o91LlfMb9%2FJ%2BF79GhTui7C%2BH5RfoMl%2FvHR%2Bvxv" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="aef60e5a-ea16-4c72-8aea-d18066a0bf75" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/apps/sfa/partials/sfa-navbar.html" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/dialog/appl/sfa/wflow/samlslopage?SAMLResponse=tVbbkqpKEn2frzDcj26bO6ix7RMFeKEVFERQX04UUALKTQoE%2FPqhtbuju%2BfMnv0ywVNmZa5crMy6%2FPqrjqPOFeU4TJNxl3oiux2UuKkXJv64uzWn%2FUH3r%2Bd%2F%2FcIwjuhstEz9tCwMhLM0wagjI1yECSzuuUFRZHhEEFkWtVHJ0xFiXDyluf9Unok2MUwIL4TtGgHbEAIfIVEdo7QiXrFxlGbQR92OIo%2B7ZRl6f%2FMI8gPIUgNy4CDGpXmP5ITjkHNcjmEd5LahyTsRMx13%2F%2BZcSLOMI%2FQFgSf7LBoKfcdl6D5yaKr9eOghp03CuERKgguYFOMuTVKDPkX16aFJkSOOHFHME8%2Byh27HepeEfpWkFSnBo4cILb88GaUQh3iUwBjhUeGONkBdjtrQUZanReqmUff5odnoXjD%2FjPB7gFY1lL8q2n3%2BA0VfARUv%2B0V8Lvb8y8OjTei3nSlz9Fbaw48WtXhVVT1VzCsQQZMkSZBDoo3xcOj%2F6H7kIk9JjundlGCSJqELo%2FB277WKiiD1OiDy0zwsgvi%2FAFMERb4C91Ht9l2KTX50ia%2FU%2FhiIZN8Z9uM0Rz9yDPs4gDTHv0Ea6IjydnBRZ2so4%2B6PPxuhe6qZwwQf0zzGX83%2FSeuLcCi5onaGkdfH73%2F3Ru3PAf9ZMOI%2FOcqh3%2B68P1TvC81WNOqN1wPEglGJ3qp8iPgwv03BR9feU1rfAjUf6zuOHMqwgB%2FGYxg3KG93%2FTen1o79s6SNfzvhPzur7dhDR1hGxc%2FOcrxMEy9NWu94HeYIJp1l4f3sSOOZeKf7Df294KO%2BVsZOuzHag4CiSJLj6SHN8ALDCBT1kfwl8hvkt7%2FYlM4JucX%2F6zc%2Bw7%2BXlF5PhWO7Cwv0rCqKbN8kCZxXPqgUEfjKC1j4G4FZ36DtrlVAzqTNZbZRHEbWJ6Kob4E6I2vpBl5EX7NEsDfB2ZNUQ60m%2Bl62dH0xqTId7l6ivc365tw4q%2Fqgkh9r80l1UB2aOzs0W09ksHpgYFOkjegQTylnrtcvJ3B%2B%2BFVzbgekNxdvq3Bwdecidmjv6oRcvN9pN0%2Firm7slp6Nr6rI7mRzQqvyudZOgNPMPbWapq1P%2Be6rHHOyVMF5BqjtRAxUySCVenIDxqNmakqRmLmxFTihqHozvZZvQHusuaZ4rq9ObFyd00RXAXvHkGp1fphZLScLe%2FIkViX97ge16sG5QbpzlV82w8qd1dcDPSyX8SFwGY1cxsPm0HAUbAaV70%2FC71qDVmvAKqJcgdf1BUjb%2FuiSNKjmKwl761XOD3PLMZppYRxIUTxpm8g4Zjwdy5wbrOQFkDdEL5YF%2B0We2b2GlJ3myGuVDK5rrPeO8rZ2FfGk70MZ7a2MXUYbnpxH9ClGxnZ%2FsS7HsxCY5lTxHF2uWFfQN3FjA4et62UTKgzj%2B6593q2MZCn5NGZnEz87z80gwtPpSdWNLJ5biBtUgSNHXL3wZ3QPlpK1ZpmePADeReOm9DHfiIEUwtJZp4292dX22j4uG%2Bo2o892Vu98H574rUtbVomOQJebkhikVRwOFd%2BcvESSz9%2FWPeWahBqza%2BqXq%2BqI9JbYG86Vdy%2BnXTiE8fqqpdW%2BFDbnPZaHez%2FOqtOknIRbiY8ouF2IWaI5wFdFACavc%2FqySA9KcHU1oE%2Bmog7kVnsRzN2bz9nYK286R18OBk7ONiy0jAhjFOA9cSiH1eKUMocznfCChvDy5Qbp3mlakKvVBZ8WHHvQFqvVic1O%2BxvZrGlEaqTTNtQI5Z5uK1uZ1M5UZknmQkdyyb6svKsGr9KJJ09CvCzLBlzsMKRCKxOKC2wu11UAg2mvMAhPK121FHnzTIrD3dovjF2z21FbSmsHC57nmRhcN3XjGIFM8b1mZbqD3a3X8%2BenyF4cB1m8SW%2FGdCdeLplIBInIbbezOpYcMO8JqaVsXBAuuJwR%2FPVZdi17iqMYWV7KpSoCRYyGxm3NMOsCwnxNJEv9kBJTimJEXdOs3WnJXJEg5IRsB24oHDeCjBJwmCtHOD%2BA8cdB9flQ%2BnA%2BLgHi8%2FVAfL4%2Fnt9fk5uitfE3U0o91LlfMb9%2FJ%2BF79GhTui7C%2BH5RfoMl%2FvHR%2Bvxv" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="45e8269a-9cc4-4799-bd1d-56b54bd4d461" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/apps/sfa/partials/sfa-footer.html" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/dialog/appl/sfa/wflow/samlslopage?SAMLResponse=tVbbkqpKEn2frzDcj26bO6ix7RMFeKEVFERQX04UUALKTQoE%2FPqhtbuju%2BfMnv0ywVNmZa5crMy6%2FPqrjqPOFeU4TJNxl3oiux2UuKkXJv64uzWn%2FUH3r%2Bd%2F%2FcIwjuhstEz9tCwMhLM0wagjI1yECSzuuUFRZHhEEFkWtVHJ0xFiXDyluf9Unok2MUwIL4TtGgHbEAIfIVEdo7QiXrFxlGbQR92OIo%2B7ZRl6f%2FMI8gPIUgNy4CDGpXmP5ITjkHNcjmEd5LahyTsRMx13%2F%2BZcSLOMI%2FQFgSf7LBoKfcdl6D5yaKr9eOghp03CuERKgguYFOMuTVKDPkX16aFJkSOOHFHME8%2Byh27HepeEfpWkFSnBo4cILb88GaUQh3iUwBjhUeGONkBdjtrQUZanReqmUff5odnoXjD%2FjPB7gFY1lL8q2n3%2BA0VfARUv%2B0V8Lvb8y8OjTei3nSlz9Fbaw48WtXhVVT1VzCsQQZMkSZBDoo3xcOj%2F6H7kIk9JjundlGCSJqELo%2FB277WKiiD1OiDy0zwsgvi%2FAFMERb4C91Ht9l2KTX50ia%2FU%2FhiIZN8Z9uM0Rz9yDPs4gDTHv0Ea6IjydnBRZ2so4%2B6PPxuhe6qZwwQf0zzGX83%2FSeuLcCi5onaGkdfH73%2F3Ru3PAf9ZMOI%2FOcqh3%2B68P1TvC81WNOqN1wPEglGJ3qp8iPgwv03BR9feU1rfAjUf6zuOHMqwgB%2FGYxg3KG93%2FTen1o79s6SNfzvhPzur7dhDR1hGxc%2FOcrxMEy9NWu94HeYIJp1l4f3sSOOZeKf7Df294KO%2BVsZOuzHag4CiSJLj6SHN8ALDCBT1kfwl8hvkt7%2FYlM4JucX%2F6zc%2Bw7%2BXlF5PhWO7Cwv0rCqKbN8kCZxXPqgUEfjKC1j4G4FZ36DtrlVAzqTNZbZRHEbWJ6Kob4E6I2vpBl5EX7NEsDfB2ZNUQ60m%2Bl62dH0xqTId7l6ivc365tw4q%2Fqgkh9r80l1UB2aOzs0W09ksHpgYFOkjegQTylnrtcvJ3B%2B%2BFVzbgekNxdvq3Bwdecidmjv6oRcvN9pN0%2Firm7slp6Nr6rI7mRzQqvyudZOgNPMPbWapq1P%2Be6rHHOyVMF5BqjtRAxUySCVenIDxqNmakqRmLmxFTihqHozvZZvQHusuaZ4rq9ObFyd00RXAXvHkGp1fphZLScLe%2FIkViX97ge16sG5QbpzlV82w8qd1dcDPSyX8SFwGY1cxsPm0HAUbAaV70%2FC71qDVmvAKqJcgdf1BUjb%2FuiSNKjmKwl761XOD3PLMZppYRxIUTxpm8g4Zjwdy5wbrOQFkDdEL5YF%2B0We2b2GlJ3myGuVDK5rrPeO8rZ2FfGk70MZ7a2MXUYbnpxH9ClGxnZ%2FsS7HsxCY5lTxHF2uWFfQN3FjA4et62UTKgzj%2B6593q2MZCn5NGZnEz87z80gwtPpSdWNLJ5biBtUgSNHXL3wZ3QPlpK1ZpmePADeReOm9DHfiIEUwtJZp4292dX22j4uG%2Bo2o892Vu98H574rUtbVomOQJebkhikVRwOFd%2BcvESSz9%2FWPeWahBqza%2BqXq%2BqI9JbYG86Vdy%2BnXTiE8fqqpdW%2BFDbnPZaHez%2FOqtOknIRbiY8ouF2IWaI5wFdFACavc%2FqySA9KcHU1oE%2Bmog7kVnsRzN2bz9nYK286R18OBk7ONiy0jAhjFOA9cSiH1eKUMocznfCChvDy5Qbp3mlakKvVBZ8WHHvQFqvVic1O%2BxvZrGlEaqTTNtQI5Z5uK1uZ1M5UZknmQkdyyb6svKsGr9KJJ09CvCzLBlzsMKRCKxOKC2wu11UAg2mvMAhPK121FHnzTIrD3dovjF2z21FbSmsHC57nmRhcN3XjGIFM8b1mZbqD3a3X8%2BenyF4cB1m8SW%2FGdCdeLplIBInIbbezOpYcMO8JqaVsXBAuuJwR%2FPVZdi17iqMYWV7KpSoCRYyGxm3NMOsCwnxNJEv9kBJTimJEXdOs3WnJXJEg5IRsB24oHDeCjBJwmCtHOD%2BA8cdB9flQ%2BnA%2BLgHi8%2FVAfL4%2Fnt9fk5uitfE3U0o91LlfMb9%2FJ%2BF79GhTui7C%2BH5RfoMl%2FvHR%2Bvxv" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+  </Items>
+  <DataSources>
+    <DataSource Name="Providers" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\Providers.csv">
+      <Tables>
+        <DataSourceTable Name="Providers#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="ULRN" Value="" />
+    <ContextParameter Name="SAMLRequest" Value="fVLLasMwEPwVo7slSziPCscQEgqGtJS29NCbLMuOiCy5Wjlt%2F76y3Usp5DrM7MzsbgGiNwPfj%2BFsn9XHqCAk1XGHdJNm7d2W0fU6FTKr01y2eVoz0aT1NlO1pKuWbVYoeVMetLM7xHCGkgpgVJWFIGyIUEa3KWUpo6805%2Fmasw1m%2Bd07So7RR1sRZuU5hAE4IcNgXOcsbgVAwM53eLyQk%2Bu0JVPKqhlQcnAW1DR79JY7ARq4Fb0CHiR%2F2T%2BceIzB5ULio4VBSd1q1aDkqzcW%2BFz3tnrwLjjpDCqLuY5fpLdFMbLyUx1UTnViG9G0gAev4rgGw0UbA%2B1oG207HKlXLRXu3HWqODHJLwYk%2BBFCQRbrslju8xgNq%2BOTM1p%2BJ%2FfO9%2BLGCiimMxJv2M7Uv4vYG%2BM%2BD16JoHYouimUkLIg%2Fx%2Bh%2FAE%3D" />
+    <ContextParameter Name="RelayState" Value="d7a7fd4d-3615-40c4-b090-c465721db46a" />
+    <ContextParameter Name="QSParam" Value="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLLasMwEPwVo7slSziPCscQEgqGtJS29NCbLMuOiCy5Wjlt%2F76y3Usp5DrM7MzsbgGiNwPfj%2BFsn9XHqCAk1XGHdJNm7d2W0fU6FTKr01y2eVoz0aT1NlO1pKuWbVYoeVMetLM7xHCGkgpgVJWFIGyIUEa3KWUpo6805%2Fmasw1m%2Bd07So7RR1sRZuU5hAE4IcNgXOcsbgVAwM53eLyQk%2Bu0JVPKqhlQcnAW1DR79JY7ARq4Fb0CHiR%2F2T%2BceIzB5ULio4VBSd1q1aDkqzcW%2BFz3tnrwLjjpDCqLuY5fpLdFMbLyUx1UTnViG9G0gAev4rgGw0UbA%2B1oG207HKlXLRXu3HWqODHJLwYk%2BBFCQRbrslju8xgNq%2BOTM1p%2BJ%2FfO9%2BLGCiimMxJv2M7Uv4vYG%2BM%2BD16JoHYouimUkLIg%2Fx%2Bh%2FAE%3D&amp;RelayState=d7a7fd4d-3615-40c4-b090-c465721db46a" />
+    <ContextParameter Name="RefId" Value="VN6L7J" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="PlugIns.UniqueReferenceNumberPlugin, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Unique Reference Number" Description="Generates a reference number">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="ULRN" />
+      </RuleParameters>
+    </WebTestPlugin>
+  </WebTestPlugins>
+</WebTest>

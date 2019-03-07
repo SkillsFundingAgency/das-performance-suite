@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="004_FindApprenticeship" Id="9a19acc7-59ed-4a95-a9fe-ac7225eb5e17" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.9d4a2a66-c21a-4763-b75e-f4354c99e1c3.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Condition UniqueStringId="f5aa32c4-8d24-40aa-b6c4-532aa353d892">
+      <ConditionalRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.StringComparisonRule, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="String Comparison" Description="The condition is met when the provided string matches the content of the provided context parameter.">
+        <RuleParameters>
+          <RuleParameter Name="ContextParameterName" Value="SubmitRequest" />
+          <RuleParameter Name="ComparisonOperator" Value="Equals" />
+          <RuleParameter Name="Value" Value="False" />
+          <RuleParameter Name="IgnoreCase" Value="True" />
+          <RuleParameter Name="UseRegularExpression" Value="False" />
+        </RuleParameters>
+      </ConditionalRule>
+      <Then>
+        <Items>
+          <TransactionTimer Name="004_0010_A_ApprenticeshipSearch_LandingPage">
+            <Items>
+              <Comment CommentText="Search Apprenticeship landing" />
+              <Request Method="GET" Guid="9f3c1b11-e349-4ce4-9fc1-77fc23db3e95" Version="1.1" Url="https://{{ApprenticeshipURL}}/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+            </Items>
+          </TransactionTimer>
+          <TransactionTimer Name="004_0020_ApprenticeshipSearch_Apprentices">
+            <Items>
+              <TransactionTimer Name="004_0020_01_Start_Click">
+                <Items>
+                  <Comment CommentText="Click Start" />
+                  <Request Method="GET" Guid="9ecae8a7-0471-45db-aca4-4db79d26fd63" Version="1.1" Url="https://{{ApprenticeshipURL}}/ApprenticeshipOrProvider" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://{{ApprenticeshipURL}}/" />
+                    </Headers>
+                    <CorrelationExtractionRules>
+                      <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.IsApprenticeship" DisplayName="" Description="">
+                        <RuleParameters>
+                          <RuleParameter Name="Name" Value="search-apprenticeships" />
+                          <RuleParameter Name="HtmlDecode" Value="True" />
+                          <RuleParameter Name="Required" Value="False" />
+                          <RuleParameter Name="Index" Value="0" />
+                        </RuleParameters>
+                      </ExtractionRule>
+                      <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.retry" DisplayName="" Description="">
+                        <RuleParameters>
+                          <RuleParameter Name="Name" Value="retry" />
+                          <RuleParameter Name="HtmlDecode" Value="True" />
+                          <RuleParameter Name="Required" Value="False" />
+                          <RuleParameter Name="Index" Value="0" />
+                        </RuleParameters>
+                      </ExtractionRule>
+                      <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.IsApprenticeship" DisplayName="" Description="">
+                        <RuleParameters>
+                          <RuleParameter Name="Name" Value="search-apprenticeships" />
+                          <RuleParameter Name="HtmlDecode" Value="True" />
+                          <RuleParameter Name="Required" Value="False" />
+                          <RuleParameter Name="Index" Value="0" />
+                        </RuleParameters>
+                      </ExtractionRule>
+                      <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.retry" DisplayName="" Description="">
+                        <RuleParameters>
+                          <RuleParameter Name="Name" Value="retry" />
+                          <RuleParameter Name="HtmlDecode" Value="True" />
+                          <RuleParameter Name="Required" Value="False" />
+                          <RuleParameter Name="Index" Value="0" />
+                        </RuleParameters>
+                      </ExtractionRule>
+                    </CorrelationExtractionRules>
+                  </Request>
+                </Items>
+              </TransactionTimer>
+              <TransactionTimer Name="004_0020_02_Apprentices_Select_Continue_Click">
+                <Items>
+                  <Comment CommentText="Select apprenticeships option and click Continue" />
+                  <Request Method="POST" Guid="2f6d6e05-42cb-4069-b652-716a680e0af7" Version="1.1" Url="https://{{ApprenticeshipURL}}/ApprenticeshipOrProvider" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{ApprenticeshipURL}}/Apprenticeship/Search" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://{{ApprenticeshipURL}}/ApprenticeshipOrProvider" />
+                    </Headers>
+                    <FormPostHttpBody>
+                      <FormPostParameter Name="IsApprenticeship" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam3.IsApprenticeship}}" UrlEncode="True" />
+                      <FormPostParameter Name="retry" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam4.retry}}" UrlEncode="True" />
+                    </FormPostHttpBody>
+                  </Request>
+                </Items>
+              </TransactionTimer>
+              <TransactionTimer Name="004_0020_03_Apprenticeship_Search">
+                <Items>
+                  <Comment CommentText="Enter Information Technology and hit search button" />
+                  <Request Method="GET" Guid="41492501-b088-4744-93ce-7120f514129e" Version="1.1" Url="https://{{ApprenticeshipURL}}/Apprenticeship/SearchResults" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://{{ApprenticeshipURL}}/Apprenticeship/Search" />
+                    </Headers>
+                    <CorrelationExtractionRules>
+                      <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam16.keyword" DisplayName="" Description="">
+                        <RuleParameters>
+                          <RuleParameter Name="StartsWith" Value="?keyword=" />
+                          <RuleParameter Name="EndsWith" Value="&quot;" />
+                          <RuleParameter Name="Index" Value="0" />
+                          <RuleParameter Name="IgnoreCase" Value="False" />
+                          <RuleParameter Name="UseRegularExpression" Value="False" />
+                          <RuleParameter Name="HtmlDecode" Value="True" />
+                          <RuleParameter Name="Required" Value="False" />
+                        </RuleParameters>
+                      </ExtractionRule>
+                    </CorrelationExtractionRules>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="Keywords" Value="{{Apprenticeships.Apprenticeships#csv.PwayCode}}" RecordedValue="Information+Technology" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </Items>
+              </TransactionTimer>
+              <TransactionTimer Name="004_0020_04_Apprenticeship_ClickToView">
+                <Items>
+                  <Comment CommentText="Select IT Appliction Specialist on the top to open the record" />
+                  <Request Method="GET" Guid="f42934d4-28ad-4db6-9b1a-d0c059df9e90" Version="1.1" Url="https://{{ApprenticeshipURL}}/Apprenticeship/Framework/{{FrameworkId}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://{{ApprenticeshipURL}}/Apprenticeship/SearchResults?Keywords={{Apprenticeships.Apprenticeships#csv.PwayCode}}" />
+                    </Headers>
+                    <CorrelationExtractionRules>
+                      <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam14.frameworkId" DisplayName="" Description="">
+                        <RuleParameters>
+                          <RuleParameter Name="StartsWith" Value="?frameworkId=" />
+                          <RuleParameter Name="EndsWith" Value="&amp;" />
+                          <RuleParameter Name="Index" Value="0" />
+                          <RuleParameter Name="IgnoreCase" Value="False" />
+                          <RuleParameter Name="UseRegularExpression" Value="False" />
+                          <RuleParameter Name="HtmlDecode" Value="True" />
+                          <RuleParameter Name="Required" Value="False" />
+                        </RuleParameters>
+                      </ExtractionRule>
+                      <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam15.keywords" DisplayName="" Description="">
+                        <RuleParameters>
+                          <RuleParameter Name="StartsWith" Value="&amp;amp;keywords=" />
+                          <RuleParameter Name="EndsWith" Value="&quot;" />
+                          <RuleParameter Name="Index" Value="0" />
+                          <RuleParameter Name="IgnoreCase" Value="False" />
+                          <RuleParameter Name="UseRegularExpression" Value="False" />
+                          <RuleParameter Name="HtmlDecode" Value="True" />
+                          <RuleParameter Name="Required" Value="False" />
+                        </RuleParameters>
+                      </ExtractionRule>
+                    </CorrelationExtractionRules>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="keyword" Value="{{Apprenticeships.Apprenticeships#csv.PwayCode}}" RecordedValue="Information%20Technology" CorrelationBinding="{{QueryStringParam16.keyword}}" UrlEncode="True" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </Items>
+              </TransactionTimer>
+              <TransactionTimer Name="004_0020_05_FindTrainingProvider_Click">
+                <Items>
+                  <Comment CommentText="Click Find training providers" />
+                  <Request Method="GET" Guid="acf78784-e368-4721-942a-4138b673f7e8" Version="1.1" Url="https://{{ApprenticeshipURL}}/Apprenticeship/SearchForFrameworkProviders" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://{{ApprenticeshipURL}}/Apprenticeship/Framework/{{FrameworkId}}?keyword={{Apprenticeships.Apprenticeships#csv.PwayCode}}" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="frameworkId" Value="{{FrameworkId}}" RecordedValue="419-2-1" CorrelationBinding="{{QueryStringParam14.frameworkId}}" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="keywords" Value="{{Apprenticeships.Apprenticeships#csv.PwayCode}}" RecordedValue="Information%20Technology" CorrelationBinding="{{QueryStringParam15.keywords}}" UrlEncode="True" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </Items>
+              </TransactionTimer>
+              <TransactionTimer Name="004_0020_06_TrainingProvider_Search">
+                <Items>
+                  <Comment CommentText="Enter postcode" />
+                  <Comment CommentText="Select Yes and click Search" />
+                  <Request Method="GET" Guid="64f760d5-7c56-4038-9818-7276c4f2c99e" Version="1.1" Url="https://{{ApprenticeshipURL}}/Provider/FrameworkResults" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://{{ApprenticeshipURL}}/Apprenticeship/SearchForFrameworkProviders?frameworkId={{Apprenticeships.Apprenticeships#csv.PathwayName}}-{{Apprenticeships.Apprenticeships#csv.FworkCode}}-{{Apprenticeships.Apprenticeships#csv.ProgType}}&amp;keywords={{Apprenticeships.Apprenticeships#csv.PwayCode}}" />
+                    </Headers>
+                    <ExtractionRules>
+                      <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+                        <RuleParameters>
+                          <RuleParameter Name="Required" Value="True" />
+                          <RuleParameter Name="HtmlDecode" Value="True" />
+                        </RuleParameters>
+                      </ExtractionRule>
+                    </ExtractionRules>
+                    <CorrelationExtractionRules>
+                      <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam3.ukprn" DisplayName="" Description="">
+                        <RuleParameters>
+                          <RuleParameter Name="StartsWith" Value="?ukprn=" />
+                          <RuleParameter Name="EndsWith" Value="&amp;" />
+                          <RuleParameter Name="Index" Value="0" />
+                          <RuleParameter Name="IgnoreCase" Value="False" />
+                          <RuleParameter Name="UseRegularExpression" Value="False" />
+                          <RuleParameter Name="HtmlDecode" Value="True" />
+                          <RuleParameter Name="Required" Value="False" />
+                        </RuleParameters>
+                      </ExtractionRule>
+                      <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam4.locationId" DisplayName="" Description="">
+                        <RuleParameters>
+                          <RuleParameter Name="StartsWith" Value="&amp;amp;locationId=" />
+                          <RuleParameter Name="EndsWith" Value="&amp;" />
+                          <RuleParameter Name="Index" Value="0" />
+                          <RuleParameter Name="IgnoreCase" Value="False" />
+                          <RuleParameter Name="UseRegularExpression" Value="False" />
+                          <RuleParameter Name="HtmlDecode" Value="True" />
+                          <RuleParameter Name="Required" Value="False" />
+                        </RuleParameters>
+                      </ExtractionRule>
+                      <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam5.frameworkId" DisplayName="" Description="">
+                        <RuleParameters>
+                          <RuleParameter Name="StartsWith" Value="&amp;amp;frameworkId=" />
+                          <RuleParameter Name="EndsWith" Value="&amp;" />
+                          <RuleParameter Name="Index" Value="0" />
+                          <RuleParameter Name="IgnoreCase" Value="False" />
+                          <RuleParameter Name="UseRegularExpression" Value="False" />
+                          <RuleParameter Name="HtmlDecode" Value="True" />
+                          <RuleParameter Name="Required" Value="False" />
+                        </RuleParameters>
+                      </ExtractionRule>
+                      <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam6.Postcode" DisplayName="" Description="">
+                        <RuleParameters>
+                          <RuleParameter Name="StartsWith" Value="&amp;amp;Postcode=" />
+                          <RuleParameter Name="EndsWith" Value="&amp;" />
+                          <RuleParameter Name="Index" Value="0" />
+                          <RuleParameter Name="IgnoreCase" Value="False" />
+                          <RuleParameter Name="UseRegularExpression" Value="False" />
+                          <RuleParameter Name="HtmlDecode" Value="True" />
+                          <RuleParameter Name="Required" Value="False" />
+                        </RuleParameters>
+                      </ExtractionRule>
+                      <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam7.Keyword" DisplayName="" Description="">
+                        <RuleParameters>
+                          <RuleParameter Name="StartsWith" Value="&amp;amp;Keyword=" />
+                          <RuleParameter Name="EndsWith" Value="&quot;" />
+                          <RuleParameter Name="Index" Value="0" />
+                          <RuleParameter Name="IgnoreCase" Value="False" />
+                          <RuleParameter Name="UseRegularExpression" Value="False" />
+                          <RuleParameter Name="HtmlDecode" Value="True" />
+                          <RuleParameter Name="Required" Value="False" />
+                        </RuleParameters>
+                      </ExtractionRule>
+                    </CorrelationExtractionRules>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="PostCode" Value="{{Apprenticeships.Apprenticeships#csv.PostCode}}" RecordedValue="CV34+6AX" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+                      <QueryStringParameter Name="IsLevyPayingEmployer" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="apprenticeshipid" Value="{{FrameworkId}}" RecordedValue="419-2-1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="keywords" Value="{{Apprenticeships.Apprenticeships#csv.PwayCode}}" RecordedValue="Information+Technology" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+                      <QueryStringParameter Name="ukprn" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </Items>
+              </TransactionTimer>
+              <TransactionTimer Name="004_0020_07_Provider_Click">
+                <Items>
+                  <Comment CommentText="Select the top provider" />
+                  <Request Method="GET" Guid="39d0c334-bea4-40f9-bde0-6256c900c41f" Version="1.1" Url="https://{{ApprenticeshipURL}}/Provider/Detail" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://{{ApprenticeshipURL}}/Provider/FrameworkResults?PostCode={{Providers.Providers#csv.PostCode}}&amp;IsLevyPayingEmployer=true&amp;apprenticeshipid={{FrameworkId}}&amp;keywords={{Apprenticeships.Apprenticeships#csv.PwayCode}}&amp;ukprn=" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="ukprn" Value="{{Apprenticeships.Apprenticeships#csv.UKPRN}}" RecordedValue="10030670" CorrelationBinding="{{QueryStringParam3.ukprn}}" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="locationId" Value="{{Apprenticeships.Apprenticeships#csv.LocationId}}" RecordedValue="12886" CorrelationBinding="{{QueryStringParam4.locationId}}" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="frameworkId" Value="{{FrameworkId}}" RecordedValue="419-2-1" CorrelationBinding="{{QueryStringParam5.frameworkId}}" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="isLevyPayingEmployer" Value="{{$HIDDEN1.isLevyPayingEmployer}}" RecordedValue="True" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="Postcode" Value="{{Apprenticeships.Apprenticeships#csv.PostCode}}" RecordedValue="CV34%206AX" CorrelationBinding="{{QueryStringParam6.Postcode}}" UrlEncode="True" UseToGroupResults="False" />
+                      <QueryStringParameter Name="Keyword" Value="{{Apprenticeships.Apprenticeships#csv.PwayCode}}" RecordedValue="Information%20Technology" CorrelationBinding="{{QueryStringParam7.Keyword}}" UrlEncode="True" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </Items>
+              </TransactionTimer>
+            </Items>
+          </TransactionTimer>
+          <TransactionTimer Name="004_0030_ApprenticeshipSearch_BackToHome">
+            <Items>
+              <Comment CommentText="Click Find apprenticeship training on the header section to go back home" />
+              <Request Method="GET" Guid="42d16e2b-bfbb-4ee6-a11d-e5cc646677d0" Version="1.1" Url="https://{{ApprenticeshipURL}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                <Headers>
+                  <Header Name="Referer" Value="https://{{ApprenticeshipURL}}/Provider/Detail?ukprn={{Apprenticeships.Apprenticeships#csv.UKPRN}}&amp;locationId={{Apprenticeships.Apprenticeships#csv.LocationId}}&amp;frameworkId={{FrameworkId}}&amp;isLevyPayingEmployer=True&amp;Postcode={{Apprenticeships.Apprenticeships#csv.PostCode}}&amp;Keyword={{Apprenticeships.Apprenticeships#csv.PwayCode}}" />
+                </Headers>
+              </Request>
+            </Items>
+          </TransactionTimer>
+        </Items>
+      </Then>
+      <Else />
+    </Condition>
+    <Condition UniqueStringId="692620b0-842a-49a5-876f-70b7474a615b">
+      <ConditionalRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.StringComparisonRule, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="String Comparison" Description="The condition is met when the provided string matches the content of the provided context parameter.">
+        <RuleParameters>
+          <RuleParameter Name="ContextParameterName" Value="SubmitRequest" />
+          <RuleParameter Name="ComparisonOperator" Value="Equals" />
+          <RuleParameter Name="Value" Value="True" />
+          <RuleParameter Name="IgnoreCase" Value="True" />
+          <RuleParameter Name="UseRegularExpression" Value="False" />
+        </RuleParameters>
+      </ConditionalRule>
+      <Then>
+        <Items>
+          <TransactionTimer Name="004_0010_P_ApprenticeshipSearch_LandingPage">
+            <Items>
+              <Comment CommentText="Search Apprenticeship landing" />
+              <Request Method="GET" Guid="9f3c1b11-e349-4ce4-9fc1-77fc23db3e95" Version="1.1" Url="https://{{ApprenticeshipURL}}/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+            </Items>
+          </TransactionTimer>
+          <TransactionTimer Name="004_0040_ApprenticeshipSearch_ViaProviders">
+            <Items>
+              <TransactionTimer Name="004_0040_01_ApprenticeshipSearch_Providers">
+                <Items>
+                  <Comment CommentText="Click Start to search using the provider" />
+                  <Comment CommentText="Select the name of training provider you already know and hit continue" />
+                  <Request Method="POST" Guid="a280b5d1-893e-480d-8f45-dad165c74bb2" Version="1.1" Url="https://{{ApprenticeshipURL}}/ApprenticeshipOrProvider" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{ApprenticeshipURL}}/provider/search" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://{{ApprenticeshipURL}}/ApprenticeshipOrProvider" />
+                    </Headers>
+                    <FormPostHttpBody>
+                      <FormPostParameter Name="IsApprenticeship" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam7.IsApprenticeship}}" UrlEncode="True" />
+                      <FormPostParameter Name="retry" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam8.retry}}" UrlEncode="True" />
+                    </FormPostHttpBody>
+                  </Request>
+                </Items>
+              </TransactionTimer>
+              <TransactionTimer Name="004_0040_02_Provider_Search">
+                <Items>
+                  <Comment CommentText="Enter SOUTH TYNESIDE COUNCIL and search for provider" />
+                  <Request Method="GET" Guid="5a861d9d-d059-4fc4-a091-1355e7a27a2a" Version="1.1" Url="https://{{ApprenticeshipURL}}/provider/searchResults" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://{{ApprenticeshipURL}}/provider/search" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="searchTerm" Value="{{Apprenticeships.Apprenticeships#csv.Provider}}" RecordedValue="SOUTH+TYNESIDE+COUNCIL" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </Items>
+              </TransactionTimer>
+              <TransactionTimer Name="004_0040_03_Provider_Select">
+                <Items>
+                  <Comment CommentText="Click Strive Training (London) Limited" />
+                  <Request Method="GET" Guid="c9eed700-63a2-480a-a492-a118c20459d2" Version="1.1" Url="https://{{ApprenticeshipURL}}/Provider/{{Apprenticeships.Apprenticeships#csv.UKPRN}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://{{ApprenticeshipURL}}/provider/searchResults?searchTerm={{Apprenticeships.Apprenticeships#csv.Provider}}" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="keyword" Value="{{Apprenticeships.Apprenticeships#csv.Provider}}" RecordedValue="SOUTH+TYNESIDE+COUNCIL" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </Items>
+              </TransactionTimer>
+              <TransactionTimer Name="004_0040_04_Apprenticeship_ClickToView">
+                <Items>
+                  <Comment CommentText="Click on Apprenticeship" />
+                  <Request Method="GET" Guid="c056f74f-485c-42a7-8505-dcecd1873524" Version="1.1" Url="https://{{ApprenticeshipURL}}/Apprenticeship/Framework/{{FrameworkId}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://{{ApprenticeshipURL}}/Provider/{{Apprenticeships.Apprenticeships#csv.UKPRN}}?keyword={{Apprenticeships.Apprenticeships#csv.Provider}}" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="keyword" Value="{{Apprenticeships.Apprenticeships#csv.Provider}}" RecordedValue="Strive+Training+(London)+Limited" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+                      <QueryStringParameter Name="UkPrn" Value="{{Apprenticeships.Apprenticeships#csv.UKPRN}}" RecordedValue="10045306" CorrelationBinding="{{QueryStringParam285.UkPrn}}" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </Items>
+              </TransactionTimer>
+            </Items>
+          </TransactionTimer>
+          <TransactionTimer Name="004_0050_ApprenticeshipSearch_BackToHome">
+            <Items>
+              <Comment CommentText="Go back Home and Stop recording" />
+              <Request Method="GET" Guid="cf0ce948-631f-4dea-ba87-9a5058e38936" Version="1.1" Url="https://{{ApprenticeshipURL}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                <Headers>
+                  <Header Name="Referer" Value="https://{{ApprenticeshipURL}}/Apprenticeship/Framework/{{FrameworkId}}?keyword={{Apprenticeships.Apprenticeships#csv.Provider}}&amp;UkPrn={{Apprenticeships.Apprenticeships#csv.UKPRN}}" />
+                </Headers>
+              </Request>
+            </Items>
+          </TransactionTimer>
+        </Items>
+      </Then>
+      <Else />
+    </Condition>
+  </Items>
+  <DataSources>
+    <DataSource Name="Apprenticeships" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\Apprenticeships.csv">
+      <Tables>
+        <DataSourceTable Name="Apprenticeships#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+    <DataSource Name="Providers" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\Providers.csv">
+      <Tables>
+        <DataSourceTable Name="Providers#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="SubmitRequest" Value="" />
+    <ContextParameter Name="ApprenticeshipURL" Value="pp-findapprenticeshiptraining.sfa.bis.gov.uk" />
+    <ContextParameter Name="FrameworkId" Value="" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+  </ValidationRules>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="PlugIns.TLSPlugin, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="TLS PlugIn" Description="TLS PlugIn to resolve the forced closure of connection">
+      <RuleParameters>
+        <RuleParameter Name="Enabled" Value="True" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.ConditionalRequest, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Conditional Request" Description="Submit a request at a desired iteration">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="SubmitRequest" />
+        <RuleParameter Name="Iter" Value="6" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.SetThinkTime, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Thinktime" Description="Set thinktime in seconds">
+      <RuleParameters>
+        <RuleParameter Name="ThinkTime" Value="30" />
+        <RuleParameter Name="Random" Value="True" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.ConvertToStringValue, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="ConvertToStringValue" Description="">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="FrameworkId" />
+      </RuleParameters>
+    </WebTestPlugin>
+  </WebTestPlugins>
+</WebTest>
