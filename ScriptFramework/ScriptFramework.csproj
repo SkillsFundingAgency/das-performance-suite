@@ -77,7 +77,7 @@
     <None Include="003_COMMITS_ProviderFirstApprove_Cohort_Empoloyer_Second.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="004_FindApprenticeship.webtest">
+    <None Include="004_FindApprenticeshipTraining.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Apprenticeships.csv">
@@ -85,9 +85,6 @@
     </None>
     <None Include="ApprenticeshipSearchViaProvider.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Employers.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="FAT.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
