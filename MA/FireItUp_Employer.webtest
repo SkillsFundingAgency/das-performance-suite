@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="FireItUp_Employer" Id="e40840b5-e133-4b2f-9e84-f045e6b51922" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.0d2e9771-76a6-4ccd-bead-93f768b88da0.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <TransactionTimer Name="001_FireItUp_Employer_0010_LandingPage">
+      <Items>
+        <Comment CommentText="Landing page" />
+        <Request Method="GET" Guid="80397f49-428e-4785-86f6-ff89ad0e8cb8" Version="1.1" Url="https://preprod.apprenticeships.gov.uk/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <DependentRequests>
+            <Request Method="GET" Guid="7a128f38-a113-495c-b25c-01797c48339f" Version="1.1" Url="https://use.typekit.net/af/7aa05f/00000000000000003b9ae848/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="fvd" Value="n2" RecordedValue="n2" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="45a661eb-2159-4a21-acaa-aa222b02cab2" Version="1.1" Url="https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="fvd" Value="n3" RecordedValue="n3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="ec2a6541-784e-4bde-9727-ddb0e8d37a02" Version="1.1" Url="https://use.typekit.net/af/2f8a18/00000000000000003b9ae84b/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="fvd" Value="i3" RecordedValue="i3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="9e007952-299b-41be-9c5b-367c1582a855" Version="1.1" Url="https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="fvd" Value="n4" RecordedValue="n4" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="6179209c-8d28-4980-b985-7cd61f145b24" Version="1.1" Url="https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="fvd" Value="n7" RecordedValue="n7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+          </DependentRequests>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Condition UniqueStringId="e00223bc-39d5-427c-9315-b2e865ab343f">
+      <ConditionalRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.StringComparisonRule, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="String Comparison" Description="The condition is met when the provided string matches the content of the provided context parameter.">
+        <RuleParameters>
+          <RuleParameter Name="ContextParameterName" Value="APIOnly" />
+          <RuleParameter Name="ComparisonOperator" Value="Equals" />
+          <RuleParameter Name="Value" Value="false" />
+          <RuleParameter Name="IgnoreCase" Value="True" />
+          <RuleParameter Name="UseRegularExpression" Value="False" />
+        </RuleParameters>
+      </ConditionalRule>
+      <Then>
+        <Items>
+          <TransactionTimer Name="001_FireItUp_Employer_0020_SelectBenefits_Click">
+            <Items>
+              <Comment CommentText="Hover Employer menu and Select Benefits" />
+              <Request Method="GET" Guid="822d06c8-d17c-49a6-84d3-69ee53add83f" Version="1.1" Url="https://preprod.apprenticeships.gov.uk/employer/benefits" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                <DependentRequests>
+                  <Request Method="GET" Guid="c2b7b2ff-6577-4499-890c-9c73f9e0130a" Version="1.1" Url="https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/benefits" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n3" RecordedValue="n3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="8948e59f-d561-445c-96c3-c025ff711630" Version="1.1" Url="https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/benefits" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n4" RecordedValue="n4" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="012ece9b-fc8b-4e07-9042-bf2a5e4e7624" Version="1.1" Url="https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/benefits" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n7" RecordedValue="n7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </DependentRequests>
+                <Headers>
+                  <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/" />
+                </Headers>
+              </Request>
+            </Items>
+          </TransactionTimer>
+          <TransactionTimer Name="001_FireItUp_Employer_0030_SelectMyIndustry_Click">
+            <Items>
+              <Comment CommentText="From Employer Drop down - Select My industry" />
+              <Request Method="GET" Guid="fef6124d-0a0e-4de0-b424-8ffc06ad88a0" Version="1.1" Url="https://preprod.apprenticeships.gov.uk/employer" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                <DependentRequests>
+                  <Request Method="GET" Guid="b4084162-edee-41d9-a7ce-6072164347e7" Version="1.1" Url="https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n3" RecordedValue="n3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="6b18e72c-7727-4ce3-85d7-e5379c77fc2b" Version="1.1" Url="https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n4" RecordedValue="n4" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="3179e3cd-b005-4c90-bd2f-48e9a8954635" Version="1.1" Url="https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n7" RecordedValue="n7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </DependentRequests>
+                <Headers>
+                  <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/benefits" />
+                </Headers>
+              </Request>
+            </Items>
+          </TransactionTimer>
+          <TransactionTimer Name="001_FireItUp_Employer_0040_SelectCosting_Click">
+            <Items>
+              <Comment CommentText="From Employer Drop down select How much is it going to cost" />
+              <Request Method="GET" Guid="cc9b2c5c-df0f-43c5-bb11-fe0ed3e89140" Version="1.1" Url="https://preprod.apprenticeships.gov.uk/employer/how-much-is-it-going-to-cost" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                <DependentRequests>
+                  <Request Method="GET" Guid="88811a04-e773-4aec-94e0-277fd31791d6" Version="1.1" Url="https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/how-much-is-it-going-to-cost" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n3" RecordedValue="n3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="bf9ea966-89b9-415d-b140-f1d96320373a" Version="1.1" Url="https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/how-much-is-it-going-to-cost" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n4" RecordedValue="n4" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="09738fd0-1a94-425a-82ed-0708f68e9e46" Version="1.1" Url="https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/how-much-is-it-going-to-cost" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n7" RecordedValue="n7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </DependentRequests>
+                <Headers>
+                  <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer" />
+                </Headers>
+              </Request>
+            </Items>
+          </TransactionTimer>
+          <TransactionTimer Name="001_FireItUp_Employer_0050_SelectRightApprentice_Click">
+            <Items>
+              <Comment CommentText="From Employer Drop down menu..." />
+              <Comment CommentText="Click The Right Apprentice" />
+              <Request Method="GET" Guid="b13be253-3f2d-43bc-9ba0-43d656e21603" Version="1.1" Url="https://preprod.apprenticeships.gov.uk/employer/the-right-apprenticeship" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                <DependentRequests>
+                  <Request Method="GET" Guid="8d4e6213-ace9-4f64-85a4-5dfe3d74d147" Version="1.1" Url="https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/the-right-apprenticeship" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n3" RecordedValue="n3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="fedba80d-fa42-4885-bf1f-bdb0c1af0683" Version="1.1" Url="https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/the-right-apprenticeship" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n4" RecordedValue="n4" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="85a81ed8-8191-4895-9038-e701816b1470" Version="1.1" Url="https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/the-right-apprenticeship" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n7" RecordedValue="n7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </DependentRequests>
+                <Headers>
+                  <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/how-much-is-it-going-to-cost" />
+                </Headers>
+              </Request>
+            </Items>
+          </TransactionTimer>
+          <TransactionTimer Name="001_FireItUp_Employer_0060_SelectTrainingProvider_Click">
+            <Items>
+              <Comment CommentText="Choose A Training Provider" />
+              <Request Method="GET" Guid="c7ac8ba5-9b7f-444a-8861-85545ce1b086" Version="1.1" Url="https://preprod.apprenticeships.gov.uk/employer/choose-training-provider" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                <DependentRequests>
+                  <Request Method="GET" Guid="827aa69e-e3e8-4866-a036-2092f5228781" Version="1.1" Url="https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/choose-training-provider" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n3" RecordedValue="n3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="f3cafd48-4940-419c-9b09-3d9b62fcaad2" Version="1.1" Url="https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/choose-training-provider" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n4" RecordedValue="n4" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="dbd4fff5-78da-4e85-96a7-ae2deaac6166" Version="1.1" Url="https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/choose-training-provider" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n7" RecordedValue="n7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </DependentRequests>
+                <Headers>
+                  <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/the-right-apprenticeship" />
+                </Headers>
+              </Request>
+            </Items>
+          </TransactionTimer>
+          <TransactionTimer Name="001_FireItUp_Employer_0070_SelectHireAnApprentice_Click">
+            <Items>
+              <Comment CommentText="Hire an apprentice" />
+              <Request Method="GET" Guid="d143ea8e-4714-4704-aa40-d7e00e6f2d15" Version="1.1" Url="https://preprod.apprenticeships.gov.uk/employer/hire-an-apprentice" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                <DependentRequests>
+                  <Request Method="GET" Guid="e0980808-7559-4cec-8c29-66f33be67cce" Version="1.1" Url="https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/hire-an-apprentice" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n3" RecordedValue="n3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="b990d2d6-3078-4050-a437-d456ed64895a" Version="1.1" Url="https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/hire-an-apprentice" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n4" RecordedValue="n4" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="deeb80d9-e0e1-4272-bef0-cdcd6f1a382b" Version="1.1" Url="https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/hire-an-apprentice" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n7" RecordedValue="n7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </DependentRequests>
+                <Headers>
+                  <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/choose-training-provider" />
+                </Headers>
+              </Request>
+            </Items>
+          </TransactionTimer>
+          <TransactionTimer Name="001_FireItUp_Employer_0080_SelectPrepareAndMonitoring">
+            <Items>
+              <Comment CommentText="Preparing and monitoring" />
+              <Request Method="GET" Guid="eb38cb56-7583-421c-86ac-12bb4bd15ccd" Version="1.1" Url="https://preprod.apprenticeships.gov.uk/employer/preparing-and-monitoring" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                <DependentRequests>
+                  <Request Method="GET" Guid="ddaeb0d7-e4a8-46cc-a2e9-e8012293f656" Version="1.1" Url="https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/preparing-and-monitoring" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n3" RecordedValue="n3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="d4c8782a-55e1-43af-b450-ae8aaf3dc1b5" Version="1.1" Url="https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/preparing-and-monitoring" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n4" RecordedValue="n4" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                  <Request Method="GET" Guid="aad9622f-09b4-49fc-b510-936adc09caae" Version="1.1" Url="https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+                    <Headers>
+                      <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/preparing-and-monitoring" />
+                    </Headers>
+                    <QueryStringParameters>
+                      <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="fvd" Value="n7" RecordedValue="n7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                      <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                    </QueryStringParameters>
+                  </Request>
+                </DependentRequests>
+                <Headers>
+                  <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/hire-an-apprentice" />
+                </Headers>
+              </Request>
+            </Items>
+          </TransactionTimer>
+        </Items>
+      </Then>
+      <Else />
+    </Condition>
+    <TransactionTimer Name="001_FireItUp_Employer_0090_SelectAssessmentAndQualification">
+      <Items>
+        <Comment CommentText="Assessment and Qualification" />
+        <Request Method="GET" Guid="cbe073c5-2535-46d5-83e5-b4a24922d815" Version="1.1" Url="https://preprod.apprenticeships.gov.uk/employer/assessment-and-qualification" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <DependentRequests>
+            <Request Method="GET" Guid="7a128f38-a113-495c-b25c-01797c48339f" Version="1.1" Url="https://use.typekit.net/af/7aa05f/00000000000000003b9ae848/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="fvd" Value="n2" RecordedValue="n2" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="ede1b1c0-80c2-43a3-a245-c8efc0dcc893" Version="1.1" Url="https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/assessment-and-qualification" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="fvd" Value="n3" RecordedValue="n3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="ec2a6541-784e-4bde-9727-ddb0e8d37a02" Version="1.1" Url="https://use.typekit.net/af/2f8a18/00000000000000003b9ae84b/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="fvd" Value="i3" RecordedValue="i3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="6ae9f1d9-3ac9-4cad-8c21-01cefc0ee3d7" Version="1.1" Url="https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/assessment-and-qualification" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="fvd" Value="n4" RecordedValue="n4" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="e0450427-66ec-4f5c-9908-6d7f46c442d0" Version="1.1" Url="https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/assessment-and-qualification" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="fvd" Value="n7" RecordedValue="n7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+          </DependentRequests>
+          <Headers>
+            <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/preparing-and-monitoring" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.AcceptTandCs" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="den=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot;&gt;&#xD;&#xA;&#xD;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.ReturnUrl" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="ref=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; cla" />
+                <RuleParameter Name="Index" Value="27" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.__RequestVerificationToken" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+                <RuleParameter Name="Index" Value="5" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.AcceptTandCs" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot;&gt;&lt;/f" />
+                <RuleParameter Name="Index" Value="6" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam5.AcceptTandCs" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="AcceptTandCs" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="001_FireItUp_Employer_0100_RegisterInterestButton_Click">
+      <Items>
+        <Comment CommentText="Register Interest-Click" />
+        <Request Method="GET" Guid="6340981c-bd6c-4c63-b343-2f11c0164820" Version="1.1" Url="https://preprod.apprenticeships.gov.uk/employer/assessment-and-qualification" ThinkTime="34" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://preprod.apprenticeships.gov.uk/employer/assessment-and-qualification#modal-RegisterInterest" ReportingName="" IgnoreHttpStatusCode="False" />
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="001_FireItUp_Employer_0110_SubmitDetails">
+      <Items>
+        <Comment CommentText="Click Register Interest" />
+        <Request Method="POST" Guid="c913e73e-fa6c-40f5-b3fd-d1eaf5c68c53" Version="1.1" Url="https://preprod.apprenticeships.gov.uk/RegisterInterest" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://preprod.apprenticeships.gov.uk/employer/assessment-and-qualification#modal-register-thanks" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/assessment-and-qualification" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="FirstName" Value="{{FirstName}}" RecordedValue="EmployerFirst" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LastName" Value="{{LastName}}" RecordedValue="EmployerLast" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="EmailAddress" Value="{{Email}}" RecordedValue="employerfirst@test.com" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Route" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam6.Route}}" UrlEncode="True" />
+            <FormPostParameter Name="AcceptTandCs" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam5.AcceptTandCs}}" UrlEncode="True" />
+            <FormPostParameter Name="ReturnUrl" Value="{{$HIDDEN1.ReturnUrl}}" RecordedValue="/employer/assessment-and-qualification" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="registerInterestSubmit" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="CfDJ8KM0ziFOlO5ImdJrneC5bDgrGmwyBIEJ3kuu2dUFFD3P3RbvnvV8om10sk6D_AEYH03biQ55cwhCchKi93wQm3iOakGhAOu1-YX2AB91j0oxEz6e89OFBbbcVAdfBdMwqUCe5zdcAFJrmX_5jRlMDR8" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="AcceptTandCs" Value="{{$HIDDEN1.AcceptTandCs}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="GET" Guid="7a128f38-a113-495c-b25c-01797c48339f" Version="1.1" Url="https://use.typekit.net/af/7aa05f/00000000000000003b9ae848/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="fvd" Value="n2" RecordedValue="n2" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="a2733e9d-a98b-4c02-adf1-794a87d0348d" Version="1.1" Url="https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/assessment-and-qualification" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="fvd" Value="n3" RecordedValue="n3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="ec2a6541-784e-4bde-9727-ddb0e8d37a02" Version="1.1" Url="https://use.typekit.net/af/2f8a18/00000000000000003b9ae84b/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="fvd" Value="i3" RecordedValue="i3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="79cc60d9-d834-462b-8290-431a9af8bdd0" Version="1.1" Url="https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/assessment-and-qualification" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="fvd" Value="n4" RecordedValue="n4" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="ca638e50-3d60-4b6a-b1a1-b398775afb2b" Version="1.1" Url="https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/d" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://preprod.apprenticeships.gov.uk/employer/assessment-and-qualification" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="primer" Value="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" RecordedValue="7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="fvd" Value="n7" RecordedValue="n7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Close" />
+    <Comment CommentText="Exit the site" />
+  </Items>
+  <ContextParameters>
+    <ContextParameter Name="EnvironmentURL" Value="preprod.apprenticeships.gov.uk" />
+    <ContextParameter Name="FirstName" Value="" />
+    <ContextParameter Name="LastName" Value="" />
+    <ContextParameter Name="Email" Value="" />
+    <ContextParameter Name="SubmitRequest" Value="" />
+    <ContextParameter Name="APIOnly" Value="true" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="PlugIns.TLSPlugin, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="TLS PlugIn" Description="TLS PlugIn to resolve the forced closure of connection">
+      <RuleParameters>
+        <RuleParameter Name="Enabled" Value="True" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.UniqueFirstName, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Generate Unique First Name" Description="Generates a unique first name with every iteration">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="FirstName" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.UniqueLastName, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Generate Unique Last Name" Description="Generates a unique last name with every iteration">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="LastName" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.UniqueEmail, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Generate Unique Email" Description="Generates a unique for the new user">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="Email" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.ConditionalRequest, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Conditional Request" Description="Submit a request at a desired iteration">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="SubmitRequest" />
+        <RuleParameter Name="Iter" Value="1" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.SetThinkTime, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Thinktime" Description="Set thinktime in seconds">
+      <RuleParameters>
+        <RuleParameter Name="ThinkTime" Value="10" />
+      </RuleParameters>
+    </WebTestPlugin>
+  </WebTestPlugins>
+</WebTest>
