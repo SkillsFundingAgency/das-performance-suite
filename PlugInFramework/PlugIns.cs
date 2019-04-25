@@ -15,44 +15,26 @@ using System.Linq;
 
 namespace PlugIns
 {
-    //namespace Testing.Web.ExtractionRules
-    //{
-    //    //The web framework does not load context values from a data source BUT an extraction rule does automatically.
-
-    //    [DisplayName("Extract Data Source Value")]
-    //    [Description("Extracts the defined datasource value and places it in the defined Context parameter.")]
-    //    public class ExtractDataSourceValue : ExtractionRule
-    //    {
-    //        private string dataSourceField = null;
-    //        [DisplayName("Data Source Field")]
-    //        [Description("The data source field name.  This must be set to the fully qualified data source name along with brackets. IE: {{datasource1.table.name}}")]
-    //        public string DataSourceField
-    //        {
-    //            get { return dataSourceField; }
-    //            set { dataSourceField = value; }
-    //        }
-
-    //        public override void Extract(object sender, ExtractionEventArgs e)
-    //        {
-    //            e.WebTest.Context.Add(ContextParameterName, dataSourceField);
-    //        }
-    //    }
-    //}
-
     [Description("This plugin can be used to set the ParseDependentsRequests property for each request")]
     public class UserIteration : WebTestPlugin
     {
         private bool m_parseDependents = true;
-        //private string strSQL = string.Empty;
-        public void DBReset(string payRef)
+        private string dbConnetionString = string.Empty;
+        private string strSQL = string.Empty;
+        string strEnv = string.Empty;
+
+        [System.ComponentModel.DisplayName("Environment")]
+        [System.ComponentModel.Description("Environment on which test is run")]
+        public string Environment { get; set; }
+       
+        public void DBReset(string payRef, string strConn)
         {
+
             SqlConnection connection;
             SqlDataAdapter adapter = new SqlDataAdapter();
-            string strSQL = string.Empty;
-            string dbConnetionString = "Data Source=das-pp-shared-sql.database.windows.net;Initial Catalog=das-pp-eas-acc-db;User ID=sreemereddy;Password=p80LghEDiATT8X6Wqt0aZ1x2PVtwzUST6HC";
-            connection = new SqlConnection(dbConnetionString);
+            
+            connection = new SqlConnection(strConn);
 
-            //strSQL = "UPDATE employer_account.accounthistory SET removedDate = GetDATE() WHERE payeref like ('500/PF00%') OR payeref like ('100/GDS6%') AND removeddate is null";
             strSQL = "UPDATE employer_account.accounthistory SET removedDate = GetDATE() WHERE payeref = '" + payRef + "' and removeddate is null";
 
             try
@@ -73,16 +55,31 @@ namespace PlugIns
 
         public override void PreWebTest(object sender, PreWebTestEventArgs e)
         {
-            // TODO: Add code to execute before the test.  
-            //e.WebTest.AddCommentToResult("Calling DBReset()...");
-            //PayRef.PayRef#csv.PayRef	500/PF00500	
+            if (Environment == "pp")
+            {
+                dbConnetionString = "Data Source=***************************;Initial Catalog=***************************;User ID=sreemereddy;Password=***************************";
+            }
+            else if (Environment == "test")
+            {
+                dbConnetionString = "Data Source=***************************;Initial Catalog=***************************;User ID=sreemereddy;Password=***************************";
+            }
+            else if (Environment == "test2")
+            {
+                dbConnetionString = "Data Source=***************************;Initial Catalog=***************************;User ID=sreemereddy;Password=***************************";
+            }
+            else if (Environment == "mo")
+            {
+                dbConnetionString = string.Empty;
+            }
+
             object contextParameterObject;
+
             if (e.WebTest.Context.TryGetValue("GatewayUsers.GatewayUsers#csv.GATEWAY_PAYESCHEME",
                            out contextParameterObject))
             {
                 string PayRef = contextParameterObject.ToString();
                 //e.WebTest.AddCommentToResult(PayRef);
-                DBReset(PayRef);
+                DBReset(PayRef, dbConnetionString);
             }
             else
             {
@@ -173,13 +170,8 @@ namespace PlugIns
 
         public AppendValueToContextParameter()
         {
-            //ContextParamOrValueSource = "$WebTestIteration";
-            //ContextParamTarget = "DataSource1.SomeDataFile#csv.FieldName";
-
-
             string dateTime = string.Empty;
             dateTime = System.DateTime.Now.ToString("ddMM") + System.DateTime.Now.ToString("HHmmSS");
-
         }
 
         public override void PreWebTest(object sender, PreWebTestEventArgs e)
@@ -192,7 +184,7 @@ namespace PlugIns
                 {
                     e.WebTest.Context[ContextParamTarget] += e.WebTest.Context[ContextParamOrValueSource].ToString();
                 }
-                else //hard coded value
+                else
                 {
                     e.WebTest.Context[ContextParamTarget] += ContextParamOrValueSource;
                 }
@@ -227,8 +219,6 @@ namespace PlugIns
             e.WebTest.Context[ContextParamTarget] = ULRN;
             base.PreWebTest(sender, e);
         }
-
-
     }
 
     [System.ComponentModel.DisplayName("Unique Checksum Number")]
@@ -241,16 +231,12 @@ namespace PlugIns
 
         public override void PreWebTest(object sender, PreWebTestEventArgs e)
         {
-
-            //string ULRN = string.Empty;
-            //String randomUln = System.DateTime.UtcNow.ToString("fff");
             String ULRN = GenerateRandomNumberBetweenTwoValues(10, 99).ToString() + DateTime.Now.ToString("ssffffff");
 
             for (int i = 1; i < 30; i++)
             {
                 if (IsValidCheckSum(ULRN))
                 {
-                    //ULRN = randomUln;
                     break;
                 }
                 else
@@ -281,7 +267,6 @@ namespace PlugIns
 
         public static int GenerateRandomNumberBetweenTwoValues(int min, int max)
         {
-            //Random number generated includes the min value, but excludes the max value
             Random rand = new Random();
             return rand.Next(min, max);
         }
@@ -417,9 +402,21 @@ namespace PlugIns
         [System.ComponentModel.Description("Environment against which the performance test to be executed.")]
         public string Environment { get; set; }
 
-        [System.ComponentModel.DisplayName("Target Context Parameter Name")]
-        [System.ComponentModel.Description("Name of the context parameter that will receive the generated value.")]
+        //[System.ComponentModel.DisplayName("Target Context Parameter Name")]
+        //[System.ComponentModel.Description("Name of the context parameter that will receive the generated value.")]
         public string ContextParamTarget { get; set; }
+        
+        public string ContextParamAccountTarget { get; set; }
+
+        public string ContextParamApprenticesTarget { get; set; }
+
+        public string ContextParamFinanceTarget { get; set; }
+
+        public string ContextParamForecastingTarget { get; set; }
+
+        public string ContextParamPermissionsTarget { get; set; }
+
+        public string ContextParamRecruitTarget { get; set; }
 
         public string ContextParamLoginTarget { get; set; }
 
@@ -434,18 +431,47 @@ namespace PlugIns
 
             if (Environment == "pp")
             {
-                //e.WebTest.Context[ContextParamTarget] = "pp-eas.apprenticeships.sfa.bis.gov.uk";
+                e.WebTest.Context[ContextParamAccountTarget] = "accounts.pp-eas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamApprenticesTarget] = "pp-eas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamFinanceTarget] = "finance.pp-eas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamForecastingTarget] = "forecasting.pp-eas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamPermissionsTarget] = "permissions.pp-eas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamRecruitTarget] = "recruit.pp-eas.apprenticeships.education.gov.uk";
                 e.WebTest.Context[ContextParamTarget] = "pp-eas.apprenticeships.education.gov.uk";
                 e.WebTest.Context[ContextParamLoginTarget] = "pp-login.apprenticeships.education.gov.uk";
                 e.WebTest.Context[ContextParamReportingTarget] = "pp-reporting.apprenticeships.education.gov.uk";
-                //e.WebTest.Context[ContextParamPASTarget] = "pp-pas.apprenticeships.sfa.bis.gov.uk";
                 e.WebTest.Context[ContextParamPASTarget] = "pp-pas.apprenticeships.education.gov.uk";
             }
             else if (Environment == "mo")
             {
                 e.WebTest.Context[ContextParamTarget] = string.Empty;
             }
-
+            else if (Environment == "test")
+            {
+                e.WebTest.Context[ContextParamAccountTarget] = "das-test-accui-as.azurewebsites.net";
+                e.WebTest.Context[ContextParamApprenticesTarget] = "test-empc.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamFinanceTarget] = "financev2.test-eas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamForecastingTarget] = "test-forecasting.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamPermissionsTarget] = "permissions.test-eas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamRecruitTarget] = "recruit.test-eas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamTarget] = "das-test-accui-as.azurewebsites.net"; 
+                e.WebTest.Context[ContextParamLoginTarget] = "test-login.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamReportingTarget] = "test-reporting.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamPASTarget] = "test-pas.apprenticeships.education.gov.uk";
+            }
+            else if (Environment == "test2")
+            {
+                e.WebTest.Context[ContextParamAccountTarget] = "accounts.test2-eas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamApprenticesTarget] = "test2-empc.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamFinanceTarget] = "financev2.test2-eas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamForecastingTarget] = "test2-forecasting.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamPermissionsTarget] = "permissions.test2-eas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamRecruitTarget] = "recruit.test2-eas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamTarget] = "test2-eas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamLoginTarget] = "test2-login.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamReportingTarget] = "test2-reporting.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamPASTarget] = "test2-pas.apprenticeships.education.gov.uk";
+            }
             base.PreWebTest(sender, e);
         }
     }
@@ -466,15 +492,12 @@ namespace PlugIns
         {
             string setTrigger = Boolean.FalseString;
 
-            //setTrigger = Iter;
-
             if ((e.WebTest.Context.WebTestIteration) % Iter == 0)
             {
                 setTrigger = Boolean.TrueString;
             }
 
             e.WebTest.Context[ContextParamTarget] = setTrigger;
-
 
             //e.WebTest.AddCommentToResult(this.ToString() + " Iteration set to: " + Iter);
             //e.WebTest.AddCommentToResult(this.ToString() + " Result: " + (e.WebTest.Context.WebTestIteration) % Iter);

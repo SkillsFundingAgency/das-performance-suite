@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LoadTest Name="000_CONSOLIDATED_LoadTest" Description="" Owner="" storage="c:\esfa\das\ma\000_consolidated_loadtest.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="cd7fbc82-993e-4392-b341-ac3db4081e9a" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<LoadTest Name="000_CONSOLIDATED_LoadTest" Description="" Owner="" storage="c:\esfa\das\esfarepo\das-performance-suite\scriptframework\000_consolidated_loadtest.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="cd7fbc82-993e-4392-b341-ac3db4081e9a" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Scenarios>
-    <Scenario Name="EmployerApprovesFirstThenProvider" DelayBetweenIterations="60" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+    <Scenario Name="EmployerApprovesFirstThenProvider" DelayBetweenIterations="90" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0" Pattern="On" />
-      <LoadProfile Pattern="Step" InitialUsers="10" MaxUsers="50" StepUsers="10" StepDuration="10" StepRampTime="0" />
+      <LoadProfile Pattern="Step" InitialUsers="1" MaxUsers="100" StepUsers="1" StepDuration="1" StepRampTime="0" />
       <TestMix>
-        <TestProfile Name="002_COMMITS_CreateApprove_Cohort_CoC" Path="002_commits_createapprove_cohort_coc.webtest" Id="d1947a10-8677-478f-90ee-3acad08d765c" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="002_COMMITS_Acct_SignUp_CreateApprove_Cohort" Path="002_commits_acct_signup_createapprove_cohort.webtest" Id="58247662-1dc8-46b5-8b76-c088d64b3a14" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       </TestMix>
       <BrowserMix>
         <BrowserProfile Percentage="100">
@@ -25,9 +25,9 @@
         </NetworkProfile>
       </NetworkMix>
     </Scenario>
-    <Scenario Name="ProviderApprovesFirstThenEmployer" DelayBetweenIterations="60" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+    <Scenario Name="ProviderApprovesFirstThenEmployer" DelayBetweenIterations="90" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0" Pattern="On" />
-      <LoadProfile Pattern="Step" InitialUsers="10" MaxUsers="50" StepUsers="10" StepDuration="10" StepRampTime="0" />
+      <LoadProfile Pattern="Step" InitialUsers="1" MaxUsers="100" StepUsers="1" StepDuration="1" StepRampTime="0" />
       <TestMix>
         <TestProfile Name="003_COMMITS_ProviderFirstApprove_Cohort_Empoloyer_Second" Path="003_commits_providerfirstapprove_cohort_empoloyer_second.webtest" Id="365895d7-f98a-430b-9cae-f2d6f8163132" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       </TestMix>
@@ -49,11 +49,11 @@
         </NetworkProfile>
       </NetworkMix>
     </Scenario>
-    <Scenario Name="MA_SignUp_Acct_AddRemove_Organisations" DelayBetweenIterations="60" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+    <Scenario Name="FindApprenticeships" DelayBetweenIterations="300" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0" Pattern="On" />
-      <LoadProfile Pattern="Step" InitialUsers="1" MaxUsers="500" StepUsers="1" StepDuration="1" StepRampTime="0" />
+      <LoadProfile Pattern="Step" InitialUsers="2" MaxUsers="100" StepUsers="2" StepDuration="1" StepRampTime="0" />
       <TestMix>
-        <TestProfile Name="001_MA_Account_SignUp_AddRemoveOrg_NavigateModules_v2" Path="001_ma_account_signup_addremoveorg_navigatemodules_v2.webtest" Id="6614296f-89d6-4eb0-9f27-16a8aeca0266" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="004_FindApprenticeshipTraining" Path="004_findapprenticeshiptraining.webtest" Id="9a19acc7-59ed-4a95-a9fe-ac7225eb5e17" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       </TestMix>
       <BrowserMix>
         <BrowserProfile Percentage="100">

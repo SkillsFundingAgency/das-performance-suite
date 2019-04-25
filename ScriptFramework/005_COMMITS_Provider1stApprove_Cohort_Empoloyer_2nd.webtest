@@ -1,0 +1,1458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd" Id="365895d7-f98a-430b-9cae-f2d6f8163132" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest2.c0cdf0db-0e91-4ca5-94e5-55b59574a9ac.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <TransactionTimer Name="005_0000_LandingPage">
+      <Items>
+        <Comment CommentText="Landing page" />
+        <Request Method="GET" Guid="e2a0ade9-e650-496c-9ddd-c3f4db1eaf51" Version="1.1" Url="https://{{EnvironmentAccounts}}/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="005_0010_Start_Click">
+      <Items>
+        <Request Method="GET" Guid="ce6bfae4-00c8-4f50-b00c-d0203f66c63f" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/usedServiceBefore" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.choice" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="not-used-service-before" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="1" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.choice" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="not-used-service-before" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="1" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="005_0020_ServiceUsedBefore_Continue">
+      <Items>
+        <Comment CommentText="Have you used this service before. Click Yes, I have used this service before" />
+        <Comment CommentText="Continue" />
+        <Request Method="POST" Guid="bbb5f3d5-3644-40b8-a1b1-7b790966bff2" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/usedServiceBefore" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentLogin}}/identity/employer/login?id=06e41a0239708178179b743cc196c826&amp;returnUrl=https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7&amp;clientId=easpp" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/service/usedServiceBefore" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="3H7M8gZ1ioWtdgG3uKt1eMOUjQemOAsPAjm6UQR9Gf3sxTxXdEO5zu3RbsF4uXjNgNVzGTctwzLykGKw8HwgU4q0ubU1" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="choice" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam29.choice}}" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="005_0030_EnterCredentials_And_SignIn">
+      <Items>
+        <Comment CommentText="Enter email and password and Click Sign in" />
+        <Request Method="POST" Guid="75262192-79b9-40e5-94a1-63b55fff56c3" Version="1.1" Url="https://{{EnvironmentLogin}}/identity/employer/login" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentAccounts}}/accounts/V9496X/teams" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/employer/login?id=06e41a0239708178179b743cc196c826&amp;returnUrl=https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7&amp;clientId=easpp" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam.Account" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="'acc': '" />
+                <RuleParameter Name="EndsWith" Value="'," />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="SearchInHeaders" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <QueryStringParameters>
+            <QueryStringParameter Name="id" Value="06e41a0239708178179b743cc196c826" RecordedValue="06e41a0239708178179b743cc196c826" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="returnUrl" Value="https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7" RecordedValue="https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="clientId" Value="easpp" RecordedValue="easpp" CorrelationBinding="{{QueryStringParam82.clientId}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="LVUdcdmr-IwR1lBZeDgD4MCcp1OrUw_ffMUk_lbx5m_e_UgMBURPVPbvoE-9OaX1bazALB2_hIQCyutrN5FJdIHUwEzIqdQobaLZULdH96I1" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="EmailAddress" Value="{{Employers.Employers#csv.Email}}" RecordedValue="tf4.tl4@test.com" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Password" Value="Password1" RecordedValue="Password1" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="005_0030_Cohort_AddAndApproveByEmployer">
+      <Items>
+        <TransactionTimer Name="005_0030_01_ApprenticesMenu_Click">
+          <Items>
+            <Comment CommentText="Click Apprentices Menu" />
+            <Request Method="GET" Guid="f0d3bf34-0ba7-46b3-a15c-15dc590783b9" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/home" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams" />
+              </Headers>
+              <ExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam19.CohortRef" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value=".userID = '" />
+                    <RuleParameter Name="EndsWith" Value="'" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                    <RuleParameter Name="Index" Value="0" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="SearchInHeaders" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </ExtractionRules>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0030_02_StartNow_Click">
+          <Items>
+            <Comment CommentText="Click Sart now on Your employer account page" />
+            <Comment CommentText="You are on Add an Apprentice page" />
+            <Request Method="GET" Guid="06c413ee-1929-429d-b4d8-bb03f95664c5" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/transferConnection/create" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/provider/create?LegalEntityCode=00445790&amp;CohortRef=72293E72-A6BC-4249-90A7-6AB6CB066005" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/Inform" />
+              </Headers>
+              <ExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam.LegalEntityCode" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="id=&quot;LegalEntityCode&quot; name=&quot;LegalEntityCode&quot; type=&quot;hidden&quot; value=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                    <RuleParameter Name="Index" Value="0" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="SearchInHeaders" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </ExtractionRules>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0030_03_EnterUKPRN_Continue_Click">
+          <Items>
+            <Comment CommentText="On Add training provider details page. Enter UK Provider Ref Number and Click Continue" />
+            <Comment CommentText="Click continue" />
+            <Request Method="POST" Guid="4df59551-040d-452f-8ba4-b8070a1d1691" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/provider/create" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/provider/create?LegalEntityCode={{FormPostParam.LegalEntityCode}}&amp;CohortRef={{$HIDDEN1.CohortRef}}" />
+              </Headers>
+              <ExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </ExtractionRules>
+              <CorrelationExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam8.Confirmation" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="1" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam9.HashedAccountId" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="3" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam10.LegalEntityCode" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="5" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam12.ProviderId" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="7" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam13.Confirmation" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="Name" Value="Confirmation-True" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                    <RuleParameter Name="Index" Value="0" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </CorrelationExtractionRules>
+              <FormPostHttpBody>
+                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="c43k7ptBsptxAq7Zc_4m2MOIy2UNUDqVDijP4DvL4-5SdMxs_2z7Yz4FRehG8n4fHh4ooWkVx3V9thXLyRSfyap7_F83-UJ60fIScEEc3YOxAUVozHnpSjUST1ImMbgRO5lq_w2" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="ProviderId" Value="{{ProviderId}}" RecordedValue="10005077" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="TransferConnectionCode" Value="{{$HIDDEN1.TransferConnectionCode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="LegalEntityCode" Value="{{$HIDDEN1.LegalEntityCode}}" RecordedValue="00445790" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="CohortRef" Value="{{$HIDDEN1.CohortRef}}" RecordedValue="72293E72-A6BC-4249-90A7-6AB6CB066005" CorrelationBinding="" UrlEncode="True" />
+              </FormPostHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0030_04_Confirm_Provider_Continue_Click">
+          <Items>
+            <Comment CommentText="On Confirm training provider page. Click Yes, user PETERBOROUGH and click continue" />
+            <Request Method="POST" Guid="3cf6c444-8507-4e79-9d71-62199e128fcf" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/confirmProvider/create" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/choosePath/create?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;providerId={{ProviderId}}&amp;cohortRef={{$HIDDEN1.CohortRef}}" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/provider/create" />
+              </Headers>
+              <ExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </ExtractionRules>
+              <CorrelationExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam15.SelectedRoute" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="1" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam17.LegalEntityCode" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="5" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam18.LegalEntityName" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="6" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam19.LegalEntityAddress" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="7" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam20.LegalEntitySource" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="8" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam21.AccountLegalEntityPublicHashedId" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="9" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam22.ProviderId" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="10" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam23.ProviderName" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="11" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam24.SelectedRoute" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="Name" Value="SelectedRoute-Employer" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                    <RuleParameter Name="Index" Value="0" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </CorrelationExtractionRules>
+              <FormPostHttpBody>
+                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="PmlyH3-9H8ItNMn2NKEAVvNNAWd2tJmMLnizRJhEe7BeJcBqQGfhUtDyljmzJDTHWc3-MrOKa0bHWROvLye7HCeG0CzELeDjxCv7QSWNnWWN22PGZQacD28OtSUTpva_-JzeOA2" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="Confirmation" Value="True" RecordedValue="True" CorrelationBinding="{{FormPostParam13.Confirmation}}" UrlEncode="True" />
+                <FormPostParameter Name="HashedAccountId" Value="{{$HIDDEN1.HashedAccountId}}" RecordedValue="MDJ87P" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="TransferConnectionCode" Value="{{$HIDDEN1.TransferConnectionCode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="LegalEntityCode" Value="{{$HIDDEN1.LegalEntityCode}}" RecordedValue="00445790" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="CohortRef" Value="{{$HIDDEN1.CohortRef}}" RecordedValue="72293E72-A6BC-4249-90A7-6AB6CB066005" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="ProviderId" Value="{{ProviderId}}" RecordedValue="10005077" CorrelationBinding="" UrlEncode="True" />
+              </FormPostHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0030_05_ProviderToAddApprentice_Continue_Click">
+          <Items>
+            <Comment CommentText="Start adding apprentices page. Select provider will add apprentices" />
+            <Comment CommentText="Click Continue" />
+            <Request Method="POST" Guid="ea38f5f6-bec7-4a09-a5e4-542269a8304a" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/choosePath/create" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/Submit?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;legalEntityName={{$HIDDEN1.LegalEntityName}}&amp;legalEntityAddress={{$HIDDEN1.LegalEntityAddress}}&amp;legalEntitySource={{$HIDDEN1.LegalEntitySource}}&amp;accountLegalEntityPublicHashedId={{$HIDDEN1.AccountLegalEntityPublicHashedId}}&amp;providerId={{ProviderId}}&amp;providerName={{$HIDDEN1.ProviderName}}&amp;cohortRef={{$HIDDEN1.CohortRef}}&amp;saveStatus=Save" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/choosePath/create?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;providerId={{ProviderId}}&amp;cohortRef={{$HIDDEN1.CohortRef}}" />
+              </Headers>
+              <ExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </ExtractionRules>
+              <CorrelationExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam26.__RequestVerificationToken" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="0" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam27.LegalEntityCode" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="3" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam28.LegalEntityName" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="4" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam29.LegalEntityAddress" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="5" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam30.LegalEntitySource" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="6" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam31.AccountLegalEntityPublicHashedId" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="7" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam32.ProviderId" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="8" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam33.ProviderName" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="9" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam34.CohortRef" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="10" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam35.SaveStatus" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="11" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </CorrelationExtractionRules>
+              <FormPostHttpBody>
+                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="pVAcPWlPjjOc-QqdvxTCh9bXL0xEc0ZyCpx3NTbEsIuWQ5t9L0jxdcUbbSUK6N4w8DqdcktT0lFnH2gJs1MCOu7myXH8atddfnoyY0HsrF92bLUTTb9ZJCOd0zuFIQENrUxMLg2" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="SelectedRoute" Value="provider" RecordedValue="provider" CorrelationBinding="{{FormPostParam25.SelectedRoute}}" UrlEncode="True" />
+                <FormPostParameter Name="CohortRef" Value="{{$HIDDEN1.CohortRef}}" RecordedValue="FB87F081-7E05-46A2-9775-16D55E4A3A78" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="TransferConnectionCode" Value="{{$HIDDEN1.TransferConnectionCode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="LegalEntityCode" Value="{{$HIDDEN1.LegalEntityCode}}" RecordedValue="SC446357" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="LegalEntityName" Value="{{$HIDDEN1.LegalEntityName}}" RecordedValue="ESFA LTD" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="LegalEntityAddress" Value="{{$HIDDEN1.LegalEntityAddress}}" RecordedValue="43 Duke Street, Edinburgh, EH6 8HH" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="LegalEntitySource" Value="{{$HIDDEN1.LegalEntitySource}}" RecordedValue="1" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="AccountLegalEntityPublicHashedId" Value="{{$HIDDEN1.AccountLegalEntityPublicHashedId}}" RecordedValue="7R9G95" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="ProviderId" Value="{{ProviderId}}" RecordedValue="10005077" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="ProviderName" Value="{{$HIDDEN1.ProviderName}}" RecordedValue="PETERBOROUGH REGIONAL COLLEGE" CorrelationBinding="" UrlEncode="True" />
+              </FormPostHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0030_06_SubmitCohort_To_Provider">
+          <Items>
+            <Comment CommentText="Enter message for your training provider and Continue..." />
+            <Request Method="POST" Guid="40ef874a-d3a6-4d47-80cc-da2c398ec8c0" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/submit" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/MN6L9N/NewCohortAcknowledgement" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/Submit?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;legalEntityName={{$HIDDEN1.LegalEntityName}}&amp;legalEntityAddress={{$HIDDEN1.LegalEntityAddress}}&amp;legalEntitySource={{$HIDDEN1.LegalEntitySource}}&amp;accountLegalEntityPublicHashedId={{$HIDDEN1.AccountLegalEntityPublicHashedId}}&amp;providerId={{ProviderId}}&amp;providerName={{$HIDDEN1.ProviderName}}&amp;cohortRef={{$HIDDEN1.CohortRef}}&amp;saveStatus=Save" />
+              </Headers>
+              <ExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam.__CohortRef" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="sfa.dataLayer.cohortRef = '" />
+                    <RuleParameter Name="EndsWith" Value="'" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                    <RuleParameter Name="Index" Value="0" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="SearchInHeaders" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </ExtractionRules>
+              <FormPostHttpBody>
+                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="N_-TVc8UnyPNrUFWM4zAZO6elIUdT3Tz3paMrYL1ZEQ2BmxEhnomARFi1Mj8Pe0o-ipZfTKJBnHrOtBHk9ewURS-ap1mKQSo4RsjkEk1o9pD3LQNLm3Bb1oOf1lRk3qjkAcKcA2" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="Message" Value="Provider to add apprentices" RecordedValue="Provider to add apprentices" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="HashedCommitmentId" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="TransferConnectionCode" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="LegalEntityCode" Value="{{$HIDDEN1.LegalEntityCode}}" RecordedValue="SC446357" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="LegalEntityName" Value="{{$HIDDEN1.LegalEntityName}}" RecordedValue="ESFA LTD" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="LegalEntityAddress" Value="{{$HIDDEN1.LegalEntityAddress}}" RecordedValue="43 Duke Street, Edinburgh, EH6 8HH" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="LegalEntitySource" Value="{{$HIDDEN1.LegalEntitySource}}" RecordedValue="1" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="AccountLegalEntityPublicHashedId" Value="{{$HIDDEN1.AccountLegalEntityPublicHashedId}}" RecordedValue="7R9G95" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="ProviderId" Value="{{ProviderId}}" RecordedValue="10005077" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="ProviderName" Value="{{$HIDDEN1.ProviderName}}" RecordedValue="PETERBOROUGH REGIONAL COLLEGE" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="CohortRef" Value="{{$HIDDEN1.CohortRef}}" RecordedValue="FB87F081-7E05-46A2-9775-16D55E4A3A78" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="SaveStatus" Value="{{$HIDDEN1.SaveStatus}}" RecordedValue="Save" CorrelationBinding="" UrlEncode="True" />
+              </FormPostHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0030_07_BackToApprenticesPage_ClickLink">
+          <Items>
+            <Comment CommentText="Add apprentice details page. Key in details of apprentice" />
+            <Request Method="GET" Guid="74852a41-144d-433f-94f6-2b6164c40ec5" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/home" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/NewCohortAcknowledgement" />
+              </Headers>
+              <CorrelationExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam833.clientId" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="?clientId=" />
+                    <RuleParameter Name="EndsWith" Value="&amp;" />
+                    <RuleParameter Name="Index" Value="0" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam954.clientId" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="?clientId=" />
+                    <RuleParameter Name="EndsWith" Value="&amp;" />
+                    <RuleParameter Name="Index" Value="0" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </CorrelationExtractionRules>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0030_08_SignOut">
+          <Items>
+            <Comment CommentText="Sign out" />
+            <Request Method="GET" Guid="f99e10d9-a9c1-4074-88a8-d598c2be8c6b" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signOut" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentLogin}}/identity/logout?id=6f33170eab71021f4f712f84f578c3d8" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams?" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="63302b55-abc1-4285-bbcc-6c4adf61be88" Version="1.1" Url="https://{{EnvironmentLogin}}/bundles/screen" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="v" Value="sVXB6jzilt1nVSNlS57LnOPveP7GgPMMp1eb2WI92gc1" RecordedValue="sVXB6jzilt1nVSNlS57LnOPveP7GgPMMp1eb2WI92gc1" CorrelationBinding="{{QueryStringParam27.v}}" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="4b6b604e-df78-4017-9a69-40e1c98be1ef" Version="1.1" Url="https://{{EnvironmentLogin}}/bundles/sfajs" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam33.v}}" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="97835a3a-eeca-46f5-b409-46a6c8d8639b" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="b8867a3d-25c7-437a-8d31-2d2adacd592a" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="765d4135-1f85-4b8b-bef7-b380959034b5" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="f042444d-cfb6-4e36-b0f3-e0f4e7454fdd" Version="1.1" Url="https://{{EnvironmentPermissions}}/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0030_09_Continue_To_Signout">
+          <Items>
+            <Comment CommentText="You've logged out. Click continue" />
+            <Request Method="GET" Guid="f695d3a0-55d8-409f-b42e-05c990ab0531" Version="1.1" Url="https://{{EnvironmentLogin}}/bundles/sfajs" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=63da6b8890fd1b79e37d5f76704cb617" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam46.v}}" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="71d38702-75d7-4a37-be1e-558fd2cc7178" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="49db3ddb-7428-4800-8135-fc187f99bfad" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="2121041d-e75a-43c4-9fba-9d428065206b" Version="1.1" Url="https://{{EnvironmentPermissions}}/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="89855a29-9e88-449a-90ab-234aebc49671" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="694913dc-ce53-4b3c-83a0-55e04a3f2b9e" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="005_0000_Provider_LandingPage">
+      <Items>
+        <Request Method="GET" Guid="e74e1416-d730-4ae9-a084-5d8e9411261f" Version="1.1" Url="https://{{EnvironmentPAS}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="005_0040_Provider_SignIn">
+      <Items>
+        <TransactionTimer Name="005_0040_01_SignIn_Click">
+          <Items>
+            <Comment CommentText="Click Sign in link" />
+            <Request Method="GET" Guid="f99a082a-85f4-41ac-ac87-9720ce721668" Version="1.1" Url="https://{{EnvironmentPAS}}/signin" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVJBasMwEPyK0d2S5TgEC8cQEgqGtJS29NCbaq8dEVlStXLa%2fr6y00sp5DrM7MzsboVy1E7spnAyT%2fAxAYakOWyJ6tK2hALy4j3N15s2LVaZTEvou5RvZCbXvexlIUnyCh6VNVuS04wkDeIEjcEgTYhQxss042m2euFcFIXIS5qt%2bRtJDtFHGRkW5SkEh4Ix57QdrKG9RAzU%2boFOZ3a0gzJsTtl0jiR7axDm2ZM3wkpUKIwcAUVoxfPu%2fihiDNFeSWIy6KBVvYKOJF%2bjNiiWurfVzttgW6tJXS11%2fFV6WxQjg5%2frkHquE9vIrkfqPMRxHcWz0hr7yXTKDDRSL6oFOtjLXHFmsl8MWfAThopdrevqep%2bHaNgcHq1W7XdyZ%2f0ob6yAU74g8Yb9Qv27iJ3W9nPvQQbYkugGJGF1xf4%2fQv0D&amp;RelayState=72faa677-7821-4c2b-8cb9-f8eb2f5a670f" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentPAS}}/" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0040_02_Provider_SignIn">
+          <Items>
+            <Comment CommentText="Sign In" />
+            <Request Method="POST" Guid="5c34d703-ef14-41ac-ae23-51e2d781afb0" Version="1.1" Url="https://adfs.preprod.skillsfunding.service.gov.uk/adfs/ls/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVJBasMwEPyK0d2S5TgEC8cQEgqGtJS29NCbaq8dEVlStXLa%2Fr6y00sp5DrM7MzsboVy1E7spnAyT%2FAxAYakOWyJ6tK2hALy4j3N15s2LVaZTEvou5RvZCbXvexlIUnyCh6VNVuS04wkDeIEjcEgTYhQxss042m2euFcFIXIS5qt%2BRtJDtFHGRkW5SkEh4Ix57QdrKG9RAzU%2BoFOZ3a0gzJsTtl0jiR7axDm2ZM3wkpUKIwcAUVoxfPu%2FihiDNFeSWIy6KBVvYKOJF%2BjNiiWurfVzttgW6tJXS11%2FFV6WxQjg5%2FrkHquE9vIrkfqPMRxHcWz0hr7yXTKDDRSL6oFOtjLXHFmsl8MWfAThopdrevqep%2BHaNgcHq1W7XdyZ%2F0ob6yAU74g8Yb9Qv27iJ3W9nPvQQbYkugGJGF1xf4%2FQv0D&amp;RelayState=72faa677-7821-4c2b-8cb9-f8eb2f5a670f" />
+              </Headers>
+              <CorrelationExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.wa" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+                    <RuleParameter Name="Index" Value="0" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.wctx" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+                    <RuleParameter Name="Index" Value="2" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </CorrelationExtractionRules>
+              <FormPostHttpBody>
+                <FormPostParameter Name="SAMLResponse" Value="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHNhbWwycDpSZXNwb25zZSBE&#xD;&#xA;ZXN0aW5hdGlvbj0iaHR0cHM6Ly9hZGZzLnByZXByb2Quc2tpbGxzZnVuZGluZy5zZXJ2aWNlLmdv&#xD;&#xA;di51ay9hZGZzL2xzLyIgSUQ9InV1aWRfYzYxODg0ODZlZjMwZDdlMjdmZDU3YmIyOGMyNDYzNTMi&#xD;&#xA;IEluUmVzcG9uc2VUbz0iaWQtYzllNGUyNGItMjU3Yy00MzBhLTllZmQtMTdhMGE1ZmFmYTRhIiBJ&#xD;&#xA;c3N1ZUluc3RhbnQ9IjIwMTktMDEtMDNUMTE6NDY6MzEuODk1WiIgVmVyc2lvbj0iMi4wIiB4bWxu&#xD;&#xA;czpzYW1sMnA9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpwcm90b2NvbCI+PHNhbWwyOklz&#xD;&#xA;c3VlciBGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpuYW1laWQtZm9ybWF0OmVu&#xD;&#xA;dGl0eSIgeG1sbnM6c2FtbDI9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24i&#xD;&#xA;Pmh0dHBzOi8vcHBsb2dvbi5mYXNzdC5vcmcudWsvTG9naW4vc2FtbElkcDwvc2FtbDI6SXNzdWVy&#xD;&#xA;PjxzYW1sMnA6U3RhdHVzPjxzYW1sMnA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVz&#xD;&#xA;OnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9zYW1sMnA6U3RhdHVzPjxzYW1sMjpBc3Nl&#xD;&#xA;cnRpb24gSUQ9InV1aWRfMzczNzBlZWQ3OGFmOGRiODAyZGM4MjVlNjRhNzhjYWYiIElzc3VlSW5z&#xD;&#xA;dGFudD0iMjAxOS0wMS0wM1QxMTo0NjozMS44OTVaIiBWZXJzaW9uPSIyLjAiIHhtbG5zOnNhbWwy&#xD;&#xA;PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIiB4bWxuczp4cz0iaHR0cDov&#xD;&#xA;L3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiPjxzYW1sMjpJc3N1ZXIgRm9ybWF0PSJ1cm46b2Fz&#xD;&#xA;aXM6bmFtZXM6dGM6U0FNTDoyLjA6bmFtZWlkLWZvcm1hdDplbnRpdHkiIHhtbG5zOnNhbWwyPSJ1&#xD;&#xA;cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5odHRwczovL3BwbG9nb24uZmFz&#xD;&#xA;c3Qub3JnLnVrL0xvZ2luL3NhbWxJZHA8L3NhbWwyOklzc3Vlcj48ZHM6U2lnbmF0dXJlIHhtbG5z&#xD;&#xA;OmRzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIj48ZHM6U2lnbmVkSW5mbz48&#xD;&#xA;ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIw&#xD;&#xA;MDEvMTAveG1sLWV4Yy1jMTRuIyIvPjxkczpTaWduYXR1cmVNZXRob2QgQWxnb3JpdGhtPSJodHRw&#xD;&#xA;Oi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2Ii8+PGRzOlJlZmVy&#xD;&#xA;ZW5jZSBVUkk9IiN1dWlkXzM3MzcwZWVkNzhhZjhkYjgwMmRjODI1ZTY0YTc4Y2FmIj48ZHM6VHJh&#xD;&#xA;bnNmb3Jtcz48ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8w&#xD;&#xA;OS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz48ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0i&#xD;&#xA;aHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIj48ZWM6SW5jbHVzaXZlTmFt&#xD;&#xA;ZXNwYWNlcyBQcmVmaXhMaXN0PSJ4cyIgeG1sbnM6ZWM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEv&#xD;&#xA;MTAveG1sLWV4Yy1jMTRuIyIvPjwvZHM6VHJhbnNmb3JtPjwvZHM6VHJhbnNmb3Jtcz48ZHM6RGln&#xD;&#xA;ZXN0TWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI3No&#xD;&#xA;YTEiLz48ZHM6RGlnZXN0VmFsdWU+VG1lWENETWRKU0NvK0M5Ty82K2RVbGV2eVBnPTwvZHM6RGln&#xD;&#xA;ZXN0VmFsdWU+PC9kczpSZWZlcmVuY2U+PC9kczpTaWduZWRJbmZvPjxkczpTaWduYXR1cmVWYWx1&#xD;&#xA;ZT5HSmI1a3pjTGFhVHhkUWNLZ3UrS2dudy9kZC8xZ2czOXB1aHNSK3l6T09jRTZERk5FSjF6eWZv&#xD;&#xA;L3FMZEFscUpEVkhVOGFNS2NhVXJOWWpiUURzQm9rZ2MyekpOM0JQWHk5SzJSZDByQ2lkcVMydkxj&#xD;&#xA;dHBxZzl5VmRaTHovZXJKMFlXbnplRFB3d3R5ckJzV3NJK2RvR1k5dkpYb2JEaEYwN2xIYUUrMmRE&#xD;&#xA;K1lFeFc3RmdCck1KSmk2WHFDaHR4S1R4YWx2U0hVdHlYOVZwbk1zS3QvZlR6amhQMzY4Y0pIb0Fs&#xD;&#xA;bXR0OTJhdnpNL1VSL1I0aUgwWXR2SklKTGZONFVrN3NyNmQxRXJmSThPcktjVThsU0FtQ1pXdmlS&#xD;&#xA;WnQ5OVhZbmJsbE1iMzRFOGhpTFBTOTJRQlRvbkN6NDFQRmJ1NHU3TkRoTHlNNFdxbVhPV0tXbWx2&#xD;&#xA;bVE9PTwvZHM6U2lnbmF0dXJlVmFsdWU+PGRzOktleUluZm8+PGRzOlg1MDlEYXRhPjxkczpYNTA5&#xD;&#xA;Q2VydGlmaWNhdGU+TUlJRFd6Q0NBa09nQXdJQkFnSUpBS2dTNzNQemFXY1BNQTBHQ1NxR1NJYjNE&#xD;&#xA;UUVCQlFVQU1HMHhDekFKQmdOVkJBWVRBa2RDTVJNd0VRWURWUVFLRXdwUWFYSmxZVzRnVEhSa01R&#xD;&#xA;OHdEUVlEVlFRSEV3Wk1iMjVrYjI0eEVEQU9CZ05WQkFzVEIyUmxabUYxYkhReEpqQWtCZ05WQkFN&#xD;&#xA;VEhXaDBkSEJ6T2k4dmNIQnNiMmR2Ymk1bVlYTnpkQzV2Y21jdWRXc3ZNQjRYRFRFMk1Ea3hOakE1&#xD;&#xA;TlRZMU9Gb1hEVEkyTURreE5qQTVOVFkxT0Zvd2JURUxNQWtHQTFVRUJoTUNSMEl4RXpBUkJnTlZC&#xD;&#xA;QW9UQ2xCcGNtVmhiaUJNZEdReER6QU5CZ05WQkFjVEJreHZibVJ2YmpFUU1BNEdBMVVFQ3hNSFpH&#xD;&#xA;Vm1ZWFZzZERFbU1DUUdBMVVFQXhNZGFIUjBjSE02THk5d2NHeHZaMjl1TG1aaGMzTjBMbTl5Wnk1&#xD;&#xA;MWF5OHdnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFDQzh3SE9Dc2RQ&#xD;&#xA;T3I2OXJWYlJ5RnRSWjBCQmpOU2xSZnA2Mm1ENWNoT0RLQURTLyttRDdXSkRHVyt5MERieWY2TndE&#xD;&#xA;QXZQc1ErZkRVeGNJQmpRWWlEZVlWcDRMbFM2MEhsMmptZVJVWXFWcWZrN2hUVEZJZGJRRHc0YzdR&#xD;&#xA;U215V0FiNHh4THlpSTMzZ2djV2tYT1JuTENnMnM0R0VncGtIVGhsc0ZGak1RUnBtSFZlNTh3aGJE&#xD;&#xA;bDV4S2dHMithdUNWUDQzK0Q4QWRxTjVGMmZyU0JoQ2lhdWJQb3lXU1h4V1BXZkx5MXpHMmtXcHhY&#xD;&#xA;Z2dhajZVYzJWVnVlZkFRRHl1Lzhvd21pOUlnVEVKbENnNnpQK0l2bmlOM1h5eEp2TWJCMlUvWVJi&#xD;&#xA;djZjcWpYaTlhbVB2Tm93WXU3U2tZc0Q5WWdtcHdqRXVFaVVDNmwxYVVLQnBuTmJBZ01CQUFFd0RR&#xD;&#xA;WUpLb1pJaHZjTkFRRUZCUUFEZ2dFQkFIY3pnNVdzZHV6UTUycVpSc25rV2F0TnAvaW1laHNZL1p1&#xD;&#xA;OXdLam8zWmsybjY3TmVzTEp6YTIrakZ0ME9PcXNqSzU0Wk5LT09qNHBqWXoweVAyZTBOMGJCQVFS&#xD;&#xA;aUQrUVdJVUQwTmsxcFZDVEtRZUR1NEpPZHZOYXZDajYwajdtTHV1eUFxV2lpMWlWcDd0cWF5cXZP&#xD;&#xA;aGFoRit0Ui9kTnVjTXVCNlRrMEI5WFBndFJYeVhYMVUxTjh3Z2FrSHBCaHZTeHliUmhEMTYreU9U&#xD;&#xA;YzhYeisrZ0hqbFdLZjhwbVNvelJGWEJxcXBCL2huQjVVVUd4bUNiQUgrN29WSVNjQWlLNXIzN2dQ&#xD;&#xA;a0RjVldGc2xtZVZkbzVvTWVBdG1lOVJ6UDMzUHRhYXJQL25MUVpvL0YxMTNCUU5OVlhqTDN2ZTc3&#xD;&#xA;ci9EV2hjaTdmUzdEZW5BWkhJZmFIWkE9PC9kczpYNTA5Q2VydGlmaWNhdGU+PC9kczpYNTA5RGF0&#xD;&#xA;YT48L2RzOktleUluZm8+PC9kczpTaWduYXR1cmU+PHNhbWwyOlN1YmplY3QgeG1sbnM6c2FtbDI9&#xD;&#xA;InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sMjpOYW1lSUQgRm9y&#xD;&#xA;bWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmll&#xD;&#xA;ZCI+SVNQLTEwMDA1MDc3czwvc2FtbDI6TmFtZUlEPjxzYW1sMjpTdWJqZWN0Q29uZmlybWF0aW9u&#xD;&#xA;IE1ldGhvZD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmNtOmJlYXJlciI+PHNhbWwyOlN1&#xD;&#xA;YmplY3RDb25maXJtYXRpb25EYXRhIEluUmVzcG9uc2VUbz0iaWQtYzllNGUyNGItMjU3Yy00MzBh&#xD;&#xA;LTllZmQtMTdhMGE1ZmFmYTRhIiBOb3RPbk9yQWZ0ZXI9IjIwMTktMDEtMDNUMTE6NTE6MzEuODk1&#xD;&#xA;WiIgUmVjaXBpZW50PSJodHRwczovL2FkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5nLnNlcnZpY2Uu&#xD;&#xA;Z292LnVrL2FkZnMvbHMvIi8+PC9zYW1sMjpTdWJqZWN0Q29uZmlybWF0aW9uPjwvc2FtbDI6U3Vi&#xD;&#xA;amVjdD48c2FtbDI6Q29uZGl0aW9ucyBOb3RCZWZvcmU9IjIwMTktMDEtMDNUMTE6MzY6MzEuODk1&#xD;&#xA;WiIgTm90T25PckFmdGVyPSIyMDE5LTAxLTAzVDEyOjAxOjMxLjg5NVoiIHhtbG5zOnNhbWwyPSJ1&#xD;&#xA;cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXVkaWVuY2VSZXN0&#xD;&#xA;cmljdGlvbj48c2FtbDI6QXVkaWVuY2U+aHR0cDovL2FkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5n&#xD;&#xA;LnNlcnZpY2UuZ292LnVrL2FkZnMvc2VydmljZXMvdHJ1c3Q8L3NhbWwyOkF1ZGllbmNlPjwvc2Ft&#xD;&#xA;bDI6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWwyOkNvbmRpdGlvbnM+PHNhbWwyOkF1dGhuU3Rh&#xD;&#xA;dGVtZW50IEF1dGhuSW5zdGFudD0iMjAxOS0wMS0wM1QxMTo0NjozMS44OTVaIiBTZXNzaW9uSW5k&#xD;&#xA;ZXg9InV1aWRfMzczNzBlZWQ3OGFmOGRiODAyZGM4MjVlNjRhNzhjYWYiIHhtbG5zOnNhbWwyPSJ1&#xD;&#xA;cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXV0aG5Db250ZXh0&#xD;&#xA;PjxzYW1sMjpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6&#xD;&#xA;YWM6Y2xhc3NlczpQYXNzd29yZFByb3RlY3RlZFRyYW5zcG9ydDwvc2FtbDI6QXV0aG5Db250ZXh0&#xD;&#xA;Q2xhc3NSZWY+PC9zYW1sMjpBdXRobkNvbnRleHQ+PC9zYW1sMjpBdXRoblN0YXRlbWVudD48c2Ft&#xD;&#xA;bDI6QXR0cmlidXRlU3RhdGVtZW50IHhtbG5zOnNhbWwyPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FN&#xD;&#xA;TDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlIE5hbWU9InNlcnZpY2UiIE5hbWVGb3Jt&#xD;&#xA;YXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sMjpBdHRyaWJ1&#xD;&#xA;dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5z&#xD;&#xA;OnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTp0eXBl&#xD;&#xA;PSJ4czpzdHJpbmciPkRBQTwvc2FtbDI6QXR0cmlidXRlVmFsdWU+PC9zYW1sMjpBdHRyaWJ1dGU+&#xD;&#xA;PHNhbWwyOkF0dHJpYnV0ZSBOYW1lPSJtYWlsIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6&#xD;&#xA;dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0&#xD;&#xA;dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMu&#xD;&#xA;b3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5vYXR0ZXN0&#xD;&#xA;dXNlcisxMDAwNTA3N0BnbWFpbC5jb208L3NhbWwyOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0&#xD;&#xA;cmlidXRlPjxzYW1sMjpBdHRyaWJ1dGUgTmFtZT0idXBpbiIgTmFtZUZvcm1hdD0idXJuOm9hc2lz&#xD;&#xA;Om5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiI+PHNhbWwyOkF0dHJpYnV0ZVZhbHVlIHhtbG5z&#xD;&#xA;OnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6eHNpPSJodHRwOi8v&#xD;&#xA;d3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnR5cGU9InhzOnN0cmluZyI+&#xD;&#xA;MTA2NDA5PC9zYW1sMjpBdHRyaWJ1dGVWYWx1ZT48L3NhbWwyOkF0dHJpYnV0ZT48c2FtbDI6QXR0&#xD;&#xA;cmlidXRlIE5hbWU9ImRpc3BsYXluYW1lIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xD;&#xA;U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6&#xD;&#xA;Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3Jn&#xD;&#xA;LzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5NciBTZnN0ZXN0&#xD;&#xA;IDEwMDA1MDc3PC9zYW1sMjpBdHRyaWJ1dGVWYWx1ZT48L3NhbWwyOkF0dHJpYnV0ZT48c2FtbDI6&#xD;&#xA;QXR0cmlidXRlIE5hbWU9InVzZXJ0eXBlIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xD;&#xA;U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6&#xD;&#xA;Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3Jn&#xD;&#xA;LzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5JU1A8L3NhbWwy&#xD;&#xA;OkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0cmlidXRlPjxzYW1sMjpBdHRyaWJ1dGUgTmFtZT0i&#xD;&#xA;YWRkaXRpb25hbHVwaW5zIi8+PHNhbWwyOkF0dHJpYnV0ZSBOYW1lPSJ1a3BybiIgTmFtZUZvcm1h&#xD;&#xA;dD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiI+PHNhbWwyOkF0dHJpYnV0&#xD;&#xA;ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6&#xD;&#xA;eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnR5cGU9&#xD;&#xA;InhzOnN0cmluZyI+MTAwMDUwNzc8L3NhbWwyOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0cmli&#xD;&#xA;dXRlPjwvc2FtbDI6QXR0cmlidXRlU3RhdGVtZW50Pjwvc2FtbDI6QXNzZXJ0aW9uPjwvc2FtbDJw&#xD;&#xA;OlJlc3BvbnNlPg==" RecordedValue="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHNhbWwycDpSZXNwb25zZSBE&#xD;&#xA;ZXN0aW5hdGlvbj0iaHR0cHM6Ly9hZGZzLnByZXByb2Quc2tpbGxzZnVuZGluZy5zZXJ2aWNlLmdv&#xD;&#xA;di51ay9hZGZzL2xzLyIgSUQ9InV1aWRfYzYxODg0ODZlZjMwZDdlMjdmZDU3YmIyOGMyNDYzNTMi&#xD;&#xA;IEluUmVzcG9uc2VUbz0iaWQtYzllNGUyNGItMjU3Yy00MzBhLTllZmQtMTdhMGE1ZmFmYTRhIiBJ&#xD;&#xA;c3N1ZUluc3RhbnQ9IjIwMTktMDEtMDNUMTE6NDY6MzEuODk1WiIgVmVyc2lvbj0iMi4wIiB4bWxu&#xD;&#xA;czpzYW1sMnA9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpwcm90b2NvbCI+PHNhbWwyOklz&#xD;&#xA;c3VlciBGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpuYW1laWQtZm9ybWF0OmVu&#xD;&#xA;dGl0eSIgeG1sbnM6c2FtbDI9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24i&#xD;&#xA;Pmh0dHBzOi8vcHBsb2dvbi5mYXNzdC5vcmcudWsvTG9naW4vc2FtbElkcDwvc2FtbDI6SXNzdWVy&#xD;&#xA;PjxzYW1sMnA6U3RhdHVzPjxzYW1sMnA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVz&#xD;&#xA;OnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIi8+PC9zYW1sMnA6U3RhdHVzPjxzYW1sMjpBc3Nl&#xD;&#xA;cnRpb24gSUQ9InV1aWRfMzczNzBlZWQ3OGFmOGRiODAyZGM4MjVlNjRhNzhjYWYiIElzc3VlSW5z&#xD;&#xA;dGFudD0iMjAxOS0wMS0wM1QxMTo0NjozMS44OTVaIiBWZXJzaW9uPSIyLjAiIHhtbG5zOnNhbWwy&#xD;&#xA;PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIiB4bWxuczp4cz0iaHR0cDov&#xD;&#xA;L3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiPjxzYW1sMjpJc3N1ZXIgRm9ybWF0PSJ1cm46b2Fz&#xD;&#xA;aXM6bmFtZXM6dGM6U0FNTDoyLjA6bmFtZWlkLWZvcm1hdDplbnRpdHkiIHhtbG5zOnNhbWwyPSJ1&#xD;&#xA;cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5odHRwczovL3BwbG9nb24uZmFz&#xD;&#xA;c3Qub3JnLnVrL0xvZ2luL3NhbWxJZHA8L3NhbWwyOklzc3Vlcj48ZHM6U2lnbmF0dXJlIHhtbG5z&#xD;&#xA;OmRzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIj48ZHM6U2lnbmVkSW5mbz48&#xD;&#xA;ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIw&#xD;&#xA;MDEvMTAveG1sLWV4Yy1jMTRuIyIvPjxkczpTaWduYXR1cmVNZXRob2QgQWxnb3JpdGhtPSJodHRw&#xD;&#xA;Oi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2Ii8+PGRzOlJlZmVy&#xD;&#xA;ZW5jZSBVUkk9IiN1dWlkXzM3MzcwZWVkNzhhZjhkYjgwMmRjODI1ZTY0YTc4Y2FmIj48ZHM6VHJh&#xD;&#xA;bnNmb3Jtcz48ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8w&#xD;&#xA;OS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz48ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0i&#xD;&#xA;aHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIj48ZWM6SW5jbHVzaXZlTmFt&#xD;&#xA;ZXNwYWNlcyBQcmVmaXhMaXN0PSJ4cyIgeG1sbnM6ZWM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEv&#xD;&#xA;MTAveG1sLWV4Yy1jMTRuIyIvPjwvZHM6VHJhbnNmb3JtPjwvZHM6VHJhbnNmb3Jtcz48ZHM6RGln&#xD;&#xA;ZXN0TWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI3No&#xD;&#xA;YTEiLz48ZHM6RGlnZXN0VmFsdWU+VG1lWENETWRKU0NvK0M5Ty82K2RVbGV2eVBnPTwvZHM6RGln&#xD;&#xA;ZXN0VmFsdWU+PC9kczpSZWZlcmVuY2U+PC9kczpTaWduZWRJbmZvPjxkczpTaWduYXR1cmVWYWx1&#xD;&#xA;ZT5HSmI1a3pjTGFhVHhkUWNLZ3UrS2dudy9kZC8xZ2czOXB1aHNSK3l6T09jRTZERk5FSjF6eWZv&#xD;&#xA;L3FMZEFscUpEVkhVOGFNS2NhVXJOWWpiUURzQm9rZ2MyekpOM0JQWHk5SzJSZDByQ2lkcVMydkxj&#xD;&#xA;dHBxZzl5VmRaTHovZXJKMFlXbnplRFB3d3R5ckJzV3NJK2RvR1k5dkpYb2JEaEYwN2xIYUUrMmRE&#xD;&#xA;K1lFeFc3RmdCck1KSmk2WHFDaHR4S1R4YWx2U0hVdHlYOVZwbk1zS3QvZlR6amhQMzY4Y0pIb0Fs&#xD;&#xA;bXR0OTJhdnpNL1VSL1I0aUgwWXR2SklKTGZONFVrN3NyNmQxRXJmSThPcktjVThsU0FtQ1pXdmlS&#xD;&#xA;WnQ5OVhZbmJsbE1iMzRFOGhpTFBTOTJRQlRvbkN6NDFQRmJ1NHU3TkRoTHlNNFdxbVhPV0tXbWx2&#xD;&#xA;bVE9PTwvZHM6U2lnbmF0dXJlVmFsdWU+PGRzOktleUluZm8+PGRzOlg1MDlEYXRhPjxkczpYNTA5&#xD;&#xA;Q2VydGlmaWNhdGU+TUlJRFd6Q0NBa09nQXdJQkFnSUpBS2dTNzNQemFXY1BNQTBHQ1NxR1NJYjNE&#xD;&#xA;UUVCQlFVQU1HMHhDekFKQmdOVkJBWVRBa2RDTVJNd0VRWURWUVFLRXdwUWFYSmxZVzRnVEhSa01R&#xD;&#xA;OHdEUVlEVlFRSEV3Wk1iMjVrYjI0eEVEQU9CZ05WQkFzVEIyUmxabUYxYkhReEpqQWtCZ05WQkFN&#xD;&#xA;VEhXaDBkSEJ6T2k4dmNIQnNiMmR2Ymk1bVlYTnpkQzV2Y21jdWRXc3ZNQjRYRFRFMk1Ea3hOakE1&#xD;&#xA;TlRZMU9Gb1hEVEkyTURreE5qQTVOVFkxT0Zvd2JURUxNQWtHQTFVRUJoTUNSMEl4RXpBUkJnTlZC&#xD;&#xA;QW9UQ2xCcGNtVmhiaUJNZEdReER6QU5CZ05WQkFjVEJreHZibVJ2YmpFUU1BNEdBMVVFQ3hNSFpH&#xD;&#xA;Vm1ZWFZzZERFbU1DUUdBMVVFQXhNZGFIUjBjSE02THk5d2NHeHZaMjl1TG1aaGMzTjBMbTl5Wnk1&#xD;&#xA;MWF5OHdnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFDQzh3SE9Dc2RQ&#xD;&#xA;T3I2OXJWYlJ5RnRSWjBCQmpOU2xSZnA2Mm1ENWNoT0RLQURTLyttRDdXSkRHVyt5MERieWY2TndE&#xD;&#xA;QXZQc1ErZkRVeGNJQmpRWWlEZVlWcDRMbFM2MEhsMmptZVJVWXFWcWZrN2hUVEZJZGJRRHc0YzdR&#xD;&#xA;U215V0FiNHh4THlpSTMzZ2djV2tYT1JuTENnMnM0R0VncGtIVGhsc0ZGak1RUnBtSFZlNTh3aGJE&#xD;&#xA;bDV4S2dHMithdUNWUDQzK0Q4QWRxTjVGMmZyU0JoQ2lhdWJQb3lXU1h4V1BXZkx5MXpHMmtXcHhY&#xD;&#xA;Z2dhajZVYzJWVnVlZkFRRHl1Lzhvd21pOUlnVEVKbENnNnpQK0l2bmlOM1h5eEp2TWJCMlUvWVJi&#xD;&#xA;djZjcWpYaTlhbVB2Tm93WXU3U2tZc0Q5WWdtcHdqRXVFaVVDNmwxYVVLQnBuTmJBZ01CQUFFd0RR&#xD;&#xA;WUpLb1pJaHZjTkFRRUZCUUFEZ2dFQkFIY3pnNVdzZHV6UTUycVpSc25rV2F0TnAvaW1laHNZL1p1&#xD;&#xA;OXdLam8zWmsybjY3TmVzTEp6YTIrakZ0ME9PcXNqSzU0Wk5LT09qNHBqWXoweVAyZTBOMGJCQVFS&#xD;&#xA;aUQrUVdJVUQwTmsxcFZDVEtRZUR1NEpPZHZOYXZDajYwajdtTHV1eUFxV2lpMWlWcDd0cWF5cXZP&#xD;&#xA;aGFoRit0Ui9kTnVjTXVCNlRrMEI5WFBndFJYeVhYMVUxTjh3Z2FrSHBCaHZTeHliUmhEMTYreU9U&#xD;&#xA;YzhYeisrZ0hqbFdLZjhwbVNvelJGWEJxcXBCL2huQjVVVUd4bUNiQUgrN29WSVNjQWlLNXIzN2dQ&#xD;&#xA;a0RjVldGc2xtZVZkbzVvTWVBdG1lOVJ6UDMzUHRhYXJQL25MUVpvL0YxMTNCUU5OVlhqTDN2ZTc3&#xD;&#xA;ci9EV2hjaTdmUzdEZW5BWkhJZmFIWkE9PC9kczpYNTA5Q2VydGlmaWNhdGU+PC9kczpYNTA5RGF0&#xD;&#xA;YT48L2RzOktleUluZm8+PC9kczpTaWduYXR1cmU+PHNhbWwyOlN1YmplY3QgeG1sbnM6c2FtbDI9&#xD;&#xA;InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sMjpOYW1lSUQgRm9y&#xD;&#xA;bWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjE6bmFtZWlkLWZvcm1hdDp1bnNwZWNpZmll&#xD;&#xA;ZCI+SVNQLTEwMDA1MDc3czwvc2FtbDI6TmFtZUlEPjxzYW1sMjpTdWJqZWN0Q29uZmlybWF0aW9u&#xD;&#xA;IE1ldGhvZD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmNtOmJlYXJlciI+PHNhbWwyOlN1&#xD;&#xA;YmplY3RDb25maXJtYXRpb25EYXRhIEluUmVzcG9uc2VUbz0iaWQtYzllNGUyNGItMjU3Yy00MzBh&#xD;&#xA;LTllZmQtMTdhMGE1ZmFmYTRhIiBOb3RPbk9yQWZ0ZXI9IjIwMTktMDEtMDNUMTE6NTE6MzEuODk1&#xD;&#xA;WiIgUmVjaXBpZW50PSJodHRwczovL2FkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5nLnNlcnZpY2Uu&#xD;&#xA;Z292LnVrL2FkZnMvbHMvIi8+PC9zYW1sMjpTdWJqZWN0Q29uZmlybWF0aW9uPjwvc2FtbDI6U3Vi&#xD;&#xA;amVjdD48c2FtbDI6Q29uZGl0aW9ucyBOb3RCZWZvcmU9IjIwMTktMDEtMDNUMTE6MzY6MzEuODk1&#xD;&#xA;WiIgTm90T25PckFmdGVyPSIyMDE5LTAxLTAzVDEyOjAxOjMxLjg5NVoiIHhtbG5zOnNhbWwyPSJ1&#xD;&#xA;cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXVkaWVuY2VSZXN0&#xD;&#xA;cmljdGlvbj48c2FtbDI6QXVkaWVuY2U+aHR0cDovL2FkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5n&#xD;&#xA;LnNlcnZpY2UuZ292LnVrL2FkZnMvc2VydmljZXMvdHJ1c3Q8L3NhbWwyOkF1ZGllbmNlPjwvc2Ft&#xD;&#xA;bDI6QXVkaWVuY2VSZXN0cmljdGlvbj48L3NhbWwyOkNvbmRpdGlvbnM+PHNhbWwyOkF1dGhuU3Rh&#xD;&#xA;dGVtZW50IEF1dGhuSW5zdGFudD0iMjAxOS0wMS0wM1QxMTo0NjozMS44OTVaIiBTZXNzaW9uSW5k&#xD;&#xA;ZXg9InV1aWRfMzczNzBlZWQ3OGFmOGRiODAyZGM4MjVlNjRhNzhjYWYiIHhtbG5zOnNhbWwyPSJ1&#xD;&#xA;cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXV0aG5Db250ZXh0&#xD;&#xA;PjxzYW1sMjpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6&#xD;&#xA;YWM6Y2xhc3NlczpQYXNzd29yZFByb3RlY3RlZFRyYW5zcG9ydDwvc2FtbDI6QXV0aG5Db250ZXh0&#xD;&#xA;Q2xhc3NSZWY+PC9zYW1sMjpBdXRobkNvbnRleHQ+PC9zYW1sMjpBdXRoblN0YXRlbWVudD48c2Ft&#xD;&#xA;bDI6QXR0cmlidXRlU3RhdGVtZW50IHhtbG5zOnNhbWwyPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FN&#xD;&#xA;TDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlIE5hbWU9InNlcnZpY2UiIE5hbWVGb3Jt&#xD;&#xA;YXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iPjxzYW1sMjpBdHRyaWJ1&#xD;&#xA;dGVWYWx1ZSB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5z&#xD;&#xA;OnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTp0eXBl&#xD;&#xA;PSJ4czpzdHJpbmciPkRBQTwvc2FtbDI6QXR0cmlidXRlVmFsdWU+PC9zYW1sMjpBdHRyaWJ1dGU+&#xD;&#xA;PHNhbWwyOkF0dHJpYnV0ZSBOYW1lPSJtYWlsIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6&#xD;&#xA;dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0&#xD;&#xA;dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMu&#xD;&#xA;b3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5vYXR0ZXN0&#xD;&#xA;dXNlcisxMDAwNTA3N0BnbWFpbC5jb208L3NhbWwyOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0&#xD;&#xA;cmlidXRlPjxzYW1sMjpBdHRyaWJ1dGUgTmFtZT0idXBpbiIgTmFtZUZvcm1hdD0idXJuOm9hc2lz&#xD;&#xA;Om5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiI+PHNhbWwyOkF0dHJpYnV0ZVZhbHVlIHhtbG5z&#xD;&#xA;OnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6eHNpPSJodHRwOi8v&#xD;&#xA;d3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnR5cGU9InhzOnN0cmluZyI+&#xD;&#xA;MTA2NDA5PC9zYW1sMjpBdHRyaWJ1dGVWYWx1ZT48L3NhbWwyOkF0dHJpYnV0ZT48c2FtbDI6QXR0&#xD;&#xA;cmlidXRlIE5hbWU9ImRpc3BsYXluYW1lIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xD;&#xA;U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6&#xD;&#xA;Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3Jn&#xD;&#xA;LzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5NciBTZnN0ZXN0&#xD;&#xA;IDEwMDA1MDc3PC9zYW1sMjpBdHRyaWJ1dGVWYWx1ZT48L3NhbWwyOkF0dHJpYnV0ZT48c2FtbDI6&#xD;&#xA;QXR0cmlidXRlIE5hbWU9InVzZXJ0eXBlIiBOYW1lRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6&#xD;&#xA;U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHM9Imh0dHA6&#xD;&#xA;Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3Jn&#xD;&#xA;LzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5JU1A8L3NhbWwy&#xD;&#xA;OkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0cmlidXRlPjxzYW1sMjpBdHRyaWJ1dGUgTmFtZT0i&#xD;&#xA;YWRkaXRpb25hbHVwaW5zIi8+PHNhbWwyOkF0dHJpYnV0ZSBOYW1lPSJ1a3BybiIgTmFtZUZvcm1h&#xD;&#xA;dD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiI+PHNhbWwyOkF0dHJpYnV0&#xD;&#xA;ZVZhbHVlIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6&#xD;&#xA;eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnR5cGU9&#xD;&#xA;InhzOnN0cmluZyI+MTAwMDUwNzc8L3NhbWwyOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0cmli&#xD;&#xA;dXRlPjwvc2FtbDI6QXR0cmlidXRlU3RhdGVtZW50Pjwvc2FtbDI6QXNzZXJ0aW9uPjwvc2FtbDJw&#xD;&#xA;OlJlc3BvbnNlPg==" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="RelayState" Value="72faa677-7821-4c2b-8cb9-f8eb2f5a670f" RecordedValue="72faa677-7821-4c2b-8cb9-f8eb2f5a670f" CorrelationBinding="" UrlEncode="True" />
+              </FormPostHttpBody>
+            </Request>
+            <Request Method="POST" Guid="b3de2a23-181d-4757-bd45-9c9e77b5011a" Version="1.1" Url="https://{{EnvironmentPAS}}/" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentPAS}}/account" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://adfs.preprod.skillsfunding.service.gov.uk/adfs/ls/" />
+              </Headers>
+              <FormPostHttpBody>
+                <FormPostParameter Name="wa" Value="wsignin1.0" RecordedValue="wsignin1.0" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="wresult" Value="{{wres}}" RecordedValue="&lt;t:RequestSecurityTokenResponse xmlns:t=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;&gt;&lt;t:Lifetime&gt;&lt;wsu:Created xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-01-03T11:46:35.708Z&lt;/wsu:Created&gt;&lt;wsu:Expires xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-01-03T19:46:35.708Z&lt;/wsu:Expires&gt;&lt;/t:Lifetime&gt;&lt;wsp:AppliesTo xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;wsa:EndpointReference xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;https://{{EnvironmentPAS}}/&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;t:RequestedSecurityToken&gt;&lt;saml:Assertion MajorVersion=&quot;1&quot; MinorVersion=&quot;1&quot; AssertionID=&quot;_af844ab2-7520-4f7d-940d-b780e864bf68&quot; Issuer=&quot;http://adfs.preprod.skillsfunding.service.gov.uk/adfs/services/trust&quot; IssueInstant=&quot;2019-01-03T11:46:35.708Z&quot; xmlns:saml=&quot;urn:oasis:names:tc:SAML:1.0:assertion&quot;&gt;&lt;saml:Conditions NotBefore=&quot;2019-01-03T11:46:35.708Z&quot; NotOnOrAfter=&quot;2019-01-03T19:46:35.708Z&quot;&gt;&lt;saml:AudienceRestrictionCondition&gt;&lt;saml:Audience&gt;https://{{EnvironmentPAS}}/&lt;/saml:Audience&gt;&lt;/saml:AudienceRestrictionCondition&gt;&lt;/saml:Conditions&gt;&lt;saml:AttributeStatement&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;saml:Attribute AttributeName=&quot;upn&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;ISP-10005077s&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;ukprn&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;10005077&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;service&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;DAA&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;displayname&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;Mr Sfstest 10005077&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;name&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;Mr Sfstest 10005077&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;mail&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;oattestuser+10005077@gmail.com&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;/saml:AttributeStatement&gt;&lt;saml:AuthenticationStatement AuthenticationMethod=&quot;urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport&quot; AuthenticationInstant=&quot;2019-01-03T11:46:31.895Z&quot;&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;/saml:AuthenticationStatement&gt;&lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;ds:SignedInfo&gt;&lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&quot; /&gt;&lt;ds:Reference URI=&quot;#_af844ab2-7520-4f7d-940d-b780e864bf68&quot;&gt;&lt;ds:Transforms&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot; /&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;/ds:Transforms&gt;&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot; /&gt;&lt;ds:DigestValue&gt;IA6n3dSajv3DndbVq4VD5kKEEbeXF2r84CBGV+LxroQ=&lt;/ds:DigestValue&gt;&lt;/ds:Reference&gt;&lt;/ds:SignedInfo&gt;&lt;ds:SignatureValue&gt;n6WPjhZhXe4q+iPSGo9GI77vFhZHhbNCPrKaOdPmGU9tVZaDy9A4cZp7F1HYYSaNKNoDZUNgiJzcmsSTXLG/GUQ408w5NxKg8Qw5omLcEffA1MEeBhz6wcH7Z45NOs8Fp7MMJxWhxg1AemUVsEHEcVoI3FfKgeksysAFIRv+p2D1OgQJzMM2x4MxX+h6bxOGgNoiG6dW4KKY0AsUjYgHGJHIxpaKhm2061EbrqgKkB7jwWMTlUwStT+2KnSlE/i6RaJiFYNbDbhL9zQIieWX97HaeKj43jMy9cB078YPMVUguorjOMuBqPmgGG7MXdaFE1Zx6zYp9/edaqfsiFoueg==&lt;/ds:SignatureValue&gt;&lt;KeyInfo xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;X509Data&gt;&lt;X509Certificate&gt;MIIDDjCCAfagAwIBAgIQVu3rHgUAyaNM353xrulvYDANBgkqhkiG9w0BAQsFADBDMUEwPwYDVQQDEzhBREZTIFNpZ25pbmcgLSBhZGZzLnByZXByb2Quc2tpbGxzZnVuZGluZy5zZXJ2aWNlLmdvdi51azAeFw0xODExMjExMjM3MTJaFw0yMDExMjAxMjM3MTJaMEMxQTA/BgNVBAMTOEFERlMgU2lnbmluZyAtIGFkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5nLnNlcnZpY2UuZ292LnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqkFOYtkoyM+korIURnmrhFWCsSeikmNXfg9DOoB5mzFleWlkQ4vPT375lo9q+rc3hKfEjIsVQIKrjVJjhYThO9Dct04sV5funwYncSDtd+IU1wQbNaYM05fnmYTty7qAL8OjcPwO+YgMmz3NWS5ahcxFtpCI4TuhZONP28MhUJXjlzkZSi0PM+kMu14vXJh8u0Iii/7OQ7eNQWM83Cd5Hd5PB/ci+ThvPnbMXEKCfhqbNXBHlBFfszFHec4FLRRhdnDxZwnK/CRRaSEE3tViYY7Gccdl+fZi87oSI3PjQJhNKZ2jdzHPXYtjlCOM3v/9+trDQMt9kzDhRWZ00khu+wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBE9066fbUb+10sJZtuRZr+1oh6f/5ONYb9mMPkRZuO+Sxof5XL+wjPSQFqtMrcHOfm3M6Y5hnsdpFXlvW1ymq2a94Do5nB+X97LUFLlAVU+U6VGbUw1T6w8KSA5wuuxcPl3CgVwb+XnOQXBW0FDaLGqMWGnctaGeO7lF74QttXbtZTm4GXjsV0R+TU3DjddnpG4yzSs3BnBZowOepdq85vTjpJMOOiEp4WKWshEOTqlOXl2+8a09ZTW09AtRjDelIRkDqU5gOEIK8cuNhCspoTcFZGPN03w0IYq36mBIO4sq/uUYNNH6jRXNoPr4a4LLB7WbyDeOWgKnbXxUwlg2Hi&lt;/X509Certificate&gt;&lt;/X509Data&gt;&lt;/KeyInfo&gt;&lt;/ds:Signature&gt;&lt;/saml:Assertion&gt;&lt;/t:RequestedSecurityToken&gt;&lt;t:TokenType&gt;urn:oasis:names:tc:SAML:1.0:assertion&lt;/t:TokenType&gt;&lt;t:RequestType&gt;http://schemas.xmlsoap.org/ws/2005/02/trust/Issue&lt;/t:RequestType&gt;&lt;t:KeyType&gt;http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey&lt;/t:KeyType&gt;&lt;/t:RequestSecurityTokenResponse&gt;" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="wctx" Value="{{wctx}}" RecordedValue="WsFedOwinState=9H6WWzye92I9gVORgOAG9wncyrtWrgCp6zvHxlMCH0vzVqYabpFk-VTdL_mg9eO00Vt9FX0rbmXwLqv_zotr61oM1fs" CorrelationBinding="" UrlEncode="True" />
+              </FormPostHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="005_0050_AddApprentice_By_Provider">
+      <Items>
+        <TransactionTimer Name="005_0050_01_YourCohorts_Click">
+          <Items>
+            <Comment CommentText="Go to your cohorts on Peterborough RC page" />
+            <Request Method="GET" Guid="4e14931b-5eca-4dbd-8ca5-1377bc77398e" Version="1.1" Url="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/Cohorts" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentPAS}}/account" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0050_02_Ready4Review_Click">
+          <Items>
+            <Comment CommentText="On Your Cohorts page. Click Ready for review block" />
+            <Request Method="GET" Guid="7ce3b600-535b-42c4-9b0a-5fe90ae717b8" Version="1.1" Url="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/cohorts/review" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/Cohorts" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0050_03_CohortDetails_Click">
+          <Items>
+            <Comment CommentText="Click Details in the row of Cohort MN6L9N" />
+            <Request Method="GET" Guid="419d819b-b2a9-49aa-ad18-b0b16ccb71e5" Version="1.1" Url="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/Details" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/cohorts/review" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0050_04_Apprentice_Add">
+          <Items>
+            <Comment CommentText="Add Apprentice" />
+            <Request Method="GET" Guid="921ca498-1b66-45d4-8ced-2bb9e80ce445" Version="1.1" Url="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/AddApprentice" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/Details" />
+              </Headers>
+              <ExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </ExtractionRules>
+              <CorrelationExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.TrainingCode" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; &gt;&#xD;&#xA;" />
+                    <RuleParameter Name="Index" Value="8" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam39.TrainingCode" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; &gt;&#xD;&#xA;" />
+                    <RuleParameter Name="Index" Value="8" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </CorrelationExtractionRules>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0050_05_Apprentice_Save">
+          <Items>
+            <Comment CommentText="Enter details of Apprentice and save" />
+            <Comment CommentText="Click Add" />
+            <Request Method="POST" Guid="29d3a6e3-14b6-4529-bfc6-4a065b7b4c6c" Version="1.1" Url="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/AddApprentice" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/Details" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/AddApprentice" />
+              </Headers>
+              <FormPostHttpBody>
+                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="ekQX1cwC5uCgjQOG9ESifPhe4mkClUYbfIZExqedoDhSOY_6FHpZ9QsoYs0REDxDmLbqxFs0S-FilItg_yAnrud8l97Hyz0etMH5AsUmxILodO6YZcL7wEBQG5uwwjMavmvpWw2" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="FirstName" Value="{{FirstName}}" RecordedValue="FirstName_15011036" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="LastName" Value="{{LastName}}" RecordedValue="LastName_15011036" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="DateOfBirth.Day" Value="01" RecordedValue="01" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="DateOfBirth.Month" Value="01" RecordedValue="01" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="DateOfBirth.Year" Value="2000" RecordedValue="2000" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="ULN" Value="{{ULRN}}" RecordedValue="8759199872" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="TrainingCode" Value="34" RecordedValue="34" CorrelationBinding="{{FormPostParam39.TrainingCode}}" UrlEncode="True" />
+                <FormPostParameter Name="StartDate.Month" Value="04" RecordedValue="04" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="StartDate.Year" Value="2019" RecordedValue="2019" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="EndDate.Month" Value="04" RecordedValue="04" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="EndDate.Year" Value="2020" RecordedValue="2020" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="Cost" Value="1500" RecordedValue="1500" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="ProviderRef" Value="Provider creation" RecordedValue="Provider creation" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="HashedCommitmentId" Value="{{FormPostParam.__CohortRef}}" RecordedValue="MN6L9N" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="ProviderId" Value="{{ProviderId}}" RecordedValue="10005077" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="AgreementStatus" Value="{{$HIDDEN1.AgreementStatus}}" RecordedValue="NotAgreed" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="EmployerRef" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="IsPaidForByTransfer" Value="{{$HIDDEN1.IsPaidForByTransfer}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+              </FormPostHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0050_06_SaveAndContinue_Click">
+          <Items>
+            <Comment CommentText="Click Apprentice block on Review your cohort page" />
+            <Comment CommentText="Click Save and continue button not Apprentice block" />
+            <Request Method="GET" Guid="97ec5309-ed74-4a79-b3b0-15cc5a1e4555" Version="1.1" Url="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/Finished" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/Details" />
+              </Headers>
+              <ExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </ExtractionRules>
+              <CorrelationExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.SaveStatus" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="Name" Value="SaveStatus-ApproveAndSend" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                    <RuleParameter Name="Index" Value="0" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam40.SaveStatus" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="Name" Value="SaveStatus-ApproveAndSend" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                    <RuleParameter Name="Index" Value="0" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </CorrelationExtractionRules>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0050_07_Send4EmployerApproval_Click">
+          <Items>
+            <Comment CommentText="Click Approve and send to employer for approval" />
+            <Request Method="POST" Guid="a9dcb878-46f7-41cf-b466-b9da7b68f832" Version="1.1" Url="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/Finished" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/Submit?SaveStatus=ApproveAndSend" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/Finished" />
+              </Headers>
+              <ExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </ExtractionRules>
+              <CorrelationExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam41.__RequestVerificationToken" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="0" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam42.ProviderId" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="1" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam43.SaveStatus" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="2" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam44.HashedCommitmentId" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="3" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </CorrelationExtractionRules>
+              <FormPostHttpBody>
+                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="RgicJ9XBXKncvarjKUyBvjx9YmqXmS2HXQZXQ9Nwlvcg5L6SqqXe6cCu-s6Vh5Nf6JIkVidHsSdbblMWuvboh8fMuhnguGzFAYb9WytRd9bf9ChF1RLJESyWVgw9Vi45RyPaRg2" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="SaveStatus" Value="ApproveAndSend" RecordedValue="ApproveAndSend" CorrelationBinding="{{FormPostParam40.SaveStatus}}" UrlEncode="True" />
+                <FormPostParameter Name="ProviderId" Value="{{ProviderId}}" RecordedValue="10005077" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="HashedCommitmentId" Value="{{FormPostParam.__CohortRef}}" RecordedValue="MN6L9N" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="HasApprenticeships" Value="{{$HIDDEN1.HasApprenticeships}}" RecordedValue="True" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="InvalidApprenticeshipCount" Value="{{$HIDDEN1.InvalidApprenticeshipCount}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="ReadyForApproval" Value="{{$HIDDEN1.ReadyForApproval}}" RecordedValue="True" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="HasSignedTheAgreement" Value="{{$HIDDEN1.HasSignedTheAgreement}}" RecordedValue="True" CorrelationBinding="" UrlEncode="True" />
+              </FormPostHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0050_08_EnterMessage_Send_Click">
+          <Items>
+            <Comment CommentText="Enter message to employer and click send button" />
+            <Request Method="POST" Guid="c16bc471-c445-4ab2-84fd-23f5454a3b27" Version="1.1" Url="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/Submit" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/Acknowledgement?saveStatus=ApproveAndSend" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentPAS}}/{{ProviderId}}/apprentices/{{FormPostParam.__CohortRef}}/Submit?SaveStatus=ApproveAndSend" />
+              </Headers>
+              <FormPostHttpBody>
+                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="sTyHUViRZOhMxmPdWmFAOAHrIokPMyDPP3VRSWTkIy2qzky4GuEG8AMN8-XVJ7cMGvCMMrJ4zkmb3cykwSW7tsHbHf7dVwinvLBtUDIgSvug-BGbaS5c-uzf-Z5anWB_eNIIuA2" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="Message" Value="Approve apprentice" RecordedValue="Approve apprentice" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="ProviderId" Value="{{ProviderId}}" RecordedValue="10005077" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="SaveStatus" Value="{{$HIDDEN1.SaveStatus}}" RecordedValue="ApproveAndSend" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="HashedCommitmentId" Value="{{FormPostParam.__CohortRef}}" RecordedValue="MN6L9N" CorrelationBinding="" UrlEncode="True" />
+              </FormPostHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0050_09_BackToHome_Click">
+          <Items>
+            <Comment CommentText="Click back to account home link" />
+            <Request Method="GET" Guid="6ca3e60c-839f-497a-a235-f156dfb7c09a" Version="1.1" Url="https://{{EnvironmentPAS}}/bundles/dropdown-select" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentPAS}}/account" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="v" Value="1gLDeLK3of5rc-1C48Gfb2Q5tirA0JMYKWNX5WYgN-Q1" RecordedValue="1gLDeLK3of5rc-1C48Gfb2Q5tirA0JMYKWNX5WYgN-Q1" CorrelationBinding="{{QueryStringParam738.v}}" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="addbd32e-bb4e-4d0a-87a9-25cefb304315" Version="1.1" Url="https://{{EnvironmentPAS}}/bundles/screen" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentPAS}}/account" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="v" Value="FGBJ0rOhDrkAPDGN-z99JDrrxesjqTZWOqn9NVftbBI1" RecordedValue="FGBJ0rOhDrkAPDGN-z99JDrrxesjqTZWOqn9NVftbBI1" CorrelationBinding="{{QueryStringParam739.v}}" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="3204873d-294c-47ad-ab36-30099758b011" Version="1.1" Url="https://{{EnvironmentPAS}}/bundles/sfajs" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentPAS}}/account" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="v" Value="W82GCwVyvv3MbCPUHKHZahaYerVLgR9RpZROgc6RWlQ1" RecordedValue="W82GCwVyvv3MbCPUHKHZahaYerVLgR9RpZROgc6RWlQ1" CorrelationBinding="{{QueryStringParam740.v}}" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0050_10_Provider_Signout">
+          <Items>
+            <Comment CommentText="Sign out" />
+            <Request Method="GET" Guid="7f199c54-804f-489b-b592-e056cee64682" Version="1.1" Url="https://{{EnvironmentPAS}}/signout" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pplogon.fasst.org.uk/Login/dialog/appl/sfa/wflow/samlslopage?SAMLResponse=tVbJdqNKEt33V%2BioliqZGQ2n5HcS0IAlkBiEhk2fBJJBjCJBIH39w5LtY7tfV9emlxEZcePmjcjh119NEncuqMBhlk661BPZ7aDUydww9SfdrTnrD7t%2FPf%2FrF4ZJTOfjVeZnVakjnGcpRh0J4TJMYXnPDcoyx2OCyPO4jUqfPIhx%2BZQV%2FlMVEW1imBJuCNs1ArYhBPYgUXtxVhOv2DjOcuijbkeWJt2qCt1%2FU56NXOiy%2FGjI0C5PkyzP0Bw5pJjBgOFovg1N34mY2aTbJkDEkCOq77Is2Wc5kuvbkHL7LHJ4l0Sex3BUm4RxheQUlzAtJ12apEZ9kupTnEmRY5Yac8wTNRgeux3rXRL6VZJWpBSPHyK0%2FIp0nEEc4nEKE4THpTM2gLIat6HjvMjKzMni7vNDs%2FG9YPEZ4fcArWqoeFW0%2B%2FwHir4Cym7%2Bi%2Fhc7PmXi8dG6LedqQr0VtrFjxa1eHVdP9XMKxBBkyRJkCOijXFx6P%2FofuQiV0697G6KMM3S0IFxeLv3WkFlkLkdEPtZEZZB8l%2BAKYIiX4H7qHH6DsWmP7rEV2p%2FDESy7wz7SVagHwWGfRxAmuPfIHXkoaIdXNTZ6vKk%2B%2BPPRuieahYwxV5WJPir%2BT9pfREOpRfUzjBy%2B%2Fh9d2%2FU%2FhzwnwUj%2FpOjFPrtyftD9b7QbEWj3ng9QCwYV%2BityoeID%2FPbFHx07T2l9S3R9WN9z5EjCZbww3gMo4GK9tR%2Fc6rt2D%2BL6uS3E%2F6zs95OXOTBKi5%2FdlaTVZa6Wdp6J5uwQDDtrEr3Z0eczIU73W%2Fo7wUf9dUqsduDQdEURZEkx9MjmuEHDDOgqI%2FkL5HfIL%2FtwqjsE3LK%2F9c2PsO%2FlxRfbwWvPYUlelZkWdrdRBFEax%2FUsgB8%2BQUsfWPAbG5w52wUQM5F4zw3ZJuRtKkgaFugzMlGvIEXwVctARxMELmioiv1VDtIlqYtp3Wuwf1LfNixvrnQI0Ub1tJjbTGtj4pNc5FNs81UAusHBjYFWo%2BPyYyyF1rzcgLRw6%2BYi11Augvhtg6HF2chYJt2L3bIJYe9enNF7uIkTuXu8EUR2L1kTmlFihr1BDjVPFDrWdb65O%2B%2B2janKwVEc0Btp0KgiDopN9Mb0B81M1OMhdxJrMAOBcWda410A%2BpjzTGFqLnYiX6xT1NNAewdQ2yUxXFutZws7ErTRBG1ux80igsXOuksFH51HdXOvLkc6VG1So6Bw6jkKhldj1eOgtdh7fvT8LvWoNUasLIg1eB1fQmytj%2BaKA7rxVrE7mZd8KPCsvXrrNSPpCCcVCPWvZynE4lzgrW0BJJB9BJpsHuR5rvelZTsq8ertQQuG6z1PGnbOLJw0g6hhA5Wzq5igycXMX1KkL49nK2zFw0C05zJrq1JNesMNCO57oDNNs3qGsoM4%2FvOLtqv9XQl%2BjRm51M%2FjxZmEOPZ7KRoep4sLMQN68CWYq5Z%2BnO6ByvR2rBMTxoC96xyM9orDCEQQ1jZm%2By6M%2FbNbrPzVlfqNqejXd7sfR%2Be%2BK1DW1aFPKBJ14oYZnUSjmTfnL7Eos%2FfNj35koYqs782LxfFFugtcdDtC%2B%2BcT%2FtwBJPNRc3qQzUwogOWRgc%2FyevTtJqGW5GPKbhdCnmq2sBXBACmr3P6ssyOcnBxVKBNZ4IGpFZ7ASycm8%2FtsFvdNI4%2BH3WcRjtYqjkRJijAB%2BJYjerlKWOOEZ3yAxXh1csN0r3TrCTX6zM%2BLTn2qC7X6xObnw438rqhEamSdttQPZR62k7eSqQaUbklmksNSRX7snYvKryIJ548DZJVVV3BeReGVGjlg%2FIMr%2BfLOoDBrFfqhKtWjlIJvBmRwmi%2F8Ut9f93vqS2ltoMFo0UuBBejudp6IFF877o2neH%2B1" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentPAS}}/account" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="c2d4d546-4c8d-4a5f-a602-45fc8a9ce015" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/languages/lang-en.json" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Accept" Value="application/json, text/plain, */*" />
+                <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/dialog/appl/sfa/wflow/samlslopage?SAMLResponse=tVbJdqNKEt33V%2BioliqZGQ2n5HcS0IAlkBiEhk2fBJJBjCJBIH39w5LtY7tfV9emlxEZcePmjcjh119NEncuqMBhlk661BPZ7aDUydww9SfdrTnrD7t%2FPf%2FrF4ZJTOfjVeZnVakjnGcpRh0J4TJMYXnPDcoyx2OCyPO4jUqfPIhx%2BZQV%2FlMVEW1imBJuCNs1ArYhBPYgUXtxVhOv2DjOcuijbkeWJt2qCt1%2FU56NXOiy%2FGjI0C5PkyzP0Bw5pJjBgOFovg1N34mY2aTbJkDEkCOq77Is2Wc5kuvbkHL7LHJ4l0Sex3BUm4RxheQUlzAtJ12apEZ9kupTnEmRY5Yac8wTNRgeux3rXRL6VZJWpBSPHyK0%2FIp0nEEc4nEKE4THpTM2gLIat6HjvMjKzMni7vNDs%2FG9YPEZ4fcArWqoeFW0%2B%2FwHir4Cym7%2Bi%2Fhc7PmXi8dG6LedqQr0VtrFjxa1eHVdP9XMKxBBkyRJkCOijXFx6P%2FofuQiV0697G6KMM3S0IFxeLv3WkFlkLkdEPtZEZZB8l%2BAKYIiX4H7qHH6DsWmP7rEV2p%2FDESy7wz7SVagHwWGfRxAmuPfIHXkoaIdXNTZ6vKk%2B%2BPPRuieahYwxV5WJPir%2BT9pfREOpRfUzjBy%2B%2Fh9d2%2FU%2FhzwnwUj%2FpOjFPrtyftD9b7QbEWj3ng9QCwYV%2BityoeID%2FPbFHx07T2l9S3R9WN9z5EjCZbww3gMo4GK9tR%2Fc6rt2D%2BL6uS3E%2F6zs95OXOTBKi5%2FdlaTVZa6Wdp6J5uwQDDtrEr3Z0eczIU73W%2Fo7wUf9dUqsduDQdEURZEkx9MjmuEHDDOgqI%2FkL5HfIL%2FtwqjsE3LK%2F9c2PsO%2FlxRfbwWvPYUlelZkWdrdRBFEax%2FUsgB8%2BQUsfWPAbG5w52wUQM5F4zw3ZJuRtKkgaFugzMlGvIEXwVctARxMELmioiv1VDtIlqYtp3Wuwf1LfNixvrnQI0Ub1tJjbTGtj4pNc5FNs81UAusHBjYFWo%2BPyYyyF1rzcgLRw6%2BYi11Augvhtg6HF2chYJt2L3bIJYe9enNF7uIkTuXu8EUR2L1kTmlFihr1BDjVPFDrWdb65O%2B%2B2janKwVEc0Btp0KgiDopN9Mb0B81M1OMhdxJrMAOBcWda410A%2BpjzTGFqLnYiX6xT1NNAewdQ2yUxXFutZws7ErTRBG1ux80igsXOuksFH51HdXOvLkc6VG1So6Bw6jkKhldj1eOgtdh7fvT8LvWoNUasLIg1eB1fQmytj%2BaKA7rxVrE7mZd8KPCsvXrrNSPpCCcVCPWvZynE4lzgrW0BJJB9BJpsHuR5rvelZTsq8ertQQuG6z1PGnbOLJw0g6hhA5Wzq5igycXMX1KkL49nK2zFw0C05zJrq1JNesMNCO57oDNNs3qGsoM4%2FvOLtqv9XQl%2BjRm51M%2FjxZmEOPZ7KRoep4sLMQN68CWYq5Z%2BnO6ByvR2rBMTxoC96xyM9orDCEQQ1jZm%2By6M%2FbNbrPzVlfqNqejXd7sfR%2Be%2BK1DW1aFPKBJ14oYZnUSjmTfnL7Eos%2FfNj35koYqs782LxfFFugtcdDtC%2B%2BcT%2FtwBJPNRc3qQzUwogOWRgc%2FyevTtJqGW5GPKbhdCnmq2sBXBACmr3P6ssyOcnBxVKBNZ4IGpFZ7ASycm8%2FtsFvdNI4%2BH3WcRjtYqjkRJijAB%2BJYjerlKWOOEZ3yAxXh1csN0r3TrCTX6zM%2BLTn2qC7X6xObnw438rqhEamSdttQPZR62k7eSqQaUbklmksNSRX7snYvKryIJ548DZJVVV3BeReGVGjlg%2FIMr%2BfLOoDBrFfqhKtWjlIJvBmRwmi%2F8Ut9f93vqS2ltoMFo0UuBBejudp6IFF877o2neH%2B1uv5i1O8W3rDPDGymz7bC%2BdzLhBBKnDb7bxJRBsseoPMkg0HhEuuYAb%2BJpIcazfDcYIsN%2BMyBYEyQSP9tmGYTQlhsSHSlXbMiBlFMYKmqtb%2BtGIuaDAoCGkXOOHAMwYSSsFxIXtwcQSTj4vq86X04Xw8AsTn54H4%2FH48v%2F8mjbK18TdTzFzUuT8xv%2F8n4Xv02KgcB2F8fyi%2FwRL%2F%2BGl9%2Fhs%3D" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="a713b6db-5b25-48ff-8170-ed32b24e89cc" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/apps/sfa/partials/sfa-navbar.html" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Accept" Value="application/json, text/plain, */*" />
+                <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/dialog/appl/sfa/wflow/samlslopage?SAMLResponse=tVbJdqNKEt33V%2BioliqZGQ2n5HcS0IAlkBiEhk2fBJJBjCJBIH39w5LtY7tfV9emlxEZcePmjcjh119NEncuqMBhlk661BPZ7aDUydww9SfdrTnrD7t%2FPf%2FrF4ZJTOfjVeZnVakjnGcpRh0J4TJMYXnPDcoyx2OCyPO4jUqfPIhx%2BZQV%2FlMVEW1imBJuCNs1ArYhBPYgUXtxVhOv2DjOcuijbkeWJt2qCt1%2FU56NXOiy%2FGjI0C5PkyzP0Bw5pJjBgOFovg1N34mY2aTbJkDEkCOq77Is2Wc5kuvbkHL7LHJ4l0Sex3BUm4RxheQUlzAtJ12apEZ9kupTnEmRY5Yac8wTNRgeux3rXRL6VZJWpBSPHyK0%2FIp0nEEc4nEKE4THpTM2gLIat6HjvMjKzMni7vNDs%2FG9YPEZ4fcArWqoeFW0%2B%2FwHir4Cym7%2Bi%2Fhc7PmXi8dG6LedqQr0VtrFjxa1eHVdP9XMKxBBkyRJkCOijXFx6P%2FofuQiV0697G6KMM3S0IFxeLv3WkFlkLkdEPtZEZZB8l%2BAKYIiX4H7qHH6DsWmP7rEV2p%2FDESy7wz7SVagHwWGfRxAmuPfIHXkoaIdXNTZ6vKk%2B%2BPPRuieahYwxV5WJPir%2BT9pfREOpRfUzjBy%2B%2Fh9d2%2FU%2FhzwnwUj%2FpOjFPrtyftD9b7QbEWj3ng9QCwYV%2BityoeID%2FPbFHx07T2l9S3R9WN9z5EjCZbww3gMo4GK9tR%2Fc6rt2D%2BL6uS3E%2F6zs95OXOTBKi5%2FdlaTVZa6Wdp6J5uwQDDtrEr3Z0eczIU73W%2Fo7wUf9dUqsduDQdEURZEkx9MjmuEHDDOgqI%2FkL5HfIL%2FtwqjsE3LK%2F9c2PsO%2FlxRfbwWvPYUlelZkWdrdRBFEax%2FUsgB8%2BQUsfWPAbG5w52wUQM5F4zw3ZJuRtKkgaFugzMlGvIEXwVctARxMELmioiv1VDtIlqYtp3Wuwf1LfNixvrnQI0Ub1tJjbTGtj4pNc5FNs81UAusHBjYFWo%2BPyYyyF1rzcgLRw6%2BYi11Augvhtg6HF2chYJt2L3bIJYe9enNF7uIkTuXu8EUR2L1kTmlFihr1BDjVPFDrWdb65O%2B%2B2janKwVEc0Btp0KgiDopN9Mb0B81M1OMhdxJrMAOBcWda410A%2BpjzTGFqLnYiX6xT1NNAewdQ2yUxXFutZws7ErTRBG1ux80igsXOuksFH51HdXOvLkc6VG1So6Bw6jkKhldj1eOgtdh7fvT8LvWoNUasLIg1eB1fQmytj%2BaKA7rxVrE7mZd8KPCsvXrrNSPpCCcVCPWvZynE4lzgrW0BJJB9BJpsHuR5rvelZTsq8ertQQuG6z1PGnbOLJw0g6hhA5Wzq5igycXMX1KkL49nK2zFw0C05zJrq1JNesMNCO57oDNNs3qGsoM4%2FvOLtqv9XQl%2BjRm51M%2FjxZmEOPZ7KRoep4sLMQN68CWYq5Z%2BnO6ByvR2rBMTxoC96xyM9orDCEQQ1jZm%2By6M%2FbNbrPzVlfqNqejXd7sfR%2Be%2BK1DW1aFPKBJ14oYZnUSjmTfnL7Eos%2FfNj35koYqs782LxfFFugtcdDtC%2B%2BcT%2FtwBJPNRc3qQzUwogOWRgc%2FyevTtJqGW5GPKbhdCnmq2sBXBACmr3P6ssyOcnBxVKBNZ4IGpFZ7ASycm8%2FtsFvdNI4%2BH3WcRjtYqjkRJijAB%2BJYjerlKWOOEZ3yAxXh1csN0r3TrCTX6zM%2BLTn2qC7X6xObnw438rqhEamSdttQPZR62k7eSqQaUbklmksNSRX7snYvKryIJ548DZJVVV3BeReGVGjlg%2FIMr%2BfLOoDBrFfqhKtWjlIJvBmRwmi%2F8Ut9f93vqS2ltoMFo0UuBBejudp6IFF877o2neH%2B1uv5i1O8W3rDPDGymz7bC%2BdzLhBBKnDb7bxJRBsseoPMkg0HhEuuYAb%2BJpIcazfDcYIsN%2BMyBYEyQSP9tmGYTQlhsSHSlXbMiBlFMYKmqtb%2BtGIuaDAoCGkXOOHAMwYSSsFxIXtwcQSTj4vq86X04Xw8AsTn54H4%2FH48v%2F8mjbK18TdTzFzUuT8xv%2F8n4Xv02KgcB2F8fyi%2FwRL%2F%2BGl9%2Fhs%3D" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="8e2d243a-ad5f-4f5f-8c75-2c0f49026d19" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/apps/sfa/partials/sfa-footer.html" ThinkTime="583" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Accept" Value="application/json, text/plain, */*" />
+                <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/dialog/appl/sfa/wflow/samlslopage?SAMLResponse=tVbJdqNKEt33V%2BioliqZGQ2n5HcS0IAlkBiEhk2fBJJBjCJBIH39w5LtY7tfV9emlxEZcePmjcjh119NEncuqMBhlk661BPZ7aDUydww9SfdrTnrD7t%2FPf%2FrF4ZJTOfjVeZnVakjnGcpRh0J4TJMYXnPDcoyx2OCyPO4jUqfPIhx%2BZQV%2FlMVEW1imBJuCNs1ArYhBPYgUXtxVhOv2DjOcuijbkeWJt2qCt1%2FU56NXOiy%2FGjI0C5PkyzP0Bw5pJjBgOFovg1N34mY2aTbJkDEkCOq77Is2Wc5kuvbkHL7LHJ4l0Sex3BUm4RxheQUlzAtJ12apEZ9kupTnEmRY5Yac8wTNRgeux3rXRL6VZJWpBSPHyK0%2FIp0nEEc4nEKE4THpTM2gLIat6HjvMjKzMni7vNDs%2FG9YPEZ4fcArWqoeFW0%2B%2FwHir4Cym7%2Bi%2Fhc7PmXi8dG6LedqQr0VtrFjxa1eHVdP9XMKxBBkyRJkCOijXFx6P%2FofuQiV0697G6KMM3S0IFxeLv3WkFlkLkdEPtZEZZB8l%2BAKYIiX4H7qHH6DsWmP7rEV2p%2FDESy7wz7SVagHwWGfRxAmuPfIHXkoaIdXNTZ6vKk%2B%2BPPRuieahYwxV5WJPir%2BT9pfREOpRfUzjBy%2B%2Fh9d2%2FU%2FhzwnwUj%2FpOjFPrtyftD9b7QbEWj3ng9QCwYV%2BityoeID%2FPbFHx07T2l9S3R9WN9z5EjCZbww3gMo4GK9tR%2Fc6rt2D%2BL6uS3E%2F6zs95OXOTBKi5%2FdlaTVZa6Wdp6J5uwQDDtrEr3Z0eczIU73W%2Fo7wUf9dUqsduDQdEURZEkx9MjmuEHDDOgqI%2FkL5HfIL%2FtwqjsE3LK%2F9c2PsO%2FlxRfbwWvPYUlelZkWdrdRBFEax%2FUsgB8%2BQUsfWPAbG5w52wUQM5F4zw3ZJuRtKkgaFugzMlGvIEXwVctARxMELmioiv1VDtIlqYtp3Wuwf1LfNixvrnQI0Ub1tJjbTGtj4pNc5FNs81UAusHBjYFWo%2BPyYyyF1rzcgLRw6%2BYi11Augvhtg6HF2chYJt2L3bIJYe9enNF7uIkTuXu8EUR2L1kTmlFihr1BDjVPFDrWdb65O%2B%2B2janKwVEc0Btp0KgiDopN9Mb0B81M1OMhdxJrMAOBcWda410A%2BpjzTGFqLnYiX6xT1NNAewdQ2yUxXFutZws7ErTRBG1ux80igsXOuksFH51HdXOvLkc6VG1So6Bw6jkKhldj1eOgtdh7fvT8LvWoNUasLIg1eB1fQmytj%2BaKA7rxVrE7mZd8KPCsvXrrNSPpCCcVCPWvZynE4lzgrW0BJJB9BJpsHuR5rvelZTsq8ertQQuG6z1PGnbOLJw0g6hhA5Wzq5igycXMX1KkL49nK2zFw0C05zJrq1JNesMNCO57oDNNs3qGsoM4%2FvOLtqv9XQl%2BjRm51M%2FjxZmEOPZ7KRoep4sLMQN68CWYq5Z%2BnO6ByvR2rBMTxoC96xyM9orDCEQQ1jZm%2By6M%2FbNbrPzVlfqNqejXd7sfR%2Be%2BK1DW1aFPKBJ14oYZnUSjmTfnL7Eos%2FfNj35koYqs782LxfFFugtcdDtC%2B%2BcT%2FtwBJPNRc3qQzUwogOWRgc%2FyevTtJqGW5GPKbhdCnmq2sBXBACmr3P6ssyOcnBxVKBNZ4IGpFZ7ASycm8%2FtsFvdNI4%2BH3WcRjtYqjkRJijAB%2BJYjerlKWOOEZ3yAxXh1csN0r3TrCTX6zM%2BLTn2qC7X6xObnw438rqhEamSdttQPZR62k7eSqQaUbklmksNSRX7snYvKryIJ548DZJVVV3BeReGVGjlg%2FIMr%2BfLOoDBrFfqhKtWjlIJvBmRwmi%2F8Ut9f93vqS2ltoMFo0UuBBejudp6IFF877o2neH%2B1uv5i1O8W3rDPDGymz7bC%2BdzLhBBKnDb7bxJRBsseoPMkg0HhEuuYAb%2BJpIcazfDcYIsN%2BMyBYEyQSP9tmGYTQlhsSHSlXbMiBlFMYKmqtb%2BtGIuaDAoCGkXOOHAMwYSSsFxIXtwcQSTj4vq86X04Xw8AsTn54H4%2FH48v%2F8mjbK18TdTzFzUuT8xv%2F8n4Xv02KgcB2F8fyi%2FwRL%2F%2BGl9%2Fhs%3D" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="005_0060_ApproveCohort_By_Employer">
+      <Items>
+        <TransactionTimer Name="005_0060_01_LandingPage">
+          <Items>
+            <Comment CommentText="Sign back in. Manage apprenticeships" />
+            <Comment CommentText="Click Start" />
+            <Request Method="GET" Guid="f8d2287d-ae37-46b7-bf16-4aeaf3a7f13a" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/usedServiceBefore" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/" />
+              </Headers>
+              <ExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </ExtractionRules>
+              <CorrelationExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam28.choice" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="1" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam29.choice" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="Name" Value="used-service-before" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                    <RuleParameter Name="Index" Value="0" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </CorrelationExtractionRules>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0060_02_ServiceUsedBefore_Continue">
+          <Items>
+            <Comment CommentText="Have you used this service before. Click Yes, I have used this service before" />
+            <Comment CommentText="Continue" />
+            <Request Method="POST" Guid="bbb5f3d5-3644-40b8-a1b1-7b790966bff2" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/usedServiceBefore" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentLogin}}/identity/employer/login?id=06e41a0239708178179b743cc196c826&amp;returnUrl=https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7&amp;clientId=easpp" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/service/usedServiceBefore" />
+              </Headers>
+              <ExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam30.__RequestVerificationToken" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                    <RuleParameter Name="Index" Value="0" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam31.__ncforminfo" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot;/&gt;&lt;/" />
+                    <RuleParameter Name="Index" Value="1" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </ExtractionRules>
+              <FormPostHttpBody>
+                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="3H7M8gZ1ioWtdgG3uKt1eMOUjQemOAsPAjm6UQR9Gf3sxTxXdEO5zu3RbsF4uXjNgNVzGTctwzLykGKw8HwgU4q0ubU1" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="choice" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam29.choice}}" UrlEncode="True" />
+              </FormPostHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0060_03_EnterCredentials_And_SignIn">
+          <Items>
+            <Comment CommentText="Enter email and password and Click Sign in" />
+            <Request Method="POST" Guid="75262192-79b9-40e5-94a1-63b55fff56c3" Version="1.1" Url="https://{{EnvironmentLogin}}/identity/employer/login" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentAccounts}}/accounts/V9496X/teams" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/employer/login?id=06e41a0239708178179b743cc196c826&amp;returnUrl=https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7&amp;clientId=easpp" />
+              </Headers>
+              <ValidationRules>
+                <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+                  <RuleParameters>
+                    <RuleParameter Name="FindText" Value="Manage apprenticeships" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="PassIfTextFound" Value="True" />
+                  </RuleParameters>
+                </ValidationRule>
+              </ValidationRules>
+              <QueryStringParameters>
+                <QueryStringParameter Name="id" Value="06e41a0239708178179b743cc196c826" RecordedValue="06e41a0239708178179b743cc196c826" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="returnUrl" Value="https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7" RecordedValue="https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="clientId" Value="easpp" RecordedValue="easpp" CorrelationBinding="{{QueryStringParam82.clientId}}" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+              <FormPostHttpBody>
+                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="LVUdcdmr-IwR1lBZeDgD4MCcp1OrUw_ffMUk_lbx5m_e_UgMBURPVPbvoE-9OaX1bazALB2_hIQCyutrN5FJdIHUwEzIqdQobaLZULdH96I1" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="EmailAddress" Value="{{Employers.Employers#csv.Email}}" RecordedValue="tf4.tl4@test.com" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="Password" Value="Password1" RecordedValue="Password1" CorrelationBinding="" UrlEncode="True" />
+              </FormPostHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0060_04_Apprentices_Click">
+          <Items>
+            <Comment CommentText="Click Apprentices" />
+            <Request Method="GET" Guid="3f9818d4-8fbc-4414-b0b4-7cf039f99053" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/home" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams?" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0060_05_YourCohorts_Click">
+          <Items>
+            <Comment CommentText="Back to Employer module. On Apprentices page. Click your cohorts" />
+            <Request Method="GET" Guid="4d6977ec-cacd-4c32-8834-9fa7e1cbb904" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/cohorts" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/home" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0060_06_ReadyForReview_Click">
+          <Items>
+            <Comment CommentText="Click Ready for review " />
+            <Request Method="GET" Guid="51ed5e2d-b6e3-4576-8fb7-24dc095087df" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/cohorts/review" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/cohorts?code=d14d1687d29b7a09e785411d672473ee&amp;state=8ac657e84ad849c1b8da00a7dfee7374" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0060_07_CohortDetails_Click">
+          <Items>
+            <Comment CommentText="Click Details" />
+            <Request Method="GET" Guid="4bc4e10b-40a1-47c6-9bca-d857d60943d9" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/details" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/cohorts/review" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0060_08_ContinueToApproval_Click">
+          <Items>
+            <Comment CommentText="Click Continue to approval button" />
+            <Request Method="GET" Guid="174fad73-1fc7-488c-85a2-bd103e719d9b" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/finished" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/details" />
+              </Headers>
+              <ExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </ExtractionRules>
+              <CorrelationExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.SaveStatus" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="Name" Value="SaveStatus-Approve" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                    <RuleParameter Name="Index" Value="0" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam45.SaveStatus" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="Name" Value="SaveStatus-Approve" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                    <RuleParameter Name="Index" Value="0" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </CorrelationExtractionRules>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0060_09_Cohort_ApproveNContinue">
+          <Items>
+            <Comment CommentText="Choose Approve option and click Continue" />
+            <Request Method="POST" Guid="c11c1167-36c1-41e6-82a9-e106bfb01c69" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/finished" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{Environment}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/CohortApproved" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/finished" />
+              </Headers>
+              <FormPostHttpBody>
+                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="exjgJbNfREd_fHrxlwSIgEseCGjomlFD_z7O02m4QV_eTTfFFb4S5VraIHzdJ5xarYAhkuAyPacfh1FAhsbsVf7Y5iZxO_bAcl9ma1HRskPizBEV0ZHRlyPf2OsAsYfVtEOyLw2" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="SaveStatus" Value="Approve" RecordedValue="Approve" CorrelationBinding="{{FormPostParam45.SaveStatus}}" UrlEncode="True" />
+                <FormPostParameter Name="HashedCommitmentId" Value="{{FormPostParam.__CohortRef}}" RecordedValue="MN6L9N" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="HasApprenticeships" Value="{{$HIDDEN1.HasApprenticeships}}" RecordedValue="True" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="InvalidApprenticeshipCount" Value="{{$HIDDEN1.InvalidApprenticeshipCount}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="NotReadyForApproval" Value="{{$HIDDEN1.NotReadyForApproval}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+              </FormPostHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0060_10_BackToApprentices_Click">
+          <Items>
+            <Comment CommentText="Cohort approved. " />
+            <Comment CommentText="Click back to apprentices link" />
+            <Request Method="GET" Guid="fe21cfad-2bec-43cf-bdc3-530e9e6dfa09" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/home" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/VJPWK4/apprentices/MN6L9N/CohortApproved" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="005_0060_11_BackToHome">
+          <Items>
+            <Comment CommentText="Click Home" />
+            <Request Method="GET" Guid="1e74a6b4-8d09-4fe6-8830-a48c7b218435" Version="1.1" Url="https://{{Environment}}/accounts/{{Employers.Employers#csv.Account}}/teams/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/home" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="005_1000_SignOut">
+      <Items>
+        <Comment CommentText="Sign out" />
+        <Request Method="GET" Guid="f99e10d9-a9c1-4074-88a8-d598c2be8c6b" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signOut" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentLogin}}/identity/logout?id=6f33170eab71021f4f712f84f578c3d8" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/VKGX77/teams?" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="fab0ca6c-77b8-4f6c-954b-1b25aa47483d" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=6f33170eab71021f4f712f84f578c3d8" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="63302b55-abc1-4285-bbcc-6c4adf61be88" Version="1.1" Url="https://{{EnvironmentLogin}}/bundles/screen" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="v" Value="sVXB6jzilt1nVSNlS57LnOPveP7GgPMMp1eb2WI92gc1" RecordedValue="sVXB6jzilt1nVSNlS57LnOPveP7GgPMMp1eb2WI92gc1" CorrelationBinding="{{QueryStringParam27.v}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="4b6b604e-df78-4017-9a69-40e1c98be1ef" Version="1.1" Url="https://{{EnvironmentLogin}}/bundles/sfajs" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam33.v}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="97835a3a-eeca-46f5-b409-46a6c8d8639b" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="b8867a3d-25c7-437a-8d31-2d2adacd592a" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="765d4135-1f85-4b8b-bef7-b380959034b5" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="f042444d-cfb6-4e36-b0f3-e0f4e7454fdd" Version="1.1" Url="https://{{EnvironmentPermissions}}/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="005_1000_Continue_To_Signout">
+      <Items>
+        <Comment CommentText="You've logged out. Click continue" />
+        <Request Method="GET" Guid="f695d3a0-55d8-409f-b42e-05c990ab0531" Version="1.1" Url="https://{{EnvironmentLogin}}/bundles/sfajs" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=63da6b8890fd1b79e37d5f76704cb617" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam46.v}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="49db3ddb-7428-4800-8135-fc187f99bfad" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="89855a29-9e88-449a-90ab-234aebc49671" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="14d9d759-33a4-4396-85f7-6e7cb1f8de8c" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="694913dc-ce53-4b3c-83a0-55e04a3f2b9e" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="7a71d415-c84a-40e5-8f07-986df6c2ecf7" Version="1.1" Url="https://{{EnvironmentPermissions}}/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+  </Items>
+  <DataSources>
+    <DataSource Name="GatewayUsers" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\GatewayUsers.csv">
+      <Tables>
+        <DataSourceTable Name="GatewayUsers#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+    <DataSource Name="Organisations" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\Organisations.csv">
+      <Tables>
+        <DataSourceTable Name="Organisations#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+    <DataSource Name="PayRef" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\PayRef.csv">
+      <Tables>
+        <DataSourceTable Name="PayRef#csv" SelectColumns="SelectAllColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+    <DataSource Name="Employers" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\Employers.csv">
+      <Tables>
+        <DataSourceTable Name="Employers#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="Email" Value="" />
+    <ContextParameter Name="Env" Value="" />
+    <ContextParameter Name="Environment" Value="" />
+    <ContextParameter Name="EnvironmentAccounts" Value="" />
+    <ContextParameter Name="EnvironmentApprentices" Value="" />
+    <ContextParameter Name="EnvironmentFinance" Value="" />
+    <ContextParameter Name="EnvironmentForecast" Value="" />
+    <ContextParameter Name="EnvironmentLogin" Value="" />
+    <ContextParameter Name="EnvironmentPAS" Value="" />
+    <ContextParameter Name="EnvironmentPermissions" Value="" />
+    <ContextParameter Name="EnvironmentRecruit" Value="" />
+    <ContextParameter Name="EnvironmentReporting" Value="" />
+    <ContextParameter Name="FirstName" Value="" />
+    <ContextParameter Name="LastName" Value="" />
+    <ContextParameter Name="ProviderId" Value="10006000" />
+    <ContextParameter Name="ULRN" Value="" />
+    <ContextParameter Name="wctx" Value="WsFedOwinState=bSUmGQ_NbkkHdXjXuxLvLH9Dihy4MLyRJbRl39gN1lR-vcpogW4upX_dtZO_9FHrrV9Yx9BAvjtS_-JYnXm1nKHAtsc" />
+    <ContextParameter Name="wres" Value="&lt;t:RequestSecurityTokenResponse xmlns:t=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;&gt;&lt;t:Lifetime&gt;&lt;wsu:Created xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-04-23T09:10:48.968Z&lt;/wsu:Created&gt;&lt;wsu:Expires xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-04-23T17:10:48.968Z&lt;/wsu:Expires&gt;&lt;/t:Lifetime&gt;&lt;wsp:AppliesTo xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;wsa:EndpointReference xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;https://test2-pas.apprenticeships.education.gov.uk&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;t:RequestedSecurityToken&gt;&lt;saml:Assertion MajorVersion=&quot;1&quot; MinorVersion=&quot;1&quot; AssertionID=&quot;_912f2498-24b6-422f-8841-59bf8e7f3f5e&quot; Issuer=&quot;http://adfs.preprod.skillsfunding.service.gov.uk/adfs/services/trust&quot; IssueInstant=&quot;2019-04-23T09:10:48.968Z&quot; xmlns:saml=&quot;urn:oasis:names:tc:SAML:1.0:assertion&quot;&gt;&lt;saml:Conditions NotBefore=&quot;2019-04-23T09:10:48.968Z&quot; NotOnOrAfter=&quot;2019-04-23T17:10:48.968Z&quot;&gt;&lt;saml:AudienceRestrictionCondition&gt;&lt;saml:Audience&gt;https://test2-pas.apprenticeships.education.gov.uk&lt;/saml:Audience&gt;&lt;/saml:AudienceRestrictionCondition&gt;&lt;/saml:Conditions&gt;&lt;saml:AttributeStatement&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;saml:Attribute AttributeName=&quot;upn&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;ISP-10006000s&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;ukprn&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;10006000&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;service&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;DAA&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;displayname&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;SFSTEST 10006000&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;name&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;SFSTEST 10006000&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;mail&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;oattestuser+10006000@gmail.com&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;/saml:AttributeStatement&gt;&lt;saml:AuthenticationStatement AuthenticationMethod=&quot;urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport&quot; AuthenticationInstant=&quot;2019-04-23T09:10:45.535Z&quot;&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;/saml:AuthenticationStatement&gt;&lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;ds:SignedInfo&gt;&lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&quot; /&gt;&lt;ds:Reference URI=&quot;#_912f2498-24b6-422f-8841-59bf8e7f3f5e&quot;&gt;&lt;ds:Transforms&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot; /&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;/ds:Transforms&gt;&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot; /&gt;&lt;ds:DigestValue&gt;xgitx6dhMPEgqiZSHBXR+IaW4BzBju6dmLh8sU6rC8Y=&lt;/ds:DigestValue&gt;&lt;/ds:Reference&gt;&lt;/ds:SignedInfo&gt;&lt;ds:SignatureValue&gt;OOPRI1lE+CkwFlaJReOfi2eIVHXA6+Hq2DFvdXiddSWoDsnbHQK9TWrMXi/Ldi8SwgcaY0jTiFl2bauAj8j5+OjoxM7nxywbXwdZGDU7kfzppN1gw1A+lN0sFoWSZiA3P1P1Ldg3ikOWeTT8+n8B9glft9+kvLsRkviZJTC9jnDuOvKU27/9JFm5NtgHuKuFkCh9kEzNe7SSUWIavDcIweAmEH4utJoROhpjk6Buu5jGzeno2mSwhCGjNHt6blg9TixUdLFYh0vZLYn2NHjCbl2cHtZ64AspVjakSTZ1m1+gWEtkCYuhN5SNsONOQPRzK6is0XBLp7GbqZYOpqvU/A==&lt;/ds:SignatureValue&gt;&lt;KeyInfo xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;X509Data&gt;&lt;X509Certificate&gt;MIIDDjCCAfagAwIBAgIQVu3rHgUAyaNM353xrulvYDANBgkqhkiG9w0BAQsFADBDMUEwPwYDVQQDEzhBREZTIFNpZ25pbmcgLSBhZGZzLnByZXByb2Quc2tpbGxzZnVuZGluZy5zZXJ2aWNlLmdvdi51azAeFw0xODExMjExMjM3MTJaFw0yMDExMjAxMjM3MTJaMEMxQTA/BgNVBAMTOEFERlMgU2lnbmluZyAtIGFkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5nLnNlcnZpY2UuZ292LnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqkFOYtkoyM+korIURnmrhFWCsSeikmNXfg9DOoB5mzFleWlkQ4vPT375lo9q+rc3hKfEjIsVQIKrjVJjhYThO9Dct04sV5funwYncSDtd+IU1wQbNaYM05fnmYTty7qAL8OjcPwO+YgMmz3NWS5ahcxFtpCI4TuhZONP28MhUJXjlzkZSi0PM+kMu14vXJh8u0Iii/7OQ7eNQWM83Cd5Hd5PB/ci+ThvPnbMXEKCfhqbNXBHlBFfszFHec4FLRRhdnDxZwnK/CRRaSEE3tViYY7Gccdl+fZi87oSI3PjQJhNKZ2jdzHPXYtjlCOM3v/9+trDQMt9kzDhRWZ00khu+wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBE9066fbUb+10sJZtuRZr+1oh6f/5ONYb9mMPkRZuO+Sxof5XL+wjPSQFqtMrcHOfm3M6Y5hnsdpFXlvW1ymq2a94Do5nB+X97LUFLlAVU+U6VGbUw1T6w8KSA5wuuxcPl3CgVwb+XnOQXBW0FDaLGqMWGnctaGeO7lF74QttXbtZTm4GXjsV0R+TU3DjddnpG4yzSs3BnBZowOepdq85vTjpJMOOiEp4WKWshEOTqlOXl2+8a09ZTW09AtRjDelIRkDqU5gOEIK8cuNhCspoTcFZGPN03w0IYq36mBIO4sq/uUYNNH6jRXNoPr4a4LLB7WbyDeOWgKnbXxUwlg2Hi&lt;/X509Certificate&gt;&lt;/X509Data&gt;&lt;/KeyInfo&gt;&lt;/ds:Signature&gt;&lt;/saml:Assertion&gt;&lt;/t:RequestedSecurityToken&gt;&lt;t:TokenType&gt;urn:oasis:names:tc:SAML:1.0:assertion&lt;/t:TokenType&gt;&lt;t:RequestType&gt;http://schemas.xmlsoap.org/ws/2005/02/trust/Issue&lt;/t:RequestType&gt;&lt;t:KeyType&gt;http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey&lt;/t:KeyType&gt;&lt;/t:RequestSecurityTokenResponse&gt;" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="PlugIns.UniqueLearnerNumber, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Unique Checksum Number" Description="Generates a checksum number">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="ULRN" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.UniqueFirstName, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Generate Unique First Name" Description="Generates a unique first name with every iteration">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="FirstName" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.UniqueLastName, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Generate Unique Last Name" Description="Generates a unique last name with every iteration">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="LastName" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.SetThinkTime, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Thinktime" Description="Set thinktime in seconds">
+      <RuleParameters>
+        <RuleParameter Name="ThinkTime" Value="10" />
+        <RuleParameter Name="Random" Value="True" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.TLSPlugin, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="TLS PlugIn" Description="TLS PlugIn to resolve the forced closure of connection">
+      <RuleParameters>
+        <RuleParameter Name="Enabled" Value="True" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.UniqueEmail, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Generate Unique Email" Description="Generates a unique for the new user">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="Email" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.SetEnvironment, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Test Env" Description="Testing Environment">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="Env" />
+        <RuleParameter Name="Environment" Value="test2" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.SetTestEnvironment, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Test Environment" Description="Environment to execute performance test against">
+      <RuleParameters>
+        <RuleParameter Name="Environment" Value="test2" />
+        <RuleParameter Name="ContextParamTarget" Value="Environment" />
+        <RuleParameter Name="ContextParamReportingTarget" Value="EnvironmentReporting" />
+        <RuleParameter Name="ContextParamPASTarget" Value="EnvironmentPAS" />
+        <RuleParameter Name="ContextParamLoginTarget" Value="EnvironmentLogin" />
+        <RuleParameter Name="ContextParamAccountTarget" Value="EnvironmentAccounts" />
+        <RuleParameter Name="ContextParamApprenticesTarget" Value="EnvironmentApprentices" />
+        <RuleParameter Name="ContextParamFinanceTarget" Value="EnvironmentFinance" />
+        <RuleParameter Name="ContextParamForecastingTarget" Value="EnvironmentForecast" />
+        <RuleParameter Name="ContextParamPermissionsTarget" Value="EnvironmentPermissions" />
+        <RuleParameter Name="ContextParamRecruitTarget" Value="EnvironmentRecruit" />
+      </RuleParameters>
+    </WebTestPlugin>
+  </WebTestPlugins>
+</WebTest>

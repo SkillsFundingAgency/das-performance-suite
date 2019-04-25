@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WebTest Name="001_MA_Account_SignUp_AddRemoveOrg_NavigateModules_v2" Id="6614296f-89d6-4eb0-9f27-16a8aeca0266" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest7.3192048f-428d-4017-89e1-3acab2f90a6c.rec.webtestresult" ResultsLocale="">
+<WebTest Name="001_MA_Account_SignUp_AddRemoveOrg_NavigateModules_v3" Id="016a831c-e9b8-4c41-bb01-7e7ffe9e696e" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest7.3192048f-428d-4017-89e1-3acab2f90a6c.rec.webtestresult" ResultsLocale="">
   <Items>
     <TransactionTimer Name="001_0000_LandingPage">
       <Items>
@@ -587,19 +587,6 @@
                     <RuleParameter Name="HtmlDecode" Value="True" />
                   </RuleParameters>
                 </ExtractionRule>
-                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="ReqVerToken1" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
-                  <RuleParameters>
-                    <RuleParameter Name="StartsWith" Value="name=&quot;__RequestVerificationToken&quot; type=&quot;hidden&quot; value=&quot;" />
-                    <RuleParameter Name="EndsWith" Value="&quot; /&gt;" />
-                    <RuleParameter Name="IgnoreCase" Value="False" />
-                    <RuleParameter Name="UseRegularExpression" Value="False" />
-                    <RuleParameter Name="Required" Value="True" />
-                    <RuleParameter Name="ExtractRandomMatch" Value="False" />
-                    <RuleParameter Name="Index" Value="0" />
-                    <RuleParameter Name="HtmlDecode" Value="True" />
-                    <RuleParameter Name="SearchInHeaders" Value="False" />
-                  </RuleParameters>
-                </ExtractionRule>
               </ExtractionRules>
               <CorrelationExtractionRules>
                 <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam25.__RequestVerificationToken" DisplayName="" Description="">
@@ -683,7 +670,7 @@
                 </ExtractionRule>
               </ExtractionRules>
               <FormPostHttpBody>
-                <FormPostParameter Name="__RequestVerificationToken" Value="{{ReqVerToken1}}" RecordedValue="8vv9BaPPg983QqQiVEvXliZFpNG6xx4hJ5RI3QPCSAMD5lH-dqBLuhhh-sbb7fubaJwglhk8xpP6713PI82-JIWq0VNsicPATPgmXQqJCiBPa2B1ixs-mGPN6Cdw5R_r4dbIcg2" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="8vv9BaPPg983QqQiVEvXliZFpNG6xx4hJ5RI3QPCSAMD5lH-dqBLuhhh-sbb7fubaJwglhk8xpP6713PI82-JIWq0VNsicPATPgmXQqJCiBPa2B1ixs-mGPN6Cdw5R_r4dbIcg2" CorrelationBinding="" UrlEncode="True" />
               </FormPostHttpBody>
             </Request>
           </Items>
@@ -1211,6 +1198,220 @@
               <Headers>
                 <Header Name="Referer" Value="https://accounts.{{Environment}}/accounts/VNRK8R/teams/view" />
               </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="001_0025_Funding_Projection">
+      <Items>
+        <TransactionTimer Name="001_0025_01_FinanceMenu_Click">
+          <Items>
+            <Comment CommentText="On home page. Click Finance" />
+            <Request Method="GET" Guid="7f4983de-22b7-4c0e-8ccf-dddef0697372" Version="1.1" Url="https://finance.{{Environment}}/accounts/{{FormPostParam.Account}}/finance" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://accounts.{{Environment}}/accounts/{{FormPostParam.Account}}/teams" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="001_0025_02_FundingProjection_Click">
+          <Items>
+            <Comment CommentText="Click Funding projection" />
+            <Request Method="GET" Guid="d76383d1-2d93-4449-a9de-9cea18fb6b76" Version="1.1" Url="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/projections" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://finance.{{Environment}}/accounts/{{FormPostParam.Account}}/finance" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="001_0025_03_EstimateApprenticeships_Click">
+          <Items>
+            <Comment CommentText="Click Estimate apprenticeships you could fund" />
+            <Request Method="GET" Guid="e80a1af4-920f-465e-a137-d50b83a4a714" Version="1.1" Url="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/start" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/projections" />
+              </Headers>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="001_0025_04_Esitmate_Start_Click">
+          <Items>
+            <Comment CommentText="Click Start on Estimate apprenticeships you could fund page" />
+            <Request Method="GET" Guid="6ab97b19-14ec-4180-80e3-06b0985bacd8" Version="1.1" Url="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/start-redirect" ThinkTime="15" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/default/apprenticeship/add" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/start" />
+              </Headers>
+              <ExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+                  <RuleParameters>
+                    <RuleParameter Name="Required" Value="True" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </ExtractionRules>
+              <CorrelationExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.Course.Id" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot;&gt;Aba" />
+                    <RuleParameter Name="Index" Value="4" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.NumberOfApprentices" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot;&gt;Ins" />
+                    <RuleParameter Name="Index" Value="492" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.TotalInstallments" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot;&gt;Pro" />
+                    <RuleParameter Name="Index" Value="710" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.save" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; cla" />
+                    <RuleParameter Name="Index" Value="959" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam9.Course.Id" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot;&gt;Aba" />
+                    <RuleParameter Name="Index" Value="4" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam10.NumberOfApprentices" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot;&gt;Ins" />
+                    <RuleParameter Name="Index" Value="492" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam11.TotalInstallments" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot;&gt;Pro" />
+                    <RuleParameter Name="Index" Value="710" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam12.save" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                    <RuleParameter Name="EndsWith" Value="&quot; cla" />
+                    <RuleParameter Name="Index" Value="959" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </CorrelationExtractionRules>
+            </Request>
+            <Request Method="POST" Guid="7c2f5e8c-6c45-4e8e-89dd-9c91a59b1e5c" Version="1.1" Url="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/default/apprenticeship/course" ThinkTime="34" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Accept" Value="*/*" />
+                <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+                <Header Name="Referer" Value="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/default/apprenticeship/add" />
+              </Headers>
+              <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEMAbwB1AHIAcwBlAEkAZAAiADoAIgAyADcANAAiACwAIgBOAHUAbQBiAGUAcgBPAGYAQQBwAHAAcgBlAG4AdABpAGMAZQBzACIAOgBuAHUAbABsACwAIgBMAGUAdgB5AFYAYQBsAHUAZQAiADoAbgB1AGwAbAAsACIAUwB0AGEAcgB0AEQAYQB0AGUAIgA6ACIAMQA4ADkAOQAtADEAMgAtADAAMQBUADAAMAA6ADAAMAA6ADAAMAAuADAAMAAwAFoAIgAsACIATgB1AG0AYgBlAHIATwBmAE0AbwBuAHQAaABzACIAOgAwACwAIgBGAHUAbgBkAGkAbgBnAEIAYQBuAGQAcwAiADoAIgAiACwAIgBUAG8AdABhAGwARgB1AG4AZABpAG4AZwBDAG8AcwB0ACIAOgAiACIALAAiAFQAbwB0AGEAbABGAHUAbgBkAGkAbgBnAEMAYQBwACIAOgAiADAAIgB9AA==</StringHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="001_0025_05_EsitmatCost_Button_Click">
+          <Items>
+            <Comment CommentText="Enter details " />
+            <Comment CommentText="Estimate cost and Click button to find if the apprenticeships can be funded" />
+            <Request Method="POST" Guid="4485fded-7638-4ad3-bfa6-a04cdab45f5c" Version="1.1" Url="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/default/apprenticeship/add" ThinkTime="13" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/default" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/default/apprenticeship/add" />
+              </Headers>
+              <FormPostHttpBody>
+                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="QE79OELjCIsy-LSQXTOU1vlZx7kkvrDpuuklvkb1bs4I7YfXlQwX7gHTWu7jiiy1x8l4DjE_6NHQvyT2_dskR72GL4MxRvbu9LRBot2wY5OgQSRKeSo7rGE7mCXSaM2cuD0SGKILvad4yQ87x7z5LA2" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="FundingPeriodsJson" Value="{{$HIDDEN1.FundingPeriodsJson}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="CalculatedTotalCap" Value="{{$HIDDEN1.CalculatedTotalCap}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="IsTransferFunded" Value="on" RecordedValue="on" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="Course.Id" Value="274" RecordedValue="274" CorrelationBinding="{{FormPostParam9.Course.Id}}" UrlEncode="True" />
+                <FormPostParameter Name="NumberOfApprentices" Value="5" RecordedValue="5" CorrelationBinding="{{FormPostParam10.NumberOfApprentices}}" UrlEncode="True" />
+                <FormPostParameter Name="TotalInstallments" Value="12" RecordedValue="12" CorrelationBinding="{{FormPostParam11.TotalInstallments}}" UrlEncode="True" />
+                <FormPostParameter Name="StartDate" Value="{{$HIDDEN1.StartDate}}" RecordedValue="1/1/0001 12:00:00 AM" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="StartDateMonth" Value="04" RecordedValue="04" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="StartDateYear" Value="2019" RecordedValue="2019" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="TotalCostAsString" Value="30,000" RecordedValue="30,000" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="save" Value="Create" RecordedValue="Create" CorrelationBinding="{{FormPostParam12.save}}" UrlEncode="True" />
+                <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="oaCHDEjPTy1MMm7o8_Ha9n3qMCOS_j_-993aZ4hKx0fwjm0zvDLa_bNbC4OwpXO6eAAjcFw3F5ZZg9JP7d3_ny0RJXUzmo42WQ7mlzztQoIdNDoj9gHiT0ZyOqlblBpjxeIkvOWB7dxxTI3Ee9MKbjiEO3YWSHiuqSV_nenoy48=" CorrelationBinding="" UrlEncode="True" />
+              </FormPostHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="001_0025_06_EstimatePage">
+          <Items>
+            <Comment CommentText="Now Estimated costs page shows apprenticeships you have added and your account funds etc..." />
+            <Comment CommentText="Click Add more apprenticeships to your current estimate" />
+            <Request Method="POST" Guid="179ecd60-7092-47f1-9870-4f5d0ee9119d" Version="1.1" Url="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/default/apprenticeship/course" ThinkTime="18" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Accept" Value="*/*" />
+                <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+                <Header Name="Referer" Value="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/default/apprenticeship/add" />
+              </Headers>
+              <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEMAbwB1AHIAcwBlAEkAZAAiADoAIgAyADcANAAiACwAIgBOAHUAbQBiAGUAcgBPAGYAQQBwAHAAcgBlAG4AdABpAGMAZQBzACIAOgBuAHUAbABsACwAIgBMAGUAdgB5AFYAYQBsAHUAZQAiADoAbgB1AGwAbAAsACIAUwB0AGEAcgB0AEQAYQB0AGUAIgA6ACIAMQA4ADkAOQAtADEAMgAtADAAMQBUADAAMAA6ADAAMAA6ADAAMAAuADAAMAAwAFoAIgAsACIATgB1AG0AYgBlAHIATwBmAE0AbwBuAHQAaABzACIAOgAwACwAIgBGAHUAbgBkAGkAbgBnAEIAYQBuAGQAcwAiADoAIgAiACwAIgBUAG8AdABhAGwARgB1AG4AZABpAG4AZwBDAG8AcwB0ACIAOgAiACIALAAiAFQAbwB0AGEAbABGAHUAbgBkAGkAbgBnAEMAYQBwACIAOgAiADAAIgB9AA==</StringHttpBody>
+            </Request>
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="001_0025_07_CheckIfICanFund_Click">
+          <Items>
+            <Comment CommentText="Click Check if I can fund these button" />
+            <Request Method="POST" Guid="0f70657e-0873-4d33-8de5-d9e949a354b8" Version="1.1" Url="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/default/apprenticeship/add" ThinkTime="24" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/default" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://forecasting.{{Environment}}/accounts/{{FormPostParam.Account}}/forecasting/estimations/default/apprenticeship/add" />
+              </Headers>
+              <FormPostHttpBody>
+                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="I97zWhA41XDJwzhuJ28Jy8c1oWTQJMZ5kRalSRpVl9gdMB8VVa6G3wXWSBPz-y-VSzROKc2gJcv3FxoQ7b-r5jtc9OB333gHbQE-CiWcGkHehLzD81yjQB9JgwFGitMDJnov5Pw_igH9mbm69Y2BRg2" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="FundingPeriodsJson" Value="{{$HIDDEN1.FundingPeriodsJson}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="CalculatedTotalCap" Value="{{$HIDDEN1.CalculatedTotalCap}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="Course.Id" Value="274" RecordedValue="274" CorrelationBinding="{{FormPostParam21.Course.Id}}" UrlEncode="True" />
+                <FormPostParameter Name="NumberOfApprentices" Value="5" RecordedValue="5" CorrelationBinding="{{FormPostParam22.NumberOfApprentices}}" UrlEncode="True" />
+                <FormPostParameter Name="TotalInstallments" Value="12" RecordedValue="12" CorrelationBinding="{{FormPostParam23.TotalInstallments}}" UrlEncode="True" />
+                <FormPostParameter Name="StartDate" Value="{{$HIDDEN1.StartDate}}" RecordedValue="1/1/0001 12:00:00 AM" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="StartDateMonth" Value="04" RecordedValue="04" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="StartDateYear" Value="2019" RecordedValue="2019" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="TotalCostAsString" Value="30,000" RecordedValue="30,000" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="save" Value="Create" RecordedValue="Create" CorrelationBinding="{{FormPostParam24.save}}" UrlEncode="True" />
+                <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="nxtLxbKlFNowApbvkp8bpuQqZE10j2F0dPjcvwnf8PBcX7bqMdCTnDGIsTYWlX91dU9x7995kccqW5xawRjLXF7rAcFq-biLXhaaxqjkG9J-84gwgzmkluVpn7Bb7NNfIRSybzPleKjEUf0lL5-rW_Rs9LnxWaF6iU3REd86U3o=" CorrelationBinding="" UrlEncode="True" />
+              </FormPostHttpBody>
             </Request>
           </Items>
         </TransactionTimer>
@@ -1920,16 +2121,22 @@
     </DataSource>
   </DataSources>
   <ContextParameters>
-    <ContextParameter Name="Env" Value="" />
     <ContextParameter Name="FirstName" Value="" />
     <ContextParameter Name="LastName" Value="" />
     <ContextParameter Name="Email" Value="" />
     <ContextParameter Name="skip" Value="true" />
+    <ContextParameter Name="Env" Value="" />
     <ContextParameter Name="Environment" Value="" />
-    <ContextParameter Name="PayRef" Value="" />
+    <ContextParameter Name="EnvironmentAccounts" Value="" />
+    <ContextParameter Name="EnvironmentFinance" Value="" />
+    <ContextParameter Name="EnvironmentForecast" Value="" />
     <ContextParameter Name="EnvironmentLogin" Value="" />
-    <ContextParameter Name="EnvironmentReporting" Value="" />
     <ContextParameter Name="EnvironmentPAS" Value="" />
+    <ContextParameter Name="EnvironmentPermissions" Value="" />
+    <ContextParameter Name="EnvironmentRecruit" Value="" />
+    <ContextParameter Name="EnvironmentReporting" Value="" />
+    <ContextParameter Name="PayRef" Value="" />
+    <ContextParameter Name="SubmitRequest" Value="" />
   </ContextParameters>
   <ValidationRules>
     <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
@@ -1962,6 +2169,7 @@
     <WebTestPlugin Classname="PlugIns.UserIteration, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="UserIteration" Description="This plugin can be used to set the ParseDependentsRequests property for each request">
       <RuleParameters>
         <RuleParameter Name="ParseDependents" Value="True" />
+        <RuleParameter Name="Environment" Value="pp" />
       </RuleParameters>
     </WebTestPlugin>
     <WebTestPlugin Classname="PlugIns.SetThinkTime, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Thinktime" Description="Set thinktime in seconds">
@@ -1977,12 +2185,12 @@
         <RuleParameter Name="ContextParamLoginTarget" Value="EnvironmentLogin" />
         <RuleParameter Name="ContextParamReportingTarget" Value="EnvironmentReporting" />
         <RuleParameter Name="ContextParamPASTarget" Value="EnvironmentPAS" />
-        <RuleParameter Name="ContextParamApprenticesTarget" Value="EnvironmentApprentices" />
         <RuleParameter Name="ContextParamAccountTarget" Value="EnvironmentAccounts" />
         <RuleParameter Name="ContextParamFinanceTarget" Value="EnvironmentFinance" />
         <RuleParameter Name="ContextParamForecastingTarget" Value="EnvironmentForecast" />
         <RuleParameter Name="ContextParamPermissionsTarget" Value="EnvironmentPermissions" />
         <RuleParameter Name="ContextParamRecruitTarget" Value="EnvironmentRecruit" />
+        <RuleParameter Name="ContextParamApprenticesTarget" Value="EnvironmentApprentices" />
       </RuleParameters>
     </WebTestPlugin>
     <WebTestPlugin Classname="PlugIns.SetEnvironment, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Test Env" Description="Testing Environment">

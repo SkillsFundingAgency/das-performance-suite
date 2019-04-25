@@ -41,10 +41,6 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="PlugInFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\PlugInFramework\bin\Debug\PlugInFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +58,12 @@
     <None Include="001_MA_Account_SignUp_AddRemoveOrg_NavigateModules_v2.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="001_MA_Account_SignUp_AddRemoveOrg_NavigateModules_v3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="001_MA_Employer_Account_SignUp.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="001_MA_ExpTest.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -74,10 +76,21 @@
     <None Include="002_COMMITS_CreateApprove_Cohort_CoC.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="003_COMMITS_ProviderFirstApprove_Cohort_Empoloyer_Second.webtest">
+    <None Include="002_COMMITS_CreateApprove_Cohort_CoC_v2.webtest" />
+    <None Include="002_MA_Employer_Funding_Projection.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="003_COMMITS_ProviderFirstApprove_Cohort_Empoloyer_Second.webtest" />
+    <None Include="003_MA_Employer_Add_Remove_Org.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="004_COMMITS_CreateApprove_Cohort_CoC_v2.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="004_FindApprenticeshipTraining.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Apprenticeships.csv">
@@ -85,6 +98,9 @@
     </None>
     <None Include="ApprenticeshipSearchViaProvider.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Employers.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="FAT.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -95,6 +111,7 @@
     <None Include="GatewayUsers.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="LoadTest2.loadtest" />
     <None Include="Organisations.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -104,6 +121,12 @@
     <None Include="Providers.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PlugInFramework\PlugInFramework.csproj">
+      <Project>{674f371e-36dd-4f3f-acd8-ff7f3d4c4efc}</Project>
+      <Name>PlugInFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
