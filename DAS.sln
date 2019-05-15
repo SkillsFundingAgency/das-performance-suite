@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlugInFramework", "PlugInFr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptFramework", "ScriptFramework\ScriptFramework.csproj", "{5E57ADDB-17D5-4B08-B274-59E57DCD2A16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Settings", "Settings\Settings.csproj", "{24392D9C-C593-44B9-BCB1-D35A1FDB174D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{5E57ADDB-17D5-4B08-B274-59E57DCD2A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E57ADDB-17D5-4B08-B274-59E57DCD2A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E57ADDB-17D5-4B08-B274-59E57DCD2A16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24392D9C-C593-44B9-BCB1-D35A1FDB174D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24392D9C-C593-44B9-BCB1-D35A1FDB174D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24392D9C-C593-44B9-BCB1-D35A1FDB174D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24392D9C-C593-44B9-BCB1-D35A1FDB174D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

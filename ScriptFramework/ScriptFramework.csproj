@@ -61,7 +61,8 @@
     <None Include="001_MA_Account_SignUp_AddRemoveOrg_NavigateModules_v3.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="001_MA_Employer_Account_SignUp.webtest">
+    <None Include="001_MA_Employer_Account_SignUp.webtest" />
+    <None Include="001_MA_Employer_Account_SignUp_NL.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="001_MA_ExpTest.loadtest">
@@ -77,20 +78,21 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="002_COMMITS_CreateApprove_Cohort_CoC_v2.webtest" />
-    <None Include="002_MA_Employer_Funding_Projection.webtest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="002_MA_Employer_Funding_Projection.webtest" />
+    <None Include="002_MA_Employer_Funding_Projection_NL.webtest" />
     <None Include="003_COMMITS_ProviderFirstApprove_Cohort_Empoloyer_Second.webtest" />
     <None Include="003_MA_Employer_Add_Remove_Org.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="004_COMMITS_CreateApprove_Cohort_CoC_v2.webtest">
+    <None Include="004_COMMITS_CreateApprove_Cohort_CoC_NL.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="004_COMMITS_CreateApprove_Cohort_CoC_v2.webtest" />
     <None Include="004_FindApprenticeshipTraining.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd.webtest">
+    <None Include="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd.webtest" />
+    <None Include="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd_NL.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Apprenticeships.csv">
@@ -119,6 +121,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Providers.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebTest1.webtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

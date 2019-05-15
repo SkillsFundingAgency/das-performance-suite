@@ -5,7 +5,7 @@
       <ThinkProfile Value="0" Pattern="On" />
       <LoadProfile Pattern="Step" InitialUsers="20" MaxUsers="500" StepUsers="20" StepDuration="5" StepRampTime="0" />
       <TestMix>
-        <TestProfile Name="001_MA_Account_SignUp_AddRemoveOrg_NavigateModules_v3" Path="001_ma_account_signup_addremoveorg_navigatemodules_v3.webtest" Id="d3b073f2-3c43-4fdd-8996-373dfe684093" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="001_MA_Employer_Account_SignUp" Path="001_ma_employer_account_signup.webtest" Id="d3b073f2-3c43-4fdd-8996-373dfe684093" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       </TestMix>
       <BrowserMix>
         <BrowserProfile Percentage="100">
