@@ -61,7 +61,7 @@ namespace Settings {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("pp")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string TestEnvironment {
             get {
                 return ((string)(this["TestEnvironment"]));
