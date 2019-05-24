@@ -70,7 +70,7 @@ artifacts/
 *.svclog
 *.scc
 *.webtestresult
-*.config
+App.config
 
 # Chutzpah Test files
 _Chutzpah*
