@@ -52,9 +52,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="000_CONSOLIDATED_LoadTest.loadtest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="001_MA_Account_SignUp_AddRemoveOrg_NavigateModules_v2.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -101,8 +98,14 @@
     <None Include="ApprenticeshipSearchViaProvider.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Employers.csv">
+    <None Include="CMT1_Employers.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="CMT2_Employers.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ConsolidatedScenario_2105.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="FAT.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -113,7 +116,6 @@
     <None Include="GatewayUsers.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="LoadTest2.loadtest" />
     <None Include="Organisations.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -121,9 +123,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Providers.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="WebTest1.webtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

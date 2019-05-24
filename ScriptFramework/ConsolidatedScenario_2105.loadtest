@@ -1,11 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LoadTest Name="LoadTest1" Description="" Owner="" storage="c:\esfa\das\ma\loadtest1.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="295f3158-fad5-4d7f-b2d7-0cfa1dff012f" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<LoadTest Name="ConsolidatedScenario_2105" Description="" Owner="" storage="c:\esfa\das\esfarepo\das-performance-suite\scriptframework\consolidatedscenario_2105.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="70bcfe60-2696-49bd-96ce-8dc5e959ebbf" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Scenarios>
-    <Scenario Name="FindApprenticeships" DelayBetweenIterations="60" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+    <Scenario Name="EmployerApprovesFirstThenProvider" DelayBetweenIterations="90" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0" Pattern="On" />
-      <LoadProfile Pattern="Step" InitialUsers="1" MaxUsers="10" StepUsers="1" StepDuration="1" StepRampTime="0" />
+      <LoadProfile Pattern="Step" InitialUsers="1" MaxUsers="200" StepUsers="1" StepDuration="1" StepRampTime="0" />
       <TestMix>
-        <TestProfile Name="004_FindApprenticeship" Path="004_findapprenticeship.webtest" Id="9a19acc7-59ed-4a95-a9fe-ac7225eb5e17" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="004_COMMITS_CreateApprove_Cohort_CoC_NL" Path="004_commits_createapprove_cohort_coc_nl.webtest" Id="d1947a10-8677-478f-90ee-3acad08d765c" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestMix>
+      <BrowserMix>
+        <BrowserProfile Percentage="100">
+          <Browser Name="Internet Explorer 11.0" MaxConnections="6">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="GZIP" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+      </BrowserMix>
+      <NetworkMix>
+        <NetworkProfile Percentage="100">
+          <Network Name="LAN" BandwidthInKbps="1000000" NetworkProfileConfigurationXml="&lt;Emulation&gt;&lt;VirtualChannel name=&quot;defaultChannel&quot;&gt;&lt;FilterList/&gt;&lt;VirtualLink instances=&quot;1&quot; name=&quot;defaultLink&quot;&gt;&lt;LinkRule dir=&quot;upstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;LinkRule dir=&quot;downstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;/VirtualLink&gt;&lt;/VirtualChannel&gt;&lt;/Emulation&gt;" />
+        </NetworkProfile>
+      </NetworkMix>
+    </Scenario>
+    <Scenario Name="ProviderApprovesFirstThenEmployer" DelayBetweenIterations="120" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+      <ThinkProfile Value="0" Pattern="On" />
+      <LoadProfile Pattern="Step" InitialUsers="1" MaxUsers="200" StepUsers="1" StepDuration="1" StepRampTime="0" />
+      <TestMix>
+        <TestProfile Name="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd_NL" Path="005_commits_provider1stapprove_cohort_empoloyer_2nd_nl.webtest" Id="365895d7-f98a-430b-9cae-f2d6f8163132" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestMix>
+      <BrowserMix>
+        <BrowserProfile Percentage="100">
+          <Browser Name="Internet Explorer 11.0" MaxConnections="6">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="GZIP" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+      </BrowserMix>
+      <NetworkMix>
+        <NetworkProfile Percentage="100">
+          <Network Name="LAN" BandwidthInKbps="1000000" NetworkProfileConfigurationXml="&lt;Emulation&gt;&lt;VirtualChannel name=&quot;defaultChannel&quot;&gt;&lt;FilterList/&gt;&lt;VirtualLink instances=&quot;1&quot; name=&quot;defaultLink&quot;&gt;&lt;LinkRule dir=&quot;upstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;LinkRule dir=&quot;downstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;/VirtualLink&gt;&lt;/VirtualChannel&gt;&lt;/Emulation&gt;" />
+        </NetworkProfile>
+      </NetworkMix>
+    </Scenario>
+    <Scenario Name="AccountSignUp" DelayBetweenIterations="120" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+      <ThinkProfile Value="0" Pattern="On" />
+      <LoadProfile Pattern="Step" InitialUsers="3" MaxUsers="300" StepUsers="3" StepDuration="2" StepRampTime="0" />
+      <TestMix>
+        <TestProfile Name="001_MA_Employer_Account_SignUp_NL" Path="001_ma_employer_account_signup_nl.webtest" Id="0d675847-c28a-4f84-9974-3feb3ac32405" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       </TestMix>
       <BrowserMix>
         <BrowserProfile Percentage="100">
@@ -421,7 +469,7 @@
     </CounterSet>
   </CounterSets>
   <RunConfigurations>
-    <RunConfiguration Name="Run Settings1" Description="" ResultsStoreType="Database" TimingDetailsStorage="AllIndividualDetails" SaveTestLogsOnError="true" SaveTestLogsFrequency="0" MaxErrorDetails="200" MaxErrorsPerType="1000" MaxThresholdViolations="1000" MaxRequestUrlsReported="1000" UseTestIterations="false" RunDuration="300" WarmupTime="0" CoolDownTime="0" TestIterations="100" WebTestConnectionModel="ConnectionPerUser" WebTestConnectionPoolSize="50" SampleRate="15" ValidationLevel="High" SqlTracingConnectString="" SqlTracingConnectStringDisplayValue="" SqlTracingDirectory="" SqlTracingEnabled="false" SqlTracingFileCount="2" SqlTracingRolloverEnabled="true" SqlTracingMinimumDuration="500" RunUnitTestsInAppDomain="true" CoreCount="0" ResourcesRetentionTimeInMinutes="0" AgentDiagnosticsLevel="Warning">
+    <RunConfiguration Name="Run Settings1" Description="" ResultsStoreType="Database" TimingDetailsStorage="AllIndividualDetails" SaveTestLogsOnError="true" SaveTestLogsFrequency="0" MaxErrorDetails="200" MaxErrorsPerType="1000" MaxThresholdViolations="1000" MaxRequestUrlsReported="10000" UseTestIterations="false" RunDuration="4200" WarmupTime="0" CoolDownTime="0" TestIterations="100" WebTestConnectionModel="ConnectionPerUser" WebTestConnectionPoolSize="100" SampleRate="15" ValidationLevel="High" SqlTracingConnectString="" SqlTracingConnectStringDisplayValue="" SqlTracingDirectory="" SqlTracingEnabled="false" SqlTracingFileCount="10" SqlTracingRolloverEnabled="true" SqlTracingMinimumDuration="500" RunUnitTestsInAppDomain="true" CoreCount="0" ResourcesRetentionTimeInMinutes="0" AgentDiagnosticsLevel="Warning">
       <CounterSetMappings>
         <CounterSetMapping ComputerName="[CONTROLLER MACHINE]">
           <CounterSetReferences>

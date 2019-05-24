@@ -94,7 +94,7 @@
           </QueryStringParameters>
           <FormPostHttpBody>
             <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="LVUdcdmr-IwR1lBZeDgD4MCcp1OrUw_ffMUk_lbx5m_e_UgMBURPVPbvoE-9OaX1bazALB2_hIQCyutrN5FJdIHUwEzIqdQobaLZULdH96I1" CorrelationBinding="" UrlEncode="True" />
-            <FormPostParameter Name="EmailAddress" Value="{{Employers.Employers#csv.Email}}" RecordedValue="tf4.tl4@test.com" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="EmailAddress" Value="{{CMT2_Employers.CMT2_Employers#csv.Email}}" RecordedValue="tf4.tl4@test.com" CorrelationBinding="" UrlEncode="True" />
             <FormPostParameter Name="Password" Value="Password1" RecordedValue="Password1" CorrelationBinding="" UrlEncode="True" />
           </FormPostHttpBody>
         </Request>
@@ -105,9 +105,9 @@
         <TransactionTimer Name="005_0030_01_ApprenticesMenu_Click">
           <Items>
             <Comment CommentText="Click Apprentices Menu" />
-            <Request Method="GET" Guid="f0d3bf34-0ba7-46b3-a15c-15dc590783b9" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/home" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="GET" Guid="f0d3bf34-0ba7-46b3-a15c-15dc590783b9" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/home" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams" />
+                <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/teams" />
               </Headers>
               <ExtractionRules>
                 <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam19.CohortRef" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
@@ -131,9 +131,9 @@
           <Items>
             <Comment CommentText="Click Sart now on Your employer account page" />
             <Comment CommentText="You are on Add an Apprentice page" />
-            <Request Method="GET" Guid="06c413ee-1929-429d-b4d8-bb03f95664c5" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/transferConnection/create" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/provider/create?LegalEntityCode=00445790&amp;CohortRef=72293E72-A6BC-4249-90A7-6AB6CB066005" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="GET" Guid="06c413ee-1929-429d-b4d8-bb03f95664c5" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/transferConnection/create" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/provider/create?LegalEntityCode=00445790&amp;CohortRef=72293E72-A6BC-4249-90A7-6AB6CB066005" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/Inform" />
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/Inform" />
               </Headers>
               <ExtractionRules>
                 <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
@@ -163,9 +163,9 @@
           <Items>
             <Comment CommentText="On Add training provider details page. Enter UK Provider Ref Number and Click Continue" />
             <Comment CommentText="Click continue" />
-            <Request Method="POST" Guid="4df59551-040d-452f-8ba4-b8070a1d1691" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/provider/create" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="POST" Guid="4df59551-040d-452f-8ba4-b8070a1d1691" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/provider/create" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/provider/create?LegalEntityCode={{FormPostParam.LegalEntityCode}}&amp;CohortRef={{$HIDDEN1.CohortRef}}" />
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/provider/create?LegalEntityCode={{FormPostParam.LegalEntityCode}}&amp;CohortRef={{$HIDDEN1.CohortRef}}" />
               </Headers>
               <ExtractionRules>
                 <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
@@ -242,9 +242,9 @@
         <TransactionTimer Name="005_0030_04_Confirm_Provider_Continue_Click">
           <Items>
             <Comment CommentText="On Confirm training provider page. Click Yes, user PETERBOROUGH and click continue" />
-            <Request Method="POST" Guid="3cf6c444-8507-4e79-9d71-62199e128fcf" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/confirmProvider/create" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/choosePath/create?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;providerId={{ProviderId}}&amp;cohortRef={{$HIDDEN1.CohortRef}}" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="POST" Guid="3cf6c444-8507-4e79-9d71-62199e128fcf" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/confirmProvider/create" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/choosePath/create?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;providerId={{ProviderId}}&amp;cohortRef={{$HIDDEN1.CohortRef}}" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/provider/create" />
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/provider/create" />
               </Headers>
               <ExtractionRules>
                 <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
@@ -368,9 +368,9 @@
           <Items>
             <Comment CommentText="Start adding apprentices page. Select provider will add apprentices" />
             <Comment CommentText="Click Continue" />
-            <Request Method="POST" Guid="ea38f5f6-bec7-4a09-a5e4-542269a8304a" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/choosePath/create" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/Submit?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;legalEntityName={{$HIDDEN1.LegalEntityName}}&amp;legalEntityAddress={{$HIDDEN1.LegalEntityAddress}}&amp;legalEntitySource={{$HIDDEN1.LegalEntitySource}}&amp;accountLegalEntityPublicHashedId={{$HIDDEN1.AccountLegalEntityPublicHashedId}}&amp;providerId={{ProviderId}}&amp;providerName={{$HIDDEN1.ProviderName}}&amp;cohortRef={{$HIDDEN1.CohortRef}}&amp;saveStatus=Save" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="POST" Guid="ea38f5f6-bec7-4a09-a5e4-542269a8304a" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/choosePath/create" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/Submit?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;legalEntityName={{$HIDDEN1.LegalEntityName}}&amp;legalEntityAddress={{$HIDDEN1.LegalEntityAddress}}&amp;legalEntitySource={{$HIDDEN1.LegalEntitySource}}&amp;accountLegalEntityPublicHashedId={{$HIDDEN1.AccountLegalEntityPublicHashedId}}&amp;providerId={{ProviderId}}&amp;providerName={{$HIDDEN1.ProviderName}}&amp;cohortRef={{$HIDDEN1.CohortRef}}&amp;saveStatus=Save" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/choosePath/create?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;providerId={{ProviderId}}&amp;cohortRef={{$HIDDEN1.CohortRef}}" />
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/choosePath/create?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;providerId={{ProviderId}}&amp;cohortRef={{$HIDDEN1.CohortRef}}" />
               </Headers>
               <ExtractionRules>
                 <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
@@ -511,9 +511,9 @@
         <TransactionTimer Name="005_0030_06_SubmitCohort_To_Provider">
           <Items>
             <Comment CommentText="Enter message for your training provider and Continue..." />
-            <Request Method="POST" Guid="40ef874a-d3a6-4d47-80cc-da2c398ec8c0" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/submit" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/MN6L9N/NewCohortAcknowledgement" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="POST" Guid="40ef874a-d3a6-4d47-80cc-da2c398ec8c0" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/submit" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/MN6L9N/NewCohortAcknowledgement" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/Submit?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;legalEntityName={{$HIDDEN1.LegalEntityName}}&amp;legalEntityAddress={{$HIDDEN1.LegalEntityAddress}}&amp;legalEntitySource={{$HIDDEN1.LegalEntitySource}}&amp;accountLegalEntityPublicHashedId={{$HIDDEN1.AccountLegalEntityPublicHashedId}}&amp;providerId={{ProviderId}}&amp;providerName={{$HIDDEN1.ProviderName}}&amp;cohortRef={{$HIDDEN1.CohortRef}}&amp;saveStatus=Save" />
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/Submit?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;legalEntityName={{$HIDDEN1.LegalEntityName}}&amp;legalEntityAddress={{$HIDDEN1.LegalEntityAddress}}&amp;legalEntitySource={{$HIDDEN1.LegalEntitySource}}&amp;accountLegalEntityPublicHashedId={{$HIDDEN1.AccountLegalEntityPublicHashedId}}&amp;providerId={{ProviderId}}&amp;providerName={{$HIDDEN1.ProviderName}}&amp;cohortRef={{$HIDDEN1.CohortRef}}&amp;saveStatus=Save" />
               </Headers>
               <ExtractionRules>
                 <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam.__CohortRef" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
@@ -551,9 +551,9 @@
         <TransactionTimer Name="005_0030_07_BackToApprenticesPage_ClickLink">
           <Items>
             <Comment CommentText="Add apprentice details page. Key in details of apprentice" />
-            <Request Method="GET" Guid="74852a41-144d-433f-94f6-2b6164c40ec5" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/home" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="GET" Guid="74852a41-144d-433f-94f6-2b6164c40ec5" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/home" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/NewCohortAcknowledgement" />
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/NewCohortAcknowledgement" />
               </Headers>
               <CorrelationExtractionRules>
                 <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam833.clientId" DisplayName="" Description="">
@@ -587,7 +587,7 @@
             <Comment CommentText="Sign out" />
             <Request Method="GET" Guid="f99e10d9-a9c1-4074-88a8-d598c2be8c6b" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signOut" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentLogin}}/identity/logout?id=6f33170eab71021f4f712f84f578c3d8" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams?" />
+                <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/teams?" />
               </Headers>
             </Request>
             <Request Method="GET" Guid="63302b55-abc1-4285-bbcc-6c4adf61be88" Version="1.1" Url="https://{{EnvironmentLogin}}/bundles/screen" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
@@ -1139,7 +1139,7 @@
               </QueryStringParameters>
               <FormPostHttpBody>
                 <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="LVUdcdmr-IwR1lBZeDgD4MCcp1OrUw_ffMUk_lbx5m_e_UgMBURPVPbvoE-9OaX1bazALB2_hIQCyutrN5FJdIHUwEzIqdQobaLZULdH96I1" CorrelationBinding="" UrlEncode="True" />
-                <FormPostParameter Name="EmailAddress" Value="{{Employers.Employers#csv.Email}}" RecordedValue="tf4.tl4@test.com" CorrelationBinding="" UrlEncode="True" />
+                <FormPostParameter Name="EmailAddress" Value="{{CMT2_Employers.CMT2_Employers#csv.Email}}" RecordedValue="tf4.tl4@test.com" CorrelationBinding="" UrlEncode="True" />
                 <FormPostParameter Name="Password" Value="Password1" RecordedValue="Password1" CorrelationBinding="" UrlEncode="True" />
               </FormPostHttpBody>
             </Request>
@@ -1148,9 +1148,9 @@
         <TransactionTimer Name="005_0060_04_Apprentices_Click">
           <Items>
             <Comment CommentText="Click Apprentices" />
-            <Request Method="GET" Guid="3f9818d4-8fbc-4414-b0b4-7cf039f99053" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/home" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="GET" Guid="3f9818d4-8fbc-4414-b0b4-7cf039f99053" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/home" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams?" />
+                <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/teams?" />
               </Headers>
             </Request>
           </Items>
@@ -1158,9 +1158,9 @@
         <TransactionTimer Name="005_0060_05_YourCohorts_Click">
           <Items>
             <Comment CommentText="Back to Employer module. On Apprentices page. Click your cohorts" />
-            <Request Method="GET" Guid="4d6977ec-cacd-4c32-8834-9fa7e1cbb904" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/cohorts" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="GET" Guid="4d6977ec-cacd-4c32-8834-9fa7e1cbb904" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/cohorts" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/home" />
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/home" />
               </Headers>
             </Request>
           </Items>
@@ -1168,9 +1168,9 @@
         <TransactionTimer Name="005_0060_06_ReadyForReview_Click">
           <Items>
             <Comment CommentText="Click Ready for review " />
-            <Request Method="GET" Guid="51ed5e2d-b6e3-4576-8fb7-24dc095087df" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/cohorts/review" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="GET" Guid="51ed5e2d-b6e3-4576-8fb7-24dc095087df" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/cohorts/review" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/cohorts?code=d14d1687d29b7a09e785411d672473ee&amp;state=8ac657e84ad849c1b8da00a7dfee7374" />
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/cohorts?code=d14d1687d29b7a09e785411d672473ee&amp;state=8ac657e84ad849c1b8da00a7dfee7374" />
               </Headers>
             </Request>
           </Items>
@@ -1178,9 +1178,9 @@
         <TransactionTimer Name="005_0060_07_CohortDetails_Click">
           <Items>
             <Comment CommentText="Click Details" />
-            <Request Method="GET" Guid="4bc4e10b-40a1-47c6-9bca-d857d60943d9" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/details" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="GET" Guid="4bc4e10b-40a1-47c6-9bca-d857d60943d9" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/details" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/cohorts/review" />
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/cohorts/review" />
               </Headers>
             </Request>
           </Items>
@@ -1188,9 +1188,9 @@
         <TransactionTimer Name="005_0060_08_ContinueToApproval_Click">
           <Items>
             <Comment CommentText="Click Continue to approval button" />
-            <Request Method="GET" Guid="174fad73-1fc7-488c-85a2-bd103e719d9b" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/finished" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="GET" Guid="174fad73-1fc7-488c-85a2-bd103e719d9b" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/finished" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/details" />
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/details" />
               </Headers>
               <ExtractionRules>
                 <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
@@ -1224,9 +1224,9 @@
         <TransactionTimer Name="005_0060_09_Cohort_ApproveNContinue">
           <Items>
             <Comment CommentText="Choose Approve option and click Continue" />
-            <Request Method="POST" Guid="c11c1167-36c1-41e6-82a9-e106bfb01c69" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/finished" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{Environment}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/CohortApproved" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="POST" Guid="c11c1167-36c1-41e6-82a9-e106bfb01c69" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/finished" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{Environment}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/CohortApproved" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/finished" />
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/{{FormPostParam.__CohortRef}}/finished" />
               </Headers>
               <FormPostHttpBody>
                 <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="exjgJbNfREd_fHrxlwSIgEseCGjomlFD_z7O02m4QV_eTTfFFb4S5VraIHzdJ5xarYAhkuAyPacfh1FAhsbsVf7Y5iZxO_bAcl9ma1HRskPizBEV0ZHRlyPf2OsAsYfVtEOyLw2" CorrelationBinding="" UrlEncode="True" />
@@ -1243,7 +1243,7 @@
           <Items>
             <Comment CommentText="Cohort approved. " />
             <Comment CommentText="Click back to apprentices link" />
-            <Request Method="GET" Guid="fe21cfad-2bec-43cf-bdc3-530e9e6dfa09" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/home" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="GET" Guid="fe21cfad-2bec-43cf-bdc3-530e9e6dfa09" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/home" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
                 <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/VJPWK4/apprentices/MN6L9N/CohortApproved" />
               </Headers>
@@ -1253,9 +1253,9 @@
         <TransactionTimer Name="005_0060_11_BackToHome">
           <Items>
             <Comment CommentText="Click Home" />
-            <Request Method="GET" Guid="1e74a6b4-8d09-4fe6-8830-a48c7b218435" Version="1.1" Url="https://{{Environment}}/accounts/{{Employers.Employers#csv.Account}}/teams/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="GET" Guid="1e74a6b4-8d09-4fe6-8830-a48c7b218435" Version="1.1" Url="https://{{Environment}}/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/teams/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentAccounts}}/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/teams" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{Employers.Employers#csv.Account}}/apprentices/home" />
+                <Header Name="Referer" Value="https://{{EnvironmentApprentices}}/commitments/accounts/{{CMT2_Employers.CMT2_Employers#csv.Account}}/apprentices/home" />
               </Headers>
             </Request>
           </Items>
@@ -1368,9 +1368,9 @@
         <DataSourceTable Name="PayRef#csv" SelectColumns="SelectAllColumns" AccessMethod="Sequential" />
       </Tables>
     </DataSource>
-    <DataSource Name="Employers" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\Employers.csv">
+    <DataSource Name="CMT2_Employers" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\CMT2_Employers.csv">
       <Tables>
-        <DataSourceTable Name="Employers#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+        <DataSourceTable Name="CMT2_Employers#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
       </Tables>
     </DataSource>
   </DataSources>

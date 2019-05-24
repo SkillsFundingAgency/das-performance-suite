@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LoadTest Name="001_MA_ExpTest" Description="" Owner="" storage="c:\esfa\das\esfarepo\das-performance-suite\scriptframework\001_ma_exptest.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="344c192c-56b3-4191-9063-710d1938e0df" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Scenarios>
-    <Scenario Name="001_1000User_MA_SignUp_Acct_AddRemove_Organisations" DelayBetweenIterations="90" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+    <Scenario Name="001_1000User_MA_SignUp_Acct_AddRemove_Organisations" DelayBetweenIterations="60" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0" Pattern="On" />
-      <LoadProfile Pattern="Step" InitialUsers="20" MaxUsers="500" StepUsers="20" StepDuration="5" StepRampTime="0" />
+      <LoadProfile Pattern="Step" InitialUsers="1" MaxUsers="100" StepUsers="1" StepDuration="1" StepRampTime="1" />
       <TestMix>
-        <TestProfile Name="001_MA_Employer_Account_SignUp" Path="001_ma_employer_account_signup.webtest" Id="d3b073f2-3c43-4fdd-8996-373dfe684093" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="001_MA_Employer_Account_SignUp" Path="001_ma_employer_account_signup.webtest" Id="d3b073f2-3c43-4fdd-8996-373dfe684093" Percentage="0" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="001_MA_Employer_Account_SignUp_NL" Path="001_ma_employer_account_signup_nl.webtest" Id="0d675847-c28a-4f84-9974-3feb3ac32405" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       </TestMix>
       <BrowserMix>
         <BrowserProfile Percentage="100">
@@ -421,7 +422,7 @@
     </CounterSet>
   </CounterSets>
   <RunConfigurations>
-    <RunConfiguration Name="Run Settings1" Description="" ResultsStoreType="Database" TimingDetailsStorage="AllIndividualDetails" SaveTestLogsOnError="true" SaveTestLogsFrequency="0" MaxErrorDetails="1000" MaxErrorsPerType="10000" MaxThresholdViolations="1000" MaxRequestUrlsReported="1000" UseTestIterations="false" RunDuration="600" WarmupTime="0" CoolDownTime="0" TestIterations="100" WebTestConnectionModel="ConnectionPerUser" WebTestConnectionPoolSize="100" SampleRate="15" ValidationLevel="High" SqlTracingConnectString="" SqlTracingConnectStringDisplayValue="" SqlTracingDirectory="" SqlTracingEnabled="false" SqlTracingFileCount="5" SqlTracingRolloverEnabled="true" SqlTracingMinimumDuration="500" RunUnitTestsInAppDomain="true" CoreCount="0" ResourcesRetentionTimeInMinutes="0" AgentDiagnosticsLevel="Warning">
+    <RunConfiguration Name="Run Settings1" Description="" ResultsStoreType="Database" TimingDetailsStorage="AllIndividualDetails" SaveTestLogsOnError="true" SaveTestLogsFrequency="0" MaxErrorDetails="1000" MaxErrorsPerType="10000" MaxThresholdViolations="1000" MaxRequestUrlsReported="1000" UseTestIterations="false" RunDuration="1800" WarmupTime="0" CoolDownTime="0" TestIterations="2" WebTestConnectionModel="ConnectionPerUser" WebTestConnectionPoolSize="100" SampleRate="15" ValidationLevel="High" SqlTracingConnectString="" SqlTracingConnectStringDisplayValue="" SqlTracingDirectory="" SqlTracingEnabled="false" SqlTracingFileCount="5" SqlTracingRolloverEnabled="true" SqlTracingMinimumDuration="500" RunUnitTestsInAppDomain="true" CoreCount="0" ResourcesRetentionTimeInMinutes="0" AgentDiagnosticsLevel="Warning">
       <CounterSetMappings>
         <CounterSetMapping ComputerName="[CONTROLLER MACHINE]">
           <CounterSetReferences>

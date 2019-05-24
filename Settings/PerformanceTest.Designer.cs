@@ -25,7 +25,7 @@ namespace Settings {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("das-test2-shared-sql.database.windows.net")]
+        [global::System.Configuration.DefaultSettingValueAttribute("das-pp-shared-sql.database.windows.net")]
         public string DataSource {
             get {
                 return ((string)(this["DataSource"]));
@@ -34,7 +34,7 @@ namespace Settings {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("das-test2-eas-acc-db")]
+        [global::System.Configuration.DefaultSettingValueAttribute("das-pp-eas-acc-db")]
         public string InitialCatalog {
             get {
                 return ((string)(this["InitialCatalog"]));
@@ -52,7 +52,7 @@ namespace Settings {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("6LcEp&cWoC2tD1hlL")]
+        [global::System.Configuration.DefaultSettingValueAttribute("p80LghEDiATT8X6Wqt0aZ1x2PVtwzUST6HC")]
         public string Password {
             get {
                 return ((string)(this["Password"]));
@@ -61,7 +61,7 @@ namespace Settings {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("test2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("pp")]
         public string TestEnvironment {
             get {
                 return ((string)(this["TestEnvironment"]));
