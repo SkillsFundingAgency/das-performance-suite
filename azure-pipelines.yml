@@ -43,8 +43,8 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents:  |
-         PlugInFramework/bin/*
-         ScriptFramework/bin/*
+         PlugInFramework/bin/Release/*
+         ScriptFramework/bin/Release/*
     TargetFolder: '$(build.artifactstagingdirectory)'
 
 - task: DotNetCoreCLI@2
