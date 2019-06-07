@@ -53,7 +53,8 @@
       <ThinkProfile Value="0" Pattern="On" />
       <LoadProfile Pattern="Step" InitialUsers="3" MaxUsers="300" StepUsers="3" StepDuration="2" StepRampTime="0" />
       <TestMix>
-        <TestProfile Name="001_MA_Employer_Account_SignUp_NL" Path="001_ma_employer_account_signup_nl.webtest" Id="0d675847-c28a-4f84-9974-3feb3ac32405" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="001_MA_Employer_Account_SignUp_NL" Path="001_ma_employer_account_signup_nl.webtest" Id="0d675847-c28a-4f84-9974-3feb3ac32405" Percentage="0" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="001_MA_Employer_Account_SignUp_NL_v01" Path="001_ma_employer_account_signup_nl_v01.webtest" Id="6efff36d-a3fa-4bea-83b0-0db4f78d4aac" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       </TestMix>
       <BrowserMix>
         <BrowserProfile Percentage="100">

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Configuration;
 using System.Net;
+using System.Reflection;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections.Generic;
@@ -19,13 +21,25 @@ namespace PlugIns
     [Description("This plugin can be used to set the ParseDependentsRequests property for each request")]
     public class UserIteration : WebTestPlugin
     {
-        //PerformanceTest perfTest = new PerformanceTest();
         private bool m_parseDependents = true;
-        string strEnv = string.Empty;
-       
+        private Configuration config;
+
+        public UserIteration()
+        {
+            ExeConfigurationFileMap configFileMap = new ExeConfigurationFileMap();
+            configFileMap.ExeConfigFilename = Assembly.GetExecutingAssembly().ManifestModule.Name + ".config";
+
+            // Get the mapped configuration file
+            config = ConfigurationManager.OpenMappedExeConfiguration(configFileMap, ConfigurationUserLevel.None);
+        }
+
+        [System.ComponentModel.DisplayName("Data file to use.")]
+        public string DataFile { get; set; }
+
         public void DBReset(string payRef)
         {
             string dbConnetionString = "Data Source=" + Settings.PerformanceTest.Default.DataSource + ";Initial Catalog=" + Settings.PerformanceTest.Default.InitialCatalog + ";User ID=" + Settings.PerformanceTest.Default.UserID + ";Password=" + Settings.PerformanceTest.Default.Password;
+            //string dbConnetionString = "Data Source=" + ConfigurationManager.AppSettings["DataSource"] + ";Initial Catalog=" + ConfigurationManager.AppSettings["InitialCatalog"] + ";User ID=" + ConfigurationManager.AppSettings["UserID"] + ";Password=" + ConfigurationManager.AppSettings["Password"];
             SqlConnection connection;
             SqlDataAdapter adapter = new SqlDataAdapter();
             connection = new SqlConnection(dbConnetionString);
@@ -49,8 +63,8 @@ namespace PlugIns
         public override void PreWebTest(object sender, PreWebTestEventArgs e)
         {
             object contextParameterObject;
-
-            if (e.WebTest.Context.TryGetValue("GatewayUsers.GatewayUsers#csv.GATEWAY_PAYESCHEME",
+            //File name is being passed as a parameter now: "GatewayUsers.GatewayUsers#csv.GATEWAY_PAYESCHEME" changed to DataFile
+            if (e.WebTest.Context.TryGetValue(DataFile,
                            out contextParameterObject))
             {
                 string PayRef = contextParameterObject.ToString();
@@ -59,7 +73,7 @@ namespace PlugIns
             }
             else
             {
-                throw new WebTestException("'GatewayUsers.GatewayUsers#csv.GATEWAY_PAYESCHEME' not found");
+                throw new WebTestException("'DataFile' not found");
             }            
         }
 
@@ -369,8 +383,6 @@ namespace PlugIns
 
         public override void PreWebTest(object sender, PreWebTestEventArgs e)
         {
-            if (PerformanceTest.Default.TestEnvironment == "pp")
-            {
                 e.WebTest.Context[ContextParamAccountTarget] = Settings.AccountsURL.AccountTarget;
                 e.WebTest.Context[ContextParamApprenticesTarget] = Settings.ApprenticesURL.ApprenticesTarget;
                 e.WebTest.Context[ContextParamFinanceTarget] = Settings.FinanceURL.FinanceTarget;
@@ -381,19 +393,12 @@ namespace PlugIns
                 e.WebTest.Context[ContextParamLoginTarget] = Settings.LoginURL.LoginTarget;
                 e.WebTest.Context[ContextParamReportingTarget] = Settings.ReportingURL.ReportingTarget;
                 e.WebTest.Context[ContextParamPASTarget] = Settings.PASURL.PASTarget;
-            }
-            else if (PerformanceTest.Default.TestEnvironment == "test2")
+
+            if (PerformanceTest.Default.TestEnvironment == "test2")
             {
-                e.WebTest.Context[ContextParamAccountTarget] = Settings.AccountsURLT2.AccountTarget;
                 e.WebTest.Context[ContextParamApprenticesTarget] = Settings.ApprenticesURLT2.ApprenticesTarget;
                 e.WebTest.Context[ContextParamFinanceTarget] = Settings.FinanceURLT2.FinanceTarget;
                 e.WebTest.Context[ContextParamForecastingTarget] = Settings.ForecastingURLT2.ForecastingTarget;
-                e.WebTest.Context[ContextParamPermissionsTarget] = Settings.PermissionsURLT2.PermissionTarget;
-                e.WebTest.Context[ContextParamRecruitTarget] = Settings.RecruitURLT2.RecruitTarget;
-                e.WebTest.Context[ContextParamTarget] = Settings.LandingURLT2.LandingTarget;
-                e.WebTest.Context[ContextParamLoginTarget] = Settings.LoginURLT2.LoginTarget;
-                e.WebTest.Context[ContextParamReportingTarget] = Settings.ReportingURLT2.ReportingTarget;
-                e.WebTest.Context[ContextParamPASTarget] = Settings.PASURLT2.PASTarget;
             }
             base.PreWebTest(sender, e);
         }

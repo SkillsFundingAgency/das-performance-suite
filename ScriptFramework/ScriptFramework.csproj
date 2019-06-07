@@ -58,13 +58,21 @@
     <None Include="001_MA_Account_SignUp_AddRemoveOrg_NavigateModules_v3.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="001_MA_DataSetup.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="001_MA_Employer_Account_SignUp.webtest" />
     <None Include="001_MA_Employer_Account_SignUp_NL.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="001_MA_ExpTest.loadtest">
+    <None Include="001_MA_Employer_Account_SignUp_NL_DS_v01.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="001_MA_Employer_Account_SignUp_NL_DS_v02.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="001_MA_Employer_Account_SignUp_NL_v01.webtest" />
+    <None Include="001_MA_Employer_Account_SignUp_NL_v02.webtest" />
     <None Include="001_MA_PeakLoadTest.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -91,6 +99,18 @@
     <None Include="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd.webtest" />
     <None Include="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd_NL.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="100_DS_GatewayUsers.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="100_PP_GatewayUsers.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="400_DS_GatewayUsers.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="500_SUp_GatewayUsers.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Apprenticeships.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

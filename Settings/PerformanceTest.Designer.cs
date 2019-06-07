@@ -25,6 +25,15 @@ namespace Settings {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("pp")]
+        public string TestEnvironment {
+            get {
+                return ((string)(this["TestEnvironment"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("das-pp-shared-sql.database.windows.net")]
         public string DataSource {
             get {
@@ -52,19 +61,10 @@ namespace Settings {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("p80LghEDiATT8X6Wqt0aZ1x2PVtwzUST6HC")]
+        [global::System.Configuration.DefaultSettingValueAttribute("88RFJTrac#NeAf")]
         public string Password {
             get {
                 return ((string)(this["Password"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string TestEnvironment {
-            get {
-                return ((string)(this["TestEnvironment"]));
             }
         }
     }

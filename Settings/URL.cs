@@ -1,4 +1,6 @@
-﻿namespace Settings
+﻿using System.Configuration;
+
+namespace Settings
 {
     public static class AccountsURL
     {

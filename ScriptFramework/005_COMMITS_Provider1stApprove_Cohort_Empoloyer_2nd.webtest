@@ -1363,11 +1363,6 @@
         <DataSourceTable Name="Organisations#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
       </Tables>
     </DataSource>
-    <DataSource Name="PayRef" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\PayRef.csv">
-      <Tables>
-        <DataSourceTable Name="PayRef#csv" SelectColumns="SelectAllColumns" AccessMethod="Sequential" />
-      </Tables>
-    </DataSource>
     <DataSource Name="CMT2_Employers" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\CMT2_Employers.csv">
       <Tables>
         <DataSourceTable Name="CMT2_Employers#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />

@@ -2,6 +2,9 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Settings" GeneratedClassName="PerformanceTest">
   <Profiles />
   <Settings>
+    <Setting Name="TestEnvironment" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">pp</Value>
+    </Setting>
     <Setting Name="DataSource" Type="System.String" Scope="Application">
       <Value Profile="(Default)">das-pp-shared-sql.database.windows.net</Value>
     </Setting>
@@ -12,10 +15,7 @@
       <Value Profile="(Default)">sreemereddy</Value>
     </Setting>
     <Setting Name="Password" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">p80LghEDiATT8X6Wqt0aZ1x2PVtwzUST6HC</Value>
-    </Setting>
-    <Setting Name="TestEnvironment" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">88RFJTrac#NeAf</Value>
     </Setting>
   </Settings>
 </SettingsFile>
