@@ -45,7 +45,8 @@ steps:
     Contents:  |
          PlugInFramework/bin/Release/*
          ScriptFramework/bin/Release/*
-    TargetFolder: '$(build.artifactstagingdirectory)'
+    TargetFolder: '$(build.artifactstagingdirectory)/publish/'
+    flattenFolders: true
 
 - task: DotNetCoreCLI@2
   displayName: dotnet test
