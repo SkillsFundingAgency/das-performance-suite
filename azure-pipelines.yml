@@ -45,6 +45,8 @@ steps:
     Contents:  |
          PlugInFramework/bin/Release/*
          ScriptFramework/bin/Release/*
+         LoadTestSettings/bin/Release/*
+         Settings/bin/Release/*
     TargetFolder: '$(build.artifactstagingdirectory)/publish/'
     flattenFolders: true
 
