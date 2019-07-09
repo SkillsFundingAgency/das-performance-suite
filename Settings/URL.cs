@@ -15,7 +15,7 @@ namespace Settings
 
     public static class FinanceURL
     {
-        public static string FinanceTarget { get; } = string.Format("finance.{0}-eas.apprenticeships.education.gov.uk", PerformanceTest.Default.TestEnvironment);
+        public static string FinanceTarget { get; } = string.Format("financev2.{0}-eas.apprenticeships.education.gov.uk", PerformanceTest.Default.TestEnvironment);
     }
 
     public static class ForecastingURL

@@ -39,7 +39,7 @@ namespace PlugIns
         public void DBReset(string payRef)
         {
             string dbConnetionString = "Data Source=" + Settings.PerformanceTest.Default.DataSource + ";Initial Catalog=" + Settings.PerformanceTest.Default.InitialCatalog + ";User ID=" + Settings.PerformanceTest.Default.UserID + ";Password=" + Settings.PerformanceTest.Default.Password;
-            //string dbConnetionString = "Data Source=" + ConfigurationManager.AppSettings["DataSource"] + ";Initial Catalog=" + ConfigurationManager.AppSettings["InitialCatalog"] + ";User ID=" + ConfigurationManager.AppSettings["UserID"] + ";Password=" + ConfigurationManager.AppSettings["Password"];
+            
             SqlConnection connection;
             SqlDataAdapter adapter = new SqlDataAdapter();
             connection = new SqlConnection(dbConnetionString);
@@ -63,17 +63,17 @@ namespace PlugIns
         public override void PreWebTest(object sender, PreWebTestEventArgs e)
         {
             object contextParameterObject;
-            //File name is being passed as a parameter now: "GatewayUsers.GatewayUsers#csv.GATEWAY_PAYESCHEME" changed to DataFile
+            
             if (e.WebTest.Context.TryGetValue(DataFile,
                            out contextParameterObject))
             {
                 string PayRef = contextParameterObject.ToString();
-                //e.WebTest.AddCommentToResult(PayRef);
+                
                 DBReset(PayRef);
             }
             else
             {
-                throw new WebTestException("'DataFile' not found");
+                throw new WebTestException(DataFile + "'DataFile' not found");
             }            
         }
 
@@ -513,4 +513,33 @@ namespace PlugIns
 
         }
     }
- }
+
+    [System.ComponentModel.DisplayName("Counter Request")]
+    [System.ComponentModel.Description("Submit a request after counter is met")]
+    public class Counter : WebTestPlugin
+    {
+        [System.ComponentModel.DisplayName("Target Context Parameter Name")]
+        [System.ComponentModel.Description("Name of the context parameter that will receive the generated value.")]
+        public string ContextParamTarget { get; set; }
+
+        [System.ComponentModel.DisplayName("Set Counter")]
+        [System.ComponentModel.Description("Set the counter.")]
+        public int IterationCounter { get; set; }
+      
+
+        public override void PreWebTest(object sender, PreWebTestEventArgs e)
+        {
+            string setTrigger = Boolean.FalseString;
+
+            for (int i = 0; i <= IterationCounter; i++)
+            {
+                setTrigger = Boolean.TrueString;
+            }
+
+            e.WebTest.Context[ContextParamTarget] = setTrigger;
+
+            base.PreWebTest(sender, e);
+        }
+    }
+
+}

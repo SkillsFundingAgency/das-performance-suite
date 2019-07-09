@@ -65,14 +65,14 @@
     <None Include="001_MA_Employer_Account_SignUp_NL.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="001_MA_Employer_Account_SignUp_NL_DS_v01.webtest">
+    <None Include="001_MA_Employer_Account_SignUp_ProPerm_NL_DS_v02.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="001_MA_Employer_Account_SignUp_NL_DS_v02.webtest">
+    <None Include="001_MA_Employer_Account_SignUp_ProPerm_NL_v02.webtest" />
+    <None Include="001_MA_Employer_Account_SignUp_SignAgreement_NL_DS_v01.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="001_MA_Employer_Account_SignUp_NL_v01.webtest" />
-    <None Include="001_MA_Employer_Account_SignUp_NL_v02.webtest" />
+    <None Include="001_MA_Employer_Account_SignUp_SignAgreement_NL_v01.webtest" />
     <None Include="001_MA_PeakLoadTest.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -92,12 +92,23 @@
     <None Include="004_COMMITS_CreateApprove_Cohort_CoC_NL.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="004_COMMITS_CreateApprove_Cohort_CoC_v2.webtest" />
+    <None Include="004_COMMITS_CreateApprove_Cohort_CoC_NL_v1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="004_COMMITS_CreateApprove_Cohort_CoC_v2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="004_FindApprenticeshipTraining.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd.webtest" />
-    <None Include="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd_NL.webtest">
+    <None Include="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd_NL_v2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="006_VS_Vacancy_Create_V02.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="007_VS_Vacancy_Create_Provider_v01.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="100_DS_GatewayUsers.csv">
@@ -143,6 +154,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Providers.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vacancy_Employers.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebTest2.webtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
