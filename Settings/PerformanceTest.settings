@@ -17,5 +17,11 @@
     <Setting Name="Password" Type="System.String" Scope="Application">
       <Value Profile="(Default)">88RFJTrac#NeAf</Value>
     </Setting>
+    <Setting Name="UsersCatalog" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">das-pp-users-db</Value>
+    </Setting>
+    <Setting Name="UsersDBPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CkHCCDtC*vgT3Ff2pGWuy3gt</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

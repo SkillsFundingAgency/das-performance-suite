@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Data;
 using System.Net;
 using System.Reflection;
 using System.Net.Security;
@@ -33,7 +34,7 @@ namespace PlugIns
             config = ConfigurationManager.OpenMappedExeConfiguration(configFileMap, ConfigurationUserLevel.None);
         }
 
-        [System.ComponentModel.DisplayName("Data file to use.")]
+        [System.ComponentModel.DisplayName("Data file to use")]
         public string DataFile { get; set; }
 
         public void DBReset(string payRef)
@@ -103,6 +104,108 @@ namespace PlugIns
                 m_parseDependents = value;
             }
         } 
+    }
+
+    [Description("This plugin can be used to set the ParseDependentsRequests property for each request")]
+    public class CreateUser : WebTestPlugin
+    {
+        [System.ComponentModel.DisplayName("Assign email to")]
+        [System.ComponentModel.Description("Name of the context parameter that will receive the generated value.")]
+        public string ContextParamTarget { get; set; }
+        
+        public void NewUser(string firstName, string lastName, string eMail)
+        {
+            //string firstName = "First_" + System.DateTime.Now.ToString("ddMM") + System.DateTime.Now.ToString("HHmmss") + "_" + e.WebTest.Context.WebTestUserId.ToString() + "_" + e.WebTest.Context.WebTestIteration.ToString();
+            //string lastName = "Last_" + System.DateTime.Now.ToString("ddMM") + System.DateTime.Now.ToString("HHmmss") + "_" + e.WebTest.Context.WebTestUserId.ToString() + "_" + e.WebTest.Context.WebTestIteration.ToString();
+            //string eMail = "First_" + System.DateTime.Now.ToString("ddMM") + System.DateTime.Now.ToString("HHmmss") + "_" + e.WebTest.Context.WebTestUserId.ToString() + "_" + e.WebTest.Context.WebTestIteration.ToString() + "@mailinator.com";
+
+            string dbConnetionString = "Data Source=" + Settings.PerformanceTest.Default.DataSource + ";Initial Catalog=" + Settings.PerformanceTest.Default.UsersCatalog + ";User ID=" + Settings.PerformanceTest.Default.UserID + ";Password=" + Settings.PerformanceTest.Default.UsersDBPassword;
+
+            SqlConnection connection = new SqlConnection(dbConnetionString);
+            SqlCommand command = new SqlCommand("CreateUser", connection);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+
+            SqlParameter pUserID = new SqlParameter("@Id", SqlDbType.VarChar);
+            pUserID.Direction = ParameterDirection.Input;
+            //pUserID.Value = new System.Guid();
+            pUserID.Value = Guid.NewGuid().ToString();
+            command.Parameters.Add(pUserID);
+
+            SqlParameter pFN = new SqlParameter("@FirstName", SqlDbType.NVarChar);
+            pFN.Direction = ParameterDirection.Input;
+            pFN.Value = firstName;
+            command.Parameters.Add(pFN);
+
+            SqlParameter pLN = new SqlParameter("@LastName", SqlDbType.NVarChar);
+            pLN.Direction = ParameterDirection.Input;
+            pLN.Value = lastName;
+            command.Parameters.Add(pLN);
+
+            SqlParameter pEmail = new SqlParameter("@Email", SqlDbType.NVarChar);
+            pEmail.Direction = ParameterDirection.Input;
+            pEmail.Value = eMail;
+            command.Parameters.Add(pEmail);
+
+            SqlParameter pPwd = new SqlParameter("@Password", SqlDbType.NVarChar);
+            pPwd.Direction = ParameterDirection.Input;
+            pPwd.Value = "BjjkHnE7sgbLzLAJLQa7uT2Qv4DpJDElv4tWyJ3iIUT1w7IEXHcvilaIczMuP+30r6lK9/6uX+PcQTfvzfbQAAz7NN1QMYHunrnqd8aSIFMJU5kRHNhGQxoOlDVkCDmf0XR7ePx2EI0B/ItdOixWKZHlPXGZLHddfI4+Mq5CAUJ0BcHmbyv85xpJAVCrJOLL7bMFVTF4zFvo6iVlliuWaDR2K326LqzSl4J3BvSqhHgkR97tc5sDxPkx21W/tge6xpP1r8tYuelDL4UjsUvYE8ffho/vNhye/04b7P9w/oByYvDeGaPs2Ajwbp0lgjBRLuN84goMW4cHbIOmwr/nOQ==";
+            //pPwd.Value = "Password1";
+            command.Parameters.Add(pPwd);
+
+            SqlParameter pSalt = new SqlParameter("@Salt", SqlDbType.NVarChar);
+            pSalt.Direction = ParameterDirection.Input;
+            pSalt.Value = "2TqpTzSi9ilBnovIGGjlsw==";
+            command.Parameters.Add(pSalt);
+
+            SqlParameter pPwdProfileId = new SqlParameter("@PasswordProfileId", SqlDbType.NVarChar);
+            pPwdProfileId.Direction = ParameterDirection.Input;
+            pPwdProfileId.Value = "b1fae38b-2325-4aa9-b0c3-3a31ef367210";
+            command.Parameters.Add(pPwdProfileId);
+
+            SqlParameter pIsActive = new SqlParameter("@IsActive", SqlDbType.Bit);
+            pIsActive.Direction = ParameterDirection.Input;
+            pIsActive.Value = 1;
+            command.Parameters.Add(pIsActive);
+
+            SqlParameter pFailedLogin = new SqlParameter("@FailedLoginAttempts", SqlDbType.Bit);
+            pFailedLogin.Direction = ParameterDirection.Input;
+            pFailedLogin.Value = 0;
+            command.Parameters.Add(pFailedLogin);
+
+            SqlParameter pIsLocked = new SqlParameter("@IsLocked", SqlDbType.Bit);
+            pIsLocked.Direction = ParameterDirection.Input;
+            pIsLocked.Value = 0;
+            command.Parameters.Add(pIsLocked);
+
+            try
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+            //catch(Exception ex)
+            //{
+            //    // Handle error
+            //    ex.ToString();
+            //}\
+            finally
+            {
+                command.Parameters.Clear();
+                connection.Close();
+                connection.Dispose();
+            }
+        }
+
+        public override void PreWebTest(object sender, PreWebTestEventArgs e)
+        {
+            string firstName = "First_" + System.DateTime.Now.ToString("ddMM") + System.DateTime.Now.ToString("HHmmss") + "_" + e.WebTest.Context.WebTestUserId.ToString() + "_" + e.WebTest.Context.WebTestIteration.ToString();
+            string lastName = "Last_" + System.DateTime.Now.ToString("ddMM") + System.DateTime.Now.ToString("HHmmss") + "_" + e.WebTest.Context.WebTestUserId.ToString() + "_" + e.WebTest.Context.WebTestIteration.ToString();
+            string eMail = "First_" + System.DateTime.Now.ToString("ddMM") + System.DateTime.Now.ToString("HHmmss") + "_" + e.WebTest.Context.WebTestUserId.ToString() + "_" + e.WebTest.Context.WebTestIteration.ToString() + "@mailinator.com";
+
+            NewUser(firstName, lastName, eMail);
+
+            e.WebTest.Context[ContextParamTarget] = eMail;
+            base.PreWebTest(sender, e);
+        }
     }
 
     public class MyWebRequestPlugin : WebTestRequestPlugin

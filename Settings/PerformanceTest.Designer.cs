@@ -67,5 +67,23 @@ namespace Settings {
                 return ((string)(this["Password"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("das-pp-users-db")]
+        public string UsersCatalog {
+            get {
+                return ((string)(this["UsersCatalog"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("CkHCCDtC*vgT3Ff2pGWuy3gt")]
+        public string UsersDBPassword {
+            get {
+                return ((string)(this["UsersDBPassword"]));
+            }
+        }
     }
 }

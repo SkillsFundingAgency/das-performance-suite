@@ -72,6 +72,10 @@
     <None Include="001_MA_Employer_Account_SignUp_SignAgreement_NL_DS_v01.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="001_MA_Employer_Account_SignUp_SignAgreement_NL_MO_v01.webtest" />
+    <None Include="001_MA_Employer_Account_SignUp_SignAgreement_NL_Test.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="001_MA_Employer_Account_SignUp_SignAgreement_NL_v01.webtest" />
     <None Include="001_MA_PeakLoadTest.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -160,6 +164,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="WebTest2.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebTest3.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebTest4.webtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

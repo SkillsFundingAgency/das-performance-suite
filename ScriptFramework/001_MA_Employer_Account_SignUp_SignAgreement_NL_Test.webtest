@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WebTest Name="001_MA_Employer_Account_SignUp_SignAgreement_NL_v01" Id="badc944d-626c-4e3b-94d5-b2811f0c6c43" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest7.3192048f-428d-4017-89e1-3acab2f90a6c.rec.webtestresult" ResultsLocale="">
+<WebTest Name="001_MA_Employer_Account_SignUp_SignAgreement_NL_Test" Id="40a08111-e9db-44c8-8362-e64ae7596c2d" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest7.3192048f-428d-4017-89e1-3acab2f90a6c.rec.webtestresult" ResultsLocale="">
   <Items>
     <TransactionTimer Name="001_0000_LandingPage">
       <Items>
@@ -964,6 +964,7 @@
     <ContextParameter Name="EnvironmentForecast" Value="" />
     <ContextParameter Name="EnvironmentPermissions" Value="" />
     <ContextParameter Name="EnvironmentRecruit" Value="" />
+    <ContextParameter Name="EmailAddress" Value="" />
   </ContextParameters>
   <ValidationRules>
     <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
@@ -1020,6 +1021,11 @@
         <RuleParameter Name="Environment" Value="pp" />
         <RuleParameter Name="ParseDependents" Value="True" />
         <RuleParameter Name="DataFile" Value="GatewayUsers.500_SUp_GatewayUsers#csv.GATEWAY_PAYESCHEME" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.CreateUser, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="CreateUser" Description="This plugin can be used to set the ParseDependentsRequests property for each request">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="EmailAddress" />
       </RuleParameters>
     </WebTestPlugin>
   </WebTestPlugins>
