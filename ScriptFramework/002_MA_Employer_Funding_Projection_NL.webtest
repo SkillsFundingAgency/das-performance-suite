@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WebTest Name="002_MA_Employer_Funding_Projection" Id="c702d047-e09f-4535-b9c7-cea8ea262c70" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest7.3192048f-428d-4017-89e1-3acab2f90a6c.rec.webtestresult" ResultsLocale="">
+<WebTest Name="002_MA_Employer_Funding_Projection_NL" Id="31b10980-fc6c-4f78-84a2-7163455e2968" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest7.3192048f-428d-4017-89e1-3acab2f90a6c.rec.webtestresult" ResultsLocale="">
   <Items>
     <TransactionTimer Name="002_0000_LandingPage">
       <Items>
@@ -46,7 +46,7 @@
       <Items>
         <Comment CommentText="Have you used this service before. Click Yes, I have used this service before" />
         <Comment CommentText="Continue" />
-        <Request Method="POST" Guid="bbb5f3d5-3644-40b8-a1b1-7b790966bff2" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/usedServiceBefore" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentLogin}}/identity/employer/login?id=06e41a0239708178179b743cc196c826&amp;returnUrl=https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7&amp;clientId=easpp" ReportingName="" IgnoreHttpStatusCode="False">
+        <Request Method="POST" Guid="bbb5f3d5-3644-40b8-a1b1-7b790966bff2" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/usedServiceBefore" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentLogin}}/identity/employer/login?id=06e41a0239708178179b743cc196c826&amp;returnUrl=https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3desapp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{EnvironmentAccounts}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7&amp;clientId=esapp" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/service/usedServiceBefore" />
           </Headers>
@@ -70,11 +70,11 @@
         <Comment CommentText="Enter email and password and Click Sign in" />
         <Request Method="POST" Guid="75262192-79b9-40e5-94a1-63b55fff56c3" Version="1.1" Url="https://{{EnvironmentLogin}}/identity/employer/login" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentAccounts}}/accounts/V9496X/teams" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/employer/login?id=06e41a0239708178179b743cc196c826&amp;returnUrl=https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7&amp;clientId=easpp" />
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/employer/login?id=8e3caf4e6a5a014ce9d093edf0bc9fb7&amp;returnUrl=https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3desapp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{EnvironmentAccounts}}%252Fservice%252FsignIn%26state%3dLfMu_n1k2CX0qo_8v8pLX29ZtKIWguTb0RITC5GG_MvFU2TMcaf1nw78JqRF7ifr5QLlzSPkSNBRQutptWi6rsZffipBJfM2Y3wQ1OihUd3PX9Qvwtlep1zgSH62utVGUCmbl_I5SS6QnnkVRswmHhfIPekdT4goQEcVgj3btkz0q-A4iAcSngUHlUwdm0iR%26nonce%3d7c5f7f0450d746d98a141d518011f29e&amp;clientId=esapp" />
           </Headers>
           <QueryStringParameters>
             <QueryStringParameter Name="id" Value="06e41a0239708178179b743cc196c826" RecordedValue="06e41a0239708178179b743cc196c826" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
-            <QueryStringParameter Name="returnUrl" Value="https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7" RecordedValue="https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="returnUrl" Value="https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3desapp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{EnvironmentAccounts}}%252Fservice%252FsignIn%26state%3dLfMu_n1k2CX0qo_8v8pLX29ZtKIWguTb0RITC5GG_MvFU2TMcaf1nw78JqRF7ifr5QLlzSPkSNBRQutptWi6rsZffipBJfM2Y3wQ1OihUd3PX9Qvwtlep1zgSH62utVGUCmbl_I5SS6QnnkVRswmHhfIPekdT4goQEcVgj3btkz0q-A4iAcSngUHlUwdm0iR%26nonce%3d7c5f7f0450d746d98a141d518011f29e" RecordedValue="https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
             <QueryStringParameter Name="clientId" Value="easpp" RecordedValue="easpp" CorrelationBinding="{{QueryStringParam82.clientId}}" UrlEncode="False" UseToGroupResults="False" />
           </QueryStringParameters>
           <FormPostHttpBody>
@@ -174,26 +174,6 @@
             </Request>
           </Items>
         </TransactionTimer>
-        <TransactionTimer Name="002_0040_09_YourTeam_Click">
-          <Items>
-            <Comment CommentText="Click Your team" />
-            <Request Method="GET" Guid="40eae49a-d8d6-4ee6-b088-66f039e13810" Version="1.1" Url="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams/view" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams?" />
-              </Headers>
-            </Request>
-          </Items>
-        </TransactionTimer>
-        <TransactionTimer Name="002_0040_10_GoToHomePage">
-          <Items>
-            <Comment CommentText="Back to home page" />
-            <Request Method="GET" Guid="78aeb928-e551-49e7-bdf1-5f1a2493813f" Version="1.1" Url="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/VNRK8R/teams/view" />
-              </Headers>
-            </Request>
-          </Items>
-        </TransactionTimer>
       </Items>
     </TransactionTimer>
     <TransactionTimer Name="002_0050_Funding_Projection">
@@ -235,16 +215,6 @@
               <Headers>
                 <Header Name="Referer" Value="https://{{EnvironmentForecast}}/accounts/{{Employers.Employers#csv.Account}}/forecasting/estimations/start" />
               </Headers>
-              <ValidationRules>
-                <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
-                  <RuleParameters>
-                    <RuleParameter Name="FindText" Value="Estimated costs" />
-                    <RuleParameter Name="IgnoreCase" Value="False" />
-                    <RuleParameter Name="UseRegularExpression" Value="False" />
-                    <RuleParameter Name="PassIfTextFound" Value="True" />
-                  </RuleParameters>
-                </ValidationRule>
-              </ValidationRules>
               <CorrelationExtractionRules>
                 <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.Course.Id" DisplayName="" Description="">
                   <RuleParameters>
@@ -376,44 +346,7 @@
             </Request>
           </Items>
         </TransactionTimer>
-        <TransactionTimer Name="002_0050_06_EstimatePage">
-          <Items>
-            <Comment CommentText="Now Estimated costs page shows apprenticeships you have added and your account funds etc..." />
-            <Comment CommentText="Click Add more apprenticeships to your current estimate" />
-            <Request Method="POST" Guid="179ecd60-7092-47f1-9870-4f5d0ee9119d" Version="1.1" Url="https://{{EnvironmentForecast}}/accounts/{{Employers.Employers#csv.Account}}/forecasting/estimations/default/apprenticeship/add" ThinkTime="18" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Accept" Value="*/*" />
-                <Header Name="X-Requested-With" Value="XMLHttpRequest" />
-                <Header Name="Referer" Value="https://{{EnvironmentForecast}}/accounts/{{Employers.Employers#csv.Account}}/forecasting/estimations/default/apprenticeship/add" />
-              </Headers>
-              <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEMAbwB1AHIAcwBlAEkAZAAiADoAIgAyADcANAAiACwAIgBOAHUAbQBiAGUAcgBPAGYAQQBwAHAAcgBlAG4AdABpAGMAZQBzACIAOgBuAHUAbABsACwAIgBMAGUAdgB5AFYAYQBsAHUAZQAiADoAbgB1AGwAbAAsACIAUwB0AGEAcgB0AEQAYQB0AGUAIgA6ACIAMQA4ADkAOQAtADEAMgAtADAAMQBUADAAMAA6ADAAMAA6ADAAMAAuADAAMAAwAFoAIgAsACIATgB1AG0AYgBlAHIATwBmAE0AbwBuAHQAaABzACIAOgAwACwAIgBGAHUAbgBkAGkAbgBnAEIAYQBuAGQAcwAiADoAIgAiACwAIgBUAG8AdABhAGwARgB1AG4AZABpAG4AZwBDAG8AcwB0ACIAOgAiACIALAAiAFQAbwB0AGEAbABGAHUAbgBkAGkAbgBnAEMAYQBwACIAOgAiADAAIgB9AA==</StringHttpBody>
-            </Request>
-          </Items>
-        </TransactionTimer>
-        <TransactionTimer Name="002_0050_07_CheckIfICanFund_Click">
-          <Items>
-            <Comment CommentText="Click Check if I can fund these button" />
-            <Request Method="POST" Guid="0f70657e-0873-4d33-8de5-d9e949a354b8" Version="1.1" Url="https://{{EnvironmentForecast}}/accounts/{{Employers.Employers#csv.Account}}/forecasting/estimations/default/apprenticeship/add" ThinkTime="24" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentForecast}}/accounts/{{Employers.Employers#csv.Account}}/forecasting/estimations/default" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://forecasting.{{Environment}}/accounts/{{Employers.Employers#csv.Account}}/forecasting/estimations/default/apprenticeship/add" />
-              </Headers>
-              <FormPostHttpBody>
-                <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="I97zWhA41XDJwzhuJ28Jy8c1oWTQJMZ5kRalSRpVl9gdMB8VVa6G3wXWSBPz-y-VSzROKc2gJcv3FxoQ7b-r5jtc9OB333gHbQE-CiWcGkHehLzD81yjQB9JgwFGitMDJnov5Pw_igH9mbm69Y2BRg2" CorrelationBinding="" UrlEncode="True" />
-                <FormPostParameter Name="FundingPeriodsJson" Value="{{$HIDDEN1.FundingPeriodsJson}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-                <FormPostParameter Name="CalculatedTotalCap" Value="{{$HIDDEN1.CalculatedTotalCap}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-                <FormPostParameter Name="Course.Id" Value="274" RecordedValue="274" CorrelationBinding="{{FormPostParam21.Course.Id}}" UrlEncode="True" />
-                <FormPostParameter Name="NumberOfApprentices" Value="5" RecordedValue="5" CorrelationBinding="{{FormPostParam22.NumberOfApprentices}}" UrlEncode="True" />
-                <FormPostParameter Name="TotalInstallments" Value="12" RecordedValue="12" CorrelationBinding="{{FormPostParam23.TotalInstallments}}" UrlEncode="True" />
-                <FormPostParameter Name="StartDate" Value="{{$HIDDEN1.StartDate}}" RecordedValue="1/1/0001 12:00:00 AM" CorrelationBinding="" UrlEncode="True" />
-                <FormPostParameter Name="StartDateMonth" Value="04" RecordedValue="04" CorrelationBinding="" UrlEncode="True" />
-                <FormPostParameter Name="StartDateYear" Value="2019" RecordedValue="2019" CorrelationBinding="" UrlEncode="True" />
-                <FormPostParameter Name="TotalCostAsString" Value="30,000" RecordedValue="30,000" CorrelationBinding="" UrlEncode="True" />
-                <FormPostParameter Name="save" Value="Create" RecordedValue="Create" CorrelationBinding="{{FormPostParam24.save}}" UrlEncode="True" />
-              </FormPostHttpBody>
-            </Request>
-          </Items>
-        </TransactionTimer>
-        <TransactionTimer Name="002_0050_08_BackToHome">
+        <TransactionTimer Name="002_0050_06_BackToHome">
           <Items>
             <Comment CommentText="Back to home from Your organisations and agreements" />
             <Request Method="GET" Guid="9519a8cd-852b-455f-a130-23beac640ff4" Version="1.1" Url="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams?" ReportingName="" IgnoreHttpStatusCode="False">
@@ -432,144 +365,6 @@
           <Headers>
             <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{Employers.Employers#csv.Account}}/teams?" />
           </Headers>
-        </Request>
-        <Request Method="GET" Guid="07e02bc3-7368-4ef6-8872-8fb4667304c2" Version="1.1" Url="https://{{EnvironmentReporting}}/signout-oidc" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentLogin}}/identity/logout?id=1f4f0687da91054c8540766b88e80e13" ReportingName="" IgnoreHttpStatusCode="False">
-          <DependentRequests>
-            <Request Method="GET" Guid="ce89ec19-8929-4785-ad7c-1a4a088d55ca" Version="1.1" Url="https://{{EnvironmentLogin}}/bundles/screen" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=1f4f0687da91054c8540766b88e80e13" />
-              </Headers>
-              <QueryStringParameters>
-                <QueryStringParameter Name="v" Value="sVXB6jzilt1nVSNlS57LnOPveP7GgPMMp1eb2WI92gc1" RecordedValue="sVXB6jzilt1nVSNlS57LnOPveP7GgPMMp1eb2WI92gc1" CorrelationBinding="{{QueryStringParam34.v}}" UrlEncode="False" UseToGroupResults="False" />
-              </QueryStringParameters>
-            </Request>
-            <Request Method="GET" Guid="1ac4b721-b29c-4d75-8fa1-75bd2bcaab6a" Version="1.1" Url="https://{{EnvironmentLogin}}/bundles/sfajs" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=1f4f0687da91054c8540766b88e80e13" />
-              </Headers>
-              <QueryStringParameters>
-                <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam36.v}}" UrlEncode="False" UseToGroupResults="False" />
-              </QueryStringParameters>
-            </Request>
-            <Request Method="GET" Guid="7282499a-9c20-42e2-a20f-2f79dd7b77fc" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=1f4f0687da91054c8540766b88e80e13" />
-              </Headers>
-            </Request>
-            <Request Method="GET" Guid="6108608b-08fd-4d65-817f-d784f7b0c3e7" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=1f4f0687da91054c8540766b88e80e13" />
-              </Headers>
-            </Request>
-            <Request Method="GET" Guid="550b79f1-a62a-4b5e-a47d-7d6506b3c087" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=1f4f0687da91054c8540766b88e80e13" />
-              </Headers>
-            </Request>
-            <Request Method="GET" Guid="83bd38b0-1b20-41ae-b2da-152b10706a13" Version="1.1" Url="https://{{EnvironmentForecast}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=1f4f0687da91054c8540766b88e80e13" />
-              </Headers>
-            </Request>
-            <Request Method="GET" Guid="aa0f4209-06c0-44f2-9ff6-3923b04f7db6" Version="1.1" Url="https://permissions.{{Environment}}/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=1f4f0687da91054c8540766b88e80e13" />
-              </Headers>
-            </Request>
-          </DependentRequests>
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=6f33170eab71021f4f712f84f578c3d8" />
-          </Headers>
-          <CorrelationExtractionRules>
-            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam27.v" DisplayName="" Description="">
-              <RuleParameters>
-                <RuleParameter Name="StartsWith" Value="?v=" />
-                <RuleParameter Name="EndsWith" Value="&quot;" />
-                <RuleParameter Name="Index" Value="0" />
-                <RuleParameter Name="IgnoreCase" Value="False" />
-                <RuleParameter Name="UseRegularExpression" Value="False" />
-                <RuleParameter Name="HtmlDecode" Value="True" />
-                <RuleParameter Name="Required" Value="False" />
-              </RuleParameters>
-            </ExtractionRule>
-            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam30.id" DisplayName="" Description="">
-              <RuleParameters>
-                <RuleParameter Name="StartsWith" Value="?id=" />
-                <RuleParameter Name="EndsWith" Value="&quot;" />
-                <RuleParameter Name="Index" Value="0" />
-                <RuleParameter Name="IgnoreCase" Value="False" />
-                <RuleParameter Name="UseRegularExpression" Value="False" />
-                <RuleParameter Name="HtmlDecode" Value="True" />
-                <RuleParameter Name="Required" Value="False" />
-              </RuleParameters>
-            </ExtractionRule>
-            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam33.v" DisplayName="" Description="">
-              <RuleParameters>
-                <RuleParameter Name="StartsWith" Value="?v=" />
-                <RuleParameter Name="EndsWith" Value="&quot;" />
-                <RuleParameter Name="Index" Value="4" />
-                <RuleParameter Name="IgnoreCase" Value="False" />
-                <RuleParameter Name="UseRegularExpression" Value="False" />
-                <RuleParameter Name="HtmlDecode" Value="True" />
-                <RuleParameter Name="Required" Value="False" />
-              </RuleParameters>
-            </ExtractionRule>
-            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam34.v" DisplayName="" Description="">
-              <RuleParameters>
-                <RuleParameter Name="StartsWith" Value="?v=" />
-                <RuleParameter Name="EndsWith" Value="&quot;" />
-                <RuleParameter Name="Index" Value="0" />
-                <RuleParameter Name="IgnoreCase" Value="False" />
-                <RuleParameter Name="UseRegularExpression" Value="False" />
-                <RuleParameter Name="HtmlDecode" Value="True" />
-                <RuleParameter Name="Required" Value="False" />
-              </RuleParameters>
-            </ExtractionRule>
-            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam35.id" DisplayName="" Description="">
-              <RuleParameters>
-                <RuleParameter Name="StartsWith" Value="?id=" />
-                <RuleParameter Name="EndsWith" Value="&quot;" />
-                <RuleParameter Name="Index" Value="0" />
-                <RuleParameter Name="IgnoreCase" Value="False" />
-                <RuleParameter Name="UseRegularExpression" Value="False" />
-                <RuleParameter Name="HtmlDecode" Value="True" />
-                <RuleParameter Name="Required" Value="False" />
-              </RuleParameters>
-            </ExtractionRule>
-            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam36.v" DisplayName="" Description="">
-              <RuleParameters>
-                <RuleParameter Name="StartsWith" Value="?v=" />
-                <RuleParameter Name="EndsWith" Value="&quot;" />
-                <RuleParameter Name="Index" Value="4" />
-                <RuleParameter Name="IgnoreCase" Value="False" />
-                <RuleParameter Name="UseRegularExpression" Value="False" />
-                <RuleParameter Name="HtmlDecode" Value="True" />
-                <RuleParameter Name="Required" Value="False" />
-              </RuleParameters>
-            </ExtractionRule>
-            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam41.id" DisplayName="" Description="">
-              <RuleParameters>
-                <RuleParameter Name="StartsWith" Value="?id=" />
-                <RuleParameter Name="EndsWith" Value="&quot;" />
-                <RuleParameter Name="Index" Value="0" />
-                <RuleParameter Name="IgnoreCase" Value="False" />
-                <RuleParameter Name="UseRegularExpression" Value="False" />
-                <RuleParameter Name="HtmlDecode" Value="True" />
-                <RuleParameter Name="Required" Value="False" />
-              </RuleParameters>
-            </ExtractionRule>
-            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam46.v" DisplayName="" Description="">
-              <RuleParameters>
-                <RuleParameter Name="StartsWith" Value="?v=" />
-                <RuleParameter Name="EndsWith" Value="&quot;" />
-                <RuleParameter Name="Index" Value="4" />
-                <RuleParameter Name="IgnoreCase" Value="False" />
-                <RuleParameter Name="UseRegularExpression" Value="False" />
-                <RuleParameter Name="HtmlDecode" Value="True" />
-                <RuleParameter Name="Required" Value="False" />
-              </RuleParameters>
-            </ExtractionRule>
-          </CorrelationExtractionRules>
         </Request>
         <Request Method="GET" Guid="63302b55-abc1-4285-bbcc-6c4adf61be88" Version="1.1" Url="https://{{EnvironmentLogin}}/bundles/screen" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
@@ -612,11 +407,6 @@
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
           </Headers>
         </Request>
-        <Request Method="GET" Guid="f174b185-4a8b-4ca6-9a1a-342e42e73487" Version="1.1" Url="https://{{EnvironmentRecruit}}/signout-oidc" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=1f4f0687da91054c8540766b88e80e13" />
-          </Headers>
-        </Request>
       </Items>
     </TransactionTimer>
     <TransactionTimer Name="002_1000_Continue_To_Signout">
@@ -629,48 +419,6 @@
           <QueryStringParameters>
             <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam46.v}}" UrlEncode="False" UseToGroupResults="False" />
           </QueryStringParameters>
-        </Request>
-        <Request Method="GET" Guid="d3affc1a-e898-40dc-8627-f2f68adc5cec" Version="1.1" Url="https://{{EnvironmentReporting}}/signout-oidc" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentLogin}}/identity/logout?id=35824a86a60ad24478a2d93b2907edad" ReportingName="" IgnoreHttpStatusCode="False">
-          <DependentRequests>
-            <Request Method="GET" Guid="61cf4d69-c1fb-4ba4-97c8-e8b567ee2e10" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=35824a86a60ad24478a2d93b2907edad" />
-              </Headers>
-            </Request>
-            <Request Method="GET" Guid="f64fcddc-e107-4f41-9cfc-95cccc21bfb9" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=35824a86a60ad24478a2d93b2907edad" />
-              </Headers>
-            </Request>
-            <Request Method="GET" Guid="ac3ea69b-1d60-4e57-8625-17063fb7bd35" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=35824a86a60ad24478a2d93b2907edad" />
-              </Headers>
-            </Request>
-            <Request Method="GET" Guid="346fafd2-4a42-4a20-ba0d-332d573986aa" Version="1.1" Url="https://forecasting.{{Environment}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=35824a86a60ad24478a2d93b2907edad" />
-              </Headers>
-            </Request>
-            <Request Method="GET" Guid="4f28f01f-ec87-4fbe-b886-e73e5b68e20d" Version="1.1" Url="https://permissions.{{Environment}}/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=35824a86a60ad24478a2d93b2907edad" />
-              </Headers>
-            </Request>
-            <Request Method="GET" Guid="1d3c4e4b-5637-4e87-af23-121da8c90ad7" Version="1.1" Url="https://{{EnvironmentReporting}}/signout-oidc" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentLogin}}/identity/logout?id=2787d9c1a94258f90a0f47b5c248220f" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=35824a86a60ad24478a2d93b2907edad" />
-              </Headers>
-            </Request>
-            <Request Method="GET" Guid="d1d5410d-139b-46a1-ab81-868d4aabc2e0" Version="1.1" Url="https://recruit.{{Environment}}/signout-oidc" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=35824a86a60ad24478a2d93b2907edad" />
-              </Headers>
-            </Request>
-          </DependentRequests>
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=63da6b8890fd1b79e37d5f76704cb617" />
-          </Headers>
         </Request>
         <Request Method="GET" Guid="71d38702-75d7-4a37-be1e-558fd2cc7178" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
@@ -698,11 +446,6 @@
           </Headers>
         </Request>
         <Request Method="GET" Guid="694913dc-ce53-4b3c-83a0-55e04a3f2b9e" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
-          </Headers>
-        </Request>
-        <Request Method="GET" Guid="01829335-842a-4bf4-a3fb-a689e79f8294" Version="1.1" Url="https://{{EnvironmentRecruit}}/signout-oidc" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
           </Headers>

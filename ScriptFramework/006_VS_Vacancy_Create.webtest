@@ -1,0 +1,1698 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="006_VS_Vacancy_Create" Id="c938a357-ec0b-4896-851f-73347eb029c1" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest2.7989b240-b4cf-41f8-b7c4-f9be60a8a445.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <TransactionTimer Name="006_0000_LandingPage">
+      <Items>
+        <Comment CommentText="Landing page. Click Sign in" />
+        <Request Method="GET" Guid="e2a0ade9-e650-496c-9ddd-c3f4db1eaf51" Version="1.1" Url="https://{{EnvironmentAccounts}}/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="006_0010_SignIn_Click">
+      <Items>
+        <Request Method="GET" Guid="0b9ad8cb-c121-4366-a4f1-5bcdb005df8a" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signIn" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login?id=b3f243bfcbff784675f50f4bef963606&amp;returnUrl=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3deasaccpp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{EnvironmentAccounts}}%252Fservice%252FsignIn%26state%3d9H-x3akhHFOEYrE-kTfZOzaU6gSQoUoW6tgiI9f1ISCfMG7UwM9afd32bmbFFoMekAdDia8ENBDaQJcRbUVEHhZT9Uha7pe4nTnJlmLy5Cdw8anza3lbKZGdEJ6dzUzg7a3hjNgEX7aJiSxU76CjYRiKzvPnYA1DwTjIqfa7dbEqVSuzsRfQHaNlqs57QQT0%26nonce%3d39d608478250489dae7481bee06af351&amp;clientId=easaccpp" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/service/index" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="006_0030_EnterCredentials_And_SignIn">
+      <Items>
+        <Comment CommentText="Enter email and password and Click Sign in" />
+        <Request Method="POST" Guid="75262192-79b9-40e5-94a1-63b55fff56c3" Version="1.1" Url="https://{{EnvironmentLogin}}/identity/employer/login" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentAccounts}}/accounts/V9496X/teams" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/employer/login?id=06e41a0239708178179b743cc196c826&amp;returnUrl=https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7&amp;clientId=easpp" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="id" Value="06e41a0239708178179b743cc196c826" RecordedValue="06e41a0239708178179b743cc196c826" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="returnUrl" Value="https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7" RecordedValue="https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="clientId" Value="easpp" RecordedValue="easpp" CorrelationBinding="{{QueryStringParam82.clientId}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="LVUdcdmr-IwR1lBZeDgD4MCcp1OrUw_ffMUk_lbx5m_e_UgMBURPVPbvoE-9OaX1bazALB2_hIQCyutrN5FJdIHUwEzIqdQobaLZULdH96I1" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="EmailAddress" Value="{{Vacancy_Employers.Vacancy_Employers#csv.Email}}" RecordedValue="tf4.tl4@test.com" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Password" Value="Password1" RecordedValue="Password1" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="suQeBz9vMQShbE7e5VLKMyyIkQxyp5lH_5Q3LPpD-gC3jUK8fxhuYRVwo7Pkl_AaeST-fDkRKTm9rr22SkYvOylqCsnHSpGoS0Ip-Y9I2KlDu7B8Dzh_TINpWkT2XAVMih8XDVOJbUw8pXLLRb169w==" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="004_0050_01_ApprenticesMenu_Click">
+      <Items>
+        <Comment CommentText="Click Apprentices Menu" />
+        <Request Method="GET" Guid="f0d3bf34-0ba7-46b3-a15c-15dc590783b9" Version="1.1" Url="https://{{EnvironmentApprentices}}/commitments/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/apprentices/home" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/teams" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="006_0040_Recruitment_Click">
+      <Items>
+        <Comment CommentText="Click Recruitment menu" />
+        <Request Method="GET" Guid="a5de7260-055a-4605-a295-5861be3d6136" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/connect/authorize?client_id=recruitpp&amp;redirect_uri=https%3A%2F%2F{{EnvironmentRecruit}}%2Fsignin-oidc&amp;response_type=code&amp;scope=openid%20profile&amp;response_mode=form_post&amp;nonce=636963561614087394.MzJiODY5NDMtMTI5MS00ZmYxLWIxMjgtZmU5YzJiN2M1OGNmMDdiZjYyNzktYTUxZC00MTkyLWE5MjItYzM3Y2Y4Yjg5N2Vk&amp;state=CfDJ8HGH2GzMZbFKvv3KMzA4XK9MmHbcbEeUXQBNkkQkJTVAfDbaL9PxEPqwG3hoQBt1Zc2OXNUHYaQIK5HneMGx7-C9zJ2AHPrDECsG6nn4wlNpTF_r0oTa-Oxsv8iTROU8G9Ng4hbEORTc0ZTK6czBZzlpHpe0GzmBPsV6oXuDOQg_nCrumaWMuYEsNvgIdPbAijkUt9ySNr-m1IyWVjT327wTmGZMEWb8vluOvRRzCGF93788nHMtuvbuYHBIQ-WHT2svUTaAr4q79-ly9Ni5WtNHPrNLZ92ge7uNKLDvU3YcHfRt6C-sJ-fYFYy2dCQQEA0cDhPHEYz88Dujfx2gIfs_JKf5zu2FehbHcioiSsr5xJiDaArIHCs7wiEPehK3Nm3HHcHRt_tporaoJSMqk5QrncKjj6U7Hh4NaerfZPS-&amp;x-client-SKU=ID_NETSTANDARD1_4&amp;x-client-ver=5.2.0.0" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/teams" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="Copy of 006_0045_OIDC">
+      <Items>
+        <Request Method="POST" Guid="bcf47327-ebf8-4385-9fc6-6e99c8dc704a" Version="1.1" Url="https://{{EnvironmentRecruit}}/signin-oidc" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/connect/authorize?client_id=recruitpp&amp;redirect_uri=https%3A%2F%2F{{EnvironmentRecruit}}%2Fsignin-oidc&amp;response_type=code&amp;scope=openid%20profile&amp;response_mode=form_post&amp;nonce={{$HIDDEN1.code}}.MzJiODY5NDMtMTI5MS00ZmYxLWIxMjgtZmU5YzJiN2M1OGNmMDdiZjYyNzktYTUxZC00MTkyLWE5MjItYzM3Y2Y4Yjg5N2Vk&amp;state={{$HIDDEN1.state}}&amp;x-client-SKU=ID_NETSTANDARD1_4&amp;x-client-ver=5.2.0.0" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="code" Value="{{$HIDDEN1.code}}" RecordedValue="667339e29e328aac49ebce64518e4176" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="state" Value="{{$HIDDEN1.state}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK9MmHbcbEeUXQBNkkQkJTVAfDbaL9PxEPqwG3hoQBt1Zc2OXNUHYaQIK5HneMGx7-C9zJ2AHPrDECsG6nn4wlNpTF_r0oTa-Oxsv8iTROU8G9Ng4hbEORTc0ZTK6czBZzlpHpe0GzmBPsV6oXuDOQg_nCrumaWMuYEsNvgIdPbAijkUt9ySNr-m1IyWVjT327wTmGZMEWb8vluOvRRzCGF93788nHMtuvbuYHBIQ-WHT2svUTaAr4q79-ly9Ni5WtNHPrNLZ92ge7uNKLDvU3YcHfRt6C-sJ-fYFYy2dCQQEA0cDhPHEYz88Dujfx2gIfs_JKf5zu2FehbHcioiSsr5xJiDaArIHCs7wiEPehK3Nm3HHcHRt_tporaoJSMqk5QrncKjj6U7Hh4NaerfZPS-" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Condition UniqueStringId="89178cd3-4ec2-492c-9618-2fd8dc9904d6">
+      <ConditionalRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.CookieExistenceRule, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Cookie Exists" Description="Test whether or not the specified cookie is set.">
+        <RuleParameters>
+          <RuleParameter Name="Webpage" Value="https://recruit.pp-eas.apprenticeships.education.gov.uk" />
+          <RuleParameter Name="CookieName" Value="recruit-data" />
+          <RuleParameter Name="CheckForExistence" Value="True" />
+          <RuleParameter Name="CookieDomainName" Value="" />
+          <RuleParameter Name="CookiePath" Value="" />
+        </RuleParameters>
+      </ConditionalRule>
+      <Then>
+        <Items>
+          <TransactionTimer Name="Transaction1" />
+        </Items>
+      </Then>
+      <Else />
+    </Condition>
+    <TransactionTimer Name="006_0050_CreateVacancy_Click">
+      <Items>
+        <Comment CommentText="Click on Create Vacancy" />
+        <Request Method="POST" Guid="1b87054c-fff2-4bd9-8f78-f80266a38b5c" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/create-options/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/create-vacancy/" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam1.wizard" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?wizard=" />
+                <RuleParameter Name="EndsWith" Value="&quot;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam106.wizard" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?wizard=" />
+                <RuleParameter Name="EndsWith" Value="&quot;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="VacancyId" Value="00000000-0000-0000-0000-000000000000" RecordedValue="00000000-0000-0000-0000-000000000000" CorrelationBinding="{{FormPostParam2.VacancyId}}" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="006_0060_VacancySummary_Save">
+      <Items>
+        <Comment CommentText="On Vacancy Summary Page. Enter vacancy details" />
+        <Comment CommentText="Click Save and continue" />
+        <Request Method="POST" Guid="8822015b-3946-463e-8f33-c1642ec9a2b0" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/create-vacancy/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/00000000-0000-0000-0000-000000000000/description/" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/create-vacancy/" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam.Vacancy" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="vacancies/" />
+                <RuleParameter Name="EndsWith" Value="/title/" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="SearchInHeaders" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam107.wizard" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?wizard=" />
+                <RuleParameter Name="EndsWith" Value="&quot;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam14._csrfToken" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam15.__ncforminfo" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot;/&gt;&lt;/" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam108.wizard" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?wizard=" />
+                <RuleParameter Name="EndsWith" Value="&quot;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <QueryStringParameters>
+            <QueryStringParameter Name="wizard" Value="True" RecordedValue="True" CorrelationBinding="{{QueryStringParam106.wizard}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <FormPostHttpBody>
+            <FormPostParameter Name="Title" Value="Software developer apprenticeship" RecordedValue="Software developer apprenticeship" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="NumberOfPositions" Value="1" RecordedValue="2" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="006_0070_VacancyOverview_SaveAndContinue">
+      <Items>
+        <Comment CommentText="Brief overview page. Enter overview and hit Save and continue" />
+        <Request Method="POST" Guid="94456448-da5e-4640-8a57-bd3f68cb9456" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/description/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/employer-name/?Wizard=true" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/description/" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam109.wizard" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?wizard=" />
+                <RuleParameter Name="EndsWith" Value="&quot;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam16.SelectedEmployerIdentityOption" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; dat" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam17._csrfToken" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+                <RuleParameter Name="Index" Value="5" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam18.__ncforminfo" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot;/&gt;&lt;/" />
+                <RuleParameter Name="Index" Value="6" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam110.wizard" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?wizard=" />
+                <RuleParameter Name="EndsWith" Value="&quot;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam19.SelectedEmployerIdentityOption" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="legal-entity-name" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <QueryStringParameters>
+            <QueryStringParameter Name="wizard" Value="True" RecordedValue="True" CorrelationBinding="{{QueryStringParam108.wizard}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <FormPostHttpBody>
+            <FormPostParameter Name="ShortDescription" Value="Brief overview needs to be engaging to make the candidate want to view the full vacancy." RecordedValue="Brief overview needs to be engaging to make the candidate want to view the full vacancy." CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK-LTM8GQElnv28K87snRefxjc9Srd2MpFxEyJMEVW32vK6KS0t2OBYkWFLY-clkKccVHee-wi38jDCf3y4jZbGYuDiNtYP1QCdpVNuJGjUFv1dSYa0Tq2RynMWfFyhVbeEmmY8v7H2WZSpLs2fqxJ0aFJNe3ABn6ZlSxMtgitF9GQ" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="MMP7CcEd1XS-XbH6hgWGBVpql4wnHemxCy63vrYQWDhDljO78U3xCQXWWMnxHnRZ6ta0btLNIvblV3woWgx88IOqW1tjp5Q5dock3nz7qiDjeToE3DaNpl4gvhwrLk5LmqV4HLhgl1XqyN2mn3P3HQ==" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="What employer name do you want to go on the vacancy. Select the Organisation already assigned" />
+    <Comment CommentText="Hit Continue" />
+    <Request Method="POST" Guid="fb33de0c-7e47-43ef-a98b-e38971b76111" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/employer-name/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/location/?Wizard=True" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/employer-name/?Wizard=true" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam111.wizard" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?wizard=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam20.SelectedLocation" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; id=" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam21._csrfToken" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+            <RuleParameter Name="Index" Value="7" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam22.__ncforminfo" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;/&gt;&lt;/" />
+            <RuleParameter Name="Index" Value="8" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam112.wizard" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?wizard=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam23.SelectedLocation" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="OtherLocation_1" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="wizard" Value="True" RecordedValue="True" CorrelationBinding="{{QueryStringParam110.wizard}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="SelectedEmployerIdentityOption" Value="RegisteredName" RecordedValue="RegisteredName" CorrelationBinding="{{FormPostParam19.SelectedEmployerIdentityOption}}" UrlEncode="True" />
+        <FormPostParameter Name="NewTradingName" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AnonymousName" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AnonymousReason" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK8USueifPm3YpeWxqdAvJbGTNk_FWQ_862ksK1YDgJjEDg5Xp4obB-HLFb5dyY5OV_qFjepcBdls-tXJvuhUl4e7QRLoPS1q5T9XX2PvAWIxLJFb4cN5XnCx8wvxFIVjpmOgvJOqFXxZ1f4Aft5UNebPGgNZuSOrOjlb8i5ZihioA" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="8yRgjYtl0E0Yu2vcmsSpo4aGr-X_MIA3t37wR5ul7psiam3GgBrKn6G-dHS9DzV0jqaMyF7HiKh4pY0m6CeaLM5E5zVtYjtaO7_pCzQdqq9qF8ngsDVUNoHkuPKXOsSD6qNYQ5OdigfJh4x-8YGxS60X6PpPccaO0KWnAtpXA6B0g3oGmNOBAMT3vW-GowQaem1wFJMFX2c=" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="Where will the apprentice work. Select Address. Hit Save and continue" />
+    <Request Method="POST" Guid="f504eef0-38a0-42ba-ace1-c5b42e0808f4" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/location/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/training/" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/location/?Wizard=True" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam113.wizard" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?wizard=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam24.ClosingDay" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;Den" />
+            <RuleParameter Name="Index" Value="241" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam25.ClosingYear" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="min=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; id=" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam26.StartDay" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;Den" />
+            <RuleParameter Name="Index" Value="241" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam27.StartMonth" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;Ele" />
+            <RuleParameter Name="Index" Value="270" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam28.StartYear" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="min=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; id=" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam29.SelectedProgrammeId" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;Sof" />
+            <RuleParameter Name="Index" Value="804" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam30._csrfToken" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+            <RuleParameter Name="Index" Value="928" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam31.IsDisabilityConfident" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="ble=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; cla" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam32.__ncforminfo" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;/&gt;&lt;/" />
+            <RuleParameter Name="Index" Value="930" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam114.wizard" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?wizard=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam33.ClosingDay" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;Den" />
+            <RuleParameter Name="Index" Value="241" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam34.ClosingYear" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="min=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; id=" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam35.StartDay" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;Den" />
+            <RuleParameter Name="Index" Value="241" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam36.StartMonth" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;Ele" />
+            <RuleParameter Name="Index" Value="270" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam37.StartYear" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="min=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; id=" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam38.SelectedProgrammeId" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;Sof" />
+            <RuleParameter Name="Index" Value="804" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam44.WeeklyHours" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;Lic" />
+            <RuleParameter Name="Index" Value="534" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam48.WeeklyHours" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;Lic" />
+            <RuleParameter Name="Index" Value="534" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="wizard" Value="True" RecordedValue="True" CorrelationBinding="{{QueryStringParam112.wizard}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="SelectedLocation" Value="16-18  Shelton Street, London, WC2H 9JL" RecordedValue="16-18  Shelton Street, London, WC2H 9JL" CorrelationBinding="{{FormPostParam23.SelectedLocation}}" UrlEncode="True" />
+        <FormPostParameter Name="AddressLine1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AddressLine2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AddressLine3" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AddressLine4" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Postcode" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK-J41UsfGuiAYzg66JPlAamPkpmE6Bkft7V1z6ghr3iFcLNpljLN13r25NFTK0swhgt8ggjOBHiH-XmZhdu9uwQW8cVKqZyLXwDmuLk40uC_z5V58MEBFOjVDQkk5wcgoog0h9xkbfVGfs1ZSk7tbEhl6gh3hstGnOqSPpj87gm_g" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="-h1osA6swl0TMKon1_UIDCtb48Z6mJAszZQJiHNXkACCniM_mhYV4FPyNLSVxVkn1blL_Z9_GzOxuXcN-6BQs9RNmi9X79HaNZ5sSxvxuY5q1TZ2CWEJ_87uVnfZFohaXEJ6R07V-Y0=" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="Important dates page. Enter Application closing and apprentice start dates" />
+    <Comment CommentText="Enter future dates. Atleast a month for closing date and atleast 3 months for start" />
+    <Comment CommentText="Choose the apprenticeship training from drop down" />
+    <Comment CommentText="Hit Save and continue" />
+    <Request Method="POST" Guid="6dbac387-9d38-4f2d-a7bd-4754e7c2210b" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/training/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/wage/" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/training/" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam115.wizard" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?wizard=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam39.Duration" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="min=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; id=" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam40.DurationUnit" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; sel" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam41.WageType" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; typ" />
+            <RuleParameter Name="Index" Value="4" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam42._csrfToken" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+            <RuleParameter Name="Index" Value="8" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam43.__ncforminfo" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;/&gt;&lt;/" />
+            <RuleParameter Name="Index" Value="9" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam116.wizard" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?wizard=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam45.WageType" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="wage-type-fixed" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam46.Duration" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="min=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; id=" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam47.DurationUnit" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; sel" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="wizard" Value="True" RecordedValue="True" CorrelationBinding="{{QueryStringParam114.wizard}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ClosingDay" Value="20" RecordedValue="20" CorrelationBinding="{{FormPostParam33.ClosingDay}}" UrlEncode="True" />
+        <FormPostParameter Name="ClosingMonth" Value="07" RecordedValue="07" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ClosingYear" Value="2019" RecordedValue="2019" CorrelationBinding="{{FormPostParam34.ClosingYear}}" UrlEncode="True" />
+        <FormPostParameter Name="StartDay" Value="20" RecordedValue="20" CorrelationBinding="{{FormPostParam35.StartDay}}" UrlEncode="True" />
+        <FormPostParameter Name="StartMonth" Value="10" RecordedValue="10" CorrelationBinding="{{FormPostParam36.StartMonth}}" UrlEncode="True" />
+        <FormPostParameter Name="StartYear" Value="2019" RecordedValue="2019" CorrelationBinding="{{FormPostParam37.StartYear}}" UrlEncode="True" />
+        <FormPostParameter Name="SelectedProgrammeId" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam38.SelectedProgrammeId}}" UrlEncode="True" />
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK_yl6B-zWMEMjUHDbsnCcnVKxvg_nnaQBvOAIXHEtIBlwFvDa42evYj-Pq58o_O33f4LScUVliOGt0Suo66RBoiIwFZy_IH9ysCW6v-F1ZR5lS7UzifFN38GyPKDhuuc6hnW1p89kXt6iiWhlJNwU3wlM3Oj9SPjuRvcmtpGC4OMQ" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="IsDisabilityConfident" Value="{{$HIDDEN1.IsDisabilityConfident}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="dLisT7ks3PlNxk69cdVJmGt-w5TXbWU-LPH3ZnpnlfNk3omx3waUPouxbXJ5SJPv2-jAJPv_v392S8wH-VgbGOfvlsesUPFQ3SMpFy5qzPzsjOC6CdrbYOoSVCgWK_ATBL0OvTgmfD_nqbHfJ-JJJcViynYsV2ireMzA66T8NZfig8oEJ5_qnU840zcCyBRw" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="Enter the period apprentice expected to last" />
+    <Comment CommentText="Enter details of working week, hours etc " />
+    <Comment CommentText="Save and continue duration, working hours and salary details" />
+    <Request Method="POST" Guid="77f6a578-4d9a-4265-af42-8d3e5dd10cfc" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/wage/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/search-result-preview/" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/wage/" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="wizard" Value="True" RecordedValue="True" CorrelationBinding="{{QueryStringParam116.wizard}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Duration" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam46.Duration}}" UrlEncode="True" />
+        <FormPostParameter Name="DurationUnit" Value="Year" RecordedValue="Year" CorrelationBinding="{{FormPostParam47.DurationUnit}}" UrlEncode="True" />
+        <FormPostParameter Name="WorkingWeekDescription" Value=" Monday to Friday 9am to 5pm" RecordedValue=" Monday to Friday 9am to 5pm" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="WeeklyHours" Value="40" RecordedValue="40" CorrelationBinding="{{FormPostParam48.WeeklyHours}}" UrlEncode="True" />
+        <FormPostParameter Name="WageType" Value="FixedWage" RecordedValue="FixedWage" CorrelationBinding="{{FormPostParam45.WageType}}" UrlEncode="True" />
+        <FormPostParameter Name="FixedWageYearlyAmount" Value="25000" RecordedValue="25000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="WageAdditionalInformation" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK_DHm8j6-EQBze0Zvuh-2JqyMXgPtf4JSeaI-9gS0ZDba0gkJl8U2Ra9XwbYZn5Bho4j-f_JugZoptDT6vCIwhfgPnhjcq6cL8uiT50Qh5T6UfoPdLcJUqwUmjzlHU7C28Y8Gpkq7bgh08urd9ocBQhwlFdwTdT8E4hmlVdVyQOdw" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="w0fL7tGs4xo8tPckHLnZsiGR_Ynbmt02bA7m5hKGKGypbNMa4zWMeZi_-Dk86XTmI32_BtxcGipvP5tKGTIQZH3hxjQjO0aHPEF4zkLNlBLCI5noa5Km9AB4kH94k1z3jc-2LMJ_T14BiOSmYEr7-sWzMDDkYIorIpdpAbgHUjYxaGO4RdMP5Dq_oKntsUmj" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="Your vacancy summary page." />
+    <Comment CommentText="Click Add full vacancy details" />
+    <Request Method="GET" Guid="6eb3136b-a6ac-4c4c-bf6e-4b6a4475a3a8" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="ba81f9e7-193f-4eac-ab21-8ee39d14b000" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/light-2c037cf7e1-v1.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="d5d0e645-efeb-4556-9610-177460d75667" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/bold-fb2676462a-v1.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/search-result-preview/" />
+      </Headers>
+    </Request>
+    <Comment CommentText="On Complete the vacancy page. " />
+    <Comment CommentText="What you will do in your working day. Click" />
+    <Comment CommentText="Click Add button to enter what you will do in your working day" />
+    <Request Method="GET" Guid="f030961e-0be2-4d69-8400-85276e431947" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/vacancy-description/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="d99df317-f07a-40a7-bc30-cb13c250429e" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/light-2c037cf7e1-v1.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/vacancy-description/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="a08c1750-a994-485f-b298-050ef8b04c09" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/bold-fb2676462a-v1.eot" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/vacancy-description/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+    </Request>
+    <Comment CommentText="Save and contine" />
+    <Request Method="POST" Guid="db11258e-6934-4995-b816-de77303b2c9f" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/vacancy-description/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/vacancy-description/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="VacancyDescription" Value="&lt;p&gt;Describe a typical working day and duties&lt;/p&gt;" RecordedValue="&lt;p&gt;Describe a typical working day and duties&lt;/p&gt;" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="TrainingDescription" Value="&lt;p&gt;Describe a typical working day and duties&lt;/p&gt;" RecordedValue="&lt;p&gt;Describe a typical working day and duties&lt;/p&gt;" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="OutcomeDescription" Value="&lt;p&gt;Describe a typical working day and duties&lt;/p&gt;" RecordedValue="&lt;p&gt;Describe a typical working day and duties&lt;/p&gt;" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK97Umn566zV5r3ktDkiyaaJ7VTq1Un9U0CqbsOCrS-CTqyRE5YSgfB1BYzyhsqHgTWiu_bdfePUnUAOpbWd3-JJ5llbJ6d3OoUFQvG22Gekxxty13vNsYjsfhlQeUY-ma7Ny7R4IJwaDHN63xDwzX9wBFgC8765jm-Mq8Y_hmYU4g" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="_GwQOWeLA-a17o351xoG2GaG3CTMNV4vhnjtFGWKbHW5xRsVGqB6sbWm6ySQ37L4TTgemlzgE__Icw441vY4FjSitdC6DSUKQKyoN9Ej7awc0hwzuGCIJAxrjjtQZZoG_X9wNa_BsmBkllIuYIjskqxuJU7uninh" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="Click Desired skills and personal qualities link" />
+    <Comment CommentText="Click Add button to enter desired skills and personal qualities" />
+    <Request Method="GET" Guid="5c4346bb-521a-4f56-8c4f-8d9b33568790" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/skills/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="86ac8e48-6997-41d7-b9de-3fa3b3891286" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/light-2c037cf7e1-v1.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/skills/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="fc067d70-fbce-4358-88da-afcb429cde76" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/bold-fb2676462a-v1.eot" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/skills/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam6.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col1-0" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam7.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col1-2" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="2" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam8.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col1-3" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="3" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam9.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col2-0" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="9" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam10.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col2-1" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="10" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam11.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col2-2" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="11" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam12.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col2-3" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="12" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam13.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col2-4" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="13" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam49.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col1-0" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam50.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col1-2" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="2" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam51.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col1-3" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="3" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam52.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col2-0" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="9" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam53.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col2-1" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="10" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam54.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col2-2" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="11" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam55.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col2-3" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="12" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam56.Skills" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="col2-4" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="13" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Comment CommentText="Select skills and personal qualities and hit Save" />
+    <Request Method="GET" Guid="6cca14a3-620e-41d7-a1a9-203ebf323450" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/skills/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="0d8d7842-1ea8-49d3-aa7a-10a4b8ca4759" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/light-2c037cf7e1-v1.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="e1e4467f-bd00-4c71-abe5-e40b912f5bc0" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/bold-fb2676462a-v1.eot" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Skills" Value="Communication skills" RecordedValue="Communication skills" CorrelationBinding="{{FormPostParam6.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Attention to detail" RecordedValue="Attention to detail" CorrelationBinding="{{FormPostParam7.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Organisation skills" RecordedValue="Organisation skills" CorrelationBinding="{{FormPostParam8.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Analytical skills" RecordedValue="Analytical skills" CorrelationBinding="{{FormPostParam9.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Logical" RecordedValue="Logical" CorrelationBinding="{{FormPostParam10.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Team working" RecordedValue="Team working" CorrelationBinding="{{FormPostParam11.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Creative" RecordedValue="Creative" CorrelationBinding="{{FormPostParam12.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Initiative" RecordedValue="Initiative" CorrelationBinding="{{FormPostParam13.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="AddCustomSkillName" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK_Vg6NVkvvQD5l1ksoNID63CigYFO6mpLTN_sMxQK7l6pFE0EjD5NXWTNBqzNVqVqu9TBLcUzlR2jqqZDRI3q4s_azdfjUUOwvF7JrHcsvd9OQ_vI5LFGMMuqTrCEh8qvNU7LGhTUDsNrbtF_GQZg62iG6XAEtwNAA6fVH2B0zK7g" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="AhGOAdeqcMUMXGd0Ggu2b2wMln9QuHALt_3Wq5Tk8iALMb0AI8t481tth8PoAM697v-Af-uw_vwVpr2ivRbVKf0UAZDDU9o05ZeUsD690oB-0rptwg-qXEGrQ5Y_49XcIwHf7yCuyvqNhlGDezdiu4rbMesXcDhXcSr8QZ97brlUtnZ2Rw-tGeKBzVznERzuemZVoqn3OCgci61OwqK5MiajvbJE20Ak36h1tcvgxTn425jMIkQpCq3vwEBLsMHZREi0wpiQGGzqgFKjuGeZapFotwwf5waxqjTMsaXUDks8TqM5e4ntdV3KrxCfDkNfeYmLUpsbRbtGxHvi7Cxn8w==" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="42736a6d-b4b7-439a-aa53-3bd463cc8275" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/skills/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/skills/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Skills" Value="Communication skills" RecordedValue="Communication skills" CorrelationBinding="{{FormPostParam49.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Attention to detail" RecordedValue="Attention to detail" CorrelationBinding="{{FormPostParam50.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Organisation skills" RecordedValue="Organisation skills" CorrelationBinding="{{FormPostParam51.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Analytical skills" RecordedValue="Analytical skills" CorrelationBinding="{{FormPostParam52.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Logical" RecordedValue="Logical" CorrelationBinding="{{FormPostParam53.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Team working" RecordedValue="Team working" CorrelationBinding="{{FormPostParam54.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Creative" RecordedValue="Creative" CorrelationBinding="{{FormPostParam55.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="Skills" Value="Initiative" RecordedValue="Initiative" CorrelationBinding="{{FormPostParam56.Skills}}" UrlEncode="True" />
+        <FormPostParameter Name="AddCustomSkillName" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK_Vg6NVkvvQD5l1ksoNID63CigYFO6mpLTN_sMxQK7l6pFE0EjD5NXWTNBqzNVqVqu9TBLcUzlR2jqqZDRI3q4s_azdfjUUOwvF7JrHcsvd9OQ_vI5LFGMMuqTrCEh8qvNU7LGhTUDsNrbtF_GQZg62iG6XAEtwNAA6fVH2B0zK7g" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="AhGOAdeqcMUMXGd0Ggu2b2wMln9QuHALt_3Wq5Tk8iALMb0AI8t481tth8PoAM697v-Af-uw_vwVpr2ivRbVKf0UAZDDU9o05ZeUsD690oB-0rptwg-qXEGrQ5Y_49XcIwHf7yCuyvqNhlGDezdiu4rbMesXcDhXcSr8QZ97brlUtnZ2Rw-tGeKBzVznERzuemZVoqn3OCgci61OwqK5MiajvbJE20Ak36h1tcvgxTn425jMIkQpCq3vwEBLsMHZREi0wpiQGGzqgFKjuGeZapFotwwf5waxqjTMsaXUDks8TqM5e4ntdV3KrxCfDkNfeYmLUpsbRbtGxHvi7Cxn8w==" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="Click Qualifications link" />
+    <Comment CommentText="Hit Add button to enter Qualifications " />
+    <Request Method="GET" Guid="e964a34e-93d7-4b02-8f50-dadc9b4476e4" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/qualifications/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="d181035f-d192-47af-aa80-bb1ee377d84e" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/light-2c037cf7e1-v1.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/qualifications/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="510c61ca-7903-4c40-a300-3478aecaea74" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/bold-fb2676462a-v1.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/qualifications/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.Weighting" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="WeightingYes" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.QualificationType" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;GCS" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam5.AddQualificationAction" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; cla" />
+            <RuleParameter Name="Index" Value="13" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam57.Weighting" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="WeightingYes" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam58.QualificationType" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;GCS" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam59.AddQualificationAction" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; cla" />
+            <RuleParameter Name="Index" Value="13" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Comment CommentText="What qualifications would you like the applicant to have" />
+    <Comment CommentText="Click Add this qualification and Save and continue" />
+    <Request Method="GET" Guid="d0121d51-bc69-45bb-b9cd-79a89719b88a" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/qualifications/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="POST" Guid="e30b98a5-4584-4e2c-837e-b7ff62491691" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/qualifications/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/qualifications/" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/qualifications/" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam60.Qualifications[0].QualificationType" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot;&gt;GCS" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam61.Qualifications[0].Subject" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="15" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam62.Qualifications[0].Grade" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="16" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam63.Qualifications[0].Weighting" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; dat" />
+                <RuleParameter Name="Index" Value="11" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam64._csrfToken" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+                <RuleParameter Name="Index" Value="19" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam65.__ncforminfo" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot;/&gt;&lt;/" />
+                <RuleParameter Name="Index" Value="20" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="QualificationType" Value="GCSE or equivalent" RecordedValue="GCSE or equivalent" CorrelationBinding="{{FormPostParam58.QualificationType}}" UrlEncode="True" />
+            <FormPostParameter Name="Subject" Value="Maths" RecordedValue="Maths" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Grade" Value="A" RecordedValue="A" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Weighting" Value="Essential" RecordedValue="Essential" CorrelationBinding="{{FormPostParam57.Weighting}}" UrlEncode="True" />
+            <FormPostParameter Name="AddQualificationAction" Value="AddQualification" RecordedValue="AddQualification" CorrelationBinding="{{FormPostParam59.AddQualificationAction}}" UrlEncode="True" />
+            <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK8tGsu9F6D7JfuGKrjAJX5n1EPrBSjdhPyOOmTDbmts-ImAEX7HOtzYV4_yjY2yv2m6o00fGPMSeNGvaexkouJvRwVl9Ek1f-YhvKA3hwfzFFKDm7WUes2xe3T1XhgdNdevzAk3bdBCkeOqUddx4-XYlL0T9jARfTOxkxOEKXEx2g" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="11xBrP-7cLxNFIUWgMk6z9_3MhnTxaa5fCIJa6d60ZzQvfChXTjUN5k2bIJXHVRI4o80R924yu2HqxFtls-1Lr4Gcyek8Fg-PerzEI5KixSkSeEypwGBxB5ZMgSe9U30v-2GobOn6V9dE5V_fqop19jZXrKTLRg3CEVkA_2sxyr4ZC6UhlHD_ajfPESVnC6V1fIvVTbXuWETZbV8kO4ikjQnMn3Z7-pJgjauboCkcntAmTHlNQO4iQ==" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="GET" Guid="066bf19f-ff98-4bb0-a2bb-f8e2b2675b50" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/light-2c037cf7e1-v1.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/qualifications/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="22d9080f-e20c-4cc8-b24f-25bcf789a327" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/bold-fb2676462a-v1.eot" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/qualifications/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <FormPostHttpBody>
+        <FormPostParameter Name="QualificationType" Value="GCSE or equivalent" RecordedValue="GCSE or equivalent" CorrelationBinding="{{FormPostParam4.QualificationType}}" UrlEncode="True" />
+        <FormPostParameter Name="Subject" Value="Maths" RecordedValue="Maths" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Grade" Value="A" RecordedValue="A" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Weighting" Value="Essential" RecordedValue="Essential" CorrelationBinding="{{FormPostParam3.Weighting}}" UrlEncode="True" />
+        <FormPostParameter Name="AddQualificationAction" Value="AddQualification" RecordedValue="AddQualification" CorrelationBinding="{{FormPostParam5.AddQualificationAction}}" UrlEncode="True" />
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK8tGsu9F6D7JfuGKrjAJX5n1EPrBSjdhPyOOmTDbmts-ImAEX7HOtzYV4_yjY2yv2m6o00fGPMSeNGvaexkouJvRwVl9Ek1f-YhvKA3hwfzFFKDm7WUes2xe3T1XhgdNdevzAk3bdBCkeOqUddx4-XYlL0T9jARfTOxkxOEKXEx2g" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="11xBrP-7cLxNFIUWgMk6z9_3MhnTxaa5fCIJa6d60ZzQvfChXTjUN5k2bIJXHVRI4o80R924yu2HqxFtls-1Lr4Gcyek8Fg-PerzEI5KixSkSeEypwGBxB5ZMgSe9U30v-2GobOn6V9dE5V_fqop19jZXrKTLRg3CEVkA_2sxyr4ZC6UhlHD_ajfPESVnC6V1fIvVTbXuWETZbV8kO4ikjQnMn3Z7-pJgjauboCkcntAmTHlNQO4iQ==" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="Save and continue to again" />
+    <Request Method="POST" Guid="56fee66b-5753-4973-b38e-59f59433a760" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/qualifications/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/qualifications/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="QualificationType" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Subject" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Grade" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Qualifications[0].QualificationType" Value="{{$HIDDEN1.Qualifications[0].QualificationType}}" RecordedValue="GCSE or equivalent" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Qualifications[0].Subject" Value="{{$HIDDEN1.Qualifications[0].Subject}}" RecordedValue="Maths" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Qualifications[0].Grade" Value="{{$HIDDEN1.Qualifications[0].Grade}}" RecordedValue="A" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Qualifications[0].Weighting" Value="{{$HIDDEN1.Qualifications[0].Weighting}}" RecordedValue="Essential" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK_4-PyrA9LTlR85lANzlxrfGLzDMJCGZPONZ6v_1Zeqcme_8vPMelYBMYt4N8QvxwlxvVdPsCuilALO6ezfXOMS7SBsvAKrkUzHf9diqVDETkhaTGPVZq-8j5Oq9no81yYeKXoxZ1VmPX6kI1bw9nwEvj2oAN3acIW_h40kYA_OSA" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="sFOkO9nkYGaDgVQ0Gx1nxvKsZgmKx1MW1FJ_Nc5Kv1b_Yv-e5x2TQUCZ6DWo4Z89Ec7ftNBLqHAoSl20zj7gpodJXoRtNM8rbvtsgvfYjvNo3CnfbicJKySdycRt9PdGjdH2h2dJRhtFnNVktboue2XvUOEBBkiuIFkgHPtMde5x85kLSrTE16SUit4CyDTeHO6c9ywO6FOXqA0WPJmGZsThnX3Z3WDg" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="Click Employer description link" />
+    <Comment CommentText="Click Add button to enter description" />
+    <Request Method="GET" Guid="62dd8b67-ef67-4332-ad35-920305242a2f" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/about-employer/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="b57299c2-fa6d-4537-a486-8cb8f50082d4" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/light-2c037cf7e1-v1.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/about-employer/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="fc6f1be7-6869-4003-9246-32139e91c6f2" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/bold-fb2676462a-v1.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/about-employer/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+    </Request>
+    <Comment CommentText="Hit save and continue" />
+    <Request Method="POST" Guid="39d84921-4937-46be-9da1-b1ecb1a1f2a2" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/about-employer/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/about-employer/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="EmployerDescription" Value="Add some information about SAINSBURY &amp; SAINSBURY LIMITED " RecordedValue="Add some information about SAINSBURY &amp; SAINSBURY LIMITED " CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="EmployerWebsiteUrl" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK99Df6THObiqJSgzWeEu4Rf30zEhKs05bCoYf-7uR7ej674rXO2lZpsGUpFcsuImTXvM3ZT7sD5Q437Tl8wGJiCkgakJvyRlzgn6FTrGF2U-D9wdjIdyuv5ELzY77tumxGrpgGPHC2Zh7XXHO5ToB_8LNmQwh3Du9XVIbZnXtQHug" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="v4RurPf7VLt5fKzx-Y6DXkEBNaF1E420MaR5ZFKoZMuNLeZJLaf7PUNQPpvYRjfIFi4LUqcVwOtVlqFyP3Ep-DsBq4o9QNezJfr03ItmIAtGLQi6Xg-acTDYogtVTKg70RuWp-lJxCbgv-f-xoWjiaSpItEP9U-j" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="Training provider" />
+    <Comment CommentText="Hit Add button to enter tranining provider details" />
+    <Request Method="GET" Guid="2ffd7e9a-0314-4232-b7b9-fb1975682f9e" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/select-training-provider/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="19c487cc-063b-43e4-9c8a-03728e9f3cd8" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/light-2c037cf7e1-v1.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/select-training-provider/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="f4c5eec1-de77-46e7-abe7-8d6a4843e159" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/bold-fb2676462a-v1.eot" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/select-training-provider/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.SelectionType" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="for=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam66.SelectionType" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="for=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Comment CommentText="Enter UKPRN and hit continue" />
+    <Request Method="POST" Guid="0739e2df-9a1e-4d10-bb5e-41516dcbfed5" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/select-training-provider/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/confirm-training-provider/?ukprn={{ProviderId}}" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/select-training-provider/" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam67.Ukprn" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xA;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam68._csrfToken" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <FormPostHttpBody>
+        <FormPostParameter Name="TrainingProviderSearch" Value="{{ProviderId}}" RecordedValue="{{ProviderId}}" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SelectionType" Value="TrainingProviderSearch" RecordedValue="TrainingProviderSearch" CorrelationBinding="{{FormPostParam66.SelectionType}}" UrlEncode="True" />
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK8gUUGUlQ-tpK16toDRXlY5S4bZvphaXQHub4HxDq4MpCJSdRjBOguCQDFMSWg75bMrc1HGvL9svzG-uJ7gSqtSGxllimHmRl9upIl9Wud8MaFFKvyiSjuwqB21RrkKxYqVofSejBwzvkP3vjvpIZdgnN_fjVLIFtsUBUeHoIOqRw" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="On the save this training provider page. Confirm training provider and continue" />
+    <Request Method="POST" Guid="f212991a-bcd2-4971-af6f-6026b61a4cee" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/confirm-training-provider/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/confirm-training-provider/?ukprn={{ProviderId}}" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Ukprn" Value="{{$HIDDEN1.Ukprn}}" RecordedValue="{{ProviderId}}" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK-wdk262sJWQH9L_HQFXSu2URMCiojLlqsbmrYAVLF8kkRnt7O2_3Bs_6yscNosZkspwDErCtEiD_PseaW9w1J1hx6QZwufZSs8FEK0xgqBWPu0TMrJ7l92LtDNkmR7z8tsBfih3kfBz3EWOJn8Qa1Idmm1qVTStK29rTGDOghSXQ" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="Click Application process link" />
+    <Comment CommentText="Hit Add button to add how will the candidates apply for this vacancy. Application process" />
+    <Request Method="GET" Guid="d041362d-7399-427f-9dac-4a66cb78652a" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/application-process/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="1173394b-769e-45f0-a194-353ff563ac2d" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/light-2c037cf7e1-v1.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/application-process/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="7f476a6b-334f-43c8-bc44-1c93f57651f0" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/bold-fb2676462a-v1.eot" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/application-process/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.ApplicationMethod" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="application-method-faa" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam69.ApplicationMethod" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="application-method-faa" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Comment CommentText="Select Through the Find and apprenticeship service and hit Save and continue button" />
+    <Request Method="POST" Guid="eeaefd9d-959a-4b99-b364-578d131a9964" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/application-process/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/application-process/" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam70._csrfToken" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam71.__ncforminfo" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;/&gt;&lt;/" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ApplicationMethod" Value="ThroughFindAnApprenticeship" RecordedValue="ThroughFindAnApprenticeship" CorrelationBinding="{{FormPostParam69.ApplicationMethod}}" UrlEncode="True" />
+        <FormPostParameter Name="ApplicationUrl" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ApplicationInstructions" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK-4Pn1qdzFTGsMbbJlI19cgscs8GPZAzgIjBHwcNZQEP_S-d-SjvBuCodg8BqNnGq7jr6_ECDaEywUlgZkrwldmIp2jnq_8pZZ01Rh5PMetspcv-1-IfZzXGCD5vRtVOj8GoWNmoSxik80UIrD3EZW7mGPlDvv7nj9xq6du6QEbxg" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="2nDVMZJBJHI6QVbZ_ECOuwFLKcbQMyJe4dkiy0XpMc-TvjnzBLS6kjrW66X5jnqp2GSl8YogzvuNnAwFKAV1A1fSof82pQD4v99ScSs4vD_HI_DsLz2hcqVBry9F4qOdws8Emiz20sdpT8t9mmIw47V9o-EvZ1nZcBL_EFAqaNIYHybJl5QDJw==" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="Sumbit the completed vancancy after enter all the details. Hit Submit vacancy in the end." />
+    <Request Method="POST" Guid="9511c0c9-949d-4e4b-8ad8-f965eee6358c" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/submitted/" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/preview/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="_csrfToken" Value="{{$HIDDEN1._csrfToken}}" RecordedValue="CfDJ8HGH2GzMZbFKvv3KMzA4XK-xU6HUYL8YX8u7WW8mavvKvqR7MvYjVGF_PjJfZqqUPGuLOujrHZUE_zskG3cC3mjNVMKLzwBx54Ivaz3rZn-uQlkEYvONJOArDu5Xzrj9jIRn5NiCoe3jlgsWapBcCqtEt8-k7qddXTCYxlhpYMJwUQFPwnC6-KWtZBZ0EaEeIA" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ncforminfo" Value="{{$HIDDEN1.__ncforminfo}}" RecordedValue="Dww6MRzuFfNYNjBUyYbAzYNvth_jctcjnFghF7RMc5gbUt1jO0DGZ-eD5UZPuqnrrIihO7xYZykxU2qoUVjrCs-TyDgbDvMwTbjxk-nbMDqN6K7PxiocOvx7U3xipDa8DyS1IRXMkGA=" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="Vacancy submitted. Hit Return to dashboard button" />
+    <Request Method="GET" Guid="8a350666-ad9c-452b-bf1f-7bc1c5ea2962" Version="1.1" Url="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="186b01f3-5c5f-42ba-bfbe-7687fb1d3dc1" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/light-2c037cf7e1-v1.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="a352f9a7-5d05-41d2-9fff-5d9d8c1c75eb" Version="1.1" Url="https://{{EnvironmentRecruit}}/lib/govuk-frontend/dist/assets/fonts/bold-fb2676462a-v1.eot" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/vacancies/{{FormPostParam.Vacancy}}/submitted/" />
+      </Headers>
+    </Request>
+    <Comment CommentText="Hit Home link to go to home page" />
+    <Request Method="GET" Guid="57b23c7d-6216-496c-acd7-5d345cdaf1c7" Version="1.1" Url="https://{{EnvironmentRecruit}}/services/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/account-home/" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login?id=45054550aa37319a90b8361f55912f57&amp;returnUrl=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252Fpp-eas.apprenticeships.education.gov.uk%252Faccounts%252F{{Vacancy_Employers.Vacancy_Employers#csv.Account}}%252Fteams%26state%3dgyu3FiVGWuduKFeE4-JAxN3_u0YHD2RUrlAEd_TthzEO3gB8fXGKyBVPcw2m7hZZVRTaZMVBRSdzqSPWMGjsC86jBS3n6gp8YL5_KTkxO9mGlG9qboIlKTdvmjL7mVR4CwApUglkXBUmeK7DUmdG1pO6PoUvJltoG2AsQxDMSs0Nv-cp%26nonce%3d3f3d2cea89364839bf4cb3644b6a7cb8&amp;clientId=easpp" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://{{EnvironmentRecruit}}/accounts/{{Vacancy_Employers.Vacancy_Employers#csv.Account}}/" />
+      </Headers>
+    </Request>
+  </Items>
+  <DataSources>
+    <DataSource Name="Vacancy_Employers" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\Vacancy_Employers.csv">
+      <Tables>
+        <DataSourceTable Name="Vacancy_Employers#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="Env" Value="" />
+    <ContextParameter Name="Environment" Value="" />
+    <ContextParameter Name="EnvironmentAccounts" Value="" />
+    <ContextParameter Name="EnvironmentApprentices" Value="" />
+    <ContextParameter Name="EnvironmentFinance" Value="" />
+    <ContextParameter Name="EnvironmentForecast" Value="" />
+    <ContextParameter Name="EnvironmentLogin" Value="" />
+    <ContextParameter Name="EnvironmentRecruit" Value="" />
+    <ContextParameter Name="EnvironmentReporting" Value="" />
+    <ContextParameter Name="EnvironmentPAS" Value="" />
+    <ContextParameter Name="EnvironmentPermissions" Value="" />
+    <ContextParameter Name="ProviderId" Value="10000291" />
+    <ContextParameter Name="Counter" Value="" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="PlugIns.TLSPlugin, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="TLS PlugIn" Description="TLS PlugIn to resolve the forced closure of connection">
+      <RuleParameters>
+        <RuleParameter Name="Enabled" Value="True" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.SetThinkTime, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Thinktime" Description="Set thinktime in seconds">
+      <RuleParameters>
+        <RuleParameter Name="ThinkTime" Value="5" />
+        <RuleParameter Name="Random" Value="True" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.SetTestEnvironment, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Test Environment" Description="Environment to execute performance test against">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="Environment" />
+        <RuleParameter Name="ContextParamAccountTarget" Value="EnvironmentAccounts" />
+        <RuleParameter Name="ContextParamApprenticesTarget" Value="EnvironmentApprentices" />
+        <RuleParameter Name="ContextParamFinanceTarget" Value="EnvironmentFinance" />
+        <RuleParameter Name="ContextParamForecastingTarget" Value="EnvironmentForecast" />
+        <RuleParameter Name="ContextParamPermissionsTarget" Value="EnvironmentPermissions" />
+        <RuleParameter Name="ContextParamRecruitTarget" Value="EnvironmentRecruit" />
+        <RuleParameter Name="ContextParamLoginTarget" Value="EnvironmentLogin" />
+        <RuleParameter Name="ContextParamReportingTarget" Value="EnvironmentReporting" />
+        <RuleParameter Name="ContextParamPASTarget" Value="EnvironmentPAS" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.SetEnvironment, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Test Env" Description="Testing Environment">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="Env" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="PlugIns.Counter, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Counter Request" Description="Submit a request after counter is met">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="Counter" />
+        <RuleParameter Name="IterationCounter" Value="10000" />
+      </RuleParameters>
+    </WebTestPlugin>
+  </WebTestPlugins>
+</WebTest>

@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Configuration;
+using System.Data;
 using System.Net;
+using System.Reflection;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections.Generic;
@@ -12,6 +15,7 @@ using System.Data.SqlClient;
 using System.ComponentModel;
 using Microsoft.VisualStudio.TestTools.WebTesting;
 using System.Linq;
+using Settings;
 
 namespace PlugIns
 {
@@ -19,71 +23,58 @@ namespace PlugIns
     public class UserIteration : WebTestPlugin
     {
         private bool m_parseDependents = true;
-        private string dbConnetionString = string.Empty;
-        private string strSQL = string.Empty;
-        string strEnv = string.Empty;
+        private Configuration config;
 
-        [System.ComponentModel.DisplayName("Environment")]
-        [System.ComponentModel.Description("Environment on which test is run")]
-        public string Environment { get; set; }
-       
-        public void DBReset(string payRef, string strConn)
+        public UserIteration()
         {
+            ExeConfigurationFileMap configFileMap = new ExeConfigurationFileMap();
+            configFileMap.ExeConfigFilename = Assembly.GetExecutingAssembly().ManifestModule.Name + ".config";
 
+            // Get the mapped configuration file
+            config = ConfigurationManager.OpenMappedExeConfiguration(configFileMap, ConfigurationUserLevel.None);
+        }
+
+        [System.ComponentModel.DisplayName("Data file to use")]
+        public string DataFile { get; set; }
+
+        public void DBReset(string payRef)
+        {
+            string dbConnetionString = "Data Source=" + Settings.PerformanceTest.Default.DataSource + ";Initial Catalog=" + Settings.PerformanceTest.Default.InitialCatalog + ";User ID=" + Settings.PerformanceTest.Default.UserID + ";Password=" + Settings.PerformanceTest.Default.Password;
+            
             SqlConnection connection;
             SqlDataAdapter adapter = new SqlDataAdapter();
-            
-            connection = new SqlConnection(strConn);
+            connection = new SqlConnection(dbConnetionString);
 
-            strSQL = "UPDATE employer_account.accounthistory SET removedDate = GetDATE() WHERE payeref = '" + payRef + "' and removeddate is null";
+            string strSQL = "UPDATE employer_account.accounthistory SET removedDate = GetDATE() WHERE payeref = '" + payRef + "' and removeddate is null";
 
             try
             {
                 connection.Open();
                 adapter.InsertCommand = new SqlCommand(strSQL, connection);
                 adapter.InsertCommand.ExecuteNonQuery();
-
                 connection.Close();
             }
             catch (Exception ex)
             {
                 ex.ToString();
             }
-
             adapter.Dispose();
         }
 
         public override void PreWebTest(object sender, PreWebTestEventArgs e)
         {
-            if (Environment == "pp")
-            {
-                dbConnetionString = "Data Source=***************************;Initial Catalog=***************************;User ID=sreemereddy;Password=***************************";
-            }
-            else if (Environment == "test")
-            {
-                dbConnetionString = "Data Source=***************************;Initial Catalog=***************************;User ID=sreemereddy;Password=***************************";
-            }
-            else if (Environment == "test2")
-            {
-                dbConnetionString = "Data Source=***************************;Initial Catalog=***************************;User ID=sreemereddy;Password=***************************";
-            }
-            else if (Environment == "mo")
-            {
-                dbConnetionString = string.Empty;
-            }
-
             object contextParameterObject;
-
-            if (e.WebTest.Context.TryGetValue("GatewayUsers.GatewayUsers#csv.GATEWAY_PAYESCHEME",
+            
+            if (e.WebTest.Context.TryGetValue(DataFile,
                            out contextParameterObject))
             {
                 string PayRef = contextParameterObject.ToString();
-                //e.WebTest.AddCommentToResult(PayRef);
-                DBReset(PayRef, dbConnetionString);
+                
+                DBReset(PayRef);
             }
             else
             {
-                throw new WebTestException("'GatewayUsers.GatewayUsers#csv.GATEWAY_PAYESCHEME' not found");
+                throw new WebTestException(DataFile + "'DataFile' not found");
             }            
         }
 
@@ -115,24 +106,107 @@ namespace PlugIns
         } 
     }
 
-    //public class ParseDependentRequests : WebTestPlugin
-    //{
-    //    [Description("Random think time")]
-    //    public bool Random { get; set; }
-    //    public override void PreRequest(object sender, PreRequestEventArgs e)
-    //    {
-    //        if (Random == true)
-    //        {
-    //            base.PreRequest(sender, e);
-    //            e.Request.ParseDependentRequests = true;
-    //        }
-    //        else
-    //        { 
-    //            base.PreRequest(sender, e);
-    //            e.Request.ParseDependentRequests = false;
-    //        }
-    //    }
-    //}
+    [Description("This plugin can be used to set the ParseDependentsRequests property for each request")]
+    public class CreateUser : WebTestPlugin
+    {
+        [System.ComponentModel.DisplayName("Assign email to")]
+        [System.ComponentModel.Description("Name of the context parameter that will receive the generated value.")]
+        public string ContextParamTarget { get; set; }
+        
+        public void NewUser(string firstName, string lastName, string eMail)
+        {
+            //string firstName = "First_" + System.DateTime.Now.ToString("ddMM") + System.DateTime.Now.ToString("HHmmss") + "_" + e.WebTest.Context.WebTestUserId.ToString() + "_" + e.WebTest.Context.WebTestIteration.ToString();
+            //string lastName = "Last_" + System.DateTime.Now.ToString("ddMM") + System.DateTime.Now.ToString("HHmmss") + "_" + e.WebTest.Context.WebTestUserId.ToString() + "_" + e.WebTest.Context.WebTestIteration.ToString();
+            //string eMail = "First_" + System.DateTime.Now.ToString("ddMM") + System.DateTime.Now.ToString("HHmmss") + "_" + e.WebTest.Context.WebTestUserId.ToString() + "_" + e.WebTest.Context.WebTestIteration.ToString() + "@mailinator.com";
+
+            string dbConnetionString = "Data Source=" + Settings.PerformanceTest.Default.DataSource + ";Initial Catalog=" + Settings.PerformanceTest.Default.UsersCatalog + ";User ID=" + Settings.PerformanceTest.Default.UserID + ";Password=" + Settings.PerformanceTest.Default.UsersDBPassword;
+
+            SqlConnection connection = new SqlConnection(dbConnetionString);
+            SqlCommand command = new SqlCommand("CreateUser", connection);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+
+            SqlParameter pUserID = new SqlParameter("@Id", SqlDbType.VarChar);
+            pUserID.Direction = ParameterDirection.Input;
+            //pUserID.Value = new System.Guid();
+            pUserID.Value = Guid.NewGuid().ToString();
+            command.Parameters.Add(pUserID);
+
+            SqlParameter pFN = new SqlParameter("@FirstName", SqlDbType.NVarChar);
+            pFN.Direction = ParameterDirection.Input;
+            pFN.Value = firstName;
+            command.Parameters.Add(pFN);
+
+            SqlParameter pLN = new SqlParameter("@LastName", SqlDbType.NVarChar);
+            pLN.Direction = ParameterDirection.Input;
+            pLN.Value = lastName;
+            command.Parameters.Add(pLN);
+
+            SqlParameter pEmail = new SqlParameter("@Email", SqlDbType.NVarChar);
+            pEmail.Direction = ParameterDirection.Input;
+            pEmail.Value = eMail;
+            command.Parameters.Add(pEmail);
+
+            SqlParameter pPwd = new SqlParameter("@Password", SqlDbType.NVarChar);
+            pPwd.Direction = ParameterDirection.Input;
+            pPwd.Value = "BjjkHnE7sgbLzLAJLQa7uT2Qv4DpJDElv4tWyJ3iIUT1w7IEXHcvilaIczMuP+30r6lK9/6uX+PcQTfvzfbQAAz7NN1QMYHunrnqd8aSIFMJU5kRHNhGQxoOlDVkCDmf0XR7ePx2EI0B/ItdOixWKZHlPXGZLHddfI4+Mq5CAUJ0BcHmbyv85xpJAVCrJOLL7bMFVTF4zFvo6iVlliuWaDR2K326LqzSl4J3BvSqhHgkR97tc5sDxPkx21W/tge6xpP1r8tYuelDL4UjsUvYE8ffho/vNhye/04b7P9w/oByYvDeGaPs2Ajwbp0lgjBRLuN84goMW4cHbIOmwr/nOQ==";
+            //pPwd.Value = "Password1";
+            command.Parameters.Add(pPwd);
+
+            SqlParameter pSalt = new SqlParameter("@Salt", SqlDbType.NVarChar);
+            pSalt.Direction = ParameterDirection.Input;
+            pSalt.Value = "2TqpTzSi9ilBnovIGGjlsw==";
+            command.Parameters.Add(pSalt);
+
+            SqlParameter pPwdProfileId = new SqlParameter("@PasswordProfileId", SqlDbType.NVarChar);
+            pPwdProfileId.Direction = ParameterDirection.Input;
+            pPwdProfileId.Value = "b1fae38b-2325-4aa9-b0c3-3a31ef367210";
+            command.Parameters.Add(pPwdProfileId);
+
+            SqlParameter pIsActive = new SqlParameter("@IsActive", SqlDbType.Bit);
+            pIsActive.Direction = ParameterDirection.Input;
+            pIsActive.Value = 1;
+            command.Parameters.Add(pIsActive);
+
+            SqlParameter pFailedLogin = new SqlParameter("@FailedLoginAttempts", SqlDbType.Bit);
+            pFailedLogin.Direction = ParameterDirection.Input;
+            pFailedLogin.Value = 0;
+            command.Parameters.Add(pFailedLogin);
+
+            SqlParameter pIsLocked = new SqlParameter("@IsLocked", SqlDbType.Bit);
+            pIsLocked.Direction = ParameterDirection.Input;
+            pIsLocked.Value = 0;
+            command.Parameters.Add(pIsLocked);
+
+            try
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+            //catch(Exception ex)
+            //{
+            //    // Handle error
+            //    ex.ToString();
+            //}\
+            finally
+            {
+                command.Parameters.Clear();
+                connection.Close();
+                connection.Dispose();
+            }
+        }
+
+        public override void PreWebTest(object sender, PreWebTestEventArgs e)
+        {
+            string firstName = "First_" + System.DateTime.Now.ToString("ddMM") + System.DateTime.Now.ToString("HHmmss") + "_" + e.WebTest.Context.WebTestUserId.ToString() + "_" + e.WebTest.Context.WebTestIteration.ToString();
+            string lastName = "Last_" + System.DateTime.Now.ToString("ddMM") + System.DateTime.Now.ToString("HHmmss") + "_" + e.WebTest.Context.WebTestUserId.ToString() + "_" + e.WebTest.Context.WebTestIteration.ToString();
+            string eMail = "First_" + System.DateTime.Now.ToString("ddMM") + System.DateTime.Now.ToString("HHmmss") + "_" + e.WebTest.Context.WebTestUserId.ToString() + "_" + e.WebTest.Context.WebTestIteration.ToString() + "@mailinator.com";
+
+            NewUser(firstName, lastName, eMail);
+
+            e.WebTest.Context[ContextParamTarget] = eMail;
+            base.PreWebTest(sender, e);
+        }
+    }
 
     public class MyWebRequestPlugin : WebTestRequestPlugin
     {
@@ -377,19 +451,9 @@ namespace PlugIns
         [System.ComponentModel.Description("Name of the context parameter that will receive the generated value.")]
         public string ContextParamTarget { get; set; }
 
-        [System.ComponentModel.DisplayName("Test against")]
-        [System.ComponentModel.Description("Environment to execute perf test against.")]
-        public string Environment { get; set; }
-
         public override void PreWebTest(object sender, PreWebTestEventArgs e)
         {
-            // Generate new guid with specified output format
-            string testEnvironment = string.Empty;
-
-            testEnvironment = Environment;
-
-            e.WebTest.Context[ContextParamTarget] = testEnvironment;
-
+            e.WebTest.Context[ContextParamTarget] = Settings.PerformanceTest.Default.TestEnvironment;
             base.PreWebTest(sender, e);
         }
     }
@@ -398,10 +462,6 @@ namespace PlugIns
     [System.ComponentModel.Description("Environment to execute performance test against")]
     public class SetTestEnvironment : WebTestPlugin
     {
-        [System.ComponentModel.DisplayName("Performance test against")]
-        [System.ComponentModel.Description("Environment against which the performance test to be executed.")]
-        public string Environment { get; set; }
-
         //[System.ComponentModel.DisplayName("Target Context Parameter Name")]
         //[System.ComponentModel.Description("Name of the context parameter that will receive the generated value.")]
         public string ContextParamTarget { get; set; }
@@ -426,51 +486,22 @@ namespace PlugIns
 
         public override void PreWebTest(object sender, PreWebTestEventArgs e)
         {
-            // Generate new guid with specified output format
-            string testEnvironment = string.Empty;
+                e.WebTest.Context[ContextParamAccountTarget] = Settings.AccountsURL.AccountTarget;
+                e.WebTest.Context[ContextParamApprenticesTarget] = Settings.ApprenticesURL.ApprenticesTarget;
+                e.WebTest.Context[ContextParamFinanceTarget] = Settings.FinanceURL.FinanceTarget;
+                e.WebTest.Context[ContextParamForecastingTarget] = Settings.ForecastingURL.ForecastingTarget;
+                e.WebTest.Context[ContextParamPermissionsTarget] = Settings.PermissionsURL.PermissionTarget;
+                e.WebTest.Context[ContextParamRecruitTarget] = Settings.RecruitURL.RecruitTarget;
+                e.WebTest.Context[ContextParamTarget] = Settings.LandingURL.LandingTarget;
+                e.WebTest.Context[ContextParamLoginTarget] = Settings.LoginURL.LoginTarget;
+                e.WebTest.Context[ContextParamReportingTarget] = Settings.ReportingURL.ReportingTarget;
+                e.WebTest.Context[ContextParamPASTarget] = Settings.PASURL.PASTarget;
 
-            if (Environment == "pp")
+            if (PerformanceTest.Default.TestEnvironment == "test2")
             {
-                e.WebTest.Context[ContextParamAccountTarget] = "accounts.pp-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamApprenticesTarget] = "pp-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamFinanceTarget] = "finance.pp-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamForecastingTarget] = "forecasting.pp-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamPermissionsTarget] = "permissions.pp-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamRecruitTarget] = "recruit.pp-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamTarget] = "pp-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamLoginTarget] = "pp-login.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamReportingTarget] = "pp-reporting.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamPASTarget] = "pp-pas.apprenticeships.education.gov.uk";
-            }
-            else if (Environment == "mo")
-            {
-                e.WebTest.Context[ContextParamTarget] = string.Empty;
-            }
-            else if (Environment == "test")
-            {
-                e.WebTest.Context[ContextParamAccountTarget] = "das-test-accui-as.azurewebsites.net";
-                e.WebTest.Context[ContextParamApprenticesTarget] = "test-empc.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamFinanceTarget] = "financev2.test-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamForecastingTarget] = "test-forecasting.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamPermissionsTarget] = "permissions.test-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamRecruitTarget] = "recruit.test-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamTarget] = "das-test-accui-as.azurewebsites.net"; 
-                e.WebTest.Context[ContextParamLoginTarget] = "test-login.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamReportingTarget] = "test-reporting.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamPASTarget] = "test-pas.apprenticeships.education.gov.uk";
-            }
-            else if (Environment == "test2")
-            {
-                e.WebTest.Context[ContextParamAccountTarget] = "accounts.test2-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamApprenticesTarget] = "test2-empc.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamFinanceTarget] = "financev2.test2-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamForecastingTarget] = "test2-forecasting.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamPermissionsTarget] = "permissions.test2-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamRecruitTarget] = "recruit.test2-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamTarget] = "test2-eas.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamLoginTarget] = "test2-login.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamReportingTarget] = "test2-reporting.apprenticeships.education.gov.uk";
-                e.WebTest.Context[ContextParamPASTarget] = "test2-pas.apprenticeships.education.gov.uk";
+                e.WebTest.Context[ContextParamApprenticesTarget] = Settings.ApprenticesURLT2.ApprenticesTarget;
+                e.WebTest.Context[ContextParamFinanceTarget] = Settings.FinanceURLT2.FinanceTarget;
+                e.WebTest.Context[ContextParamForecastingTarget] = Settings.ForecastingURLT2.ForecastingTarget;
             }
             base.PreWebTest(sender, e);
         }
@@ -585,4 +616,33 @@ namespace PlugIns
 
         }
     }
- }
+
+    [System.ComponentModel.DisplayName("Counter Request")]
+    [System.ComponentModel.Description("Submit a request after counter is met")]
+    public class Counter : WebTestPlugin
+    {
+        [System.ComponentModel.DisplayName("Target Context Parameter Name")]
+        [System.ComponentModel.Description("Name of the context parameter that will receive the generated value.")]
+        public string ContextParamTarget { get; set; }
+
+        [System.ComponentModel.DisplayName("Set Counter")]
+        [System.ComponentModel.Description("Set the counter.")]
+        public int IterationCounter { get; set; }
+      
+
+        public override void PreWebTest(object sender, PreWebTestEventArgs e)
+        {
+            string setTrigger = Boolean.FalseString;
+
+            for (int i = 0; i <= IterationCounter; i++)
+            {
+                setTrigger = Boolean.TrueString;
+            }
+
+            e.WebTest.Context[ContextParamTarget] = setTrigger;
+
+            base.PreWebTest(sender, e);
+        }
+    }
+
+}

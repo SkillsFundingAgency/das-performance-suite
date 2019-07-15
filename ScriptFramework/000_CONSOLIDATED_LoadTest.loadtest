@@ -1,7 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LoadTest Name="000_CONSOLIDATED_LoadTest" Description="" Owner="" storage="c:\esfa\das\esfarepo\das-performance-suite\scriptframework\000_consolidated_loadtest.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="cd7fbc82-993e-4392-b341-ac3db4081e9a" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Scenarios>
-    <Scenario Name="EmployerApprovesFirstThenProvider" DelayBetweenIterations="90" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+    <Scenario Name="MA_SignUp_Acct_AddRemove_Organisations" DelayBetweenIterations="60" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+      <ThinkProfile Value="0" Pattern="On" />
+      <LoadProfile Pattern="Step" InitialUsers="2" MaxUsers="500" StepUsers="2" StepDuration="1" StepRampTime="0" />
+      <TestMix>
+        <TestProfile Name="001_MA_Account_SignUp_AddRemoveOrg_NavigateModules_v2" Path="001_ma_account_signup_addremoveorg_navigatemodules_v2.webtest" Id="6614296f-89d6-4eb0-9f27-16a8aeca0266" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestMix>
+      <BrowserMix>
+        <BrowserProfile Percentage="100">
+          <Browser Name="Internet Explorer 11.0" MaxConnections="6">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="GZIP" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+      </BrowserMix>
+      <NetworkMix>
+        <NetworkProfile Percentage="100">
+          <Network Name="LAN" BandwidthInKbps="1000000" NetworkProfileConfigurationXml="&lt;Emulation&gt;&lt;VirtualChannel name=&quot;defaultChannel&quot;&gt;&lt;FilterList/&gt;&lt;VirtualLink instances=&quot;1&quot; name=&quot;defaultLink&quot;&gt;&lt;LinkRule dir=&quot;upstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;LinkRule dir=&quot;downstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;/VirtualLink&gt;&lt;/VirtualChannel&gt;&lt;/Emulation&gt;" />
+        </NetworkProfile>
+      </NetworkMix>
+    </Scenario>
+    <Scenario Name="EmployerApprovesFirstThenProvider" DelayBetweenIterations="60" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0" Pattern="On" />
       <LoadProfile Pattern="Step" InitialUsers="1" MaxUsers="100" StepUsers="1" StepDuration="1" StepRampTime="0" />
       <TestMix>
@@ -25,7 +49,7 @@
         </NetworkProfile>
       </NetworkMix>
     </Scenario>
-    <Scenario Name="ProviderApprovesFirstThenEmployer" DelayBetweenIterations="90" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+    <Scenario Name="ProviderApprovesFirstThenEmployer" DelayBetweenIterations="60" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0" Pattern="On" />
       <LoadProfile Pattern="Step" InitialUsers="1" MaxUsers="100" StepUsers="1" StepDuration="1" StepRampTime="0" />
       <TestMix>
@@ -51,7 +75,7 @@
     </Scenario>
     <Scenario Name="FindApprenticeships" DelayBetweenIterations="300" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0" Pattern="On" />
-      <LoadProfile Pattern="Step" InitialUsers="2" MaxUsers="100" StepUsers="2" StepDuration="1" StepRampTime="0" />
+      <LoadProfile Pattern="Step" InitialUsers="2" MaxUsers="1000" StepUsers="2" StepDuration="1" StepRampTime="0" />
       <TestMix>
         <TestProfile Name="004_FindApprenticeshipTraining" Path="004_findapprenticeshiptraining.webtest" Id="9a19acc7-59ed-4a95-a9fe-ac7225eb5e17" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       </TestMix>

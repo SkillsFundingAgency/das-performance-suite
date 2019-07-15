@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Settings" GeneratedClassName="PerformanceTest">
+  <Profiles />
+  <Settings>
+    <Setting Name="TestEnvironment" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">pp</Value>
+    </Setting>
+    <Setting Name="DataSource" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">das-pp-shared-sql.database.windows.net</Value>
+    </Setting>
+    <Setting Name="InitialCatalog" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">das-pp-eas-acc-db</Value>
+    </Setting>
+    <Setting Name="UserID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sreemereddy</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">88RFJTrac#NeAf</Value>
+    </Setting>
+    <Setting Name="UsersCatalog" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">das-pp-users-db</Value>
+    </Setting>
+    <Setting Name="UsersDBPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CkHCCDtC*vgT3Ff2pGWuy3gt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

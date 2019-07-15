@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LoadTest Name="LoadTest1" Description="" Owner="" storage="c:\esfa\das\ma\loadtest1.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="295f3158-fad5-4d7f-b2d7-0cfa1dff012f" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<LoadTest Name="001_MA_DataSetup" Description="" Owner="" storage="c:\esfa\das\esfarepo\das-performance-suite\scriptframework\001_ma_datasetup.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="344c192c-56b3-4191-9063-710d1938e0df" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Scenarios>
-    <Scenario Name="FindApprenticeships" DelayBetweenIterations="60" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+    <Scenario Name="DataSetup" DelayBetweenIterations="1800" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0" Pattern="On" />
-      <LoadProfile Pattern="Step" InitialUsers="1" MaxUsers="10" StepUsers="1" StepDuration="1" StepRampTime="0" />
+      <LoadProfile Pattern="Step" InitialUsers="1" MaxUsers="100" StepUsers="1" StepDuration="1" StepRampTime="0" />
       <TestMix>
-        <TestProfile Name="004_FindApprenticeship" Path="004_findapprenticeship.webtest" Id="9a19acc7-59ed-4a95-a9fe-ac7225eb5e17" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="001_MA_Employer_Account_SignUp_SignAgreement_NL_DS_v01" Path="001_ma_employer_account_signup_signagreement_nl_ds_v01.webtest" Id="16256bf0-1642-44d8-bda5-bc8ec30c9d48" Percentage="0" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="001_MA_Employer_Account_SignUp_ProPerm_NL_DS_v02" Path="001_ma_employer_account_signup_properm_nl_ds_v02.webtest" Id="4c8cf5d5-c6ac-4843-bd5e-f6d517ca8471" Percentage="100" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       </TestMix>
       <BrowserMix>
         <BrowserProfile Percentage="100">
@@ -421,7 +422,25 @@
     </CounterSet>
   </CounterSets>
   <RunConfigurations>
-    <RunConfiguration Name="Run Settings1" Description="" ResultsStoreType="Database" TimingDetailsStorage="AllIndividualDetails" SaveTestLogsOnError="true" SaveTestLogsFrequency="0" MaxErrorDetails="200" MaxErrorsPerType="1000" MaxThresholdViolations="1000" MaxRequestUrlsReported="1000" UseTestIterations="false" RunDuration="300" WarmupTime="0" CoolDownTime="0" TestIterations="100" WebTestConnectionModel="ConnectionPerUser" WebTestConnectionPoolSize="50" SampleRate="15" ValidationLevel="High" SqlTracingConnectString="" SqlTracingConnectStringDisplayValue="" SqlTracingDirectory="" SqlTracingEnabled="false" SqlTracingFileCount="2" SqlTracingRolloverEnabled="true" SqlTracingMinimumDuration="500" RunUnitTestsInAppDomain="true" CoreCount="0" ResourcesRetentionTimeInMinutes="0" AgentDiagnosticsLevel="Warning">
+    <RunConfiguration Name="Run Settings1" Description="" ResultsStoreType="Database" TimingDetailsStorage="AllIndividualDetails" SaveTestLogsOnError="true" SaveTestLogsFrequency="0" MaxErrorDetails="1000" MaxErrorsPerType="10000" MaxThresholdViolations="1000" MaxRequestUrlsReported="1000" UseTestIterations="false" RunDuration="900" WarmupTime="0" CoolDownTime="0" TestIterations="100" WebTestConnectionModel="ConnectionPerUser" WebTestConnectionPoolSize="100" SampleRate="15" ValidationLevel="High" SqlTracingConnectString="" SqlTracingConnectStringDisplayValue="" SqlTracingDirectory="" SqlTracingEnabled="false" SqlTracingFileCount="5" SqlTracingRolloverEnabled="true" SqlTracingMinimumDuration="500" RunUnitTestsInAppDomain="true" CoreCount="0" ResourcesRetentionTimeInMinutes="0" AgentDiagnosticsLevel="Warning">
+      <CounterSetMappings>
+        <CounterSetMapping ComputerName="[CONTROLLER MACHINE]">
+          <CounterSetReferences>
+            <CounterSetReference CounterSetName="LoadTest" />
+            <CounterSetReference CounterSetName="Controller" />
+          </CounterSetReferences>
+        </CounterSetMapping>
+        <CounterSetMapping ComputerName="[AGENT MACHINES]">
+          <CounterSetReferences>
+            <CounterSetReference CounterSetName="Agent" />
+          </CounterSetReferences>
+        </CounterSetMapping>
+      </CounterSetMappings>
+      <LoadGeneratorLocations>
+        <GeoLocation Location="Default" Percentage="100" />
+      </LoadGeneratorLocations>
+    </RunConfiguration>
+    <RunConfiguration Name="Copy of Run Settings1" Description="" ResultsStoreType="Database" TimingDetailsStorage="AllIndividualDetails" SaveTestLogsOnError="true" SaveTestLogsFrequency="0" MaxErrorDetails="1000" MaxErrorsPerType="1000" MaxThresholdViolations="1000" MaxRequestUrlsReported="1000" UseTestIterations="false" RunDuration="3600" WarmupTime="300" CoolDownTime="300" TestIterations="100" WebTestConnectionModel="ConnectionPerUser" WebTestConnectionPoolSize="100" SampleRate="15" ValidationLevel="High" SqlTracingConnectString="" SqlTracingConnectStringDisplayValue="" SqlTracingDirectory="" SqlTracingEnabled="false" SqlTracingFileCount="5" SqlTracingRolloverEnabled="true" SqlTracingMinimumDuration="500" RunUnitTestsInAppDomain="true" CoreCount="0" ResourcesRetentionTimeInMinutes="0" AgentDiagnosticsLevel="Warning">
       <CounterSetMappings>
         <CounterSetMapping ComputerName="[CONTROLLER MACHINE]">
           <CounterSetReferences>
