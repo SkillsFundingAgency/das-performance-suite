@@ -587,16 +587,6 @@
                 <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
               </Headers>
             </Request>
-            <Request Method="GET" Guid="b8867a3d-25c7-437a-8d31-2d2adacd592a" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
-              </Headers>
-            </Request>
-            <Request Method="GET" Guid="765d4135-1f85-4b8b-bef7-b380959034b5" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
-              </Headers>
-            </Request>
             <Request Method="GET" Guid="dc470720-1483-4763-8e29-03e798411be6" Version="1.1" Url="https://{{EnvironmentForecast}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
                 <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
@@ -620,22 +610,7 @@
                 <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam46.v}}" UrlEncode="False" UseToGroupResults="False" />
               </QueryStringParameters>
             </Request>
-            <Request Method="GET" Guid="49db3ddb-7428-4800-8135-fc187f99bfad" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
-              </Headers>
-            </Request>
             <Request Method="GET" Guid="89855a29-9e88-449a-90ab-234aebc49671" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
-              </Headers>
-            </Request>
-            <Request Method="GET" Guid="14d9d759-33a4-4396-85f7-6e7cb1f8de8c" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-              <Headers>
-                <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
-              </Headers>
-            </Request>
-            <Request Method="GET" Guid="694913dc-ce53-4b3c-83a0-55e04a3f2b9e" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
                 <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
               </Headers>
@@ -656,7 +631,7 @@
           <Items>
             <Comment CommentText="Sign back in. Manage apprenticeships" />
             <Comment CommentText="Click Sign in link on the landing page to log in" />
-            <Request Method="GET" Guid="0b9ad8cb-c121-4366-a4f1-5bcdb005df8a" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signIn" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login?id=b3f243bfcbff784675f50f4bef963606&amp;returnUrl=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3deasaccpp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252Faccounts.pp-eas.apprenticeships.education.gov.uk%252Fservice%252FsignIn%26state%3d9H-x3akhHFOEYrE-kTfZOzaU6gSQoUoW6tgiI9f1ISCfMG7UwM9afd32bmbFFoMekAdDia8ENBDaQJcRbUVEHhZT9Uha7pe4nTnJlmLy5Cdw8anza3lbKZGdEJ6dzUzg7a3hjNgEX7aJiSxU76CjYRiKzvPnYA1DwTjIqfa7dbEqVSuzsRfQHaNlqs57QQT0%26nonce%3d39d608478250489dae7481bee06af351&amp;clientId=easaccpp" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="GET" Guid="0b9ad8cb-c121-4366-a4f1-5bcdb005df8a" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signIn" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentLogin}}/identity/employer/login?id=b3f243bfcbff784675f50f4bef963606&amp;returnUrl=https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deasaccpp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{EnvironmentAccounts}}%252Fservice%252FsignIn%26state%3d9H-x3akhHFOEYrE-kTfZOzaU6gSQoUoW6tgiI9f1ISCfMG7UwM9afd32bmbFFoMekAdDia8ENBDaQJcRbUVEHhZT9Uha7pe4nTnJlmLy5Cdw8anza3lbKZGdEJ6dzUzg7a3hjNgEX7aJiSxU76CjYRiKzvPnYA1DwTjIqfa7dbEqVSuzsRfQHaNlqs57QQT0%26nonce%3d39d608478250489dae7481bee06af351&amp;clientId=easaccpp" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
                 <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/service/index" />
               </Headers>
@@ -698,7 +673,7 @@
         <TransactionTimer Name="001_0020_01_AgreementsMenu_Click">
           <Items>
             <Comment CommentText="Click Your organisations and agreements menu" />
-            <Request Method="GET" Guid="de6b2ee6-a393-4233-b57d-8eab747fd5d9" Version="1.1" Url="https://{{EnvironmentAccounts}}/accounts/{{FormPostParam.Account}}/agreements" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{Environment}}/accounts/{{FormPostParam.Account}}/agreements?agreementSigned=False" ReportingName="" IgnoreHttpStatusCode="False">
+            <Request Method="GET" Guid="de6b2ee6-a393-4233-b57d-8eab747fd5d9" Version="1.1" Url="https://{{EnvironmentAccounts}}/accounts/{{FormPostParam.Account}}/agreements" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentAccounts}}/accounts/{{FormPostParam.Account}}/agreements?agreementSigned=False" ReportingName="" IgnoreHttpStatusCode="False">
               <Headers>
                 <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{FormPostParam.Account}}/teams" />
               </Headers>
@@ -869,16 +844,6 @@
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
           </Headers>
         </Request>
-        <Request Method="GET" Guid="b8867a3d-25c7-437a-8d31-2d2adacd592a" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
-          </Headers>
-        </Request>
-        <Request Method="GET" Guid="765d4135-1f85-4b8b-bef7-b380959034b5" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
-          </Headers>
-        </Request>
         <Request Method="GET" Guid="dc470720-1483-4763-8e29-03e798411be6" Version="1.1" Url="https://{{EnvironmentForecast}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
@@ -902,16 +867,6 @@
             <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam46.v}}" UrlEncode="False" UseToGroupResults="False" />
           </QueryStringParameters>
         </Request>
-        <Request Method="GET" Guid="71d38702-75d7-4a37-be1e-558fd2cc7178" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
-          </Headers>
-        </Request>
-        <Request Method="GET" Guid="49db3ddb-7428-4800-8135-fc187f99bfad" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
-          </Headers>
-        </Request>
         <Request Method="GET" Guid="1662315b-4939-4743-9f14-a28f9303a1ff" Version="1.1" Url="https://{{EnvironmentForecast}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
@@ -923,11 +878,6 @@
           </Headers>
         </Request>
         <Request Method="GET" Guid="89855a29-9e88-449a-90ab-234aebc49671" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
-          </Headers>
-        </Request>
-        <Request Method="GET" Guid="694913dc-ce53-4b3c-83a0-55e04a3f2b9e" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
           </Headers>

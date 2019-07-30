@@ -594,12 +594,7 @@
         <Comment CommentText="Sign out" />
         <Request Method="GET" Guid="f99e10d9-a9c1-4074-88a8-d598c2be8c6b" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signOut" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentLogin}}/identity/logout?id=6f33170eab71021f4f712f84f578c3d8" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/VKGX77/teams?" />
-          </Headers>
-        </Request>
-        <Request Method="GET" Guid="fab0ca6c-77b8-4f6c-954b-1b25aa47483d" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=6f33170eab71021f4f712f84f578c3d8" />
+            <Header Name="Referer" Value="https://{{EnvironmentAccounts}}/accounts/{{CMT1_Employers.CMT1_Employers#csv.Account}}/teams?" />
           </Headers>
         </Request>
         <Request Method="GET" Guid="63302b55-abc1-4285-bbcc-6c4adf61be88" Version="1.1" Url="https://{{EnvironmentLogin}}/bundles/screen" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
@@ -623,12 +618,7 @@
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
           </Headers>
         </Request>
-        <Request Method="GET" Guid="b8867a3d-25c7-437a-8d31-2d2adacd592a" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
-          </Headers>
-        </Request>
-        <Request Method="GET" Guid="765d4135-1f85-4b8b-bef7-b380959034b5" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+        <Request Method="GET" Guid="dc470720-1483-4763-8e29-03e798411be6" Version="1.1" Url="https://{{EnvironmentForecast}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
           </Headers>
@@ -651,27 +641,17 @@
             <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam46.v}}" UrlEncode="False" UseToGroupResults="False" />
           </QueryStringParameters>
         </Request>
-        <Request Method="GET" Guid="49db3ddb-7428-4800-8135-fc187f99bfad" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+        <Request Method="GET" Guid="1662315b-4939-4743-9f14-a28f9303a1ff" Version="1.1" Url="https://{{EnvironmentForecast}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="2121041d-e75a-43c4-9fba-9d428065206b" Version="1.1" Url="https://{{EnvironmentPermissions}}/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
           </Headers>
         </Request>
         <Request Method="GET" Guid="89855a29-9e88-449a-90ab-234aebc49671" Version="1.1" Url="https://{{EnvironmentAccounts}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
-          </Headers>
-        </Request>
-        <Request Method="GET" Guid="14d9d759-33a4-4396-85f7-6e7cb1f8de8c" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
-          </Headers>
-        </Request>
-        <Request Method="GET" Guid="694913dc-ce53-4b3c-83a0-55e04a3f2b9e" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
-          </Headers>
-        </Request>
-        <Request Method="GET" Guid="7a71d415-c84a-40e5-8f07-986df6c2ecf7" Version="1.1" Url="https://{{EnvironmentPermissions}}/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
           </Headers>
@@ -1645,7 +1625,7 @@
         <TransactionTimer Name="004_0090_01_LandingPage">
           <Items>
             <Comment CommentText="Employer landing page" />
-            <Request Method="GET" Guid="9bdfea9d-9545-49e2-8f4b-d4054275d9c5" Version="1.1" Url="https://{{Environment}}/" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentAccounts}}/service/index" ReportingName="" IgnoreHttpStatusCode="False" />
+            <Request Method="GET" Guid="9bdfea9d-9545-49e2-8f4b-d4054275d9c5" Version="1.1" Url="https://{{EnvironmentAccounts}}/" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://{{EnvironmentAccounts}}/service/index" ReportingName="" IgnoreHttpStatusCode="False" />
           </Items>
         </TransactionTimer>
         <TransactionTimer Name="004_0090_02_SignIn_Click">
@@ -1898,12 +1878,7 @@
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
           </Headers>
         </Request>
-        <Request Method="GET" Guid="b8867a3d-25c7-437a-8d31-2d2adacd592a" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
-          </Headers>
-        </Request>
-        <Request Method="GET" Guid="765d4135-1f85-4b8b-bef7-b380959034b5" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+        <Request Method="GET" Guid="dc470720-1483-4763-8e29-03e798411be6" Version="1.1" Url="https://{{EnvironmentForecast}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
           </Headers>
@@ -1926,7 +1901,12 @@
             <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam46.v}}" UrlEncode="False" UseToGroupResults="False" />
           </QueryStringParameters>
         </Request>
-        <Request Method="GET" Guid="49db3ddb-7428-4800-8135-fc187f99bfad" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+        <Request Method="GET" Guid="1662315b-4939-4743-9f14-a28f9303a1ff" Version="1.1" Url="https://{{EnvironmentForecast}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="2121041d-e75a-43c4-9fba-9d428065206b" Version="1.1" Url="https://{{EnvironmentPermissions}}/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
           </Headers>
@@ -1936,24 +1916,8 @@
             <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
           </Headers>
         </Request>
-        <Request Method="GET" Guid="14d9d759-33a4-4396-85f7-6e7cb1f8de8c" Version="1.1" Url="https://{{EnvironmentFinance}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
-          </Headers>
-        </Request>
-        <Request Method="GET" Guid="694913dc-ce53-4b3c-83a0-55e04a3f2b9e" Version="1.1" Url="https://{{Environment}}/service/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
-          </Headers>
-        </Request>
-        <Request Method="GET" Guid="7a71d415-c84a-40e5-8f07-986df6c2ecf7" Version="1.1" Url="https://{{EnvironmentPermissions}}/signoutcleanup" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-          <Headers>
-            <Header Name="Referer" Value="https://{{EnvironmentLogin}}/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
-          </Headers>
-        </Request>
       </Items>
     </TransactionTimer>
-    <Comment CommentText="Stop recording" />
   </Items>
   <DataSources>
     <DataSource Name="Organisations" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\Organisations.csv">
@@ -1973,7 +1937,6 @@
     </DataSource>
   </DataSources>
   <ContextParameters>
-    <ContextParameter Name="Email" Value="" />
     <ContextParameter Name="Env" Value="" />
     <ContextParameter Name="Environment" Value="" />
     <ContextParameter Name="EnvironmentAccounts" Value="" />
@@ -1989,8 +1952,8 @@
     <ContextParameter Name="LastName" Value="" />
     <ContextParameter Name="ProviderId" Value="10000291" />
     <ContextParameter Name="skip" Value="true" />
-    <ContextParameter Name="wctx" Value="WsFedOwinState=qDgkQtN-QxLWsCD_mOOhWDNKcmKrDuBOgz-DsHG7m58fqN90x26LBpq0ZRWxA27cp62KBwJH8WIbbI9TvHCFjMs_aBo" />
-    <ContextParameter Name="wres" Value="&lt;t:RequestSecurityTokenResponse xmlns:t=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;&gt;&lt;t:Lifetime&gt;&lt;wsu:Created xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-07-08T08:40:55.121Z&lt;/wsu:Created&gt;&lt;wsu:Expires xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-07-08T16:40:55.121Z&lt;/wsu:Expires&gt;&lt;/t:Lifetime&gt;&lt;wsp:AppliesTo xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;wsa:EndpointReference xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;https://pp-pas.apprenticeships.education.gov.uk&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;t:RequestedSecurityToken&gt;&lt;saml:Assertion MajorVersion=&quot;1&quot; MinorVersion=&quot;1&quot; AssertionID=&quot;_8a1a2848-ff7c-4a12-99c5-706f08d46244&quot; Issuer=&quot;http://adfs.preprod.skillsfunding.service.gov.uk/adfs/services/trust&quot; IssueInstant=&quot;2019-07-08T08:40:55.139Z&quot; xmlns:saml=&quot;urn:oasis:names:tc:SAML:1.0:assertion&quot;&gt;&lt;saml:Conditions NotBefore=&quot;2019-07-08T08:40:55.121Z&quot; NotOnOrAfter=&quot;2019-07-08T16:40:55.121Z&quot;&gt;&lt;saml:AudienceRestrictionCondition&gt;&lt;saml:Audience&gt;https://pp-pas.apprenticeships.education.gov.uk&lt;/saml:Audience&gt;&lt;/saml:AudienceRestrictionCondition&gt;&lt;/saml:Conditions&gt;&lt;saml:AttributeStatement&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;saml:Attribute AttributeName=&quot;upn&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;ISP-10000291s&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;ukprn&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;10000291&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;service&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;DAA&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;displayname&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;SFSTEST 10000291&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;name&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;SFSTEST 10000291&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;mail&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;oattestuser+10000291@gmail.com&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;/saml:AttributeStatement&gt;&lt;saml:AuthenticationStatement AuthenticationMethod=&quot;urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport&quot; AuthenticationInstant=&quot;2019-07-08T08:40:51.432Z&quot;&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;/saml:AuthenticationStatement&gt;&lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;ds:SignedInfo&gt;&lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&quot; /&gt;&lt;ds:Reference URI=&quot;#_8a1a2848-ff7c-4a12-99c5-706f08d46244&quot;&gt;&lt;ds:Transforms&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot; /&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;/ds:Transforms&gt;&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot; /&gt;&lt;ds:DigestValue&gt;mbPRbDaMQ3eXUHtZWLTNoxBi1fNoPTTK39C4+xATm10=&lt;/ds:DigestValue&gt;&lt;/ds:Reference&gt;&lt;/ds:SignedInfo&gt;&lt;ds:SignatureValue&gt;FvkXn4pKDDy4LHdijZnThq+NXloGRUon/MKxLQjmFNuYK9T+X/GUW2+2WSWpK13nn3h5Zka/5QZOV6VUuf5ZKQ2ROu3OJ5ZOqon7Vu1PLuEmdWVbyCBZhUuB5jPoiKGvuPo+3KTEy78Qr38TEuaktoKz0OGULp34ZkTQU+pNbjo/ihwwx1K7P0RG1mScdiAxC2CxKem+F5/JOkEe0poVJOB/B427ANG8hO+MAqLw+rbMen8utD+VFeDB+zYYbEbEcdAGF7KgPL8bf0rSEO+9uZBh0r+wRteOtDF5ZM/0ry4VL06QXU0Vm8fOD2RZ1cCaERyeTzwI15sXthD7m2kOfg==&lt;/ds:SignatureValue&gt;&lt;KeyInfo xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;X509Data&gt;&lt;X509Certificate&gt;MIIDDjCCAfagAwIBAgIQVu3rHgUAyaNM353xrulvYDANBgkqhkiG9w0BAQsFADBDMUEwPwYDVQQDEzhBREZTIFNpZ25pbmcgLSBhZGZzLnByZXByb2Quc2tpbGxzZnVuZGluZy5zZXJ2aWNlLmdvdi51azAeFw0xODExMjExMjM3MTJaFw0yMDExMjAxMjM3MTJaMEMxQTA/BgNVBAMTOEFERlMgU2lnbmluZyAtIGFkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5nLnNlcnZpY2UuZ292LnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqkFOYtkoyM+korIURnmrhFWCsSeikmNXfg9DOoB5mzFleWlkQ4vPT375lo9q+rc3hKfEjIsVQIKrjVJjhYThO9Dct04sV5funwYncSDtd+IU1wQbNaYM05fnmYTty7qAL8OjcPwO+YgMmz3NWS5ahcxFtpCI4TuhZONP28MhUJXjlzkZSi0PM+kMu14vXJh8u0Iii/7OQ7eNQWM83Cd5Hd5PB/ci+ThvPnbMXEKCfhqbNXBHlBFfszFHec4FLRRhdnDxZwnK/CRRaSEE3tViYY7Gccdl+fZi87oSI3PjQJhNKZ2jdzHPXYtjlCOM3v/9+trDQMt9kzDhRWZ00khu+wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBE9066fbUb+10sJZtuRZr+1oh6f/5ONYb9mMPkRZuO+Sxof5XL+wjPSQFqtMrcHOfm3M6Y5hnsdpFXlvW1ymq2a94Do5nB+X97LUFLlAVU+U6VGbUw1T6w8KSA5wuuxcPl3CgVwb+XnOQXBW0FDaLGqMWGnctaGeO7lF74QttXbtZTm4GXjsV0R+TU3DjddnpG4yzSs3BnBZowOepdq85vTjpJMOOiEp4WKWshEOTqlOXl2+8a09ZTW09AtRjDelIRkDqU5gOEIK8cuNhCspoTcFZGPN03w0IYq36mBIO4sq/uUYNNH6jRXNoPr4a4LLB7WbyDeOWgKnbXxUwlg2Hi&lt;/X509Certificate&gt;&lt;/X509Data&gt;&lt;/KeyInfo&gt;&lt;/ds:Signature&gt;&lt;/saml:Assertion&gt;&lt;/t:RequestedSecurityToken&gt;&lt;t:TokenType&gt;urn:oasis:names:tc:SAML:1.0:assertion&lt;/t:TokenType&gt;&lt;t:RequestType&gt;http://schemas.xmlsoap.org/ws/2005/02/trust/Issue&lt;/t:RequestType&gt;&lt;t:KeyType&gt;http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey&lt;/t:KeyType&gt;&lt;/t:RequestSecurityTokenResponse&gt;" />
+    <ContextParameter Name="wctx" Value="WsFedOwinState=ABmNqLAa9EE6l8OErzRmDG_kKgW8As1b-lJiljMnNL6w9T7CFDPNoNnvejJgZSYfYPMAm0bu1dozAe8AO65BM-skBOI" />
+    <ContextParameter Name="wres" Value="&lt;t:RequestSecurityTokenResponse xmlns:t=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;&gt;&lt;t:Lifetime&gt;&lt;wsu:Created xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-07-30T10:20:16.547Z&lt;/wsu:Created&gt;&lt;wsu:Expires xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-07-30T18:20:16.547Z&lt;/wsu:Expires&gt;&lt;/t:Lifetime&gt;&lt;wsp:AppliesTo xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;wsa:EndpointReference xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;https://pp-pas.apprenticeships.education.gov.uk&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;t:RequestedSecurityToken&gt;&lt;saml:Assertion MajorVersion=&quot;1&quot; MinorVersion=&quot;1&quot; AssertionID=&quot;_4064bf42-ab50-484e-8442-e5c281994319&quot; Issuer=&quot;http://adfs.preprod.skillsfunding.service.gov.uk/adfs/services/trust&quot; IssueInstant=&quot;2019-07-30T10:20:16.547Z&quot; xmlns:saml=&quot;urn:oasis:names:tc:SAML:1.0:assertion&quot;&gt;&lt;saml:Conditions NotBefore=&quot;2019-07-30T10:20:16.547Z&quot; NotOnOrAfter=&quot;2019-07-30T18:20:16.547Z&quot;&gt;&lt;saml:AudienceRestrictionCondition&gt;&lt;saml:Audience&gt;https://pp-pas.apprenticeships.education.gov.uk&lt;/saml:Audience&gt;&lt;/saml:AudienceRestrictionCondition&gt;&lt;/saml:Conditions&gt;&lt;saml:AttributeStatement&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;saml:Attribute AttributeName=&quot;upn&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;ISP-10000291s&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;ukprn&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;10000291&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;service&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;DAA&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;displayname&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;SFSTEST 10000291&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;name&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;SFSTEST 10000291&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;mail&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;oattestuser+10000291@gmail.com&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;/saml:AttributeStatement&gt;&lt;saml:AuthenticationStatement AuthenticationMethod=&quot;urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport&quot; AuthenticationInstant=&quot;2019-07-30T10:20:12.879Z&quot;&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;/saml:AuthenticationStatement&gt;&lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;ds:SignedInfo&gt;&lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&quot; /&gt;&lt;ds:Reference URI=&quot;#_4064bf42-ab50-484e-8442-e5c281994319&quot;&gt;&lt;ds:Transforms&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot; /&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;/ds:Transforms&gt;&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot; /&gt;&lt;ds:DigestValue&gt;gZ27IhGwnSaf0d6j0dYCVh/UQnna66xlWzop3nL9lMs=&lt;/ds:DigestValue&gt;&lt;/ds:Reference&gt;&lt;/ds:SignedInfo&gt;&lt;ds:SignatureValue&gt;KWS2FV6EbNoDEqg9mmDhLL3Ihk4YrUkMuIVSl7NpItbFnmTc82JgPlrN/0NcneB6NOqXJoRqZ3ghMV5F/UzwAe3jRtd03gMv7RiQYTfXUteTofs8E/HvreUllTqiCN+Ut5AqxZd0fwy5u+sCpFwRgJVa1TBQb6DnfhLwfVNhZpgWPcr8KlJxuiejwXR2mI2HSLDXOXJfb2ogVkfyocCwz3BhY4BTBdckG5RNGuq73tsRSLcEIvIi5P4H0zhRcZ8VxEf0cFMvezulvRUEywTUZ0i/6WFZpjRZq6sfKA9O8VYv4aOoV0OIdiuh2ISXhLzoww9jF41dfpfVI1rWqpHqhw==&lt;/ds:SignatureValue&gt;&lt;KeyInfo xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;X509Data&gt;&lt;X509Certificate&gt;MIIDDjCCAfagAwIBAgIQVu3rHgUAyaNM353xrulvYDANBgkqhkiG9w0BAQsFADBDMUEwPwYDVQQDEzhBREZTIFNpZ25pbmcgLSBhZGZzLnByZXByb2Quc2tpbGxzZnVuZGluZy5zZXJ2aWNlLmdvdi51azAeFw0xODExMjExMjM3MTJaFw0yMDExMjAxMjM3MTJaMEMxQTA/BgNVBAMTOEFERlMgU2lnbmluZyAtIGFkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5nLnNlcnZpY2UuZ292LnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqkFOYtkoyM+korIURnmrhFWCsSeikmNXfg9DOoB5mzFleWlkQ4vPT375lo9q+rc3hKfEjIsVQIKrjVJjhYThO9Dct04sV5funwYncSDtd+IU1wQbNaYM05fnmYTty7qAL8OjcPwO+YgMmz3NWS5ahcxFtpCI4TuhZONP28MhUJXjlzkZSi0PM+kMu14vXJh8u0Iii/7OQ7eNQWM83Cd5Hd5PB/ci+ThvPnbMXEKCfhqbNXBHlBFfszFHec4FLRRhdnDxZwnK/CRRaSEE3tViYY7Gccdl+fZi87oSI3PjQJhNKZ2jdzHPXYtjlCOM3v/9+trDQMt9kzDhRWZ00khu+wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBE9066fbUb+10sJZtuRZr+1oh6f/5ONYb9mMPkRZuO+Sxof5XL+wjPSQFqtMrcHOfm3M6Y5hnsdpFXlvW1ymq2a94Do5nB+X97LUFLlAVU+U6VGbUw1T6w8KSA5wuuxcPl3CgVwb+XnOQXBW0FDaLGqMWGnctaGeO7lF74QttXbtZTm4GXjsV0R+TU3DjddnpG4yzSs3BnBZowOepdq85vTjpJMOOiEp4WKWshEOTqlOXl2+8a09ZTW09AtRjDelIRkDqU5gOEIK8cuNhCspoTcFZGPN03w0IYq36mBIO4sq/uUYNNH6jRXNoPr4a4LLB7WbyDeOWgKnbXxUwlg2Hi&lt;/X509Certificate&gt;&lt;/X509Data&gt;&lt;/KeyInfo&gt;&lt;/ds:Signature&gt;&lt;/saml:Assertion&gt;&lt;/t:RequestedSecurityToken&gt;&lt;t:TokenType&gt;urn:oasis:names:tc:SAML:1.0:assertion&lt;/t:TokenType&gt;&lt;t:RequestType&gt;http://schemas.xmlsoap.org/ws/2005/02/trust/Issue&lt;/t:RequestType&gt;&lt;t:KeyType&gt;http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey&lt;/t:KeyType&gt;&lt;/t:RequestSecurityTokenResponse&gt;" />
     <ContextParameter Name="ULRN" Value="" />
   </ContextParameters>
   <ValidationRules>
@@ -2001,11 +1964,6 @@
     </ValidationRule>
   </ValidationRules>
   <WebTestPlugins>
-    <WebTestPlugin Classname="PlugIns.UniqueEmail, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Generate Unique Email" Description="Generates a unique for the new user">
-      <RuleParameters>
-        <RuleParameter Name="ContextParamTarget" Value="Email" />
-      </RuleParameters>
-    </WebTestPlugin>
     <WebTestPlugin Classname="PlugIns.UniqueFirstName, PlugInFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Generate Unique First Name" Description="Generates a unique first name with every iteration">
       <RuleParameters>
         <RuleParameter Name="ContextParamTarget" Value="FirstName" />

@@ -73,9 +73,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="001_MA_Employer_Account_SignUp_SignAgreement_NL_MO_v01.webtest" />
-    <None Include="001_MA_Employer_Account_SignUp_SignAgreement_NL_Test.webtest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="001_MA_Employer_Account_SignUp_SignAgreement_NL_v01.webtest" />
     <None Include="001_MA_PeakLoadTest.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -106,10 +103,16 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd.webtest" />
-    <None Include="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd_NL_v2.webtest">
+    <None Include="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd_NL_v2.webtest" />
+    <None Include="005_COMMITS_Provider1stApprove_Cohort_Empoloyer_2nd_NL_v3.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="006_VS_Vacancy_Create_V02.webtest">
+    <None Include="006_VS_Vacancy_Create.webtest" />
+    <None Include="006_VS_Vacancy_Create_V02.webtest" />
+    <None Include="006_VS_Vacancy_Create_V02_WiP.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="006_VS_Vacancy_Create_WiP.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="007_VS_Vacancy_Create_Provider_v01.webtest">
@@ -139,6 +142,9 @@
     <None Include="CMT2_Employers.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ConsolidatedScenario_1207.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ConsolidatedScenario_2105.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -163,13 +169,10 @@
     <None Include="Vacancy_Employers.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="WebTest1.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="WebTest2.webtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="WebTest3.webtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="WebTest4.webtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

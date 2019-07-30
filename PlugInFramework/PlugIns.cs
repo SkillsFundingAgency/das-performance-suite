@@ -25,14 +25,14 @@ namespace PlugIns
         private bool m_parseDependents = true;
         private Configuration config;
 
-        public UserIteration()
-        {
-            ExeConfigurationFileMap configFileMap = new ExeConfigurationFileMap();
-            configFileMap.ExeConfigFilename = Assembly.GetExecutingAssembly().ManifestModule.Name + ".config";
+        //public UserIteration()
+        //{
+        //    ExeConfigurationFileMap configFileMap = new ExeConfigurationFileMap();
+        //    configFileMap.ExeConfigFilename = Assembly.GetExecutingAssembly().ManifestModule.Name + ".config";
 
-            // Get the mapped configuration file
-            config = ConfigurationManager.OpenMappedExeConfiguration(configFileMap, ConfigurationUserLevel.None);
-        }
+        //    // Get the mapped configuration file
+        //    config = ConfigurationManager.OpenMappedExeConfiguration(configFileMap, ConfigurationUserLevel.None);
+        //}
 
         [System.ComponentModel.DisplayName("Data file to use")]
         public string DataFile { get; set; }
