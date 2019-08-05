@@ -71,7 +71,7 @@ artifacts/
 *.scc
 *.webtestresult
 App.config
-GavewayUsers.csv
+*.csv
 
 # Chutzpah Test files
 _Chutzpah*
